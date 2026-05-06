@@ -624,6 +624,325 @@
 
     .divider-line.visible { transform: scaleX(1); }
 
+    /* ===== PRODUCTS ===== */
+    .products {
+      padding: 8rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 5rem;
+    }
+
+    .product-card {
+      background: var(--gray-800);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .product-card:hover {
+      border-color: rgba(255,255,255,0.15);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    .product-card.featured {
+      border-color: rgba(255,255,255,0.2);
+      background: linear-gradient(135deg, var(--gray-800) 0%, rgba(255,255,255,0.03) 100%);
+    }
+
+    .product-card.featured::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    }
+
+    .product-badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 100px;
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      width: fit-content;
+    }
+
+    .badge-active {
+      background: rgba(34, 197, 94, 0.1);
+      color: #22c55e;
+    }
+
+    .badge-dev {
+      background: rgba(234, 179, 8, 0.1);
+      color: #eab308;
+    }
+
+    .badge-soon {
+      background: rgba(99, 102, 241, 0.1);
+      color: #818cf8;
+    }
+
+    .product-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-desc {
+      font-size: 0.85rem;
+      color: var(--gray-400);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .product-price {
+      margin-top: auto;
+      margin-bottom: 1.5rem;
+    }
+
+    .product-price .amount {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .product-price .currency {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gray-400);
+    }
+
+    .product-price .period {
+      font-size: 0.8rem;
+      color: var(--gray-500);
+    }
+
+    .product-price .starting {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .product-features {
+      list-style: none;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .product-features li {
+      font-size: 0.8rem;
+      color: var(--gray-400);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .product-features li svg {
+      width: 14px;
+      height: 14px;
+      color: #22c55e;
+      flex-shrink: 0;
+    }
+
+    .product-btn {
+      display: block;
+      text-align: center;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.875rem;
+      transition: all 0.3s ease;
+    }
+
+    .product-btn-primary {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .product-btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .product-btn-secondary {
+      background: rgba(255,255,255,0.06);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .product-btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    /* Bundles */
+    .bundles-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .bundles-header h3 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    .bundles-header p {
+      font-size: 0.95rem;
+      color: var(--gray-400);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease 0.1s;
+    }
+
+    .bundles-header h3.visible,
+    .bundles-header p.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .bundles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .bundle-card {
+      background: var(--gray-800);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.4s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bundle-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .bundle-card:hover {
+      border-color: rgba(255,255,255,0.15);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    .bundle-card.featured {
+      border-color: rgba(255,255,255,0.2);
+      background: linear-gradient(135deg, var(--gray-800) 0%, rgba(255,255,255,0.04) 100%);
+    }
+
+    .bundle-card.featured::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    }
+
+    .bundle-name {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gray-500);
+      margin-bottom: 0.5rem;
+    }
+
+    .bundle-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .bundle-price {
+      margin-bottom: 0.25rem;
+    }
+
+    .bundle-price .amount {
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .bundle-price .currency {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gray-400);
+    }
+
+    .bundle-price .period {
+      font-size: 0.8rem;
+      color: var(--gray-500);
+    }
+
+    .bundle-savings {
+      font-size: 0.75rem;
+      color: #22c55e;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    .bundle-includes {
+      list-style: none;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .bundle-includes li {
+      font-size: 0.85rem;
+      color: var(--gray-400);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .bundle-includes li svg {
+      width: 14px;
+      height: 14px;
+      color: #22c55e;
+      flex-shrink: 0;
+    }
+
     /* ===== MOBILE ===== */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.25rem; }
@@ -632,6 +951,9 @@
       .services { padding: 4rem 1.5rem; }
       .cta-section { padding: 4rem 1.5rem; }
       .services-grid { grid-template-columns: 1fr; }
+      .products { padding: 4rem 1.5rem; }
+      .products-grid { grid-template-columns: 1fr; }
+      .bundles-grid { grid-template-columns: 1fr; }
       footer { flex-direction: column; text-align: center; }
     }
   </style>
@@ -652,6 +974,7 @@
     </a>
     <div class="nav-links">
       <a href="#servicios">Servicios</a>
+      <a href="#productos">Productos</a>
       <a href="#contacto">Contacto</a>
       <a href="https://wa.me/5212941114401" class="nav-cta">Hablemos</a>
     </div>
@@ -729,6 +1052,152 @@
 
   <div class="divider"><div class="divider-line"></div></div>
 
+  <!-- PRODUCTS -->
+  <section class="products" id="productos">
+    <p class="section-label">Productos</p>
+    <h2 class="section-title">Elige lo que necesitas,<br>crece cuando quieras</h2>
+    <p class="section-subtitle">Productos individuales o paquetes con descuento. Sin contratos, cancela cuando quieras.</p>
+
+    <!-- Individual Products -->
+    <div class="products-grid">
+
+      <div class="product-card featured" style="transition-delay: 0s;">
+        <span class="product-badge badge-active">Disponible</span>
+        <h3>ALGORA Web</h3>
+        <p class="product-desc">Página web profesional, responsiva y optimizada para SEO. Incluye dominio, hosting y SSL.</p>
+        <div class="product-price">
+          <span class="starting">Instalación</span>
+          <span class="currency">$</span><span class="amount">3,500</span> <span class="currency">MXN</span>
+          <span class="period">+ $299/mes</span>
+        </div>
+        <ul class="product-features">
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Diseño personalizado</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Adaptable a móvil y tablet</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>SEO y velocidad optimizada</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Pago único disponible: $5,799</li>
+        </ul>
+        <a href="https://wa.me/5212941114401?text=Hola%2C%20me%20interesa%20ALGORA%20Web" class="product-btn product-btn-primary">Cotizar ahora</a>
+      </div>
+
+      <div class="product-card" style="transition-delay: 0.1s;">
+        <span class="product-badge badge-dev">En desarrollo</span>
+        <h3>ALGORA POS</h3>
+        <p class="product-desc">Punto de venta para cobrar en efectivo, tarjeta o QR. Cortes de caja, reportes y tickets.</p>
+        <div class="product-price">
+          <span class="starting">Instalación</span>
+          <span class="currency">$</span><span class="amount">5,500</span> <span class="currency">MXN</span>
+          <span class="period">+ $499/mes</span>
+        </div>
+        <ul class="product-features">
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Cobro multicanal</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Corte de caja diario</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Tickets digitales</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Pago único disponible: $9,499</li>
+        </ul>
+        <a href="https://wa.me/5212941114401?text=Hola%2C%20me%20interesa%20ALGORA%20POS" class="product-btn product-btn-secondary">Reservar lugar</a>
+      </div>
+
+      <div class="product-card" style="transition-delay: 0.2s;">
+        <span class="product-badge badge-soon">Próximamente</span>
+        <h3>ALGORA Agenda</h3>
+        <p class="product-desc">Sistema de citas con recordatorios por WhatsApp y cobros automáticos por servicio.</p>
+        <div class="product-price">
+          <span class="starting">Desde</span>
+          <span class="currency">$</span><span class="amount">399</span> <span class="currency">MXN</span>
+          <span class="period">/ mes</span>
+        </div>
+        <ul class="product-features">
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Agenda en línea 24/7</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Recordatorios WhatsApp</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Cobro por servicio</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Historial de clientes</li>
+        </ul>
+        <a href="https://wa.me/5212941114401?text=Hola%2C%20me%20interesa%20ALGORA%20Agenda" class="product-btn product-btn-secondary">Lista de espera</a>
+      </div>
+
+      <div class="product-card" style="transition-delay: 0.3s;">
+        <span class="product-badge badge-soon">Próximamente</span>
+        <h3>ALGORA Tienda</h3>
+        <p class="product-desc">Gestión completa: inventarios, ventas, facturación electrónica y reportes automatizados.</p>
+        <div class="product-price">
+          <span class="starting">Desde</span>
+          <span class="currency">$</span><span class="amount">799</span> <span class="currency">MXN</span>
+          <span class="period">/ mes</span>
+        </div>
+        <ul class="product-features">
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Control de inventario</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Facturación CFDI 4.0</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Reportes en tiempo real</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Multi-sucursal</li>
+        </ul>
+        <a href="https://wa.me/5212941114401?text=Hola%2C%20me%20interesa%20ALGORA%20Tienda" class="product-btn product-btn-secondary">Lista de espera</a>
+      </div>
+
+    </div>
+
+    <!-- Bundles -->
+    <div class="bundles-header">
+      <h3>Paquetes con descuento</h3>
+      <p>Combina herramientas y ahorra. Ideal para negocios que necesitan más de un servicio.</p>
+    </div>
+
+    <div class="bundles-grid">
+
+      <div class="bundle-card" style="transition-delay: 0s;">
+        <p class="bundle-name">Paquete Starter</p>
+        <h3>Web + POS</h3>
+        <div class="bundle-price">
+          <span class="currency">$</span><span class="amount">9,000</span> <span class="currency">MXN</span>
+          <span class="period">instalación + $699/mes</span>
+        </div>
+        <p class="bundle-savings">Ahorras $99/mes vs. individual | Pago único: $14,499</p>
+        <ul class="bundle-includes">
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Página web completa</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Punto de venta con descuento</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Soporte prioritario</li>
+        </ul>
+        <a href="https://wa.me/5212941114401?text=Hola%2C%20me%20interesa%20el%20Paquete%20Starter" class="product-btn product-btn-secondary">Cotizar paquete</a>
+      </div>
+
+      <div class="bundle-card featured" style="transition-delay: 0.15s;">
+        <p class="bundle-name">Paquete Negocio</p>
+        <h3>Web + POS + Agenda</h3>
+        <div class="bundle-price">
+          <span class="currency">$</span><span class="amount">12,000</span> <span class="currency">MXN</span>
+          <span class="period">instalación + $999/mes</span>
+        </div>
+        <p class="bundle-savings">Ahorras $298/mes vs. individual</p>
+        <ul class="bundle-includes">
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Todo del Starter</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Agenda con recordatorios</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Configuración personalizada</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Soporte prioritario 24/7</li>
+        </ul>
+        <a href="https://wa.me/5212941114401?text=Hola%2C%20me%20interesa%20el%20Paquete%20Negocio" class="product-btn product-btn-primary">Cotizar paquete</a>
+      </div>
+
+      <div class="bundle-card" style="transition-delay: 0.3s;">
+        <p class="bundle-name">Paquete Total</p>
+        <h3>Web + POS + Agenda + Tienda</h3>
+        <div class="bundle-price">
+          <span class="currency">$</span><span class="amount">15,000</span> <span class="currency">MXN</span>
+          <span class="period">instalación + $1,499/mes</span>
+        </div>
+        <p class="bundle-savings">Ahorras $497/mes vs. individual</p>
+        <ul class="bundle-includes">
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Todo del Negocio</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Sistema de tienda completo</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Facturación electrónica</li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Gerente de cuenta dedicado</li>
+        </ul>
+        <a href="https://wa.me/5212941114401?text=Hola%2C%20me%20interesa%20el%20Paquete%20Total" class="product-btn product-btn-secondary">Cotizar paquete</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"><div class="divider-line"></div></div>
+
   <!-- CTA -->
   <section class="cta-section" id="contacto">
     <h2>¿Listo para dar<br>el siguiente paso?</h2>
@@ -774,7 +1243,7 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
     // Observe all animated elements
-    document.querySelectorAll('.section-label, .section-title, .section-subtitle, .service-card, .divider-line, .cta-section').forEach(el => {
+    document.querySelectorAll('.section-label, .section-title, .section-subtitle, .service-card, .product-card, .bundle-card, .bundles-header h3, .bundles-header p, .divider-line, .cta-section').forEach(el => {
       observer.observe(el);
     });
 
