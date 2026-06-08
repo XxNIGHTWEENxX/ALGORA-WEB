@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALGORA — Tecnología para negocios que se atreven</title>
-  <meta name="description" content="Herramientas digitales para tu negocio: páginas web, punto de venta, agenda de citas y sistemas de gestión. Desde México para el mundo.">
+  <title>ALGORA — Todo tu negocio en una sola plataforma</title>
+  <meta name="description" content="Una sola plataforma: punto de venta, tienda en línea, agenda, facturación CFDI, finanzas y nómina. Funciona sin internet. Prueba gratis.">
   <meta name="keywords" content="ALGORA, punto de venta, POS, páginas web, software para negocios, agenda de citas, facturación, México, SaaS, tecnología para negocios">
   <meta name="author" content="ALGORA">
   <meta name="robots" content="index, follow">
@@ -21,16 +21,16 @@
   <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.algora.com.mx/">
-  <meta property="og:title" content="ALGORA — Tecnología para negocios que se atreven">
-  <meta property="og:description" content="Que ningún negocio se quede atrás por falta de tecnología. Páginas web, punto de venta, agenda y más.">
+  <meta property="og:title" content="ALGORA — Todo tu negocio en una sola plataforma">
+  <meta property="og:description" content="Punto de venta, tienda, agenda, facturación y finanzas en una sola plataforma. Prueba gratis, sin tarjeta.">
   <meta property="og:image" content="https://www.algora.com.mx/og-image.png">
   <meta property="og:locale" content="es_MX">
   <meta property="og:site_name" content="ALGORA">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ALGORA — Tecnología para negocios que se atreven">
-  <meta name="twitter:description" content="Que ningún negocio se quede atrás por falta de tecnología. Páginas web, punto de venta, agenda y más.">
+  <meta name="twitter:title" content="ALGORA — Todo tu negocio en una sola plataforma">
+  <meta name="twitter:description" content="Punto de venta, tienda, agenda, facturación y finanzas en una sola plataforma. Prueba gratis, sin tarjeta.">
   <meta name="twitter:image" content="https://www.algora.com.mx/og-image.png">
 
   <!-- Structured Data (Schema.org) -->
@@ -64,1217 +64,307 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --black: #0a0a0a;
-      --white: #ffffff;
-      --gray-100: #f5f5f5;
-      --gray-200: #e5e5e5;
-      --gray-400: #a3a3a3;
-      --gray-500: #737373;
-      --gray-600: #525252;
-      --gray-800: #1a1a1a;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: var(--black);
-      color: var(--white);
-      line-height: 1.6;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ===== NAV ===== */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 100;
-      padding: 1.25rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      background: rgba(10,10,10,0.7);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      transition: all 0.3s ease;
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      text-decoration: none;
-      color: var(--white);
-    }
-
-    .nav-logo svg { height: 28px; width: auto; }
-
-    .nav-links { display: flex; gap: 2rem; align-items: center; }
-
-    .nav-links a {
-      color: var(--gray-400);
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--white); }
-
-    .nav-cta {
-      background: var(--white) !important;
-      color: var(--black) !important;
-      padding: 0.5rem 1.25rem;
-      border-radius: 8px;
-      font-weight: 600 !important;
-      font-size: 0.875rem;
-      transition: opacity 0.2s !important;
-    }
-
-    .nav-cta:hover { opacity: 0.9; }
-
-    /* ===== HERO ===== */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 8rem 2rem 4rem;
-      position: relative;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -20%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 800px;
-      height: 800px;
-      background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 60%);
-      pointer-events: none;
-      animation: heroGlow 8s ease-in-out infinite alternate;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 1200px;
-      height: 1200px;
-      background: conic-gradient(from 0deg, transparent, rgba(255,255,255,0.015), transparent, rgba(255,255,255,0.01), transparent);
-      animation: slowRotate 30s linear infinite;
-      pointer-events: none;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.4rem 1rem;
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 100px;
-      font-size: 0.8rem;
-      color: var(--gray-400);
-      margin-bottom: 2.5rem;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 0.2s;
-    }
-
-    .hero-badge .dot {
-      width: 6px;
-      height: 6px;
-      background: #22c55e;
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-
-    .hero h1 {
-      font-size: clamp(3rem, 8vw, 6rem);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      line-height: 1;
-      margin-bottom: 1.5rem;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 0.4s;
-    }
-
-    .hero h1 .gradient-text {
-      background: linear-gradient(135deg, var(--white) 0%, var(--gray-400) 50%, var(--white) 100%);
-      background-size: 200% 200%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: fadeUp 0.8s ease forwards 0.4s, shimmer 6s ease-in-out infinite 1.5s;
-    }
-
-    .hero-mission {
-      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
-      color: var(--gray-400);
-      max-width: 600px;
-      margin-bottom: 1rem;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 0.6s;
-      font-weight: 400;
-    }
-
-    .hero-submission {
-      font-size: clamp(0.95rem, 2vw, 1.1rem);
-      color: var(--gray-500);
-      max-width: 550px;
-      margin-bottom: 3rem;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 0.7s;
-      font-style: italic;
-    }
-
-    .hero-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--white);
-      color: var(--black);
-      padding: 0.9rem 2rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 0.9s;
-      position: relative;
-      overflow: visible;
-    }
-
-    .hero-cta:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 8px 40px rgba(255,255,255,0.15);
-    }
-
-    .hero-cta::before {
-      content: '';
-      position: absolute;
-      inset: -1px;
-      border-radius: 13px;
-      background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.2), rgba(255,255,255,0.8));
-      background-size: 200% 200%;
-      animation: borderShimmer 3s ease-in-out infinite;
-      z-index: -1;
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .hero-cta:hover::before { opacity: 1; }
-
-    .hero-cta svg {
-      width: 18px;
-      height: 18px;
-      transition: transform 0.2s;
-    }
-
-    .hero-cta:hover svg { transform: translateX(3px); }
-
-    .hero-scroll {
-      position: absolute;
-      bottom: 2rem;
-      opacity: 0;
-      animation: fadeUp 0.8s ease forwards 1.1s;
-    }
-
-    .hero-scroll svg {
-      width: 24px;
-      height: 24px;
-      color: var(--gray-600);
-      animation: bounceDown 2s infinite;
-    }
-
-    /* ===== SERVICES ===== */
-    .services {
-      padding: 8rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gray-500);
-      margin-bottom: 1rem;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-      line-height: 1.1;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease 0.1s;
-    }
-
-    .section-subtitle {
-      font-size: 1.1rem;
-      color: var(--gray-400);
-      max-width: 500px;
-      margin-bottom: 4rem;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease 0.2s;
-    }
-
-    .section-label.visible,
-    .section-title.visible,
-    .section-subtitle.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .service-card {
-      background: var(--gray-800);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 16px;
-      padding: 2rem;
-      transition: all 0.4s ease;
-      opacity: 0;
-      transform: translateY(30px);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-      opacity: 0;
-      transition: opacity 0.4s;
-    }
-
-    .service-card:hover::before { opacity: 1; }
-
-    .service-card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .service-card:hover {
-      border-color: rgba(255,255,255,0.15);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    }
-
-    .service-card .card-glow {
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.3s;
-      transform: translate(-50%, -50%);
-    }
-
-    .service-card:hover .card-glow { opacity: 1; }
-
-    .service-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: rgba(255,255,255,0.05);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.25rem;
-    }
-
-    .service-icon svg {
-      width: 24px;
-      height: 24px;
-      color: var(--white);
-    }
-
-    .service-phase {
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--gray-500);
-      margin-bottom: 0.5rem;
-    }
-
-    .service-card h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
-
-    .service-card p {
-      font-size: 0.9rem;
-      color: var(--gray-400);
-      line-height: 1.6;
-    }
-
-    .service-tag {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.25rem 0.75rem;
-      border-radius: 100px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      background: rgba(34, 197, 94, 0.1);
-      color: #22c55e;
-    }
-
-    /* ===== CTA SECTION ===== */
-    .cta-section {
-      padding: 8rem 2rem;
-      text-align: center;
-      position: relative;
-    }
-
-    .cta-section::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 800px;
-      height: 400px;
-      background: radial-gradient(ellipse, rgba(255,255,255,0.02) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .cta-section h2 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-      line-height: 1.1;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .cta-section p {
-      font-size: 1.1rem;
-      color: var(--gray-400);
-      margin-bottom: 2.5rem;
-      max-width: 450px;
-      margin-left: auto;
-      margin-right: auto;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
-    }
-
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s;
-    }
-
-    .cta-section.visible h2,
-    .cta-section.visible p,
-    .cta-section.visible .cta-buttons {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--white);
-      color: var(--black);
-      padding: 0.9rem 2rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(255,255,255,0.1);
-    }
-
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: transparent;
-      color: var(--white);
-      padding: 0.9rem 2rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      border: 1px solid rgba(255,255,255,0.15);
-      transition: all 0.3s ease;
-    }
-
-    .btn-secondary:hover {
-      border-color: rgba(255,255,255,0.3);
-      background: rgba(255,255,255,0.03);
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      padding: 3rem 2rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .footer-left {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--gray-500);
-      font-size: 0.85rem;
-    }
-
-    .footer-left svg { height: 18px; width: auto; }
-
-    .footer-right {
-      color: var(--gray-600);
-      font-size: 0.8rem;
-    }
-
-    /* ===== ANIMATIONS ===== */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
-
-    @keyframes bounceDown {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(8px); }
-    }
-
-    @keyframes shimmer {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-
-    @keyframes heroGlow {
-      0% { opacity: 0.6; transform: translateX(-50%) scale(1); }
-      100% { opacity: 1; transform: translateX(-50%) scale(1.1); }
-    }
-
-    @keyframes slowRotate {
-      from { transform: translate(-50%, -50%) rotate(0deg); }
-      to { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-
-    @keyframes borderShimmer {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-
-    /* ===== DIVIDER ===== */
-    .divider {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    .divider-line {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
-      transform: scaleX(0);
-      transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .divider-line.visible { transform: scaleX(1); }
-
-    /* ===== PRODUCTS ===== */
-    .products {
-      padding: 8rem 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 5rem;
-    }
-
-    .product-card {
-      background: var(--gray-800);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 16px;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      transition: all 0.4s ease;
-      opacity: 0;
-      transform: translateY(30px);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .product-card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .product-card:hover {
-      border-color: rgba(255,255,255,0.15);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    }
-
-    .product-card.featured {
-      border-color: rgba(255,255,255,0.2);
-      background: linear-gradient(135deg, var(--gray-800) 0%, rgba(255,255,255,0.03) 100%);
-    }
-
-    .product-card.featured::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    }
-
-    .product-badge {
-      display: inline-block;
-      padding: 0.2rem 0.6rem;
-      border-radius: 100px;
-      font-size: 0.65rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 1rem;
-      width: fit-content;
-    }
-
-    .badge-active {
-      background: rgba(34, 197, 94, 0.1);
-      color: #22c55e;
-    }
-
-    .badge-dev {
-      background: rgba(234, 179, 8, 0.1);
-      color: #eab308;
-    }
-
-    .badge-soon {
-      background: rgba(99, 102, 241, 0.1);
-      color: #818cf8;
-    }
-
-    .product-card h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .product-desc {
-      font-size: 0.85rem;
-      color: var(--gray-400);
-      line-height: 1.5;
-      margin-bottom: 1.5rem;
-    }
-
-    .product-price {
-      margin-top: auto;
-      margin-bottom: 1.5rem;
-    }
-
-    .product-price .amount {
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    .product-price .currency {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--gray-400);
-    }
-
-    .product-price .period {
-      font-size: 0.8rem;
-      color: var(--gray-500);
-    }
-
-    .product-price .starting {
-      font-size: 0.75rem;
-      color: var(--gray-500);
-      display: block;
-      margin-bottom: 0.25rem;
-    }
-
-    .product-features {
-      list-style: none;
-      margin-bottom: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .product-features li {
-      font-size: 0.8rem;
-      color: var(--gray-400);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .product-features li svg {
-      width: 14px;
-      height: 14px;
-      color: #22c55e;
-      flex-shrink: 0;
-    }
-
-    .product-btn {
-      display: block;
-      text-align: center;
-      padding: 0.75rem 1.5rem;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.875rem;
-      transition: all 0.3s ease;
-    }
-
-    .product-btn-primary {
-      background: var(--white);
-      color: var(--black);
-    }
-
-    .product-btn-primary:hover {
-      opacity: 0.9;
-      transform: translateY(-1px);
-    }
-
-    .product-btn-secondary {
-      background: rgba(255,255,255,0.06);
-      color: var(--white);
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .product-btn-secondary:hover {
-      background: rgba(255,255,255,0.1);
-      border-color: rgba(255,255,255,0.2);
-    }
-
-    /* Bundles */
-    .bundles-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .bundles-header h3 {
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
-    }
-
-    .bundles-header p {
-      font-size: 0.95rem;
-      color: var(--gray-400);
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease 0.1s;
-    }
-
-    .bundles-header h3.visible,
-    .bundles-header p.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .bundles-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .bundle-card {
-      background: var(--gray-800);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 16px;
-      padding: 2.5rem 2rem;
-      text-align: center;
-      transition: all 0.4s ease;
-      opacity: 0;
-      transform: translateY(30px);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .bundle-card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .bundle-card:hover {
-      border-color: rgba(255,255,255,0.15);
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-    }
-
-    .bundle-card.featured {
-      border-color: rgba(255,255,255,0.2);
-      background: linear-gradient(135deg, var(--gray-800) 0%, rgba(255,255,255,0.04) 100%);
-    }
-
-    .bundle-card.featured::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-    }
-
-    .bundle-name {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--gray-500);
-      margin-bottom: 0.5rem;
-    }
-
-    .bundle-card h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .bundle-price {
-      margin-bottom: 0.25rem;
-    }
-
-    .bundle-price .amount {
-      font-size: 2.5rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    .bundle-price .currency {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--gray-400);
-    }
-
-    .bundle-price .period {
-      font-size: 0.8rem;
-      color: var(--gray-500);
-    }
-
-    .bundle-savings {
-      font-size: 0.75rem;
-      color: #22c55e;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
-
-    .bundle-includes {
-      list-style: none;
-      margin-bottom: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .bundle-includes li {
-      font-size: 0.85rem;
-      color: var(--gray-400);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-
-    .bundle-includes li svg {
-      width: 14px;
-      height: 14px;
-      color: #22c55e;
-      flex-shrink: 0;
-    }
-
-    /* ===== MOBILE ===== */
-    @media (max-width: 768px) {
-      nav { padding: 1rem 1.25rem; }
-      .nav-links { display: none; }
-      .hero { padding: 7rem 1.5rem 4rem; min-height: 90vh; }
-      .services { padding: 4rem 1.5rem; }
-      .cta-section { padding: 4rem 1.5rem; }
-      .services-grid { grid-template-columns: 1fr; }
-      .products { padding: 4rem 1.5rem; }
-      .products-grid { grid-template-columns: 1fr; }
-      .bundles-grid { grid-template-columns: 1fr; }
-      footer { flex-direction: column; text-align: center; }
-    }
-  </style>
+<style>
+:root{
+  --bg:#0A0A0A; --bg2:#121212; --card:#161616; --line:#262626;
+  --tx:#FFFFFF; --tx2:#A3A3A3; --tx3:#666; --accent:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 26px;border-radius:12px;font-weight:700;font-size:15px;transition:.2s;cursor:pointer;border:none}
+.btn-pri{background:#fff;color:#0A0A0A}
+.btn-pri:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,255,255,.15)}
+.btn-sec{background:transparent;color:#fff;border:1px solid var(--line)}
+.btn-sec:hover{border-color:#fff}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--tx2);padding:6px 14px;border:1px solid var(--line);border-radius:100px;margin-bottom:20px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.8);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;letter-spacing:2px}
+.logo svg{width:30px;height:30px}
+.logo-img{height:30px;width:auto}
+.logo-img.lg{height:34px}
+.nav-links{display:flex;gap:32px;font-size:14px;font-weight:500;color:var(--tx2)}
+.nav-links a:hover{color:#fff}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;padding:90px 0 70px;text-align:center;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:900px;height:700px;background:radial-gradient(circle,rgba(255,255,255,.07),transparent 65%);pointer-events:none}
+.hero h1{font-size:clamp(38px,6.5vw,72px);font-weight:900;line-height:1.04;letter-spacing:-2px;max-width:900px;margin:0 auto 22px;position:relative}
+.hero h1 .muted{color:var(--tx3)}
+.hero p.sub{font-size:clamp(17px,2.2vw,21px);color:var(--tx2);max-width:620px;margin:0 auto 36px;position:relative}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.hero-note{margin-top:18px;font-size:13px;color:var(--tx3);position:relative}
+
+/* REPLACES STRIP */
+.replaces{padding:46px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.replaces .lbl{text-align:center;font-size:13px;color:var(--tx3);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:22px}
+.replaces .row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 36px}
+.replaces .row span{font-size:clamp(16px,2.4vw,22px);font-weight:700;color:var(--tx2);opacity:.75}
+.replaces .row span.strike{text-decoration:line-through;text-decoration-color:#555}
+
+/* SECTION */
+section.pad{padding:90px 0}
+.head{text-align:center;max-width:680px;margin:0 auto 56px}
+.head h2{font-size:clamp(30px,4.5vw,46px);font-weight:800;letter-spacing:-1px;line-height:1.1;margin-bottom:16px}
+.head p{font-size:18px;color:var(--tx2)}
+
+/* MODULES GRID */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.mod{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;transition:.25s}
+.mod:hover{border-color:#3a3a3a;transform:translateY(-4px);background:#1a1a1a}
+.mod .ic{width:46px;height:46px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.mod .ic svg{width:24px;height:24px;stroke:#0A0A0A}
+.mod h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.mod p{font-size:14.5px;color:var(--tx2);line-height:1.55}
+
+/* FEATURE ROWS */
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;margin-bottom:90px}
+.feat:nth-child(even) .fimg{order:-1}
+@media(max-width:820px){.feat{grid-template-columns:1fr;gap:28px;margin-bottom:60px}.feat:nth-child(even) .fimg{order:0}}
+.feat .ftag{font-size:13px;font-weight:700;color:var(--tx3);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.feat h3{font-size:clamp(24px,3.5vw,34px);font-weight:800;letter-spacing:-.5px;line-height:1.15;margin-bottom:16px}
+.feat p{font-size:16.5px;color:var(--tx2);margin-bottom:18px}
+.feat ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.feat ul li{display:flex;gap:11px;font-size:15px;color:#d4d4d4}
+.feat ul li svg{width:20px;height:20px;flex-shrink:0;stroke:#fff;margin-top:1px}
+.fimg{background:linear-gradient(145deg,#1c1c1c,#101010);border:1px solid var(--line);border-radius:20px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.fimg .big{font-size:clamp(40px,8vw,90px);font-weight:900;color:#fff;opacity:.07;letter-spacing:-3px;text-align:center;padding:20px;line-height:1}
+
+/* PRICING */
+.pricing{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:stretch}
+@media(max-width:920px){.plans{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.plans{grid-template-columns:1fr}}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column}
+.plan.feat-plan{border-color:#fff;box-shadow:0 0 0 1px #fff}
+.plan .pname{font-size:14px;font-weight:700;color:var(--tx2);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.plan .price{font-size:38px;font-weight:900;letter-spacing:-1px;line-height:1}
+.plan .price small{font-size:15px;font-weight:600;color:var(--tx3)}
+.plan .pyear{font-size:13px;color:var(--tx3);margin-top:6px}
+.plan .pdesc{font-size:14px;color:var(--tx2);margin:16px 0;flex:1}
+.plan .badge{display:inline-block;background:#fff;color:#0A0A0A;font-size:11px;font-weight:800;padding:4px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px;align-self:flex-start}
+.plan .btn{width:100%;justify-content:center;height:44px}
+.pnote{text-align:center;color:var(--tx3);font-size:14px;margin-top:30px}
+
+/* DIFERENCIADORES strip */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+@media(max-width:780px){.why{grid-template-columns:repeat(2,1fr);gap:36px}}
+.why .n{font-size:40px;font-weight:900;letter-spacing:-1px;margin-bottom:8px}
+.why .t{font-size:15px;color:var(--tx2)}
+
+/* GIROS */
+.giros{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:760px;margin:0 auto}
+.giros span{background:var(--card);border:1px solid var(--line);border-radius:100px;padding:10px 20px;font-size:14.5px;font-weight:600;color:#d4d4d4}
+
+/* CTA */
+.cta{text-align:center;padding:100px 0}
+.cta h2{font-size:clamp(32px,5vw,54px);font-weight:900;letter-spacing:-1.5px;line-height:1.08;max-width:760px;margin:0 auto 22px}
+.cta p{font-size:18px;color:var(--tx2);margin-bottom:34px}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:50px 0 40px}
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.foot .mission{max-width:440px;font-size:14px;color:var(--tx2);line-height:1.6}
+.foot .legal{font-size:13px;color:var(--tx3)}
+.wpp{position:fixed;bottom:24px;right:24px;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.4);z-index:60;transition:.2s}
+.wpp:hover{transform:scale(1.08)}
+.wpp svg{width:30px;height:30px;fill:#fff}
+.reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+</style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <a href="#" class="nav-logo">
-      <svg viewBox="0 0 520 100" xmlns="http://www.w3.org/2000/svg">
-        <g transform="translate(22, 10)">
-          <path d="M28,0 L0,76 L15,76 Z" fill="#ffffff"/>
-          <path d="M28,0 L56,76 L41,76 Z" fill="#ffffff"/>
-          <circle cx="28" cy="46" r="5.5" fill="#ffffff"/>
-        </g>
-        <text x="90" y="76" font-size="52" font-weight="800" letter-spacing="8" fill="#ffffff" font-family="Inter, sans-serif">LGORA</text>
-      </svg>
-    </a>
-    <div class="nav-links">
-      <a href="#servicios">Servicios</a>
-      <a href="#productos">Productos</a>
-      <a href="#contacto">Contacto</a>
-      <a href="https://wa.me/5212941114401" class="nav-cta">Hablemos</a>
+<nav><div class="wrap nav">
+  <a href="#" class="logo"><img class="logo-img" src="ALGORA_Logo_blanco.png" alt="ALGORA"></a>
+  <div class="nav-links">
+    <a href="#modulos">Plataforma</a>
+    <a href="#como">Cómo funciona</a>
+    <a href="#precios">Precios</a>
+    <a href="#giros">Para quién</a>
+  </div>
+  <a href="#precios" class="btn btn-pri" style="height:42px;font-size:14px">Probar gratis</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="tag">Una sola plataforma · Todo tu negocio</span>
+  <h1>Administra <span class="muted">todo</span> tu negocio<br>desde un solo lugar</h1>
+  <p class="sub">Punto de venta, tienda en línea, agenda, facturación, finanzas y nómina. Sin contratar 5 sistemas distintos. ALGORA es una sola plataforma que crece contigo.</p>
+  <div class="hero-cta">
+    <a href="#precios" class="btn btn-pri">Empezar prueba gratis</a>
+    <a href="#modulos" class="btn btn-sec">Ver todo lo que incluye</a>
+  </div>
+  <p class="hero-note">Sin tarjeta para probar · Funciona sin internet · Se instala como app</p>
+</div></header>
+
+<div class="replaces"><div class="wrap">
+  <p class="lbl">Reemplaza todo esto con una sola cuenta</p>
+  <div class="row">
+    <span class="strike">Caja registradora</span>
+    <span class="strike">Tienda en línea aparte</span>
+    <span class="strike">App de citas</span>
+    <span class="strike">Facturador externo</span>
+    <span class="strike">Hojas de Excel</span>
+    <span class="strike">Sistema de nómina</span>
+    <span class="strike">Terminal sin conectar</span>
+  </div>
+</div></div>
+
+<section class="pad" id="modulos"><div class="wrap">
+  <div class="head reveal">
+    <h2>Todo incluido. Nada por separado.</h2>
+    <p>Cada módulo se conecta con el siguiente: vendes, facturas, controlas inventario y ves tus finanzas sin pasar datos de un lado a otro.</p>
+  </div>
+  <div class="grid">
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272"/></svg></div><h3>Punto de venta</h3><p>Cobra rápido con código de barras, venta a granel, descuentos y crédito. Funciona sin internet y se sincroniza solo.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64M3 9.75L12 3l9 6.75"/></svg></div><h3>Tienda en línea</h3><p>Tu propia página para vender por internet con tu logo y dominio. Pagos, envíos y pedidos, todo conectado al inventario.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0V11.25"/></svg></div><h3>Agenda de citas</h3><p>Tus clientes reservan en línea, con anticipo y recordatorios automáticos. Ideal para servicios y negocios con cita.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg></div><h3>Facturación CFDI 4.0</h3><p>Timbra facturas válidas ante el SAT desde el punto de venta. Factura global, complementos de pago y todo automático.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg></div><h3>Finanzas e impuestos</h3><p>Flujo de efectivo, utilidad real, margen y cálculo de impuestos. Sabes cuánto ganas de verdad, sin contador de por medio.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg></div><h3>Nómina y equipo</h3><p>Empleados con roles y permisos, nómina con cálculo de ISR, y cada caja con su responsable asignado.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg></div><h3>Inventario y compras</h3><p>Control de stock en tiempo real, proveedores, órdenes de compra y alertas de producto bajo. Sin sorpresas.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/></svg></div><h3>Terminal de cobro</h3><p>Conecta tu terminal y cobra con tarjeta directo desde el punto de venta. El monto aparece solo y la venta se cierra al pagar.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"/></svg></div><h3>App instalable</h3><p>Se instala como aplicación en tu celular, tablet o computadora. Multicaja, multisucursal y siempre disponible.</p></div>
+  </div>
+</div></section>
+
+<section class="pad" id="como" style="padding-top:30px"><div class="wrap">
+  <div class="head reveal"><h2>Por qué ALGORA es diferente</h2><p>No es otro sistema más. Es la única plataforma que conecta la venta con la factura, el inventario y tus finanzas, sin que muevas un dato a mano.</p></div>
+
+  <div class="feat reveal">
+    <div>
+      <div class="ftag">Sigue vendiendo siempre</div>
+      <h3>Funciona aunque se caiga el internet</h3>
+      <p>Tu negocio no se detiene. ALGORA guarda todo en tu dispositivo y sincroniza solo cuando vuelve la conexión. Nunca pierdes una venta.</p>
+      <ul>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Ventas offline que se sincronizan solas</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Multicaja: cada equipo con su corte</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Multisucursal desde una sola cuenta</li>
+      </ul>
     </div>
-  </nav>
+    <div class="fimg"><span class="big">Sin internet,<br>sin parar</span></div>
+  </div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-badge">
-      <span class="dot"></span>
-      Aceptando nuevos clientes
+  <div class="feat reveal">
+    <div>
+      <div class="ftag">Ahorra hasta en el contador</div>
+      <h3>Facturas e impuestos en automático</h3>
+      <p>Timbra CFDI 4.0 desde la misma venta. ALGORA calcula tus impuestos, detecta tus deducciones y emite la factura global del mes por ti.</p>
+      <ul>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Factura válida ante el SAT en segundos</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Complementos de pago automáticos</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Cálculo de IVA e ISR del mes</li>
+      </ul>
     </div>
-    <h1><span class="gradient-text">Tecnología para<br>negocios que<br>se atreven</span></h1>
-    <p class="hero-mission">Que ningún negocio se quede atrás por falta de tecnología. Existimos para cerrar esa brecha.</p>
-    <p class="hero-submission">Detrás de cada negocio hay una persona que lo apostó todo. Nosotros apostamos por ella.</p>
-    <a href="https://wa.me/5212941114401?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20ALGORA" class="hero-cta">
-      Empieza hoy
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-    </a>
-    <div class="hero-scroll">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"/></svg>
+    <div class="fimg"><span class="big">CFDI 4.0<br>automático</span></div>
+  </div>
+
+  <div class="feat reveal">
+    <div>
+      <div class="ftag">Decide con datos reales</div>
+      <h3>Sabes cuánto ganas de verdad</h3>
+      <p>No es solo cuánto vendiste. ALGORA te muestra tu utilidad real, tu margen por producto, lo que te deben y lo que debes, con gráficas claras.</p>
+      <ul>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Flujo de efectivo y proyección del mes</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Margen real con costo de cada producto</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Cuentas por cobrar y por pagar</li>
+      </ul>
     </div>
-  </section>
+    <div class="fimg"><span class="big">Tu negocio,<br>en números</span></div>
+  </div>
+</div></section>
 
-  <div class="divider"><div class="divider-line"></div></div>
+<section class="pad" style="padding:70px 0"><div class="wrap">
+  <div class="why">
+    <div class="reveal"><div class="n">1</div><div class="t">Una sola plataforma para todo el negocio</div></div>
+    <div class="reveal"><div class="n">0</div><div class="t">Comisiones ocultas por tus ventas</div></div>
+    <div class="reveal"><div class="n">100%</div><div class="t">Mexicana, hecha para el SAT y el peso</div></div>
+    <div class="reveal"><div class="n">24/7</div><div class="t">Soporte real por WhatsApp</div></div>
+  </div>
+</div></section>
 
-  <!-- SERVICES -->
-  <section class="services" id="servicios">
-    <p class="section-label">Servicios</p>
-    <h2 class="section-title">Todo lo que tu negocio<br>necesita para crecer</h2>
-    <p class="section-subtitle">Un ecosistema de herramientas que trabajan juntas. Empieza con una, escala a todas.</p>
-
-    <div class="services-grid">
-      <div class="service-card" style="transition-delay: 0s;">
-        <div class="card-glow"></div>
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/></svg>
-        </div>
-        <p class="service-phase">Fase 1 — Disponible</p>
-        <h3>ALGORA Web</h3>
-        <p>Páginas web profesionales para tu negocio. Tu catálogo, tu marca, tu presencia digital — todo en un solo lugar.</p>
-        <span class="service-tag">Activo</span>
-      </div>
-
-      <div class="service-card" style="transition-delay: 0.1s;">
-        <div class="card-glow"></div>
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"/></svg>
-        </div>
-        <p class="service-phase">Fase 1 — Disponible</p>
-        <h3>ALGORA POS</h3>
-        <p>Punto de venta inteligente. Cobra en efectivo, tarjeta o QR. Corte de caja, reportes y tickets — sin complicaciones.</p>
-        <span class="service-tag">Activo</span>
-      </div>
-
-      <div class="service-card" style="transition-delay: 0.2s;">
-        <div class="card-glow"></div>
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
-        </div>
-        <p class="service-phase">Fase 2 — Próximamente</p>
-        <h3>ALGORA Agenda</h3>
-        <p>Gestión de citas para salones, consultorios y clínicas. Recordatorios automáticos por WhatsApp y cobros por servicio.</p>
-      </div>
-
-      <div class="service-card" style="transition-delay: 0.3s;">
-        <div class="card-glow"></div>
-        <div class="service-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.871c1.355 0 2.697.056 4.024.166C17.155 8.51 18 9.473 18 10.608v2.513M15 8.25v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 16.5m15-3.379a48.474 48.474 0 00-6-.371c-2.032 0-4.034.126-6 .371m12 0c.39.049.777.102 1.163.16 1.07.16 1.837 1.094 1.837 2.175v5.169c0 .621-.504 1.125-1.125 1.125H4.125A1.125 1.125 0 013 20.625v-5.17c0-1.08.768-2.014 1.837-2.174A47.78 47.78 0 016 13.12"/></svg>
-        </div>
-        <p class="service-phase">Fase 2 — Próximamente</p>
-        <h3>ALGORA RES</h3>
-        <p>Sistema integral para restaurantes: mesas, comandas, cocina, inventario y facturación. Todo el flujo de tu restaurante en un solo lugar.</p>
-      </div>
+<section class="pad pricing" id="precios"><div class="wrap">
+  <div class="head reveal">
+    <h2>Empieza con lo que necesitas. Suma el resto cuando quieras.</h2>
+    <p>Arma tu plataforma. Comienza con el punto de venta y agrega tienda, agenda o el paquete completo. Una sola cuenta, un solo acceso.</p>
+  </div>
+  <div class="plans">
+    <div class="plan reveal">
+      <div class="pname">Punto de venta</div>
+      <div class="price">$599<small>/mes</small></div>
+      <div class="pyear">o $6,200 al año</div>
+      <div class="pdesc">El corazón de tu negocio: ventas, inventario, caja, clientes, facturación y finanzas.</div>
+      <a href="#" class="btn btn-sec">Probar gratis</a>
     </div>
-  </section>
-
-  <div class="divider"><div class="divider-line"></div></div>
-
-  <!-- PRODUCTS -->
-  <section class="products" id="productos">
-    <p class="section-label">Productos</p>
-    <h2 class="section-title">Elige lo que necesitas,<br>crece cuando quieras</h2>
-    <p class="section-subtitle">Productos individuales o paquetes con descuento. Sin contratos, cancela cuando quieras.</p>
-
-    <!-- Individual Products -->
-    <div class="products-grid">
-
-      <div class="product-card featured" style="transition-delay: 0s;">
-        <span class="product-badge badge-active">Disponible</span>
-        <h3>ALGORA Web</h3>
-        <p class="product-desc">Página web profesional, responsiva y optimizada para SEO. Incluye dominio, hosting y SSL.</p>
-        <div class="product-price">
-          <span class="starting">Elaboración</span>
-          <span class="currency">$</span><span class="amount">3,500</span> <span class="currency">MXN</span>
-          <span class="period">+ $299/mes</span>
-        </div>
-        <ul class="product-features">
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Diseño personalizado</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Adaptable a móvil y tablet</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>SEO y velocidad optimizada</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Pago único disponible: $7,299</li>
-        </ul>
-        <a href="https://wa.me/5212941114401?text=Hola%2C%20me%20interesa%20ALGORA%20Web" class="product-btn product-btn-primary">Cotizar ahora</a>
-      </div>
-
-      <div class="product-card featured" style="transition-delay: 0.1s;">
-        <span class="product-badge badge-active">Disponible</span>
-        <h3>ALGORA POS</h3>
-        <p class="product-desc">Punto de venta para cobrar en efectivo, tarjeta o QR. Cortes de caja, reportes en vivo y tickets.</p>
-        <div class="product-price">
-          <span class="starting">Sin costo de instalación</span>
-          <span class="currency">$</span><span class="amount">899</span> <span class="currency">MXN</span>
-          <span class="period">/ mes</span>
-        </div>
-        <ul class="product-features">
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Cobro efectivo, tarjeta y QR</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Ventas en tiempo real</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>14 días de prueba gratis</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Anualidad: $8,599 (ahorra 20%)</li>
-        </ul>
-        <a href="https://www.algorapos.com.mx" target="_blank" rel="noopener noreferrer" class="product-btn product-btn-primary" id="pos-download-btn">Probar gratis</a>
-      </div>
-
-      <div class="product-card" style="transition-delay: 0.2s;">
-        <span class="product-badge badge-soon">Próximamente</span>
-        <h3>ALGORA Agenda</h3>
-        <p class="product-desc">Sistema de citas con recordatorios por WhatsApp y cobros automáticos por servicio.</p>
-        <div class="product-price">
-          <span class="starting">Desde</span>
-          <span class="currency">$</span><span class="amount">399</span> <span class="currency">MXN</span>
-          <span class="period">/ mes</span>
-        </div>
-        <ul class="product-features">
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Agenda en línea 24/7</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Recordatorios WhatsApp</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Cobro por servicio</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Historial de clientes</li>
-        </ul>
-        <a href="https://wa.me/5212941114401?text=Hola%2C%20me%20interesa%20ALGORA%20Agenda" class="product-btn product-btn-secondary">Lista de espera</a>
-      </div>
-
-      <div class="product-card" style="transition-delay: 0.3s;">
-        <span class="product-badge badge-soon">Próximamente</span>
-        <h3>ALGORA RES</h3>
-        <p class="product-desc">Sistema completo para restaurantes: mesas, comandas a cocina, inventario y facturación.</p>
-        <div class="product-price">
-          <span class="starting">Desde</span>
-          <span class="currency">$</span><span class="amount">999</span> <span class="currency">MXN</span>
-          <span class="period">/ mes</span>
-        </div>
-        <ul class="product-features">
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Gestión de mesas y zonas</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Comandas a cocina en tiempo real</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Control de inventario y recetas</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Facturación y reportes</li>
-        </ul>
-        <a href="https://wa.me/5212941114401?text=Hola%2C%20me%20interesa%20ALGORA%20RES" class="product-btn product-btn-secondary">Lista de espera</a>
-      </div>
-
+    <div class="plan reveal">
+      <div class="pname">Tienda en línea</div>
+      <div class="price">$299<small>/mes</small></div>
+      <div class="pyear">Súmalo a tu POS</div>
+      <div class="pdesc">Tu página para vender por internet con tu marca, dominio, pagos y envíos.</div>
+      <a href="#" class="btn btn-sec">Agregar</a>
     </div>
-
-    <!-- Bundles -->
-    <div class="bundles-header">
-      <h3>Paquetes con descuento</h3>
-      <p>Combina herramientas y ahorra. Ideal para negocios que necesitan más de un servicio.</p>
+    <div class="plan reveal">
+      <div class="pname">Agenda de citas</div>
+      <div class="price">$299<small>/mes</small></div>
+      <div class="pyear">Súmalo a tu POS</div>
+      <div class="pdesc">Reservas en línea con anticipo y recordatorios. Para negocios de servicio.</div>
+      <a href="#" class="btn btn-sec">Agregar</a>
     </div>
-
-    <div class="bundles-grid">
-
-      <div class="bundle-card featured" style="transition-delay: 0s;">
-        <p class="bundle-name">Paquete Starter</p>
-        <h3>Web + POS</h3>
-        <div class="bundle-price">
-          <span class="currency">$</span><span class="amount">4,500</span> <span class="currency">MXN</span>
-          <span class="period">elaboración + $999/mes</span>
-        </div>
-        <p class="bundle-savings">Anualidad: $14,499 | Ahorras vs. individual</p>
-        <ul class="bundle-includes">
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Página web completa</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Punto de venta con descuento</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Soporte prioritario</li>
-        </ul>
-        <a href="https://wa.me/5212941114401?text=Hola%2C%20me%20interesa%20el%20Paquete%20Starter" class="product-btn product-btn-secondary">Cotizar paquete</a>
-      </div>
-
-      <div class="bundle-card" style="transition-delay: 0.15s;">
-        <p class="bundle-name">Paquete Negocio</p>
-        <h3>Web + POS + Agenda</h3>
-        <div class="bundle-price">
-          <span class="currency">$</span><span class="amount">4,500</span> <span class="currency">MXN</span>
-          <span class="period">elaboración + $1,299/mes</span>
-        </div>
-        <p class="bundle-savings">Ahorras vs. contratar individual</p>
-        <ul class="bundle-includes">
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Todo del Starter</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Agenda con recordatorios</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Configuración personalizada</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Soporte prioritario 24/7</li>
-        </ul>
-        <a href="https://wa.me/5212941114401?text=Hola%2C%20me%20interesa%20el%20Paquete%20Negocio" class="product-btn product-btn-primary">Cotizar paquete</a>
-      </div>
-
-      <div class="bundle-card" style="transition-delay: 0.3s;">
-        <p class="bundle-name">Paquete Total</p>
-        <h3>Web + POS + Agenda + RES</h3>
-        <div class="bundle-price">
-          <span class="currency">$</span><span class="amount">4,500</span> <span class="currency">MXN</span>
-          <span class="period">elaboración + $1,799/mes</span>
-        </div>
-        <p class="bundle-savings">Máximo ahorro vs. individual</p>
-        <ul class="bundle-includes">
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Todo del Negocio</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Sistema de restaurante completo</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Facturación electrónica</li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Gerente de cuenta dedicado</li>
-        </ul>
-        <a href="https://wa.me/5212941114401?text=Hola%2C%20me%20interesa%20el%20Paquete%20Total" class="product-btn product-btn-secondary">Cotizar paquete</a>
-      </div>
-
+    <div class="plan feat-plan reveal">
+      <div class="badge">El más completo</div>
+      <div class="pname">Todo ALGORA</div>
+      <div class="price">$999<small>/mes</small></div>
+      <div class="pyear">o $10,499 al año · ahorras 2 meses</div>
+      <div class="pdesc">Punto de venta + tienda + agenda. Todos los módulos, sin límites. La plataforma completa.</div>
+      <a href="#" class="btn btn-pri">Empezar ahora</a>
     </div>
-  </section>
+  </div>
+  <p class="pnote">Todos los planes incluyen facturación CFDI, finanzas, soporte y actualizaciones. Dominio propio y terminal de cobro disponibles. Sin contratos forzosos.</p>
+</div></section>
 
-  <div class="divider"><div class="divider-line"></div></div>
+<section class="pad" id="giros"><div class="wrap">
+  <div class="head reveal"><h2>Hecho para tu giro</h2><p>Desde la tiendita de la esquina hasta el negocio con varias sucursales.</p></div>
+  <div class="giros reveal">
+    <span>Abarrotes y minisúper</span><span>Ropa y boutiques</span><span>Restaurantes y cafés</span>
+    <span>Estéticas y barberías</span><span>Refaccionarias</span><span>Farmacias</span>
+    <span>Papelerías</span><span>Talleres y servicios</span><span>Ferreterías</span>
+    <span>Dulcerías</span><span>Spa y bienestar</span><span>Cualquier negocio</span>
+  </div>
+</div></section>
 
-  <!-- CTA -->
-  <section class="cta-section" id="contacto">
-    <h2>¿Listo para dar<br>el siguiente paso?</h2>
-    <p>Escríbenos y te ayudamos a elegir la herramienta perfecta para tu negocio.</p>
-    <div class="cta-buttons">
-      <a href="https://wa.me/5212941114401?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20ALGORA" class="btn-primary">
-        WhatsApp
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
-      </a>
-      <a href="mailto:ventas.cliente@algora.com.mx" class="btn-secondary">
-        Email
-      </a>
-    </div>
-  </section>
+<section class="cta"><div class="wrap reveal">
+  <h2>Ningún negocio se queda atrás por falta de tecnología.</h2>
+  <p>Empieza gratis hoy. Sin tarjeta, sin instalaciones complicadas, con soporte que sí contesta.</p>
+  <a href="#" class="btn btn-pri" style="height:54px;padding:0 34px;font-size:16px">Crear mi cuenta gratis</a>
+</div></section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-left">
-      <svg viewBox="0 0 520 100" xmlns="http://www.w3.org/2000/svg">
-        <g transform="translate(22, 10)">
-          <path d="M28,0 L0,76 L15,76 Z" fill="#737373"/>
-          <path d="M28,0 L56,76 L41,76 Z" fill="#737373"/>
-          <circle cx="28" cy="46" r="5.5" fill="#737373"/>
-        </g>
-        <text x="90" y="76" font-size="52" font-weight="800" letter-spacing="8" fill="#737373" font-family="Inter, sans-serif">LGORA</text>
-      </svg>
-      <span>© 2026</span>
-    </div>
-    <div class="footer-right">
-      Desde México para el mundo
-    </div>
-  </footer>
+<footer><div class="wrap foot">
+  <div>
+    <div style="margin-bottom:14px"><img class="logo-img lg" src="ALGORA_Logo_blanco.png" alt="ALGORA"></div>
+    <p class="mission">Detrás de cada negocio hay una persona que lo apostó todo. Nosotros apostamos por ella. Existimos para cerrar la brecha tecnológica.</p>
+  </div>
+  <div style="text-align:right">
+    <p class="legal">ventas.cliente@algora.com.mx</p>
+    <p class="legal">WhatsApp +52 294 111 4401</p>
+    <p class="legal" style="margin-top:10px">© 2026 ALGORA · Marca registrada IMPI · Hecho en México</p>
+  </div>
+</div></footer>
 
-  <!-- JS -->
-  <script>
-    // Intersection Observer for reveal animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+<a class="wpp" href="https://wa.me/522941114401?text=Hola%2C%20quiero%20información%20de%20ALGORA" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
-    // Observe all animated elements
-    document.querySelectorAll('.section-label, .section-title, .section-subtitle, .service-card, .product-card, .bundle-card, .bundles-header h3, .bundles-header p, .divider-line, .cta-section').forEach(el => {
-      observer.observe(el);
-    });
-
-    // Card cursor-follow glow
-    document.querySelectorAll('.service-card').forEach(card => {
-      card.addEventListener('mousemove', (e) => {
-        const glow = card.querySelector('.card-glow');
-        if (glow) {
-          const rect = card.getBoundingClientRect();
-          glow.style.left = (e.clientX - rect.left) + 'px';
-          glow.style.top = (e.clientY - rect.top) + 'px';
-        }
-      });
-    });
-
-    // Parallax hero on scroll
-    const hero = document.querySelector('.hero');
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
-      if (hero && scrolled < window.innerHeight) {
-        hero.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
-        hero.style.opacity = 1 - (scrolled / window.innerHeight) * 0.5;
-      }
-    }, { passive: true });
-  </script>
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*0.06)+'s';io.observe(el)});
+</script>
 </body>
 </html>

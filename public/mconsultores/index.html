@@ -1,0 +1,1989 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M Consultores — Planeación, Monitoreo y Seguridad</title>
+  <meta name="description" content="Soluciones integrales para el sector público y privado en tecnología, seguridad y consultoría. 25+ años de experiencia. Puebla, México.">
+  <meta name="keywords" content="M Consultores, consultoría, tecnología, seguridad, CCTV, infraestructura, Puebla, monitoreo, planeación, obra pública">
+  <meta name="author" content="M Consultores">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="M Consultores — Planeación, Monitoreo y Seguridad">
+  <meta property="og:description" content="Soluciones integrales en tecnología, seguridad y consultoría. 25+ años de experiencia.">
+  <meta property="og:locale" content="es_MX">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #18486B;
+      --navy-dark: #0f2f47;
+      --navy-light: #1e5a85;
+      --teal: #1A9E97;
+      --teal-dark: #148a84;
+      --teal-light: #22b8b0;
+      --white: #ffffff;
+      --gray-50: #f8fafb;
+      --gray-100: #f0f4f6;
+      --gray-200: #dce4e8;
+      --gray-300: #b8c6ce;
+      --gray-400: #8a9ba6;
+      --gray-500: #5f7380;
+      --gray-600: #3d4f5a;
+      --gray-700: #2a3842;
+      --gray-800: #1a2530;
+      --gray-900: #0d1419;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+      --shadow-xl: 0 16px 48px rgba(0,0,0,0.16);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--white);
+      color: var(--gray-800);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ========== NAVBAR ========== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
+    }
+    .navbar.scrolled {
+      box-shadow: var(--shadow-md);
+    }
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--navy);
+    }
+    .nav-logo img { height: 42px; width: auto; }
+    .nav-logo-text {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .nav-logo-text span { color: var(--teal); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--gray-600);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a:hover { color: var(--teal); }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--teal);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-cta {
+      background: var(--teal) !important;
+      color: var(--white) !important;
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-weight: 600 !important;
+      transition: all 0.3s !important;
+    }
+    .nav-cta:hover {
+      background: var(--teal-dark) !important;
+      transform: translateY(-1px);
+    }
+    .nav-cta::after { display: none !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--navy);
+      transition: all 0.3s;
+      border-radius: 2px;
+    }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ========== HERO ========== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 72px;
+    }
+    .hero-video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 36, 54, 0.65);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      background: linear-gradient(to top, var(--white), transparent);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .hero-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 3;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero-content { color: var(--white); }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(26,158,151,0.2);
+      border: 1px solid rgba(26,158,151,0.4);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      color: var(--teal-light);
+      margin-bottom: 24px;
+      font-weight: 500;
+      backdrop-filter: blur(8px);
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -0.03em;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .hero h1 span { color: var(--teal-light); }
+    .hero p {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 500px;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+    .btn-primary {
+      background: var(--teal);
+      color: var(--white);
+    }
+    .btn-primary:hover {
+      background: var(--teal-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(26,158,151,0.35);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .btn-outline:hover {
+      border-color: var(--white);
+      background: rgba(255,255,255,0.1);
+    }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      justify-content: center;
+    }
+    .hero-stat h3 {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--teal-light);
+    }
+    .hero-stat p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 0;
+    }
+
+    /* ========== SECTIONS COMMON ========== */
+    section { padding: 100px 0; }
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--teal);
+      margin-bottom: 16px;
+    }
+    .section-label::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--teal);
+      border-radius: 2px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--gray-500);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+    .section-header {
+      margin-bottom: 60px;
+    }
+    .section-header.center {
+      text-align: center;
+    }
+    .section-header.center .section-subtitle {
+      margin: 0 auto;
+    }
+
+    /* ========== ABOUT ========== */
+    .about { background: var(--gray-50); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .about-feature {
+      padding: 24px;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+    }
+    .about-feature:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .about-feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+    .about-feature-icon.ti {
+      background: rgba(26,158,151,0.1);
+      color: var(--teal);
+    }
+    .about-feature-icon.consult {
+      background: rgba(24,72,107,0.1);
+      color: var(--navy);
+    }
+    .about-feature h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .about-feature p {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      line-height: 1.5;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--gray-200);
+    }
+    .about-card-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    .about-card-logo {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--navy), var(--teal));
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.4rem;
+      font-weight: 800;
+    }
+    .about-card-info h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .about-card-info p {
+      font-size: 0.8rem;
+      color: var(--gray-400);
+    }
+    .about-card-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .about-stat {
+      text-align: center;
+      padding: 20px 12px;
+      background: var(--gray-50);
+      border-radius: var(--radius-sm);
+    }
+    .about-stat h4 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--teal);
+    }
+    .about-stat p {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      margin-top: 4px;
+    }
+
+    /* ========== SERVICES ========== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--teal), var(--navy));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .service-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .service-card:hover::before { opacity: 1; }
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+    .service-icon.teal {
+      background: rgba(26,158,151,0.1);
+      color: var(--teal);
+    }
+    .service-icon.navy {
+      background: rgba(24,72,107,0.1);
+      color: var(--navy);
+    }
+    .service-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+    .service-card ul {
+      list-style: none;
+      margin-top: 16px;
+    }
+    .service-card li {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+    }
+    .service-card li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      transform: translateY(-50%);
+    }
+    .services-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .services-tab {
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid var(--gray-200);
+      background: var(--white);
+      color: var(--gray-500);
+      transition: all 0.3s;
+      font-family: inherit;
+    }
+    .services-tab.active, .services-tab:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+      background: rgba(26,158,151,0.05);
+    }
+
+    /* ========== PORTFOLIO ========== */
+    .portfolio { background: var(--gray-50); }
+    .portfolio-filters {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid var(--gray-200);
+      background: var(--white);
+      color: var(--gray-500);
+      transition: all 0.3s;
+      font-family: inherit;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      border-color: var(--teal);
+      color: var(--white);
+      background: var(--teal);
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+    }
+    .project-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+    }
+    .project-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    /* Carousel controls */
+    .portfolio-carousel-wrap {
+      position: relative;
+    }
+    .carousel-nav {
+      display: none;
+    }
+    .carousel-dots {
+      display: none;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 24px;
+    }
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gray-300);
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .carousel-dot.active {
+      background: var(--teal);
+      width: 24px;
+      border-radius: 4px;
+    }
+    .carousel-arrow {
+      display: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      background: var(--white);
+      box-shadow: var(--shadow-md);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      color: var(--navy);
+      font-size: 1.1rem;
+      transition: all 0.2s;
+    }
+    .carousel-arrow:hover {
+      background: var(--teal);
+      color: var(--white);
+    }
+    .carousel-arrow.left { left: -8px; }
+    .carousel-arrow.right { right: -8px; }
+    .scroll-hint {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: var(--gray-400);
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 16px;
+      animation: swipeHint 2s ease-in-out infinite;
+    }
+    @keyframes swipeHint {
+      0%, 100% { opacity: 0.6; transform: translateX(0); }
+      50% { opacity: 1; transform: translateX(8px); }
+    }
+    .project-img {
+      width: 100%;
+      height: 220px;
+      background: linear-gradient(135deg, var(--navy), var(--teal));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .project-img .placeholder-icon {
+      font-size: 3rem;
+      opacity: 0.3;
+      color: var(--white);
+    }
+    .project-category {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      padding: 6px 14px;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(8px);
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .project-body {
+      padding: 24px;
+    }
+    .project-body h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .project-body p {
+      font-size: 0.88rem;
+      color: var(--gray-500);
+      line-height: 1.6;
+    }
+
+    /* ========== CLIENTS ========== */
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 16px;
+    }
+    .client-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 20px 24px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      transition: all 0.3s;
+    }
+    .client-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--teal);
+    }
+    .client-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .client-icon.gov { background: rgba(24,72,107,0.1); color: var(--navy); }
+    .client-icon.priv { background: rgba(26,158,151,0.1); color: var(--teal); }
+    .client-info h4 {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+    .client-info span {
+      font-size: 0.75rem;
+      color: var(--gray-400);
+      font-weight: 500;
+    }
+
+    /* ========== WHY US ========== */
+    .why-us { background: linear-gradient(135deg, var(--navy-dark), var(--navy)); color: var(--white); }
+    .why-us .section-label { color: var(--teal-light); }
+    .why-us .section-label::before { background: var(--teal-light); }
+    .why-us .section-title { color: var(--white); }
+    .why-us .section-subtitle { color: rgba(255,255,255,0.65); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+    }
+    .why-card {
+      padding: 32px 24px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      transition: all 0.3s;
+    }
+    .why-card:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-2px);
+    }
+    .why-card-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    .why-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .why-card p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+    }
+
+    /* ========== CONTACT ========== */
+    .contact { background: var(--gray-50); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .contact-item-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      background: rgba(26,158,151,0.1);
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .contact-item h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .contact-item p, .contact-item a {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      text-decoration: none;
+      line-height: 1.5;
+    }
+    .contact-item a:hover { color: var(--teal); }
+    .contact-form {
+      background: var(--white);
+      padding: 36px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-family: inherit;
+      background: var(--white);
+      color: var(--gray-800);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      border-color: var(--teal);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--teal);
+      color: var(--white);
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.3s;
+    }
+    .btn-submit:hover { background: var(--teal-dark); }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      background: var(--gray-900);
+      color: rgba(255,255,255,0.6);
+      padding: 48px 0 24px;
+    }
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-weight: 700;
+    }
+    .footer-logo span { color: var(--teal); }
+    .footer p { font-size: 0.85rem; }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--teal-light); }
+    .footer-bottom {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    .footer-bottom a {
+      color: var(--teal-light);
+      text-decoration: none;
+    }
+
+    /* ========== ADMIN PANEL ========== */
+    .admin-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
+    }
+    .admin-overlay.active { display: flex; }
+    .admin-panel {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      width: 90%;
+      max-width: 700px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 40px;
+      position: relative;
+    }
+    .admin-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: none;
+      background: var(--gray-100);
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .admin-close:hover { background: var(--gray-200); }
+    .admin-panel h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .admin-panel > p {
+      color: var(--gray-500);
+      font-size: 0.9rem;
+      margin-bottom: 28px;
+    }
+    .login-form { max-width: 360px; margin: 0 auto; }
+    .login-form h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .admin-projects-list {
+      margin-bottom: 24px;
+    }
+    .admin-project-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      margin-bottom: 8px;
+    }
+    .admin-project-item img {
+      width: 60px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .admin-project-item .thumb-placeholder {
+      width: 60px;
+      height: 40px;
+      background: var(--gray-200);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      color: var(--gray-400);
+    }
+    .admin-project-item .info {
+      flex: 1;
+    }
+    .admin-project-item .info h5 {
+      font-size: 0.85rem;
+      color: var(--navy);
+      font-weight: 600;
+    }
+    .admin-project-item .info span {
+      font-size: 0.75rem;
+      color: var(--gray-400);
+    }
+    .admin-project-item .delete-btn {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(220,53,69,0.1);
+      color: #dc3545;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .admin-project-item .delete-btn:hover {
+      background: #dc3545;
+      color: var(--white);
+    }
+    .img-preview {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      margin-top: 8px;
+      display: none;
+    }
+    .admin-divider {
+      border: none;
+      border-top: 1px solid var(--gray-200);
+      margin: 24px 0;
+    }
+    #adminError {
+      color: #dc3545;
+      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 8px;
+      display: none;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 968px) {
+      .hero-grid { text-align: center; }
+      .hero p { margin: 0 auto 36px; }
+      .hero-buttons { justify-content: center; }
+      .hero-stats { gap: 20px; flex-wrap: wrap; }
+      .hero-stats { justify-content: center; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-visual { order: -1; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        flex-direction: column;
+        padding: 24px;
+        gap: 16px;
+        border-bottom: 1px solid var(--gray-200);
+        box-shadow: var(--shadow-lg);
+      }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+      section { padding: 64px 0; }
+      .hero { min-height: auto; padding: 120px 0 80px; }
+      .hero-stats { flex-direction: column; gap: 20px; align-items: center; }
+      .about-features { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; text-align: center; }
+      .admin-panel { padding: 24px; width: 95%; }
+
+      /* ===== PORTFOLIO CARRUSEL MÓVIL ===== */
+      .portfolio-filters {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .portfolio-filters::-webkit-scrollbar { display: none; }
+      .filter-btn { white-space: nowrap; flex-shrink: 0; }
+      .scroll-hint { display: flex; }
+      .portfolio-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 16px;
+        padding-bottom: 8px;
+        scrollbar-width: none;
+        scroll-padding: 0 24px;
+      }
+      .portfolio-grid::-webkit-scrollbar { display: none; }
+      .project-card {
+        flex: 0 0 85vw;
+        max-width: 340px;
+        scroll-snap-align: center;
+      }
+      .project-img { height: 200px; }
+      .carousel-dots { display: flex; }
+      .carousel-arrow { display: flex; }
+    }
+
+    /* ========== ANIMATIONS ========== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#inicio" class="nav-logo">
+        <img src="logo.png" alt="M Consultores Logo">
+        <img src="escudo.jpeg" alt="Razón Social" style="height:42px;width:auto;">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" disablepictureinpicture>
+      <source src="video-hero.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
+            25+ años de experiencia
+          </div>
+          <h1>Soluciones integrales en <span>tecnología y consultoría</span></h1>
+          <p>Combinamos infraestructura tecnológica de vanguardia con análisis estratégico y social para el sector público y privado.</p>
+          <div class="hero-buttons">
+            <a href="#portafolio" class="btn btn-primary">Ver portafolio</a>
+            <a href="#contacto" class="btn btn-outline">Contáctenos</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <h3>25+</h3>
+              <p>Años de experiencia</p>
+            </div>
+            <div class="hero-stat">
+              <h3>100+</h3>
+              <p>Proyectos realizados</p>
+            </div>
+            <div class="hero-stat">
+              <h3>10+</h3>
+              <p>Estados de México</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="fade-up">
+          <div class="section-label">Quiénes somos</div>
+          <h2 class="section-title">Una empresa.<br>Dos grandes capacidades.</h2>
+          <p class="section-subtitle">Somos un grupo de profesionales con más de 25 años de experiencia en Tecnologías de la Información y Consultoría. Brindamos soluciones integrales a clientes del sector privado y gubernamental.</p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon ti">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <h4>Tecnologías de la Información</h4>
+              <p>Infraestructura, desarrollo, seguridad y servicios administrados.</p>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon consult">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17l-5-5-4 4-3-3"/></svg>
+              </div>
+              <h4>Consultoría y Planeación</h4>
+              <p>Estudios sociales, estadística, mercado, electoral y obra pública.</p>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon ti">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h4>Seguridad Integral</h4>
+              <p>CCTV, control de acceso, reconocimiento facial y monitoreo 24/7.</p>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon consult">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <h4>Presencia Nacional</h4>
+              <p>Proyectos en Puebla, Querétaro, CDMX, Veracruz, Tamaulipas y mas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual fade-up">
+          <div class="about-card">
+            <div class="about-card-header">
+              <img src="logo.png" alt="M Consultores" style="width:56px;height:56px;border-radius:8px;object-fit:contain;">
+              <div class="about-card-info">
+                <h3>M Consultores</h3>
+                <p>Puebla, México</p>
+              </div>
+            </div>
+            <div class="about-card-stats">
+              <div class="about-stat">
+                <h4>25+</h4>
+                <p>Años</p>
+              </div>
+              <div class="about-stat">
+                <h4>2</h4>
+                <p>Divisiones</p>
+              </div>
+              <div class="about-stat">
+                <h4>10+</h4>
+                <p>Estados</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="section-header center fade-up">
+        <div class="section-label">Nuestros servicios</div>
+        <h2 class="section-title">Soluciones completas para su proyecto</h2>
+        <p class="section-subtitle">Desde cableado estructurado hasta estudios socioeconómicos, cubrimos todas las necesidades de su organización.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-up">
+          <div class="service-icon teal">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Infraestructura y Redes</h3>
+          <p>Diseño e instalación de infraestructura de telecomunicaciones de ultima generación.</p>
+          <ul>
+            <li>Cableado estructurado voz, datos, video y energía</li>
+            <li>Fibra óptica planta interna y externa</li>
+            <li>Certificados Panduit y Belden</li>
+            <li>Respaldos de energía: diesel, gas, eólica, solar</li>
+          </ul>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon teal">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+          </div>
+          <h3>Desarrollo Tecnológico</h3>
+          <p>Plataformas digitales y aplicaciónes a medida para su operación.</p>
+          <ul>
+            <li>Plataformas digitales y aplicaciónes a medida</li>
+            <li>Sistemas de Información Gerencial (tableros)</li>
+            <li>Sistemas Financieros, RH y Activo Fijo</li>
+            <li>Sistemas de georreferencia y GPS</li>
+          </ul>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon navy">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+          </div>
+          <h3>Monitoreo y Seguridad (CCTV)</h3>
+          <p>Sistemas de videovigilancia y detección inteligente para cualquier escala.</p>
+          <ul>
+            <li>Video IP y CCTV: UNV, Hikvision, Axis, Dahua</li>
+            <li>Detección de objetos, intrusos, reconocimiento facial</li>
+            <li>Video vigilancia vehicular y flotillas (MDVR)</li>
+            <li>Centros de monitoreo C2, C4, C5</li>
+          </ul>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon navy">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Controles de Acceso</h3>
+          <p>Sistemas de acceso biométrico, vehicular y de seguridad perimetral.</p>
+          <ul>
+            <li>Torniquetes, esclusas, detectores de metales</li>
+            <li>Reconocimiento facial y biométrico</li>
+            <li>Accesos vehiculares y reconocimiento de placas</li>
+            <li>Instalaciones bancarias y bodegas de valores</li>
+          </ul>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon teal">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M18 17l-5-5-4 4-3-3"/></svg>
+          </div>
+          <h3>Consultoría y Análisis</h3>
+          <p>Estudios socioeconómicos, factibilidad de proyectos y análisis de mercado.</p>
+          <ul>
+            <li>Estudios socioeconómicos y análisis de rentabilidad</li>
+            <li>Factibilidad de proyectos y mapeos de mercado</li>
+            <li>Encuestas de opinión pública</li>
+            <li>Estudios político-electorales</li>
+          </ul>
+        </div>
+        <div class="service-card fade-up">
+          <div class="service-icon navy">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3>Obra Pública y Proyectos</h3>
+          <p>Planeación integral de obra gubernamental y gestión de permisos.</p>
+          <ul>
+            <li>Cartera de obras: caminos, imagen urbana, turismo</li>
+            <li>Expedientes de obra: costo-beneficio, impacto ambiental</li>
+            <li>Auditorios, planetarios, puentes, complejos</li>
+            <li>Gestión de permisos ante autoridades</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portafolio">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-label">Portafolio</div>
+        <h2 class="section-title">Proyectos destacados</h2>
+        <p class="section-subtitle">Conoce algunos de los proyectos más importantes que hemos realizado a lo largo de nuestra trayectoria.</p>
+      </div>
+      <div class="portfolio-filters fade-up">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="infraestructura">Infraestructura</button>
+        <button class="filter-btn" data-filter="tecnología">Tecnología</button>
+        <button class="filter-btn" data-filter="consultoría">Consultoría</button>
+        <button class="filter-btn" data-filter="seguridad">Seguridad</button>
+      </div>
+      <div class="scroll-hint" id="scrollHint">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Desliza para ver más proyectos
+      </div>
+      <div class="portfolio-carousel-wrap">
+        <button class="carousel-arrow left" id="carouselLeft" onclick="scrollCarousel(-1)">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="portfolio-grid" id="portfolioGrid">
+          <!-- Projects loaded by JS -->
+        </div>
+        <button class="carousel-arrow right" id="carouselRight" onclick="scrollCarousel(1)">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </div>
+  </section>
+
+  <!-- CLIENTS -->
+  <section class="clients" id="clientes">
+    <div class="container">
+      <div class="section-header center fade-up">
+        <div class="section-label">Clientes destacados</div>
+        <h2 class="section-title">Confianza del sector público y privado</h2>
+        <p class="section-subtitle">Hemos trabajado con las instituciones y empresas más importantes de México.</p>
+      </div>
+      <div class="clients-grid fade-up">
+        <div class="client-card"><div class="client-icon gov"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M12 3l9 7H3l9-7z"/><path d="M5 10v11M9 10v11M15 10v11M19 10v11"/></svg></div><div class="client-info"><h4>Gobierno del Estado de Puebla</h4><span>Gobierno Estatal</span></div></div>
+        <div class="client-card"><div class="client-icon gov"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M12 3l9 7H3l9-7z"/><path d="M5 10v11M9 10v11M15 10v11M19 10v11"/></svg></div><div class="client-info"><h4>Gobierno de Querétaro</h4><span>Gobierno Estatal</span></div></div>
+        <div class="client-card"><div class="client-icon gov"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M12 3l9 7H3l9-7z"/><path d="M5 10v11M9 10v11M15 10v11M19 10v11"/></svg></div><div class="client-info"><h4>SCT (Comunicaciónes y Transportes)</h4><span>Gobierno Federal</span></div></div>
+        <div class="client-card"><div class="client-icon gov"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M12 3l9 7H3l9-7z"/><path d="M5 10v11M9 10v11M15 10v11M19 10v11"/></svg></div><div class="client-info"><h4>Congreso de la Unión</h4><span>Gobierno Federal</span></div></div>
+        <div class="client-card"><div class="client-icon gov"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M12 3l9 7H3l9-7z"/><path d="M5 10v11M9 10v11M15 10v11M19 10v11"/></svg></div><div class="client-info"><h4>Secretaría del Medio Ambiente CDMX</h4><span>Gobierno Ciudad de México</span></div></div>
+        <div class="client-card"><div class="client-icon gov"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M12 3l9 7H3l9-7z"/><path d="M5 10v11M9 10v11M15 10v11M19 10v11"/></svg></div><div class="client-info"><h4>Fiscalía General de Querétaro</h4><span>Gobierno Estatal</span></div></div>
+        <div class="client-card"><div class="client-icon gov"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M12 3l9 7H3l9-7z"/><path d="M5 10v11M9 10v11M15 10v11M19 10v11"/></svg></div><div class="client-info"><h4>SEP (Educación Pública)</h4><span>Gobierno Federal</span></div></div>
+        <div class="client-card"><div class="client-icon gov"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M12 3l9 7H3l9-7z"/><path d="M5 10v11M9 10v11M15 10v11M19 10v11"/></svg></div><div class="client-info"><h4>Ciudad Incluyente — Municipio de Puebla</h4><span>Municipio</span></div></div>
+        <div class="client-card"><div class="client-icon priv"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg></div><div class="client-info"><h4>AICM (Aeropuerto Internacional CDMX)</h4><span>Infraestructura</span></div></div>
+        <div class="client-card"><div class="client-icon priv"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg></div><div class="client-info"><h4>Nacional Financiera (NAFIN)</h4><span>Banca de Desarrollo</span></div></div>
+        <div class="client-card"><div class="client-icon priv"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg></div><div class="client-info"><h4>Hotel Hilton Tru, San Andrés Cholula</h4><span>Hoteleria</span></div></div>
+        <div class="client-card"><div class="client-icon priv"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg></div><div class="client-info"><h4>Bimbo — Cedis Atlixco</h4><span>Industria Alimentaria</span></div></div>
+        <div class="client-card"><div class="client-icon priv"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg></div><div class="client-info"><h4>Federación Mexicana de Fútbol</h4><span>Deporte / Entretenimiento</span></div></div>
+        <div class="client-card"><div class="client-icon priv"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg></div><div class="client-info"><h4>Val'Quirico</h4><span>Turismo / Residencial</span></div></div>
+        <div class="client-card"><div class="client-icon priv"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg></div><div class="client-info"><h4>Maquinsa (Nonwoven Innovation)</h4><span>Industria</span></div></div>
+        <div class="client-card"><div class="client-icon gov"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M12 3l9 7H3l9-7z"/><path d="M5 10v11M9 10v11M15 10v11M19 10v11"/></svg></div><div class="client-info"><h4>CETES Directo / Loteria Nacional / SAT / ISSSTE</h4><span>Gobierno Federal</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-us">
+    <div class="container">
+      <div class="section-header center fade-up">
+        <div class="section-label">Por que elegirnos</div>
+        <h2 class="section-title">Por que M Consultores?</h2>
+        <p class="section-subtitle">Somos su aliado estratégico con soluciones probadas en el sector público y privado.</p>
+      </div>
+      <div class="why-grid fade-up">
+        <div class="why-card">
+          <div class="why-card-icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 15l-2-2m0 0l2-2m-2 2h12M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"/></svg>
+          </div>
+          <h4>25+ años de trayectoria</h4>
+          <p>Presencia en sector gobierno y privado a nivel nacional.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13.828 10.172a4 4 0 0 0-5.656 0l-4 4a4 4 0 1 0 5.656 5.656l1.102-1.101"/><path d="M10.172 13.828a4 4 0 0 0 5.656 0l4-4a4 4 0 0 0-5.656-5.656l-1.102 1.101"/></svg>
+          </div>
+          <h4>Solución integral</h4>
+          <p>TI + Seguridad + Consultoría bajo un solo proveedor.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h4>Equipo certificado</h4>
+          <p>Panduit, Belden y especialistas en estadística y planeación.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </div>
+          <h4>Tecnología propia</h4>
+          <p>Plataformas GPS "Traccar" y sistemas a medida.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-card-icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h4>Doble sector</h4>
+          <p>Experiencia sólida con clientes públicos y privados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-label">Contacto</div>
+        <h2 class="section-title">Estamos listos para atender su proyecto</h2>
+        <p class="section-subtitle">Contáctenos para una consulta gratuita o cotización de su proyecto.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="fade-up">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:Manolo@arguelles.net">Manolo@arguelles.net</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h4>Teléfono</h4>
+              <a href="tel:+522229512384">Oficina: 222 951 2384</a><br>
+              <a href="tel:+5255545135780">Celular: 55 5451 3580</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Dirección</h4>
+              <p>Calle UC II No. 20, Villas de los Ángeles<br>San Andrés Cholula, Puebla C.P. 72825</p>
+              <a href="https://maps.app.goo.gl/gj9tbvcyJKNSDmQT6" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;margin-top:8px;color:var(--teal);font-weight:600;font-size:0.85rem;">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Ver en Google Maps
+              </a>
+            </div>
+          </div>
+          <div style="margin-top:12px;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);">
+            <iframe src="https://www.google.com/maps?q=Calle+UC+II+No.+20+Villas+de+los+Ángeles+San+Andrés+Cholula+Puebla+72825&output=embed" width="100%" height="260" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <div class="contact-form fade-up">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nombre</label>
+              <input type="text" placeholder="Su nombre" id="contactName">
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="correo@ejemplo.com" id="contactEmail">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Asunto</label>
+            <select id="contactSubject">
+              <option value="">Seleccione un tema</option>
+              <option>Infraestructura y Redes</option>
+              <option>Videovigilancia / CCTV</option>
+              <option>Desarrollo Tecnológico</option>
+              <option>Consultoría y Planeación</option>
+              <option>Obra Pública</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Mensaje</label>
+            <textarea placeholder="Cuéntenos sobre su proyecto..." id="contactMessage"></textarea>
+          </div>
+          <button class="btn-submit" onclick="sendContact()">Enviar mensaje</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo" style="gap:12px;">
+          <img src="logo.png" alt="M Consultores" style="height:36px;width:auto;">
+          <img src="escudo.jpeg" alt="Razón Social" style="height:36px;width:auto;opacity:0.8;">
+        </div>
+        <ul class="footer-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#" onclick="openAdmin(); return false;">Admin</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 M Consultores. Todos los derechos reservados. Desarrollado por <a href="https://www.algora.com.mx" target="_blank">ALGORA</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ADMIN OVERLAY -->
+  <div class="admin-overlay" id="adminOverlay">
+    <div class="admin-panel">
+      <button class="admin-close" onclick="closeAdmin()">&times;</button>
+
+      <!-- Login view -->
+      <div id="adminLogin">
+        <div class="login-form">
+          <h3>Panel de Administración</h3>
+          <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" id="adminPassword" placeholder="Ingrese la contraseña" onkeydown="if(event.key==='Enter')attemptLogin()">
+          </div>
+          <button class="btn-submit" onclick="attemptLogin()">Ingresar</button>
+          <p id="adminError">Contraseña incorrecta</p>
+        </div>
+      </div>
+
+      <!-- Dashboard view -->
+      <div id="adminDashboard" style="display:none;">
+        <h2>Gestiónar Portafolio</h2>
+        <p>Agregue, edite o elimine proyectos de su portafolio.</p>
+
+        <div class="admin-projects-list" id="adminProjectsList"></div>
+
+        <hr class="admin-divider">
+
+        <h3 style="font-size:1.1rem; font-weight:700; color:var(--navy); margin-bottom:16px;">Agregar nuevo proyecto</h3>
+        <div class="form-group">
+          <label>Título del proyecto</label>
+          <input type="text" id="projectTitle" placeholder="Ej: Centro de Monitoreo C4">
+        </div>
+        <div class="form-group">
+          <label>Descripción</label>
+          <textarea id="projectDesc" placeholder="Describa brevemente el proyecto..."></textarea>
+        </div>
+        <div class="form-group">
+          <label>Categoría</label>
+          <select id="projectCategory">
+            <option value="infraestructura">Infraestructura</option>
+            <option value="tecnología">Tecnología</option>
+            <option value="seguridad">Seguridad</option>
+            <option value="consultoría">Consultoría</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Imagen del proyecto</label>
+          <input type="file" id="projectImage" accept="image/*" onchange="previewImage(this)">
+          <img class="img-preview" id="imgPreview">
+        </div>
+        <button class="btn-submit" onclick="addProject()">Agregar proyecto</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Supabase JS Client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+
+  <script>
+    // ========== SUPABASE CONFIG ==========
+    const SUPABASE_URL = 'https://rbtbjnjhclnwradgdlot.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJidGJqbmpoY2xud3JhZGdkbG90Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg2OTAwOTksImV4cCI6MjA5NDI2NjA5OX0.N5udDMbhA8y5OXTih5nNE-J33F1TQBNAq65khOQydb4';
+    const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    // ========== DEFAULT PROJECTS (siempre visibles) ==========
+    const defaultProjects = [
+      { id: 'default-1', title: 'Gobierno del Estado de Puebla — Edificio Semiconductores', description: 'Voz, datos, CCTV, detección de humo y contra incendio — Edificio Yankuilotl.', category: 'infraestructura', image_url: 'img/semiconductores.jpg' },
+      { id: 'default-2', title: 'Hotel Hilton Tru, San Andrés Cholula', description: 'Voz y datos, control de acceso, videovigilancia, sistema de audio y video.', category: 'infraestructura', image_url: 'img/hilton.jpg' },
+      { id: 'default-3', title: 'Metrobús Puebla — Línea 4 (Chachapa-FINSA)', description: 'Voz y datos, videovigilancia en terminales y encierros.', category: 'infraestructura', image_url: 'img/metrobus.jpg' },
+      { id: 'default-4', title: 'Complejo de Seguridad C4, Querétaro', description: 'Equipamiento integral del complejo de seguridad municipal.', category: 'seguridad', image_url: 'img/c4.jpg' },
+      { id: 'default-5', title: 'Fiscalía General del Estado de Querétaro', description: 'Unidad Especializada en Investigación de Homicidios — equipamiento tecnológico.', category: 'seguridad', image_url: 'img/fiscalia.jpg' },
+      { id: 'default-6', title: 'Congreso de la Unión — Edificio de Talleres Gráficos', description: 'Voz, datos, CCTV, detección de humo y contra incendio.', category: 'infraestructura', image_url: 'img/congreso.jpg' },
+      { id: 'default-7', title: 'Secretaría de Medio Ambiente CDMX', description: 'Equipamiento audiovisual del edificio Quinta Colorada (Bosque de Chapultepec).', category: 'infraestructura', image_url: 'img/chapultepec.jpg' },
+      { id: 'default-8', title: 'SAEOPB & SAEO Tlaxcala', description: 'Sistema de Administración de Expedientes de Obra Pública — Centro SCT Puebla y Tlaxcala.', category: 'tecnología', image_url: 'img/sct.jpg' },
+      { id: 'default-9', title: 'Presupuesto Participativo — Municipio de Puebla', description: 'Monitor, avance y aplicación móvil del programa.', category: 'tecnología', image_url: 'img/presupuesto.jpg' },
+      { id: 'default-10', title: 'Traccar — Rastreo vehicular y personal', description: 'Sistema propietario de rastreo GPS con geofencing y monitoreo 24/7.', category: 'tecnología', image_url: 'img/traccar.jpg' },
+      { id: 'default-11', title: 'Nueva Central Camionera del Sur, Puebla', description: 'Voz y datos, control de acceso y videovigilancia.', category: 'seguridad', image_url: 'img/camionera.jpg' },
+      { id: 'default-12', title: 'Cedis Bimbo, Atlixco, Puebla', description: 'Cableado estructurado (voz y datos).', category: 'infraestructura', image_url: 'img/bimbo.jpg' },
+      { id: 'default-13', title: 'Centro Penitenciario', description: 'Equipamiento de seguridad y videovigilancia para centro penitenciario.', category: 'seguridad', image_url: 'img/penitenciaria.jpg' },
+    ];
+
+    // ========== ADMIN CONFIG ==========
+    const ADMIN_PASS = 'mconsultores2025';
+    let dbProjects = [];
+    let currentFilter = 'all';
+
+    // ========== SUPABASE DATA ==========
+    async function fetchProjects() {
+      try {
+        const { data, error } = await sb.from('projects').select('*').order('created_at', { ascending: false });
+        if (error) throw error;
+        dbProjects = data || [];
+      } catch (e) {
+        console.warn('Error cargando proyectos de Supabase:', e);
+        dbProjects = [];
+      }
+      renderPortfolio(currentFilter);
+    }
+
+    async function uploadImage(file) {
+      const ext = file.name.split('.').pop();
+      const fileName = `${Date.now()}_${Math.random().toString(36).slice(2,8)}.${ext}`;
+      const { data, error } = await sb.storage.from('project-images').upload(fileName, file, {
+        cacheControl: '3600',
+        upsert: false
+      });
+      if (error) throw error;
+      const { data: urlData } = sb.storage.from('project-images').getPublicUrl(fileName);
+      return urlData.publicUrl;
+    }
+
+    async function insertProject(project) {
+      const { data, error } = await sb.from('projects').insert([project]).select();
+      if (error) throw error;
+      return data[0];
+    }
+
+    async function removeProject(id, imageUrl) {
+      // Eliminar imagen del storage si existe
+      if (imageUrl) {
+        const fileName = imageUrl.split('/').pop();
+        await sb.storage.from('project-images').remove([fileName]);
+      }
+      const { error } = await sb.from('projects').delete().eq('id', id);
+      if (error) throw error;
+    }
+
+    // ========== PORTFOLIO RENDERING ==========
+    function getAllProjects() {
+      return [...defaultProjects, ...dbProjects];
+    }
+
+    function renderPortfolio(filter = 'all') {
+      currentFilter = filter;
+      const grid = document.getElementById('portfolioGrid');
+      const projects = getAllProjects();
+      const filtered = filter === 'all' ? projects : projects.filter(p => p.category === filter);
+
+      grid.innerHTML = filtered.map(p => `
+        <div class="project-card fade-up visible" data-category="${p.category}">
+          <div class="project-img">
+            ${p.image_url ? `<img src="${p.image_url}" alt="${p.title}" loading="lazy">` : `<div class="placeholder-icon"><svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>`}
+            <span class="project-category">${p.category.charAt(0).toUpperCase() + p.category.slice(1)}</span>
+          </div>
+          <div class="project-body">
+            <h3>${p.title}</h3>
+            <p>${p.description}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // ========== FILTER BUTTONS ==========
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderPortfolio(btn.dataset.filter);
+      });
+    });
+
+    // ========== ADMIN FUNCTIONS ==========
+    function openAdmin() {
+      document.getElementById('adminOverlay').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeAdmin() {
+      document.getElementById('adminOverlay').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+    function attemptLogin() {
+      const pw = document.getElementById('adminPassword').value;
+      if (pw === ADMIN_PASS) {
+        document.getElementById('adminLogin').style.display = 'none';
+        document.getElementById('adminDashboard').style.display = 'block';
+        renderAdminList();
+      } else {
+        document.getElementById('adminError').style.display = 'block';
+      }
+    }
+    function renderAdminList() {
+      const list = document.getElementById('adminProjectsList');
+      if (dbProjects.length === 0) {
+        list.innerHTML = '<p style="color:var(--gray-400); font-size:0.85rem; text-align:center; padding:16px;">No hay proyectos agregados aún. Los proyectos predeterminados se muestran automáticamente.</p>';
+        return;
+      }
+      list.innerHTML = dbProjects.map(p => `
+        <div class="admin-project-item">
+          ${p.image_url ? `<img src="${p.image_url}" alt="">` : `<div class="thumb-placeholder">IMG</div>`}
+          <div class="info">
+            <h5>${p.title}</h5>
+            <span>${p.category}</span>
+          </div>
+          <button class="delete-btn" onclick="handleDelete('${p.id}', '${p.image_url || ''}')">&times;</button>
+        </div>
+      `).join('');
+    }
+
+    async function handleDelete(id, imageUrl) {
+      if (!confirm('¿Eliminar este proyecto?')) return;
+      try {
+        await removeProject(id, imageUrl);
+        await fetchProjects();
+        renderAdminList();
+      } catch (e) {
+        alert('Error al eliminar: ' + e.message);
+      }
+    }
+
+    function previewImage(input) {
+      const preview = document.getElementById('imgPreview');
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = e => {
+          preview.src = e.target.result;
+          preview.style.display = 'block';
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    async function addProject() {
+      const title = document.getElementById('projectTitle').value.trim();
+      const desc = document.getElementById('projectDesc').value.trim();
+      const category = document.getElementById('projectCategory').value;
+      const fileInput = document.getElementById('projectImage');
+      const submitBtn = document.querySelector('#adminDashboard .btn-submit');
+
+      if (!title || !desc) {
+        alert('Por favor complete el título y la descripción.');
+        return;
+      }
+
+      submitBtn.textContent = 'Subiendo...';
+      submitBtn.disabled = true;
+
+      try {
+        let image_url = '';
+        if (fileInput.files && fileInput.files[0]) {
+          image_url = await uploadImage(fileInput.files[0]);
+        }
+
+        await insertProject({ title, description: desc, category, image_url });
+
+        // Reset form
+        document.getElementById('projectTitle').value = '';
+        document.getElementById('projectDesc').value = '';
+        fileInput.value = '';
+        document.getElementById('imgPreview').style.display = 'none';
+        document.getElementById('imgPreview').src = '';
+
+        await fetchProjects();
+        renderAdminList();
+        alert('¡Proyecto agregado exitosamente!');
+      } catch (e) {
+        alert('Error al agregar proyecto: ' + e.message);
+      } finally {
+        submitBtn.textContent = 'Agregar proyecto';
+        submitBtn.disabled = false;
+      }
+    }
+
+    // ========== CONTACT FORM ==========
+    function sendContact() {
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const subject = document.getElementById('contactSubject').value;
+      const message = document.getElementById('contactMessage').value.trim();
+      if (!name || !email || !message) {
+        alert('Por favor complete todos los campos.');
+        return;
+      }
+      const mailBody = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\nAsunto: ${subject}\n\nMensaje:\n${message}`);
+      window.open(`mailto:Manolo@arguelles.net?subject=${encodeURIComponent('Contacto Web: ' + (subject || 'General'))}&body=${mailBody}`);
+    }
+
+    // ========== NAVBAR ==========
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // ========== SCROLL ANIMATIONS ==========
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // ========== CAROUSEL (MOBILE) ==========
+    function isMobile() { return window.innerWidth <= 768; }
+
+    function scrollCarousel(direction) {
+      const grid = document.getElementById('portfolioGrid');
+      const card = grid.querySelector('.project-card');
+      if (!card) return;
+      const scrollAmount = card.offsetWidth + 16;
+      grid.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+
+    function updateDots() {
+      if (!isMobile()) return;
+      const grid = document.getElementById('portfolioGrid');
+      const cards = grid.querySelectorAll('.project-card');
+      const dotsContainer = document.getElementById('carouselDots');
+      if (cards.length === 0) { dotsContainer.innerHTML = ''; return; }
+
+      const totalDots = Math.min(cards.length, 12);
+      const dotStep = cards.length > 12 ? Math.floor(cards.length / 12) : 1;
+
+      dotsContainer.innerHTML = '';
+      for (let i = 0; i < totalDots; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Proyecto ${i + 1}`);
+        const idx = i * dotStep;
+        dot.addEventListener('click', () => {
+          const target = cards[Math.min(idx, cards.length - 1)];
+          if (target) target.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        });
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function trackScroll() {
+      const grid = document.getElementById('portfolioGrid');
+      if (!grid || !isMobile()) return;
+      const dots = document.querySelectorAll('.carousel-dot');
+      if (dots.length === 0) return;
+      const cards = grid.querySelectorAll('.project-card');
+      if (cards.length === 0) return;
+
+      const scrollLeft = grid.scrollLeft;
+      const cardWidth = cards[0].offsetWidth + 16;
+      const currentIndex = Math.round(scrollLeft / cardWidth);
+      const dotStep = cards.length > 12 ? Math.floor(cards.length / 12) : 1;
+      const activeDot = Math.min(Math.floor(currentIndex / dotStep), dots.length - 1);
+
+      dots.forEach((d, i) => d.classList.toggle('active', i === activeDot));
+
+      // Hide scroll hint after first scroll
+      const hint = document.getElementById('scrollHint');
+      if (hint && scrollLeft > 20) hint.style.display = 'none';
+    }
+
+    // Attach scroll listener
+    document.getElementById('portfolioGrid').addEventListener('scroll', trackScroll, { passive: true });
+
+    // Re-build dots after portfolio renders
+    const origRender = renderPortfolio;
+    renderPortfolio = function(filter) {
+      origRender(filter);
+      if (isMobile()) setTimeout(updateDots, 100);
+    };
+
+    window.addEventListener('resize', () => {
+      if (isMobile()) updateDots();
+    });
+
+    // ========== HERO VIDEO AUTOPLAY (mobile fix) ==========
+    (function() {
+      const v = document.querySelector('.hero-video');
+      if (!v) return;
+      function tryPlay() {
+        v.muted = true;
+        v.play().catch(function(){});
+      }
+      tryPlay();
+      document.addEventListener('touchstart', function once() {
+        tryPlay();
+        document.removeEventListener('touchstart', once);
+      }, { passive: true });
+      document.addEventListener('scroll', function once() {
+        tryPlay();
+        document.removeEventListener('scroll', once);
+      }, { passive: true });
+      // Intersection Observer — play/pause when visible
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function(entries) {
+          entries.forEach(function(e) {
+            if (e.isIntersecting) tryPlay();
+            else v.pause();
+          });
+        }, { threshold: 0.25 }).observe(v);
+      }
+    })();
+
+    // ========== INIT ==========
+    renderPortfolio();
+    fetchProjects();
+  </script>
+
+  <!-- ALGORA Widget — Catálogo de productos -->
+  <script src="https://algora-pos-zlvf.vercel.app/api/store/widget?id=87d4915d-2636-41b9-8e65-2a9190404920"></script>
+</body>
+</html>
