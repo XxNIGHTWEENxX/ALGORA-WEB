@@ -140,7 +140,8 @@ section.pad{padding:90px 0}
 
 /* PRICING */
 .pricing{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:stretch}
+.plans{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:stretch}
+@media(max-width:1100px){.plans{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:920px){.plans{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:540px){.plans{grid-template-columns:1fr}}
 .plan{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column}
@@ -297,6 +298,13 @@ footer{border-top:1px solid var(--line);padding:50px 0 40px}
     <p>Arma tu plataforma. Comienza con el punto de venta y agrega tienda, agenda o el paquete completo. Una sola cuenta, un solo acceso.</p>
   </div>
   <div class="plans">
+    <div class="plan reveal">
+      <div class="pname">Lite</div>
+      <div class="price">$349<small>/mes</small></div>
+      <div class="pyear">Para empezar</div>
+      <div class="pdesc">Punto de venta, inventario, clientes y facturación. Lo esencial para cobrar y controlar tu mercancía.</div>
+      <a href="https://algorapos.com.mx" target="_blank" rel="noopener" class="btn btn-sec">Probar gratis</a>
+    </div>
     <div class="plan reveal">
       <div class="pname">Punto de venta</div>
       <div class="price">$599<small>/mes</small></div>
