@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALGORA — Todo tu negocio en una sola plataforma con IA</title>
+  <meta name="description" content="Una sola plataforma con asistente de IA: punto de venta, tienda en línea, agenda, facturación CFDI, finanzas, nómina, marketing, lealtad y módulos para restaurante y gimnasio. Funciona sin internet. Prueba gratis.">
+  <meta name="keywords" content="ALGORA, punto de venta, POS, asistente de IA para negocios, software para restaurantes, software para gimnasios, tienda en línea, agenda de citas, facturación CFDI, marketing, programa de lealtad, monedero, nómina, México, SaaS, tecnología para negocios">
+  <meta name="author" content="ALGORA">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.algora.com.mx/">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.algora.com.mx/">
+  <meta property="og:title" content="ALGORA — Todo tu negocio en una sola plataforma con IA">
+  <meta property="og:description" content="Punto de venta, tienda, agenda, facturación, finanzas, marketing y un asistente de IA. Módulos para restaurante y gimnasio. Prueba gratis, sin tarjeta.">
+  <meta property="og:image" content="https://www.algora.com.mx/og-image.png">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="ALGORA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ALGORA — Todo tu negocio en una sola plataforma con IA">
+  <meta name="twitter:description" content="Punto de venta, tienda, agenda, facturación, finanzas, marketing y un asistente de IA. Módulos para restaurante y gimnasio. Prueba gratis, sin tarjeta.">
+  <meta name="twitter:image" content="https://www.algora.com.mx/og-image.png">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ALGORA",
+    "url": "https://www.algora.com.mx",
+    "description": "Herramientas digitales para negocios: páginas web, punto de venta, agenda de citas y sistemas de gestión.",
+    "foundingDate": "2026",
+    "founder": {
+      "@type": "Person",
+      "name": "Alan Góngora"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "México"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "ventas.cliente@algora.com.mx",
+      "telephone": "+52 294 111 4401",
+      "availableLanguage": "Spanish"
+    },
+    "sameAs": []
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0A0A; --bg2:#121212; --card:#161616; --line:#262626;
+  --tx:#FFFFFF; --tx2:#A3A3A3; --tx3:#666; --accent:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 26px;border-radius:12px;font-weight:700;font-size:15px;transition:.2s;cursor:pointer;border:none}
+.btn-pri{background:#fff;color:#0A0A0A}
+.btn-pri:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,255,255,.15)}
+.btn-sec{background:transparent;color:#fff;border:1px solid var(--line)}
+.btn-sec:hover{border-color:#fff}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--tx2);padding:6px 14px;border:1px solid var(--line);border-radius:100px;margin-bottom:20px}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.8);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;letter-spacing:2px}
+.logo svg{width:30px;height:30px}
+.logo-img{height:30px;width:auto}
+.logo-img.lg{height:34px}
+.nav-links{display:flex;gap:32px;font-size:14px;font-weight:500;color:var(--tx2)}
+.nav-links a:hover{color:#fff}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* HERO */
+.hero{position:relative;padding:90px 0 70px;text-align:center;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:900px;height:700px;background:radial-gradient(circle,rgba(255,255,255,.07),transparent 65%);pointer-events:none}
+.hero h1{font-size:clamp(38px,6.5vw,72px);font-weight:900;line-height:1.04;letter-spacing:-2px;max-width:900px;margin:0 auto 22px;position:relative}
+.hero h1 .muted{color:var(--tx3)}
+.hero p.sub{font-size:clamp(17px,2.2vw,21px);color:var(--tx2);max-width:620px;margin:0 auto 36px;position:relative}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.hero-note{margin-top:18px;font-size:13px;color:var(--tx3);position:relative}
+
+/* REPLACES STRIP */
+.replaces{padding:46px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.replaces .lbl{text-align:center;font-size:13px;color:var(--tx3);font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:22px}
+.replaces .row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 36px}
+.replaces .row span{font-size:clamp(16px,2.4vw,22px);font-weight:700;color:var(--tx2);opacity:.75}
+.replaces .row span.strike{text-decoration:line-through;text-decoration-color:#555}
+
+/* SECTION */
+section.pad{padding:90px 0}
+.head{text-align:center;max-width:680px;margin:0 auto 56px}
+.head h2{font-size:clamp(30px,4.5vw,46px);font-weight:800;letter-spacing:-1px;line-height:1.1;margin-bottom:16px}
+.head p{font-size:18px;color:var(--tx2)}
+
+/* MODULES GRID */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.mod{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;transition:.25s}
+.mod:hover{border-color:#3a3a3a;transform:translateY(-4px);background:#1a1a1a}
+.mod .ic{width:46px;height:46px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.mod .ic svg{width:24px;height:24px;stroke:#0A0A0A}
+.mod h3{font-size:18px;font-weight:700;margin-bottom:8px}
+.mod p{font-size:14.5px;color:var(--tx2);line-height:1.55}
+
+/* FEATURE ROWS */
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;margin-bottom:90px}
+.feat:nth-child(even) .fimg{order:-1}
+@media(max-width:820px){.feat{grid-template-columns:1fr;gap:28px;margin-bottom:60px}.feat:nth-child(even) .fimg{order:0}}
+.feat .ftag{font-size:13px;font-weight:700;color:var(--tx3);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.feat h3{font-size:clamp(24px,3.5vw,34px);font-weight:800;letter-spacing:-.5px;line-height:1.15;margin-bottom:16px}
+.feat p{font-size:16.5px;color:var(--tx2);margin-bottom:18px}
+.feat ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.feat ul li{display:flex;gap:11px;font-size:15px;color:#d4d4d4}
+.feat ul li svg{width:20px;height:20px;flex-shrink:0;stroke:#fff;margin-top:1px}
+.fimg{background:linear-gradient(145deg,#1c1c1c,#101010);border:1px solid var(--line);border-radius:20px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.fimg .big{font-size:clamp(40px,8vw,90px);font-weight:900;color:#fff;opacity:.07;letter-spacing:-3px;text-align:center;padding:20px;line-height:1}
+
+/* PRICING */
+.pricing{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.plans{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:stretch}
+@media(max-width:1100px){.plans{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:920px){.plans{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:540px){.plans{grid-template-columns:1fr}}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column}
+.plan.feat-plan{border-color:#fff;box-shadow:0 0 0 1px #fff}
+.plan .pname{font-size:14px;font-weight:700;color:var(--tx2);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px}
+.plan .price{font-size:38px;font-weight:900;letter-spacing:-1px;line-height:1}
+.plan .price small{font-size:15px;font-weight:600;color:var(--tx3)}
+.plan .pyear{font-size:13px;color:var(--tx3);margin-top:6px}
+.plan .pdesc{font-size:14px;color:var(--tx2);margin:16px 0;flex:1}
+.plan .badge{display:inline-block;background:#fff;color:#0A0A0A;font-size:11px;font-weight:800;padding:4px 10px;border-radius:100px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px;align-self:flex-start}
+.plan .btn{width:100%;justify-content:center;height:44px}
+.pnote{text-align:center;color:var(--tx3);font-size:14px;margin-top:30px}
+.cmp-wrap{margin-top:48px;overflow-x:auto}
+.cmp{width:100%;border-collapse:collapse;min-width:680px;font-size:14.5px}
+.cmp th,.cmp td{padding:14px 16px;text-align:center;border-bottom:1px solid var(--line)}
+.cmp th:first-child,.cmp td:first-child{text-align:left;color:var(--tx2);font-weight:500}
+.cmp thead th{font-size:13px;font-weight:800;color:#fff;border-bottom:1px solid #333}
+.cmp thead th span{display:block;font-size:12px;font-weight:600;color:var(--tx3);margin-top:3px}
+.cmp thead th.hl{position:relative}
+.cmp thead th.hl::after{content:'POPULAR';position:absolute;top:-9px;left:50%;transform:translateX(-50%);background:#fff;color:#0A0A0A;font-size:9px;font-weight:800;padding:2px 8px;border-radius:100px;letter-spacing:.5px}
+.cmp td.yes{color:#fff}
+.cmp td.no{color:#3a3a3a}
+.cmp .ic{width:18px;height:18px;display:inline-block;vertical-align:middle}
+.cmp tbody tr:hover{background:#141414}
+.cmp .grp td{background:#121212;font-weight:700;color:#fff;text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+.cmp col.hl-col{background:rgba(255,255,255,.03)}
+
+/* DIFERENCIADORES strip */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+@media(max-width:780px){.why{grid-template-columns:repeat(2,1fr);gap:36px}}
+.why .n{font-size:40px;font-weight:900;letter-spacing:-1px;margin-bottom:8px}
+.why .t{font-size:15px;color:var(--tx2)}
+
+/* ADD-ONS por giro */
+.addons{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+@media(max-width:820px){.addons{grid-template-columns:1fr}}
+.addon{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;display:flex;flex-direction:column;transition:.25s}
+.addon:hover{border-color:#3a3a3a;transform:translateY(-4px)}
+.addon .atop{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+.addon .ic{width:46px;height:46px;border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.addon .ic svg{width:24px;height:24px;stroke:#0A0A0A}
+.addon h3{font-size:21px;font-weight:800;letter-spacing:-.3px}
+.addon .akick{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--tx3)}
+.addon>p{font-size:15px;color:var(--tx2);margin:6px 0 18px;line-height:1.55}
+.addon ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px}
+@media(max-width:480px){.addon ul{grid-template-columns:1fr}}
+.addon ul li{display:flex;gap:9px;font-size:14px;color:#d4d4d4}
+.addon ul li svg{width:18px;height:18px;flex-shrink:0;stroke:#fff;margin-top:1px}
+.addon .afoot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
+.addon .aprice{font-size:26px;font-weight:900;letter-spacing:-1px}
+.addon .aprice small{font-size:13px;font-weight:600;color:var(--tx3)}
+.addon .aprice .free{display:block;font-size:12px;font-weight:600;color:var(--tx3);letter-spacing:0}
+
+/* GIROS */
+.giros{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:760px;margin:0 auto}
+.giros span{background:var(--card);border:1px solid var(--line);border-radius:100px;padding:10px 20px;font-size:14.5px;font-weight:600;color:#d4d4d4}
+
+/* CTA */
+.cta{text-align:center;padding:100px 0}
+.cta h2{font-size:clamp(32px,5vw,54px);font-weight:900;letter-spacing:-1.5px;line-height:1.08;max-width:760px;margin:0 auto 22px}
+.cta p{font-size:18px;color:var(--tx2);margin-bottom:34px}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:50px 0 40px}
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.foot .mission{max-width:440px;font-size:14px;color:var(--tx2);line-height:1.6}
+.foot .legal{font-size:13px;color:var(--tx3)}
+.wpp{position:fixed;bottom:24px;right:24px;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.4);z-index:60;transition:.2s}
+.wpp:hover{transform:scale(1.08)}
+.wpp svg{width:30px;height:30px;fill:#fff}
+.reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap nav">
+  <a href="/" class="logo"><img class="logo-img" src="ALGORA_Logo_blanco.png" alt="ALGORA"></a>
+  <div class="nav-links">
+    <a href="#modulos">Plataforma</a>
+    <a href="#addons">Restaurante y Gym</a>
+    <a href="#como">Cómo funciona</a>
+    <a href="#precios">Precios</a>
+    <a href="#giros">Para quién</a>
+  </div>
+  <a href="https://algorapos.com.mx" target="_blank" rel="noopener" class="btn btn-pri" style="height:42px;font-size:14px">Probar gratis</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="tag">Una sola plataforma · Con asistente de IA</span>
+  <h1>Administra <span class="muted">todo</span> tu negocio<br>desde un solo lugar</h1>
+  <p class="sub">Punto de venta, tienda en línea, agenda, facturación, finanzas, nómina, marketing y un asistente de IA que trabaja por ti. Con módulos para restaurante y gimnasio. Una sola plataforma que crece contigo.</p>
+  <div class="hero-cta">
+    <a href="https://algorapos.com.mx" target="_blank" rel="noopener" class="btn btn-pri">Empezar prueba gratis</a>
+    <a href="#modulos" class="btn btn-sec">Ver todo lo que incluye</a>
+  </div>
+  <p class="hero-note">Sin tarjeta para probar · Funciona sin internet · Se instala como app</p>
+</div></header>
+
+<div class="replaces"><div class="wrap">
+  <p class="lbl">Reemplaza todo esto con una sola cuenta</p>
+  <div class="row">
+    <span class="strike">Caja registradora</span>
+    <span class="strike">Tienda en línea aparte</span>
+    <span class="strike">App de citas</span>
+    <span class="strike">Facturador externo</span>
+    <span class="strike">Hojas de Excel</span>
+    <span class="strike">Sistema de nómina</span>
+    <span class="strike">Terminal sin conectar</span>
+    <span class="strike">Programa de lealtad</span>
+    <span class="strike">Plataforma de mailing</span>
+    <span class="strike">Comandera de restaurante</span>
+    <span class="strike">Control de gimnasio</span>
+  </div>
+</div></div>
+
+<section class="pad" id="modulos"><div class="wrap">
+  <div class="head reveal">
+    <h2>Todo incluido. Nada por separado.</h2>
+    <p>Cada módulo se conecta con el siguiente: vendes, facturas, controlas inventario y ves tus finanzas sin pasar datos de un lado a otro.</p>
+  </div>
+  <div class="grid">
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272"/></svg></div><h3>Punto de venta</h3><p>Cobra rápido con código de barras, venta a granel, descuentos y crédito. Funciona sin internet y se sincroniza solo.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64M3 9.75L12 3l9 6.75"/></svg></div><h3>Tienda en línea</h3><p>Tu propia página para vender por internet con tu logo y dominio. Pagos, envíos y pedidos, todo conectado al inventario.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0V11.25"/></svg></div><h3>Agenda de citas</h3><p>Tus clientes reservan en línea, con anticipo y recordatorios automáticos. Ideal para servicios y negocios con cita.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg></div><h3>Facturación CFDI 4.0</h3><p>Timbra facturas válidas ante el SAT desde el punto de venta. Factura global, complementos de pago y todo automático.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/></svg></div><h3>Finanzas e impuestos</h3><p>Flujo de efectivo, utilidad real, margen y cálculo de impuestos. Sabes cuánto ganas de verdad, sin contador de por medio.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg></div><h3>Nómina y equipo</h3><p>Empleados con roles y permisos, nómina con cálculo de ISR, y cada caja con su responsable asignado.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg></div><h3>Inventario y compras</h3><p>Control de stock en tiempo real, proveedores, órdenes de compra y alertas de producto bajo. Sin sorpresas.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/></svg></div><h3>Terminal de cobro</h3><p>Conecta tu terminal y cobra con tarjeta directo desde el punto de venta. El monto aparece solo y la venta se cierra al pagar.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"/></svg></div><h3>App instalable</h3><p>Se instala como aplicación en tu celular, tablet o computadora. Multicaja, multisucursal y siempre disponible.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z"/></svg></div><h3>Aura · Asistente de IA</h3><p>Un asistente inteligente que vive en la plataforma. Pídele por voz que agende una cita, registre un gasto o cree un producto, y consulta ventas e inventario al instante.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg></div><h3>Lealtad y monedero</h3><p>Premia a tus clientes con saldo por cada compra, canjeable en caja con tope configurable. Incluye tarjetas físicas con código de barras que activas y escaneas al cobrar.</p></div>
+    <div class="mod reveal"><div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 010 3.46"/></svg></div><h3>Marketing y campañas</h3><p>Segmenta tus clientes y manda promociones por correo y WhatsApp, con imagen incluida. Un CRM ligero para que regresen más seguido, sin pagar otra herramienta.</p></div>
+  </div>
+</div></section>
+
+<section class="pad" id="addons" style="padding-top:30px"><div class="wrap">
+  <div class="head reveal">
+    <h2>Módulos hechos para tu giro</h2>
+    <p>Si tienes restaurante o gimnasio, ALGORA se adapta a tu operación con un módulo dedicado que activas cuando quieras. 7 días gratis, sin contrato.</p>
+  </div>
+  <div class="addons">
+    <div class="addon reveal">
+      <div class="atop">
+        <div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg></div>
+        <div>
+          <div class="akick">Add-on · ALGORA RES</div>
+          <h3>Restaurante</h3>
+        </div>
+      </div>
+      <p>Convierte tu POS en un sistema de restaurante completo: lleva mesas, comandas y cocina sin perder ninguna orden, y controla tu costo real por platillo.</p>
+      <ul>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Mapa de mesas y salones</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Comandas a cocina y barra</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Cuentas divididas sin doble cobro</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Insumos y recetas</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Pantalla de cocina (KDS)</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Reservaciones en agenda</li>
+      </ul>
+      <div class="afoot">
+        <div class="aprice">$399<small>/mes</small><span class="free">7 días gratis · súmalo a tu POS</span></div>
+        <a href="https://algorapos.com.mx" target="_blank" rel="noopener" class="btn btn-sec" style="height:42px">Activar restaurante</a>
+      </div>
+    </div>
+    <div class="addon reveal">
+      <div class="atop">
+        <div class="ic"><svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64"/></svg></div>
+        <div>
+          <div class="akick">Add-on · ALGORA GYM</div>
+          <h3>Gimnasio</h3>
+        </div>
+      </div>
+      <p>Administra tu gimnasio o estudio: vende membresías, controla el acceso con QR y llena tus clases sin sobrecupo, todo conectado a tu caja y tus cobros.</p>
+      <ul>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Membresías y planes</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Check-in con código QR</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Clases con cupo y reservas</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Control de miembros</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Cobros recurrentes</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Alertas de vencimiento</li>
+      </ul>
+      <div class="afoot">
+        <div class="aprice">$399<small>/mes</small><span class="free">7 días gratis · súmalo a tu POS</span></div>
+        <a href="https://algorapos.com.mx" target="_blank" rel="noopener" class="btn btn-sec" style="height:42px">Activar gimnasio</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section class="pad" id="como" style="padding-top:30px"><div class="wrap">
+  <div class="head reveal"><h2>Por qué ALGORA es diferente</h2><p>No es otro sistema más. Es la única plataforma que conecta la venta con la factura, el inventario y tus finanzas, sin que muevas un dato a mano.</p></div>
+
+  <div class="feat reveal">
+    <div>
+      <div class="ftag">Sigue vendiendo siempre</div>
+      <h3>Funciona aunque se caiga el internet</h3>
+      <p>Tu negocio no se detiene. ALGORA guarda todo en tu dispositivo y sincroniza solo cuando vuelve la conexión. Nunca pierdes una venta.</p>
+      <ul>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Ventas offline que se sincronizan solas</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Multicaja: cada equipo con su corte</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Multisucursal desde una sola cuenta</li>
+      </ul>
+    </div>
+    <div class="fimg"><span class="big">Sin internet,<br>sin parar</span></div>
+  </div>
+
+  <div class="feat reveal">
+    <div>
+      <div class="ftag">Ahorra hasta en el contador</div>
+      <h3>Facturas e impuestos en automático</h3>
+      <p>Timbra CFDI 4.0 desde la misma venta. ALGORA calcula tus impuestos, detecta tus deducciones y emite la factura global del mes por ti.</p>
+      <ul>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Factura válida ante el SAT en segundos</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Complementos de pago automáticos</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Cálculo de IVA e ISR del mes</li>
+      </ul>
+    </div>
+    <div class="fimg"><span class="big">CFDI 4.0<br>automático</span></div>
+  </div>
+
+  <div class="feat reveal">
+    <div>
+      <div class="ftag">Decide con datos reales</div>
+      <h3>Sabes cuánto ganas de verdad</h3>
+      <p>No es solo cuánto vendiste. ALGORA te muestra tu utilidad real, tu margen por producto, lo que te deben y lo que debes, con gráficas claras.</p>
+      <ul>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Flujo de efectivo y proyección del mes</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Margen real con costo de cada producto</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Cuentas por cobrar y por pagar</li>
+      </ul>
+    </div>
+    <div class="fimg"><span class="big">Tu negocio,<br>en números</span></div>
+  </div>
+
+  <div class="feat reveal">
+    <div>
+      <div class="ftag">Nuevo · Inteligencia artificial</div>
+      <h3>Aura: tu asistente que trabaja por ti</h3>
+      <p>Habla o escribe y Aura lo hace. Vive dentro de la plataforma, entiende tu negocio y ejecuta tareas con tu confirmación. Es como tener un ayudante que conoce cada rincón de tu sistema.</p>
+      <ul>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Por voz: "agenda una cita" o "registra este gasto"</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Consulta ventas, stock y clientes al instante</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Crea productos, clientes y cotizaciones</li>
+        <li><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>Te guía y da soporte sin salir de la app</li>
+      </ul>
+    </div>
+    <div class="fimg"><span class="big">Pídeselo<br>a Aura</span></div>
+  </div>
+</div></section>
+
+<section class="pad" style="padding:70px 0"><div class="wrap">
+  <div class="why">
+    <div class="reveal"><div class="n">1</div><div class="t">Una sola plataforma para todo el negocio</div></div>
+    <div class="reveal"><div class="n">0</div><div class="t">Comisiones ocultas por tus ventas</div></div>
+    <div class="reveal"><div class="n">100%</div><div class="t">Mexicana, hecha para el SAT y el peso</div></div>
+    <div class="reveal"><div class="n">24/7</div><div class="t">Soporte real por WhatsApp</div></div>
+  </div>
+</div></section>
+
+<section class="pad pricing" id="precios"><div class="wrap">
+  <div class="head reveal">
+    <h2>Empieza con lo que necesitas. Suma el resto cuando quieras.</h2>
+    <p>Arma tu plataforma. Comienza con el punto de venta y agrega tienda, agenda o el paquete completo. Una sola cuenta, un solo acceso.</p>
+  </div>
+  <div class="plans">
+    <div class="plan reveal">
+      <div class="pname">Lite</div>
+      <div class="price">$349<small>/mes</small></div>
+      <div class="pyear">Para empezar</div>
+      <div class="pdesc">Punto de venta, inventario, clientes y facturación CFDI. Lo esencial para cobrar y controlar tu mercancía.</div>
+      <a href="https://algorapos.com.mx" target="_blank" rel="noopener" class="btn btn-sec">Probar gratis</a>
+    </div>
+    <div class="plan reveal">
+      <div class="pname">Punto de venta</div>
+      <div class="price">$599<small>/mes</small></div>
+      <div class="pyear">o $6,200 al año</div>
+      <div class="pdesc">El corazón de tu negocio: ventas, inventario, caja, clientes, facturación y finanzas.</div>
+      <a href="https://algorapos.com.mx" target="_blank" rel="noopener" class="btn btn-sec">Probar gratis</a>
+    </div>
+    <div class="plan reveal">
+      <div class="pname">Tienda en línea</div>
+      <div class="price">$299<small>/mes</small></div>
+      <div class="pyear">Súmalo a tu POS</div>
+      <div class="pdesc">Tu página para vender por internet con tu marca, dominio, pagos y envíos.</div>
+      <a href="https://algorapos.com.mx" target="_blank" rel="noopener" class="btn btn-sec">Agregar</a>
+    </div>
+    <div class="plan reveal">
+      <div class="pname">Agenda de citas</div>
+      <div class="price">$149<small>/mes</small></div>
+      <div class="pyear">Súmalo a tu POS</div>
+      <div class="pdesc">Reservas en línea con anticipo y recordatorios. Para negocios de servicio.</div>
+      <a href="https://algorapos.com.mx" target="_blank" rel="noopener" class="btn btn-sec">Agregar</a>
+    </div>
+    <div class="plan feat-plan reveal">
+      <div class="badge">El más completo</div>
+      <div class="pname">Todo ALGORA</div>
+      <div class="price">$899<small>/mes</small></div>
+      <div class="pyear">o $10,499 al año · ahorras 2 meses</div>
+      <div class="pdesc">Punto de venta + tienda + agenda. Todos los módulos, sin límites. La plataforma completa.</div>
+      <a href="https://algorapos.com.mx" target="_blank" rel="noopener" class="btn btn-pri">Empezar ahora</a>
+    </div>
+  </div>
+  <p class="pnote">Todos los planes incluyen facturación CFDI, finanzas, asistente de IA, lealtad, marketing, soporte y actualizaciones. Dominio propio y terminal de cobro disponibles. Sin contratos forzosos.</p>
+
+  <div class="head reveal" style="margin:64px auto 28px">
+    <h2 style="font-size:clamp(24px,3.5vw,34px)">¿Tienes restaurante o gimnasio?</h2>
+    <p>Agrega el módulo a tu plan por $399/mes, o llévate todo en un solo paquete con descuento.</p>
+  </div>
+  <div class="plans" style="grid-template-columns:repeat(2,1fr);max-width:760px;margin:0 auto">
+    <div class="plan feat-plan reveal">
+      <div class="badge">Todo + Restaurante</div>
+      <div class="pname">ALGORA RES</div>
+      <div class="price">$1,200<small>/mes</small></div>
+      <div class="pyear">o $12,499 al año · o súmalo a tu POS por $399/mes</div>
+      <div class="pdesc">Todo ALGORA (POS + tienda + agenda) más el módulo de restaurante: mesas, comandas, cocina, barra, insumos y recetas.</div>
+      <a href="https://algorapos.com.mx" target="_blank" rel="noopener" class="btn btn-pri">Empezar ahora</a>
+    </div>
+    <div class="plan feat-plan reveal">
+      <div class="badge">Todo + Gimnasio</div>
+      <div class="pname">ALGORA GYM</div>
+      <div class="price">$1,200<small>/mes</small></div>
+      <div class="pyear">o $12,499 al año · o súmalo a tu POS por $399/mes</div>
+      <div class="pdesc">Todo ALGORA (POS + tienda + agenda) más el módulo de gimnasio: membresías, check-in con QR y clases con cupo.</div>
+      <a href="https://algorapos.com.mx" target="_blank" rel="noopener" class="btn btn-pri">Empezar ahora</a>
+    </div>
+  </div>
+  <div class="cmp-wrap">
+    <table class="cmp">
+      <colgroup><col><col><col><col class="hl-col"></colgroup>
+      <thead><tr>
+        <th>Funciones</th>
+        <th>Lite<span>$349/mes</span></th>
+        <th>Punto de venta<span>$599/mes</span></th>
+        <th class="hl">Todo ALGORA<span>$899/mes</span></th>
+      </tr></thead>
+      <tbody>
+        <tr class="grp"><td colspan="4">Ventas y cobro</td></tr>
+        <tr><td>Punto de venta</td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Funciona sin internet</td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Multicaja y multisucursal</td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Terminal de cobro</td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Cotizaciones</td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr class="grp"><td colspan="4">Catálogo e inventario</td></tr>
+        <tr><td>Inventario y productos</td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Clientes y crédito</td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Proveedores y compras</td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr class="grp"><td colspan="4">Facturación</td></tr>
+        <tr><td>Facturación CFDI 4.0</td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Factura global y complementos</td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr class="grp"><td colspan="4">Administración</td></tr>
+        <tr><td>Empleados y roles</td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Devoluciones</td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Finanzas e impuestos</td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Nómina</td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Reportes avanzados</td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr class="grp"><td colspan="4">Inteligencia y fidelización</td></tr>
+        <tr><td>Aura · Asistente de IA</td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Lealtad y monedero</td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Marketing y campañas (correo + WhatsApp)</td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr class="grp"><td colspan="4">Módulos por giro (add-on $399/mes)</td></tr>
+        <tr><td>Restaurante: mesas, comandas, cocina</td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Gimnasio: membresías, check-in, clases</td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr class="grp"><td colspan="4">Crecimiento</td></tr>
+        <tr><td>Tienda en línea</td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Agenda de citas</td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+        <tr><td>Dominio propio</td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="no"><svg class="ic" fill="none" stroke="#444" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></td><td class="yes"><svg class="ic" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div></section>
+
+<section class="pad" id="giros"><div class="wrap">
+  <div class="head reveal"><h2>Hecho para tu giro</h2><p>Desde la tiendita de la esquina hasta el negocio con varias sucursales.</p></div>
+  <div class="giros reveal">
+    <span>Abarrotes y minisúper</span><span>Ropa y boutiques</span><span>Restaurantes y cafés</span>
+    <span>Gimnasios y estudios</span><span>Estéticas y barberías</span><span>Refaccionarias</span>
+    <span>Farmacias</span><span>Papelerías</span><span>Talleres y servicios</span>
+    <span>Ferreterías</span><span>Spa y bienestar</span><span>Cualquier negocio</span>
+  </div>
+</div></section>
+
+<section class="cta"><div class="wrap reveal">
+  <h2>Ningún negocio se queda atrás por falta de tecnología.</h2>
+  <p>Empieza gratis hoy. Sin tarjeta, sin instalaciones complicadas, con soporte que sí contesta.</p>
+  <a href="https://algorapos.com.mx" target="_blank" rel="noopener" class="btn btn-pri" style="height:54px;padding:0 34px;font-size:16px">Crear mi cuenta gratis</a>
+</div></section>
+
+<footer><div class="wrap foot">
+  <div>
+    <div style="margin-bottom:14px"><img class="logo-img lg" src="ALGORA_Logo_blanco.png" alt="ALGORA"></div>
+    <p class="mission">Detrás de cada negocio hay una persona que lo apostó todo. Nosotros apostamos por ella. Existimos para cerrar la brecha tecnológica.</p>
+  </div>
+  <div style="text-align:right">
+    <p class="legal">ventas.cliente@algora.com.mx</p>
+    <p class="legal">WhatsApp +52 294 111 4401</p>
+    <p class="legal" style="margin-top:10px">© 2026 ALGORA · Marca registrada IMPI · Hecho en México</p>
+  </div>
+</div></footer>
+
+<a class="wpp" href="https://wa.me/522941114401?text=Hola%2C%20quiero%20información%20de%20ALGORA" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*0.06)+'s';io.observe(el)});
+</script>
+</body>
+</html>
