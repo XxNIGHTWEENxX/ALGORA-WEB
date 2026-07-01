@@ -431,7 +431,7 @@ footer{border-top:1px solid var(--line);padding:50px 0 40px}
     </div>
     <div class="plan reveal">
       <div class="pname">Agenda de citas</div>
-      <div class="price">$149<small>/mes</small></div>
+      <div class="price">$299<small>/mes</small></div>
       <div class="pyear">Súmalo a tu POS</div>
       <div class="pdesc">Reservas en línea con anticipo y recordatorios. Para negocios de servicio.</div>
       <a href="https://algorapos.com.mx" target="_blank" rel="noopener" class="btn btn-sec">Agregar</a>
@@ -439,7 +439,7 @@ footer{border-top:1px solid var(--line);padding:50px 0 40px}
     <div class="plan feat-plan reveal">
       <div class="badge">El más completo</div>
       <div class="pname">Todo ALGORA</div>
-      <div class="price">$899<small>/mes</small></div>
+      <div class="price">$999<small>/mes</small></div>
       <div class="pyear">o $10,499 al año · ahorras 2 meses</div>
       <div class="pdesc">Punto de venta + tienda + agenda. Todos los módulos, sin límites. La plataforma completa.</div>
       <a href="https://algorapos.com.mx" target="_blank" rel="noopener" class="btn btn-pri">Empezar ahora</a>
@@ -476,7 +476,7 @@ footer{border-top:1px solid var(--line);padding:50px 0 40px}
         <th>Funciones</th>
         <th>Lite<span>$349/mes</span></th>
         <th>Punto de venta<span>$599/mes</span></th>
-        <th class="hl">Todo ALGORA<span>$899/mes</span></th>
+        <th class="hl">Todo ALGORA<span>$999/mes</span></th>
       </tr></thead>
       <tbody>
         <tr class="grp"><td colspan="4">Ventas y cobro</td></tr>
