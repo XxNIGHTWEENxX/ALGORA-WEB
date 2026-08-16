@@ -2,7 +2,7 @@
 cd /d "%~dp0"
 del /f /q .git\index.lock 2>nul
 git add -A
-git commit -m "SEO: datos estructurados Organization con logo y WebSite mas og site_name para que Google muestre el logo de marca"
+git commit -m "Pagina de venta Sitios a la Medida (sitios.html) con paquetes y enlace de pago del pago unico"
 git push origin main
 echo.
 echo Done! Press any key to close...
