@@ -28,7 +28,8 @@
   .gold{color:var(--gold)}
   .kicker{font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);font-weight:500}
   nav{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:16px 26px;background:rgba(6,6,6,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-  nav .brand{font-weight:600;letter-spacing:.34em;font-size:14px}
+  nav .brand{display:flex;align-items:center;gap:9px;font-weight:600;letter-spacing:.34em;font-size:14px}
+  nav .brand img{height:26px;width:auto;display:block}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-weight:500;font-size:14px;letter-spacing:.02em;padding:13px 26px;border-radius:999px;border:1px solid var(--gold);color:#060606;background:var(--gold);transition:.25s;cursor:pointer}
   .btn:hover{background:var(--gold-soft);border-color:var(--gold-soft);transform:translateY(-2px)}
   .btn.ghost{background:transparent;color:var(--ink)}
@@ -70,7 +71,7 @@
 </head>
 <body>
 <nav>
-  <a class="brand" href="/">A L G O R A</a>
+  <a class="brand" href="/"><img src="/ALGORA_Logo_blanco.png" alt="ALGORA"></a>
   <a class="btn ghost" href="https://algorapos.com.mx" style="padding:9px 18px">Entrar</a>
 </nav>
 
