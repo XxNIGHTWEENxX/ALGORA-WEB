@@ -8,6 +8,7 @@ body{background:#000;color:var(--ink);font-family:var(--sans);font-weight:300;li
 .gold{color:var(--gold)}
 .cover{padding:70px 56px 56px;text-align:center;border-bottom:1px solid var(--line);background:radial-gradient(120% 80% at 50% 0%,rgba(216,166,87,.12),transparent 60%)}
 .cover .brand{font-weight:700;letter-spacing:.4em;font-size:20px;color:var(--gold)}
+.cover .brand-logo{height:34px;width:auto;margin:0 auto 4px;display:block}
 .cover .k{margin-top:26px;font-size:12px;letter-spacing:.36em;text-transform:uppercase;color:var(--gold)}
 .cover h1{font-family:var(--serif);font-size:46px;font-weight:600;line-height:1.05;margin:10px 0 12px}
 .cover p{color:var(--muted);max-width:540px;margin:0 auto;font-size:15px}
