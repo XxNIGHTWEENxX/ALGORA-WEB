@@ -1,0 +1,52 @@
+/* ALGORA — Estilo compartido de manuales de usuario */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600;700&display=swap');
+:root{--bg:#0b0a08;--panel:#141210;--ink:#ECE8DF;--muted:#9a9284;--line:rgba(216,166,87,.22);--gold:#D8A657;--gold-soft:#e9c98f;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.65;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.doc{max-width:900px;margin:0 auto;background:var(--bg)}
+.serif{font-family:var(--serif)}
+.gold{color:var(--gold)}
+.cover{padding:70px 56px 56px;text-align:center;border-bottom:1px solid var(--line);background:radial-gradient(120% 80% at 50% 0%,rgba(216,166,87,.12),transparent 60%)}
+.cover .brand{font-weight:700;letter-spacing:.4em;font-size:20px;color:var(--gold)}
+.cover .k{margin-top:26px;font-size:12px;letter-spacing:.36em;text-transform:uppercase;color:var(--gold)}
+.cover h1{font-family:var(--serif);font-size:46px;font-weight:600;line-height:1.05;margin:10px 0 12px}
+.cover p{color:var(--muted);max-width:540px;margin:0 auto;font-size:15px}
+.cover .meta{margin-top:22px;font-size:11px;color:var(--muted);letter-spacing:.1em}
+.back{display:inline-block;margin:18px 0 0;font-size:12px;color:var(--gold);text-decoration:none;letter-spacing:.05em}
+.back:hover{color:var(--gold-soft)}
+main{padding:44px 56px 60px}
+h2{font-family:var(--serif);font-size:30px;font-weight:600;color:#fff;margin:38px 0 6px;padding-top:14px;border-top:1px solid var(--line)}
+h2:first-child{border-top:none;padding-top:0;margin-top:0}
+h2 .num{color:var(--gold);margin-right:.4em}
+h3{font-size:17px;font-weight:600;color:var(--gold-soft);margin:22px 0 6px}
+p{margin:8px 0;color:#d7d2c6;font-size:14.5px}
+ul,ol{margin:8px 0 8px 22px;color:#d7d2c6;font-size:14.5px}
+li{margin:5px 0}
+b,strong{color:#fff;font-weight:600}
+a{color:var(--gold)}
+.toc{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 26px;margin-bottom:8px}
+.toc h4{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.toc ol{margin-left:18px}
+.toc a{color:#d7d2c6}
+.toc a:hover{color:var(--gold)}
+.box{border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0;background:var(--panel)}
+.box.req{border-color:rgba(216,166,87,.4)}
+.box.tip{border-left:3px solid var(--gold)}
+.box.warn{border-left:3px solid #c9762f;background:rgba(201,118,47,.06)}
+.box .t{font-weight:700;color:#fff;font-size:13px;letter-spacing:.02em;margin-bottom:6px}
+.steps{counter-reset:s;margin:14px 0}
+.steps .s{position:relative;padding:12px 0 12px 46px;border-bottom:1px dashed var(--line)}
+.steps .s:last-child{border-bottom:none}
+.steps .s::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:11px;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#060606;font-family:var(--serif);font-weight:600;font-size:16px;display:flex;align-items:center;justify-content:center}
+.steps .s h4{color:#fff;font-size:15px;font-weight:600;margin-bottom:2px}
+.steps .s p{margin:2px 0;font-size:13.5px}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--gold);font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+td b{color:#fff}
+.faq .q{font-weight:600;color:#fff;margin-top:14px}
+.faq .a{color:#cfcabd;font-size:14px}
+footer{padding:24px 56px 40px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:var(--ink)}
+.path{font-family:var(--sans);background:rgba(216,166,87,.12);color:var(--gold-soft);border-radius:6px;padding:1px 7px;font-size:13px;font-weight:500}
+@media print{@page{size:A4;margin:14mm}body{background:#fff}.doc{max-width:none}main{padding:0}.cover{padding:0 0 30px}.back,.noprint{display:none}h2{break-after:avoid}.box,.steps .s,table{break-inside:avoid}}

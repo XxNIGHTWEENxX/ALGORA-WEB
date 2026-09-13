@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALGORA · Manual — Clínica</title>
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <div class="brand">A L G O R A</div>
+    <div class="k">Manual de usuario</div>
+    <h1>Módulo <span class="gold">Clínica</span></h1>
+    <p>Expediente clínico electrónico (NOM-004), notas SOAP con firma y cédula, fichas, mediciones, control de acceso y migración de pacientes.</p>
+    <div class="meta">Serie de manuales ALGORA · Módulo Clínica · Para dueño, médico, recepción y guardia</div>
+    <a class="back" href="index.html">← Ver todos los manuales</a>
+  </div>
+  <main>
+    <div class="toc">
+      <h4>Contenido</h4>
+      <ol>
+        <li><a href="#s1">Activar el módulo y requisitos</a></li>
+        <li><a href="#s2">Pantallas principales</a></li>
+        <li><a href="#s3">Crear o buscar un paciente</a></li>
+        <li><a href="#s4">Antecedentes (perfil clínico)</a></li>
+        <li><a href="#s5">Nota de evolución SOAP y firma</a></li>
+        <li><a href="#s6">Imprimir receta / documento</a></li>
+        <li><a href="#s7">Fichas y plantillas</a></li>
+        <li><a href="#s8">Mediciones y métricas</a></li>
+        <li><a href="#s9">Control de acceso con QR</a></li>
+        <li><a href="#s10">Migrar pacientes desde otro sistema</a></li>
+        <li><a href="#s11">Roles y solución de problemas</a></li>
+      </ol>
+    </div>
+
+    <h2 id="s1"><span class="num">1.</span>Activar el módulo y requisitos</h2>
+    <p>Solo el <b>dueño/administrador</b> lo activa desde <span class="path">Suscripción</span>, en la tarjeta <b>“ALGORA CLÍNICA · Salud”</b> con <b>“Activar · 7 días gratis”</b> (por defecto $599/mes). Hay planes empaquetados: <b>“ALGORA POS + Clínica”</b> y <b>“ALGORA Suite Clínica”</b>. Una vez activo aparece la sección <b>“Clínica”</b> con <b>Expedientes</b>, <b>Mi desempeño</b> (médico) y <b>Métricas</b> (dueño/encargado).</p>
+    <div class="box req"><div class="t">Requisitos NOM-004</div><p>El rol <b>Médico</b> exige <b>cédula profesional</b> (se captura en Equipo y sale impresa en las notas). Cada nota debe llevar motivo, exploración, diagnóstico, plan y firma; las notas no se pueden borrar.</p></div>
+
+    <h2 id="s2"><span class="num">2.</span>Pantallas principales</h2>
+    <ul>
+      <li><b>Expedientes</b>: buscador “Buscar paciente por nombre o teléfono”, <b>“+ Nuevo paciente”</b> y, al elegir uno, su expediente (Perfil clínico, Mediciones, Fichas, Nueva nota SOAP, Historial y Adjuntos).</li>
+      <li><b>Mi desempeño</b> (médico): sus propios números (citas, completadas, pacientes, retención, NPS…).</li>
+      <li><b>Métricas</b> (dueño/encargado): “Métricas por médico”, paquetes y satisfacción, con <b>“Exportar CSV”</b>.</li>
+      <li><b>Control de acceso</b> (recepción/guardia): citas del día y escáner de QR.</li>
+    </ul>
+
+    <h2 id="s3"><span class="num">3.</span>Crear o buscar un paciente</h2>
+    <div class="steps">
+      <div class="s"><h4>Busca</h4><p>En <b>Expedientes</b> escribe nombre o teléfono. Los pacientes son los clientes del negocio.</p></div>
+      <div class="s"><h4>Nuevo paciente</h4><p><b>“+ Nuevo paciente”</b> → Nombre completo, Teléfono, Correo (opcional) → <b>“Registrar y abrir expediente”</b>.</p></div>
+    </div>
+
+    <h2 id="s4"><span class="num">4.</span>Antecedentes (perfil clínico)</h2>
+    <p>En la sección <b>“Perfil clínico”</b> captura tipo de sangre, aseguradora, alergias, padecimientos crónicos, medicamentos, antecedentes heredofamiliares y personales, y contacto de emergencia. Pulsa <b>“Guardar”</b>.</p>
+
+    <h2 id="s5"><span class="num">5.</span>Nota de evolución SOAP y firma</h2>
+    <div class="steps">
+      <div class="s"><h4>Abre “Nueva nota de evolución (SOAP)”</h4><p>Puedes consultar la <b>“Guía NOM-004-SSA3-2012”</b>.</p></div>
+      <div class="s"><h4>Llena la nota</h4><p><b>Subjetivo</b> (lo que refiere), <b>Objetivo</b> (exploración), <b>Análisis/diagnóstico</b>, <b>Plan/tratamiento</b> y <b>Diagnóstico</b> (resumen).</p></div>
+      <div class="s"><h4>Agrega la nota</h4><p><b>“Agregar nota”</b>. Si falta diagnóstico o plan, avisa “Nota incompleta según NOM-004” con opciones <b>“Guardar así”</b> / <b>“Completar”</b>.</p></div>
+    </div>
+    <div class="box tip"><div class="t">Firma automática</div><p>La nota queda con fecha, hora, nombre del médico y su cédula. Es de solo agregar: no se edita ni se borra; una corrección se hace con una nota nueva.</p></div>
+
+    <h2 id="s6"><span class="num">6.</span>Imprimir receta / documento</h2>
+    <p>En <b>“Historial de evolución”</b>, cada nota tiene <b>“Imprimir”</b>: genera un documento conforme a NOM-004 (datos del establecimiento, identificación del paciente, fecha/hora, contenido SOAP, línea de firma con cédula y pie de conservación por 5 años). Permite las ventanas emergentes para imprimir.</p>
+
+    <h2 id="s7"><span class="num">7.</span>Fichas y plantillas</h2>
+    <p>En <b>“Fichas clínicas”</b>, el dueño/encargado abre <b>“Plantillas”</b> para instalar prediseñadas o <b>“Crear ficha personalizada”</b> (nombre, especialidad y campos de varios tipos: texto, número, opción única, casillas, sí/no, fecha, escala 0–10). Para llenar una ficha, pulsa su botón, complétala y <b>“Guardar ficha”</b>. Las fichas llenas también se imprimen.</p>
+
+    <h2 id="s8"><span class="num">8.</span>Mediciones y métricas</h2>
+    <p>En el expediente, <b>“Mediciones y mejoría”</b>: el dueño/encargado crea <b>Indicadores</b> (nombre, unidad, si “más alto = mejor” o “más bajo = mejor”); cualquiera captura el <b>“Valor de hoy”</b> y pulsa <b>“Registrar”</b>. Se muestra la gráfica y la etiqueta Mejoría / Retroceso / Sin cambio. El médico ve <b>“Mi desempeño”</b> y el dueño/encargado <b>“Métricas”</b>.</p>
+
+    <h2 id="s9"><span class="num">9.</span>Control de acceso con QR</h2>
+    <div class="box warn"><div class="t">Solo con recepción o guardia</div><p>El QR de la cita solo se genera si hay al menos un empleado activo con rol <b>Guardia</b> o <b>Recepción</b>. Se envía al paciente por correo y/o WhatsApp.</p></div>
+    <div class="steps">
+      <div class="s"><h4>El paciente muestra su QR</h4><p>Recibió el enlace del pase por correo; en él aparece el código QR con los datos de su cita.</p></div>
+      <div class="s"><h4>Recepción escanea</h4><p>En <b>Control de acceso</b> → <b>“Escanear código QR”</b>. Resultado: “Acceso válido. Llegada registrada.” (o avisos de ya registrado / cancelada / no es de hoy).</p></div>
+      <div class="s"><h4>Se avisa al médico</h4><p>El médico asignado recibe la notificación <b>“Paciente en recepción”</b>. También se puede marcar con <b>“Confirmar llegada”</b> sin escanear.</p></div>
+    </div>
+
+    <h2 id="s10"><span class="num">10.</span>Migrar pacientes desde otro sistema (Klinik)</h2>
+    <p>En el panel de administración (ALGORA ADMIN), bloque <b>“Importar de Klinik (clínica)”</b>:</p>
+    <div class="steps">
+      <div class="s"><h4>Elige el negocio destino</h4><p>La Clínica debe estar activa en ese negocio.</p></div>
+      <div class="s"><h4>Sube el .json de Klinik</h4><p>Exporta desde Klinik (Ajustes → Exportar datos) y súbelo. Se muestra el conteo: Pacientes, Notas, Citas, Adjuntos.</p></div>
+      <div class="s"><h4>Importa</h4><p><b>“Importar de Klinik (N pacientes)”</b>. Trae pacientes + antecedentes, expedientes, citas y adjuntos/recetas.</p></div>
+      <div class="s"><h4>Revisa el reporte</h4><p>Cada tipo queda como <b>lote reversible</b> con su botón <b>“Revertir”</b>.</p></div>
+    </div>
+
+    <h2 id="s11"><span class="num">11.</span>Roles y solución de problemas</h2>
+    <table>
+      <tr><th>Rol</th><th>Qué ve / puede</th></tr>
+      <tr><td><b>Médico</b></td><td>Su agenda, Expedientes (pacientes, notas, fichas, mediciones, imprimir) y Mi desempeño. Requiere cédula.</td></tr>
+      <tr><td><b>Recepción</b></td><td>Control de acceso (citas del día + escáner). Su presencia activa el QR.</td></tr>
+      <tr><td><b>Guardia</b></td><td>Solo Control de acceso.</td></tr>
+      <tr><td><b>Encargado</b></td><td>Plantillas, indicadores y Métricas.</td></tr>
+      <tr><td><b>Dueño / Admin</b></td><td>Todo, incluida la activación del add-on y la migración desde Klinik.</td></tr>
+    </table>
+    <table>
+      <tr><th>Aviso</th><th>Qué significa</th></tr>
+      <tr><td>“La cédula profesional es obligatoria para el rol Médico”.</td><td>Captúrala en Equipo antes de guardar al médico.</td></tr>
+      <tr><td>“Nota incompleta según NOM-004”.</td><td>Falta diagnóstico o plan; puedes Guardar así o Completar.</td></tr>
+      <tr><td>“El módulo Clínica no está activo”.</td><td>El dueño debe activarlo desde Suscripción.</td></tr>
+      <tr><td>“No se pudo leer el JSON…”.</td><td>Verifica que sea el archivo de exportación de Klinik.</td></tr>
+    </table>
+  </main>
+  <footer>
+    <div><b>ALGORA TECH S.A.S. de C.V.</b> · Manual — Clínica<br>Soporte: WhatsApp 294 111 4401 · ventas.cliente@algora.com.mx</div>
+    <div>algora.com.mx · Hecho en México</div>
+  </footer>
+</div>
+</body>
+</html>

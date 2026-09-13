@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALGORA · Manual — WhatsApp: Campañas y Agente de IA</title>
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <div class="brand">A L G O R A</div>
+    <div class="k">Manual de usuario</div>
+    <h1>WhatsApp: <span class="gold">Campañas y Agente de IA</span></h1>
+    <p>Cómo conectar el WhatsApp de tu negocio, dejar que la IA conteste y agende 24/7, y enviar campañas de publicidad a tus clientes.</p>
+    <div class="meta">Serie de manuales ALGORA · Módulo WhatsApp · Para dueño y empleados</div>
+    <a class="back" href="index.html">← Ver todos los manuales</a>
+  </div>
+  <main>
+    <div class="toc">
+      <h4>Contenido</h4>
+      <ol>
+        <li><a href="#q1">Qué puede hacer WhatsApp en ALGORA</a></li>
+        <li><a href="#q2">Requisitos antes de empezar</a></li>
+        <li><a href="#q3">Conectar el WhatsApp de tu negocio</a></li>
+        <li><a href="#q4">El Agente de IA: configurarlo y probarlo</a></li>
+        <li><a href="#q5">Campañas de publicidad (plantillas de Meta)</a></li>
+        <li><a href="#q6">Roles: quién hace qué</a></li>
+        <li><a href="#q7">Buenas prácticas y reglas de Meta</a></li>
+        <li><a href="#q8">Solución de problemas</a></li>
+        <li><a href="#q9">Preguntas frecuentes</a></li>
+      </ol>
+    </div>
+
+    <h2 id="q1"><span class="num">1.</span>Qué puede hacer WhatsApp en ALGORA</h2>
+    <p>ALGORA usa WhatsApp de tres maneras, todas desde el mismo sistema:</p>
+    <ul>
+      <li><b>Alertas y confirmaciones automáticas:</b> confirmaciones de cita o reservación, recordatorios y avisos de pedido salen solos.</li>
+      <li><b>Agente de IA:</b> contesta 24 horas con la información real de tu negocio (catálogo, menú, servicios, horarios), resuelve dudas y —si lo activas— agenda citas y cobra el anticipo con un enlace.</li>
+      <li><b>Campañas de publicidad:</b> mandas promociones con imagen a toda tu base de clientes usando plantillas aprobadas por Meta.</li>
+    </ul>
+    <div class="box tip">
+      <div class="t">Número propio vs. número de ALGORA</div>
+      <p>Si aún no conectas tu número, los mensajes salen del <b>número central de ALGORA</b> (funciona igual, pero el cliente no ve tu nombre). Al conectar <b>tu propio número</b>, todo sale a nombre de tu negocio y puedes crear tus propias plantillas de publicidad. Recomendado: conecta tu número.</p>
+    </div>
+
+    <h2 id="q2"><span class="num">2.</span>Requisitos antes de empezar</h2>
+    <div class="box req">
+      <div class="t">Lista de requisitos</div>
+      <ol>
+        <li><b>Cuenta ALGORA activa</b> con el add-on del agente de WhatsApp. Si no lo tienes, actívalo en <span class="path">Suscripción</span>.</li>
+        <li><b>Un número de teléfono</b> dedicado que <u>no</u> esté ya registrado en la app de WhatsApp o WhatsApp Business.</li>
+        <li><b>Poder recibir un SMS o llamada</b> en ese número para verificarlo con Meta.</li>
+        <li><b>Una cuenta de Facebook</b> (del dueño) para autorizar la conexión. No necesitas saber usar el Administrador de Facebook.</li>
+        <li><b>Tu catálogo / menú / servicios cargados</b> en ALGORA.</li>
+        <li>Para <b>agendar citas</b> con el agente: <b>servicios y horarios</b> configurados en la Agenda.</li>
+      </ol>
+    </div>
+    <div class="box warn"><div class="t">Importante sobre el número</div><p>Si el número ya está en uso en la app de WhatsApp del celular, primero <b>bórralo de esa app</b> antes de conectarlo a ALGORA. Un número solo puede vivir en un lugar a la vez.</p></div>
+
+    <h2 id="q3"><span class="num">3.</span>Conectar el WhatsApp de tu negocio</h2>
+    <p>Se hace una sola vez desde <span class="path">Ajustes → WhatsApp del negocio</span>, con el asistente oficial de Meta.</p>
+    <div class="steps">
+      <div class="s"><h4>Entra a Ajustes</h4><p>Abre ALGORA como <b>dueño</b> y busca la tarjeta <b>“WhatsApp del negocio”</b>.</p></div>
+      <div class="s"><h4>“Conectar WhatsApp”</h4><p>Se abre la ventana de Meta; inicia sesión con Facebook.</p></div>
+      <div class="s"><h4>Elige o crea tu WhatsApp Business</h4><p>Meta pide el nombre del negocio; si no tienes cuenta, se crea ahí.</p></div>
+      <div class="s"><h4>Verifica tu número</h4><p>Escribe el número y confirma el código que llega por SMS o llamada.</p></div>
+      <div class="s"><h4>Termina</h4><p>La ventana se cierra y ALGORA muestra tu WhatsApp como <b>“Conectado”</b>.</p></div>
+    </div>
+    <div class="box tip"><div class="t">Si el botón aún no está disponible</div><p>La conexión directa se habilita cuando Meta aprueba la integración. Mientras, tus mensajes salen del número de ALGORA. Para <b>desconectar</b>, usa <b>“Desconectar”</b> en la misma tarjeta.</p></div>
+
+    <h2 id="q4"><span class="num">4.</span>El Agente de IA: configurarlo y probarlo</h2>
+    <p>Está en <span class="path">Ajustes → Agente de IA (WhatsApp)</span>. Contesta solo cuando está activado y <b>nunca inventa precios</b>: los toma de tu catálogo.</p>
+    <table>
+      <tr><th>Campo</th><th>Para qué sirve</th><th>Ejemplo</th></tr>
+      <tr><td><b>Tono / estilo</b></td><td>Cómo habla con tus clientes.</td><td>“Amable, informal, tutea, emojis con moderación.”</td></tr>
+      <tr><td><b>Horario de atención</b></td><td>Para responder coherente con tus horas.</td><td>“Lun–Sáb 9:00 a 20:00; Dom cerrado.”</td></tr>
+      <tr><td><b>Información adicional</b></td><td>Promos, envíos, pagos, ubicación, preguntas frecuentes.</td><td>“Envío gratis desde $500. Aceptamos tarjeta y transferencia.”</td></tr>
+      <tr><td><b>Permitir agendar citas</b></td><td>Deja que cree citas en tu agenda (requiere servicios y horarios).</td><td>Casilla activada.</td></tr>
+    </table>
+    <div class="steps">
+      <div class="s"><h4>Configura</h4><p>Define tono, horario e información; activa “Permitir agendar citas” si das servicios.</p></div>
+      <div class="s"><h4>Pruébalo</h4><p>Usa el <b>Probador</b>: escribe como cliente. Prueba tus cambios aunque no los guardes.</p></div>
+      <div class="s"><h4>Guarda</h4><p><b>“Guardar cambios”</b>. Ajusta hasta que responda como quieres.</p></div>
+      <div class="s"><h4>Actívalo</h4><p><b>“Activar”</b>: responde solo a los mensajes que lleguen a tu WhatsApp, 24/7. Se apaga con <b>“Apagar”</b>.</p></div>
+    </div>
+
+    <h2 id="q5"><span class="num">5.</span>Campañas de publicidad (plantillas de Meta)</h2>
+    <p>Se arman en <span class="path">Marketing</span>. Meta exige plantillas aprobadas; ALGORA te deja crearlas sin entrar a Facebook.</p>
+    <h3>Crear una plantilla</h3>
+    <div class="steps">
+      <div class="s"><h4>Marketing → Plantillas de publicidad</h4><p>Requiere tu número propio conectado.</p></div>
+      <div class="s"><h4>“Crear plantilla de publicidad”</h4><p>Nombre, texto del mensaje y, opcional, imagen de encabezado.</p></div>
+      <div class="s"><h4>Envíala a aprobación</h4><p>Meta la revisa (minutos a horas). Actualiza hasta que diga <b>Aprobada</b>.</p></div>
+    </div>
+    <h3>Enviar una campaña</h3>
+    <div class="steps">
+      <div class="s"><h4>Elige el segmento</h4><p>Tus clientes ya están en la base (compras, citas, reservas).</p></div>
+      <div class="s"><h4>Selecciona la plantilla aprobada</h4><p>Si lleva imagen, súbela: al cliente le llega la foto, no un enlace.</p></div>
+      <div class="s"><h4>Envía o programa</h4><p>De inmediato o a una fecha/hora.</p></div>
+    </div>
+    <div class="box warn"><div class="t">La plantilla “Hello World” no aparece</div><p>Es una muestra de Meta y ALGORA la oculta a propósito. Solo verás tus plantillas y las de ALGORA. Las campañas tienen costo por mensaje según Meta.</p></div>
+
+    <h2 id="q6"><span class="num">6.</span>Roles: quién hace qué</h2>
+    <table>
+      <tr><th>Rol</th><th>Qué puede</th></tr>
+      <tr><td><b>Dueño</b></td><td>Conectar/desconectar el número, configurar el agente, crear plantillas y enviar campañas.</td></tr>
+      <tr><td><b>Encargado</b></td><td>Enviar campañas y usar plantillas aprobadas; dar seguimiento a conversaciones.</td></tr>
+      <tr><td><b>Empleado</b></td><td>Atiende a los clientes que el agente ya filtró y agendó. No configura el agente.</td></tr>
+    </table>
+
+    <h2 id="q7"><span class="num">7.</span>Buenas prácticas y reglas de Meta</h2>
+    <ul>
+      <li><b>Calidad del número:</b> envía a tu base real; evita mandar a quien no te conoce.</li>
+      <li><b>No spam:</b> promociones con valor y frecuencia razonable.</li>
+      <li><b>Plantillas honestas:</b> Meta rechaza textos engañosos.</li>
+      <li><b>El agente primero:</b> deja que conteste lo repetitivo; entra tú para el trato humano.</li>
+    </ul>
+
+    <h2 id="q8"><span class="num">8.</span>Solución de problemas</h2>
+    <table>
+      <tr><th>Problema</th><th>Qué hacer</th></tr>
+      <tr><td>“Conectar WhatsApp” está gris.</td><td>La conexión directa aún no está habilitada. Mientras, usas el número de ALGORA.</td></tr>
+      <tr><td>“Conexión cancelada o incompleta”.</td><td>Vuelve a intentar y completa todos los pasos de Meta.</td></tr>
+      <tr><td>El número ya está en uso.</td><td>Bórralo de la app de WhatsApp del celular y reconéctalo.</td></tr>
+      <tr><td>El agente responde mal.</td><td>Mejora la “Información adicional” y el catálogo; vuelve a probar.</td></tr>
+      <tr><td>El agente no agenda.</td><td>Activa “Permitir agendar citas” y ten servicios y horarios configurados.</td></tr>
+      <tr><td>Plantilla rechazada.</td><td>Ajusta el texto (sin exageraciones) y reenvíala.</td></tr>
+    </table>
+
+    <h2 id="q9"><span class="num">9.</span>Preguntas frecuentes</h2>
+    <div class="faq">
+      <p class="q">¿Necesito saber usar el Administrador de Facebook?</p>
+      <p class="a">No. Todo se hace desde ALGORA; el asistente de Meta te guía.</p>
+      <p class="q">¿El agente inventa precios?</p>
+      <p class="a">No. Toma los precios de tu catálogo real y usa la info que le diste.</p>
+      <p class="q">¿Puedo probarlo sin arriesgarme con clientes?</p>
+      <p class="a">Sí, con el Probador dentro de Ajustes, sin mandar nada por WhatsApp.</p>
+      <p class="q">¿Las campañas tienen costo?</p>
+      <p class="a">Sí, Meta cobra por mensaje de marketing.</p>
+    </div>
+  </main>
+  <footer>
+    <div><b>ALGORA TECH S.A.S. de C.V.</b> · Manual — WhatsApp<br>Soporte: WhatsApp 294 111 4401 · ventas.cliente@algora.com.mx</div>
+    <div>algora.com.mx · Hecho en México</div>
+  </footer>
+</div>
+</body>
+</html>

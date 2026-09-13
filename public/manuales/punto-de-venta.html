@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALGORA · Manual — Punto de venta y ventas</title>
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <div class="brand">A L G O R A</div>
+    <div class="k">Manual de usuario</div>
+    <h1>Punto de venta <span class="gold">y ventas</span></h1>
+    <p>Cobrar, controlar inventario, manejar la caja, registrar clientes y facturar (CFDI 4.0), con o sin internet.</p>
+    <div class="meta">Serie de manuales ALGORA · Módulo Punto de venta · Para dueño y empleados</div>
+    <a class="back" href="index.html">← Ver todos los manuales</a>
+  </div>
+  <main>
+    <div class="toc">
+      <h4>Contenido</h4>
+      <ol>
+        <li><a href="#s1">Antes de empezar (roles y acceso)</a></li>
+        <li><a href="#s2">Hacer una venta y cobrar</a></li>
+        <li><a href="#s3">Descuentos</a></li>
+        <li><a href="#s4">Catálogo de productos</a></li>
+        <li><a href="#s5">Inventario / existencias</a></li>
+        <li><a href="#s6">Caja: abrir, gastos y corte</a></li>
+        <li><a href="#s7">Clientes, crédito y monedero</a></li>
+        <li><a href="#s8">Facturación CFDI 4.0</a></li>
+        <li><a href="#s9">Con y sin internet</a></li>
+        <li><a href="#s10">Ajustes clave</a></li>
+        <li><a href="#s11">Solución de problemas</a></li>
+      </ol>
+    </div>
+
+    <h2 id="s1"><span class="num">1.</span>Antes de empezar (roles y acceso)</h2>
+    <p>Cada persona entra con su rol y solo ve lo que le corresponde:</p>
+    <table>
+      <tr><th>Rol</th><th>Qué puede hacer</th></tr>
+      <tr><td><b>Dueño</b></td><td>Todo: vender, catálogo, precios, costos, inventario, caja, reportes, finanzas, ajustes y facturación. Es el único que abre y asigna cajas y da de alta empleados/sucursales.</td></tr>
+      <tr><td><b>Encargado</b></td><td>Casi todo, excepto Finanzas/Nómina, Ajustes y gestión de personal. Ve todas las ventas.</td></tr>
+      <tr><td><b>Cajero / Empleado</b></td><td>Vender, usar su caja asignada, clientes, facturar y ajustar stock. No ve costos ni reportes y no aplica descuentos libres sin autorización.</td></tr>
+    </table>
+    <p><b>Cómo entra cada quien:</b> el dueño con correo y contraseña (o huella de Windows si la activó); el empleado con <b>código del negocio + PIN de 4 dígitos</b>, huella USB o Windows Hello.</p>
+    <div class="box tip">
+      <div class="t">Autorización del encargado</div>
+      <p>Para acciones sensibles (por ejemplo, un descuento libre) el sistema pide autorización. El dueño/administrador procede directo; el encargado confirma con huella USB, biometría del equipo o su PIN. Verás el aviso <b>“Autorización requerida”</b>.</p>
+    </div>
+
+    <h2 id="s2"><span class="num">2.</span>Hacer una venta y cobrar</h2>
+    <div class="steps">
+      <div class="s"><h4>Agrega productos al carrito</h4><p>En <span class="path">Punto de venta</span> toca los productos, escanéalos con lector USB o usa <b>“Escanear con cámara”</b>. Búscalos en <b>“Buscar producto, SKU o código de barras…”</b>. Si es producto a granel, se pide la <b>Cantidad</b>.</p></div>
+      <div class="s"><h4>Revisa el carrito</h4><p>Ajusta cantidades con <b>+ / −</b> o usa <b>“Vaciar”</b>. Verás Subtotal, Descuento y Total.</p></div>
+      <div class="s"><h4>Pulsa “Cobrar”</h4><p>Si el botón está deshabilitado, es porque la caja está cerrada (“Abre la caja registradora para poder cobrar”).</p></div>
+      <div class="s"><h4>Elige la forma de pago</h4><p>En el modal <b>“Cobrar”</b>: <b>Efectivo</b> (teclea el monto o usa <b>“Exacto”</b>; muestra el <b>Cambio</b>), <b>Tarjeta</b> (si tienes terminal Mercado Pago Point, <b>“Enviar cobro a la terminal”</b>) o <b>QR</b>.</p></div>
+      <div class="s"><h4>Confirma</h4><p>Pulsa <b>“Confirmar”</b>. Se guarda la venta, baja el stock y aparece el ticket, desde donde puedes facturar.</p></div>
+    </div>
+
+    <h2 id="s3"><span class="num">3.</span>Descuentos</h2>
+    <p>En el carrito, botón <b>“Agregar descuento”</b>: elige <b>%</b> o <b>$</b>, escribe el valor y <b>“Aplicar”</b>. Aparece como “Descuento (…)” y puedes quitarlo. Los empleados no pueden aplicar descuentos libres sin autorización del encargado. Los cupones son de la tienda en línea, no del POS.</p>
+
+    <h2 id="s4"><span class="num">4.</span>Catálogo de productos</h2>
+    <div class="steps">
+      <div class="s"><h4>Nuevo producto</h4><p>En <span class="path">Catálogo</span> → <b>“+ Nuevo producto”</b> (o <b>“Escanear”</b> un código para prellenar nombre y foto).</p></div>
+      <div class="s"><h4>Llena los datos</h4><p><b>Nombre</b> y <b>Precio</b> son obligatorios. Opcional: Costo, SKU, Código de barras (<b>“Generar EAN-13”</b>), Clave SAT (se sugiere), <b>IVA</b> (Gravado 16% / Tasa 0% / Exento), <b>IEPS (%)</b>, Categoría y foto (con <b>“Quitar fondo”</b>).</p></div>
+      <div class="s"><h4>Inventario y unidad</h4><p>Activa <b>“Controlar inventario”</b> y define <b>Stock actual</b>. Elige la <b>Unidad de venta</b> (Pieza, Kilogramo, Litro…); las que no son pieza activan la venta a granel.</p></div>
+      <div class="s"><h4>Guarda</h4><p>Pulsa <b>“Guardar”</b>. Con <b>“Importar”</b> puedes subir tu catálogo desde Excel/CSV, y con <b>“Etiquetas”</b> imprimir códigos.</p></div>
+    </div>
+
+    <h2 id="s5"><span class="num">5.</span>Inventario / existencias</h2>
+    <p>En <span class="path">Catálogo</span>, toca un producto que controle inventario para abrir <b>Existencias</b>. Elige el modo:</p>
+    <ul>
+      <li><b>Entrada</b>: recarga de mercancía (con costo opcional; calcula costo promedio ponderado).</li>
+      <li><b>Salida</b>: merma o consumo.</li>
+      <li><b>Ajuste</b>: conteo físico (deja el stock en el número real).</li>
+    </ul>
+    <p>Escribe la cantidad y una nota opcional, y confirma. El botón <b>“Historial”</b> muestra todos los movimientos.</p>
+
+    <h2 id="s6"><span class="num">6.</span>Caja: abrir, gastos y corte</h2>
+    <div class="steps">
+      <div class="s"><h4>Abrir caja</h4><p>En <span class="path">Caja</span> → <b>“Abrir caja”</b>: nombre, encargado (opcional) y <b>“Fondo de caja inicial”</b>. Con varias cajas, cada equipo elige <b>“Usar esta caja”</b>. Solo el dueño abre; al empleado se le asigna una.</p></div>
+      <div class="s"><h4>Registrar un gasto</h4><p>En <b>“Gastos del negocio” → “Agregar gasto”</b>: Descripción y Monto. Se resta del efectivo esperado en el corte.</p></div>
+      <div class="s"><h4>Cerrar caja (corte)</h4><p><b>“Cerrar caja (corte)”</b> muestra: fondo + ventas en efectivo − gastos = <b>“Efectivo esperado”</b>. Escribe el <b>“Conteo real en caja”</b>, revisa la <b>Diferencia</b> y <b>“Confirmar cierre”</b>. Consulta cortes pasados en <b>“Historial de cortes”</b>.</p></div>
+    </div>
+
+    <h2 id="s7"><span class="num">7.</span>Clientes, crédito y monedero</h2>
+    <p>En <span class="path">Clientes</span> → <b>“+ Nuevo”</b> registras nombre, RFC, teléfono, email, régimen, uso CFDI, <b>Límite de crédito</b> y <b>Días de crédito</b>. Cada ficha muestra <b>Límite / Adeudo / Disponible</b>, el <b>Monedero</b> (lealtad) y <b>“Registrar abono”</b>.</p>
+    <p>Durante el cobro puedes <b>“Asignar cliente (monedero)”</b> (buscar, escanear tarjeta o registrar por teléfono) y, si tiene saldo, activar <b>“Usar monedero”</b>. Para vender a crédito, usa <b>“Vender a crédito”</b> en el cobro.</p>
+
+    <h2 id="s8"><span class="num">8.</span>Facturación CFDI 4.0</h2>
+    <div class="steps">
+      <div class="s"><h4>Abre “Facturar venta”</h4><p>Desde el ticket de la venta.</p></div>
+      <div class="s"><h4>Captura los datos fiscales</h4><p>Busca al cliente o crea uno nuevo: <b>RFC</b>, <b>Razón social</b>, <b>Régimen fiscal</b>, <b>Uso CFDI</b>, <b>Email</b> y <b>C.P. fiscal</b> (5 dígitos; obligatorio para timbrar).</p></div>
+      <div class="s"><h4>Timbra</h4><p><b>“Timbrar factura CFDI”</b> (o <b>“Timbrar factura PPD”</b> en ventas a crédito). Luego puedes <b>Descargar PDF</b>, <b>Descargar XML</b> o <b>Enviar por correo</b>.</p></div>
+    </div>
+    <div class="box warn">
+      <div class="t">Requisitos para timbrar</div>
+      <p>Necesitas la <b>Facturación CFDI configurada</b> (Configuración) y timbres disponibles. Sin eso, ALGORA genera un <b>comprobante interno</b> (sin validez fiscal). En pruebas aparece “MODO PRUEBA - SIN VALIDEZ FISCAL”.</p>
+    </div>
+
+    <h2 id="s9"><span class="num">9.</span>Con y sin internet</h2>
+    <p>Todo se guarda <b>primero en el dispositivo</b>: puedes vender sin internet. Verás la banda <b>“Sin conexión — los datos se guardan localmente y se sincronizarán al reconectar”</b> y un contador de <b>ventas pendientes</b>. Al volver la conexión, se sincroniza solo (no repitas la venta: ya está guardada).</p>
+    <p>Sí necesitan internet: enviar cobro a la terminal, timbrar CFDI, el monedero (saldo del servidor), registrar gastos y consultar la clave SAT.</p>
+
+    <h2 id="s10"><span class="num">10.</span>Ajustes clave</h2>
+    <ul>
+      <li><b>Ticket impreso:</b> logo del ticket (58 mm) y pie de ticket.</li>
+      <li><b>Cajón de efectivo</b> (por equipo): <b>“Conectar cajón”</b>, <b>“Probar apertura”</b>; opción de abrir automáticamente al cobrar en efectivo. Con impresoras de driver de Windows se usa el <b>Agente de cajón ALGORA</b>.</li>
+      <li><b>IVA / IEPS por producto:</b> se define en cada producto. En el POS el precio ya incluye impuestos; el IVA/IEPS solo se usa al timbrar CFDI.</li>
+      <li><b>Terminales de cobro:</b> Mercado Pago Point.</li>
+      <li><b>Multi-sucursal:</b> Configuración → Sucursales (hasta 5). Con 2+ sucursales activas, el stock pasa a ser por sucursal.</li>
+    </ul>
+
+    <h2 id="s11"><span class="num">11.</span>Solución de problemas</h2>
+    <table>
+      <tr><th>Situación</th><th>Qué hacer</th></tr>
+      <tr><td>El botón “Cobrar” está bloqueado.</td><td>No hay caja abierta o asignada. El dueño abre la caja; al empleado hay que asignarle una.</td></tr>
+      <tr><td>“Agotado” o “Solo hay N unidades”.</td><td>El producto controla inventario y no hay stock suficiente. Registra una entrada.</td></tr>
+      <tr><td>La caja parece cerrarse sola.</td><td>Es el bloqueo por inactividad: el empleado reingresa su PIN. Se ajusta en “Bloqueo de caja por inactividad (minutos)”.</td></tr>
+      <tr><td>No timbra la factura.</td><td>Falta el C.P. fiscal (5 dígitos) o no hay timbres. Revisa la configuración de CFDI.</td></tr>
+      <tr><td>El cajón no abre.</td><td>Suele ser impresora con driver de Windows: instala el Agente de cajón y, en Chrome, da permiso de “red local” al pulsar “Buscar agente”.</td></tr>
+      <tr><td>Stock distinto al esperado en multi-sucursal.</td><td>El campo de stock es el de la sucursal activa, no el total global.</td></tr>
+    </table>
+  </main>
+  <footer>
+    <div><b>ALGORA TECH S.A.S. de C.V.</b> · Manual — Punto de venta<br>Soporte: WhatsApp 294 111 4401 · ventas.cliente@algora.com.mx</div>
+    <div>algora.com.mx · Hecho en México</div>
+  </footer>
+</div>
+</body>
+</html>

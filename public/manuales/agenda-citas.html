@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALGORA · Manual — Agenda y citas</title>
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <div class="brand">A L G O R A</div>
+    <div class="k">Manual de usuario</div>
+    <h1>Agenda <span class="gold">y citas</span></h1>
+    <p>Servicios, horarios, reservas en línea, anticipos, recordatorios, cobro de la cita y pase de acceso con QR.</p>
+    <div class="meta">Serie de manuales ALGORA · Módulo Agenda · Para dueño y empleados</div>
+    <a class="back" href="index.html">← Ver todos los manuales</a>
+  </div>
+  <main>
+    <div class="toc">
+      <h4>Contenido</h4>
+      <ol>
+        <li><a href="#s1">Activar la Agenda y para quién es</a></li>
+        <li><a href="#s2">Pantallas principales</a></li>
+        <li><a href="#s3">Crear un servicio (con o sin anticipo)</a></li>
+        <li><a href="#s4">Asignar profesionales</a></li>
+        <li><a href="#s5">Horarios y horas muertas</a></li>
+        <li><a href="#s6">Crear una cita manual</a></li>
+        <li><a href="#s7">Completar y cobrar la cita</a></li>
+        <li><a href="#s8">Reservas en línea y anticipos</a></li>
+        <li><a href="#s9">Pase de acceso con QR</a></li>
+        <li><a href="#s10">Recordatorios y roles</a></li>
+        <li><a href="#s11">Solución de problemas</a></li>
+      </ol>
+    </div>
+
+    <h2 id="s1"><span class="num">1.</span>Activar la Agenda y para quién es</h2>
+    <p>La Agenda vive en el menú <span class="path">Operatividad → Agenda</span>. Es un add-on (<b>$399/mes, 14 días gratis</b>). Si no está activa, aparece la pantalla de venta con <b>“Iniciar prueba gratis”</b> y <b>“Suscribirse ahora”</b>.</p>
+    <p>La usan estéticas, barberías, spa, consultorios/clínicas, gimnasios (clases con cupo) y hoteles (servicios extra). Los roles <b>Guardia</b> y <b>Recepción</b> ven además la pantalla <b>“Control de acceso”</b>.</p>
+
+    <h2 id="s2"><span class="num">2.</span>Pantallas principales</h2>
+    <p>El encabezado muestra <b>“Agenda”</b> y “N citas hoy”, con los botones <b>“Nuevo evento”</b> y <b>“Nueva cita”</b>. Pestañas:</p>
+    <ul>
+      <li><b>Calendario</b>: citas del día con vista <b>Día / Semana / Mes</b> y filtro por profesional.</li>
+      <li><b>Paquetes</b>: paquetes de sesiones.</li>
+      <li><b>Servicios</b> y <b>Horarios</b>: solo dueño/encargado.</li>
+    </ul>
+    <p>Estados de una cita: <b>Pendiente, Confirmada, Completada, Cancelada, No asistió</b>.</p>
+
+    <h2 id="s3"><span class="num">3.</span>Crear un servicio (con o sin anticipo)</h2>
+    <div class="steps">
+      <div class="s"><h4>Servicios → “Agregar servicio”</h4><p>Captura imagen, <b>Nombre</b>, Descripción, <b>Precio</b>, <b>Duración (min)</b> y Color.</p></div>
+      <div class="s"><h4>¿Clase grupal?</h4><p>Llena <b>Cupo</b> para que varios asistan al mismo horario (vacío = cita individual).</p></div>
+      <div class="s"><h4>Anticipo (opcional)</h4><p>En <b>“Anticipo”</b> elige <b>Porcentaje (%)</b> o <b>Monto fijo ($)</b> y captura el valor. En 0 = sin anticipo. El sistema muestra “Anticipo: $…”.</p></div>
+      <div class="s"><h4>Guarda</h4><p>Pulsa <b>“Guardar”</b>. Cada servicio genera una <b>“Liga directa para agendar”</b> con <b>“Copiar liga”</b> y <b>“WhatsApp”</b> (requiere la Tienda en línea activada).</p></div>
+    </div>
+
+    <h2 id="s4"><span class="num">4.</span>Asignar profesionales</h2>
+    <p>En la tarjeta del servicio, <b>“Asignar profesionales”</b> y marca quiénes lo atienden. <b>Sin asignar = todos pueden atender.</b> Si asignas, solo esos aparecen para ese servicio (en la agenda y en la web).</p>
+
+    <h2 id="s5"><span class="num">5.</span>Horarios y horas muertas</h2>
+    <div class="steps">
+      <div class="s"><h4>Horarios de atención</h4><p>En <b>Horarios</b>, elige el profesional (el horario es por persona) y activa cada día con su rango “de … a …”. Días inactivos quedan como <b>Cerrado</b>. <b>“Guardar horarios”</b>.</p></div>
+      <div class="s"><h4>Horas muertas (bloqueos)</h4><p><b>“+ Agregar”</b>: alcance (el profesional o “Todo el negocio”), tipo (“Cada semana” o “Día específico”), rango y motivo. <b>“Bloquear horario”</b>. Esas horas desaparecen de la web y del formulario.</p></div>
+    </div>
+    <div class="box tip"><div class="t">El horario del profesional manda</div><p>Si un profesional tiene su propio horario y ese día está en “Cerrado”, no aparecerá aunque el negocio abra.</p></div>
+
+    <h2 id="s6"><span class="num">6.</span>Crear una cita manual</h2>
+    <div class="steps">
+      <div class="s"><h4>“Nueva cita”</h4><p>Captura Cliente (requerido), Teléfono/Email (opcionales), Servicio, Profesional (<b>“Cualquiera”</b> o uno), Fecha y Duración.</p></div>
+      <div class="s"><h4>Elige el horario</h4><p>En <b>“Horario disponible”</b> aparecen solo las horas realmente libres. Con <b>“Cualquiera”</b>, el sistema asigna al primer profesional libre y elegible.</p></div>
+      <div class="s"><h4>Agenda</h4><p>Pulsa <b>“Agendar”</b>. La cita entra como <b>Confirmada</b>; si hay correo o teléfono, se manda confirmación automática.</p></div>
+    </div>
+
+    <h2 id="s7"><span class="num">7.</span>Completar y cobrar la cita</h2>
+    <p>En una cita <b>Confirmada</b>, el ícono verde de palomita abre <b>“Cobrar y completar”</b>. Muestra Precio del servicio, Anticipo pagado, Monedero usado y <b>“A cobrar ahora”</b>.</p>
+    <div class="steps">
+      <div class="s"><h4>Quién atendió</h4><p>Elige el profesional en <b>“Atendió”</b>.</p></div>
+      <div class="s"><h4>Método de pago</h4><p>Efectivo, Tarjeta o QR / Transfer (solo si queda saldo). Si el cliente tiene monedero, activa <b>“Usar saldo”</b>.</p></div>
+      <div class="s"><h4>Cobra y completa</h4><p><b>“Cobrar $… y completar”</b> (o <b>“Completar cita”</b> si no hay saldo). Registra la venta en Finanzas/Reportes y, en efectivo, la liga a la caja abierta.</p></div>
+    </div>
+    <div class="box tip"><div class="t">Abre caja antes de cobrar en efectivo</div><p>Para que el arqueo cuadre, ten una caja abierta cuando completes una cita cobrada en efectivo.</p></div>
+
+    <h2 id="s8"><span class="num">8.</span>Reservas en línea y anticipos</h2>
+    <p>En la página pública del negocio (<span class="path">…/store/tu-negocio</span>), sección <b>“Reserva en línea → Nuestros servicios”</b>, el cliente elige servicio, profesional, fecha y horario (agrupado en Mañana/Tarde/Noche), captura sus datos y puede aplicar un código de descuento.</p>
+    <ul>
+      <li>Si el servicio pide anticipo y el negocio tiene <b>Stripe</b> conectado: botón <b>“Agendar y pagar $…”</b> (paga en línea). La cita queda <b>Pendiente</b> hasta que se paga y luego pasa a <b>Confirmada</b>.</li>
+      <li>Sin anticipo: <b>“Confirmar cita”</b>, y queda confirmada de inmediato.</li>
+    </ul>
+    <p>El cliente recibe confirmación por <b>correo</b> y/o <b>WhatsApp</b>. El resto del precio se cobra en el negocio al completar la cita.</p>
+
+    <h2 id="s9"><span class="num">9.</span>Pase de acceso con QR</h2>
+    <div class="box warn"><div class="t">Solo si hay recepción o guardia</div><p>El pase con QR solo se genera y se envía si el negocio tiene al menos un empleado activo con rol <b>Guardia</b> o <b>Recepción</b>. Si no, la confirmación se manda sin QR.</p></div>
+    <p>El pase vive en una página propia y muestra el negocio, el cliente, el QR y los datos de la cita. El cliente lo recibe por correo (y en el recordatorio). Desde la Agenda, el botón del sobre <b>“Enviar QR de acceso por correo”</b> lo reenvía.</p>
+    <p>Recepción/guardia usa <b>“Control de acceso”</b>: la lista <b>“Citas de hoy · Llegaron”</b> y <b>“Escanear código QR”</b>. Al escanear, valida y registra la llegada; también puede marcarla con <b>“Confirmar llegada”</b>. Al registrar la llegada, se avisa al profesional/médico asignado (<b>“Paciente en recepción”</b>).</p>
+
+    <h2 id="s10"><span class="num">10.</span>Recordatorios y roles</h2>
+    <p><b>Recordatorios automáticos:</b> avisos al negocio 30, 15 y ~5 min antes de cada cita, y recordatorio al cliente <b>24 h antes</b> por WhatsApp y/o correo (incluye el pase con QR si existe).</p>
+    <table>
+      <tr><th>Rol</th><th>Qué puede en la Agenda</th></tr>
+      <tr><td><b>Empleado</b></td><td>Ve todas las citas pero solo actúa (cobra, completa, edita, cancela) sobre las <b>asignadas a él</b>. En las demás verá “Solo el asignado”.</td></tr>
+      <tr><td><b>Recepción</b></td><td>Gestiona todas las citas y usa Control de acceso.</td></tr>
+      <tr><td><b>Dueño / Encargado</b></td><td>Gestionan cualquier cita, servicios y horarios.</td></tr>
+      <tr><td><b>Guardia</b></td><td>Solo la pantalla Control de acceso.</td></tr>
+    </table>
+
+    <h2 id="s11"><span class="num">11.</span>Solución de problemas</h2>
+    <table>
+      <tr><th>Situación</th><th>Qué hacer</th></tr>
+      <tr><td>“No hay profesionales disponibles en ese horario”.</td><td>Sin cupo, fuera de horario, hora muerta, o el profesional no está asignado al servicio.</td></tr>
+      <tr><td>En la web: “Sin horarios para esta fecha”.</td><td>Prueba otro día; revisa horarios y profesionales asignados a ese servicio.</td></tr>
+      <tr><td>“Clase llena (N lugares)”.</td><td>El cupo se agotó; abre otra sesión u horario.</td></tr>
+      <tr><td>No llega el QR al cliente.</td><td>Verifica que exista un rol Guardia/Recepción activo y que la cita tenga correo del cliente.</td></tr>
+      <tr><td>El arqueo no cuadra tras cobrar una cita.</td><td>Abre la caja antes de completar citas cobradas en efectivo.</td></tr>
+    </table>
+  </main>
+  <footer>
+    <div><b>ALGORA TECH S.A.S. de C.V.</b> · Manual — Agenda y citas<br>Soporte: WhatsApp 294 111 4401 · ventas.cliente@algora.com.mx</div>
+    <div>algora.com.mx · Hecho en México</div>
+  </footer>
+</div>
+</body>
+</html>

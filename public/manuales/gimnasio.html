@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALGORA · Manual — Gimnasio</title>
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <div class="brand">A L G O R A</div>
+    <div class="k">Manual de usuario</div>
+    <h1>Módulo <span class="gold">Gimnasio</span></h1>
+    <p>Planes y membresías, check-in con QR o rostro, clases con cupo y portal de miembros.</p>
+    <div class="meta">Serie de manuales ALGORA · Módulo Gimnasio · Para dueño, recepción y miembros</div>
+    <a class="back" href="index.html">← Ver todos los manuales</a>
+  </div>
+  <main>
+    <div class="toc">
+      <h4>Contenido</h4>
+      <ol>
+        <li><a href="#s1">Activar el módulo</a></li>
+        <li><a href="#s2">Las 5 pestañas</a></li>
+        <li><a href="#s3">Crear planes de membresía</a></li>
+        <li><a href="#s4">Registrar y renovar miembros</a></li>
+        <li><a href="#s5">Check-in con QR</a></li>
+        <li><a href="#s6">Kiosko facial y lectores</a></li>
+        <li><a href="#s7">Clases con cupo</a></li>
+        <li><a href="#s8">Portal de miembros</a></li>
+        <li><a href="#s9">Roles y solución de problemas</a></li>
+      </ol>
+    </div>
+
+    <h2 id="s1"><span class="num">1.</span>Activar el módulo</h2>
+    <p>Add-on (por defecto <b>$399/mes, 7 días gratis</b>). Solo el <b>dueño/administrador</b> lo activa desde <b>Mi suscripción</b> o el paywall <b>“Módulo Gimnasio”</b>. Una vez activo aparece la sección <b>“Gimnasio”</b> en el menú.</p>
+
+    <h2 id="s2"><span class="num">2.</span>Las 5 pestañas</h2>
+    <table>
+      <tr><th>Pestaña</th><th>Para qué sirve</th></tr>
+      <tr><td><b>Check-in</b></td><td>Recepción/kiosko de acceso por número, teléfono o QR.</td></tr>
+      <tr><td><b>Miembros</b></td><td>Padrón con foto, código, vigencia y venta/renovación. Filtros: Todos, Activos, Por vencer, Vencidos, Sin membresía.</td></tr>
+      <tr><td><b>Clases</b></td><td>Sesiones con cupo (son servicios de la Agenda): inscribir y marcar asistencia.</td></tr>
+      <tr><td><b>Planes</b></td><td>Alta y edición de planes de membresía.</td></tr>
+      <tr><td><b>Accesos</b></td><td>Dispositivos (lector/torniquete/rostro/huella), Kiosko facial y monitor en vivo (solo dueño/admin/encargado).</td></tr>
+    </table>
+
+    <h2 id="s3"><span class="num">3.</span>Crear planes de membresía</h2>
+    <div class="steps">
+      <div class="s"><h4>Planes → “+ Nuevo plan”</h4><p>Nombre (ej. Mensual, 10 visitas).</p></div>
+      <div class="s"><h4>Tipo de plan</h4><p><b>“Por días”</b> (vigencia en días) o <b>“Por visitas”</b> (número de visitas incluidas). Captura Precio y Vigencia.</p></div>
+      <div class="s"><h4>Guarda</h4><p>Cada tarjeta muestra DÍAS o VISITAS. Al eliminar un plan, las membresías ya vendidas conservan su vigencia.</p></div>
+    </div>
+
+    <h2 id="s4"><span class="num">4.</span>Registrar y renovar miembros</h2>
+    <div class="steps">
+      <div class="s"><h4>Nuevo miembro</h4><p><b>“+ Nuevo miembro”</b>: foto, Nombre, Teléfono, Email y notas (opcionales). Al guardar se genera un código automático (ej. 0001).</p></div>
+      <div class="s"><h4>Vender / renovar</h4><p>En el miembro, <b>“Vender membresía”</b> o <b>“Renovar”</b>: elige Plan y método de pago (Efectivo/Tarjeta/Transferencia) y <b>“Cobrar $X”</b>. Se registra como venta del POS.</p></div>
+      <div class="s"><h4>Credencial QR</h4><p>El botón <b>“QR”</b> descarga una credencial (QR + nombre + número de miembro).</p></div>
+    </div>
+    <div class="box warn"><div class="t">Requiere caja abierta</div><p>Sin caja abierta no deja cobrar. Si el cobro pasó pero falló activar la membresía (red), usa <b>“Reintentar activación”</b> (no re-cobra).</p></div>
+
+    <h2 id="s5"><span class="num">5.</span>Check-in con QR</h2>
+    <p>En <b>Check-in</b>, escribe el número o teléfono y <b>“Entrar”</b>, o usa <b>“Escanear QR del miembro”</b>. El resultado se muestra en grande: banda verde <b>“ADELANTE”</b> o roja <b>“NO PASA”</b>, con foto, nombre y días/visitas restantes. Suena un tono (se puede silenciar). Si se deniega, aparece <b>“Cobrar renovación”</b>. El botón <b>“Modo kiosko”</b> deja la pantalla fija en recepción.</p>
+
+    <h2 id="s6"><span class="num">6.</span>Kiosko facial y lectores</h2>
+    <p><b>Kiosko facial</b> (pestaña Accesos): primero se acepta el aviso de datos biométricos; el reconocimiento ocurre <b>en el navegador</b> (no se sube la foto). Modos <b>“Reconocer”</b> (entrada por cámara) y <b>“Enrolar”</b> (capturar rostro del miembro).</p>
+    <p><b>Lectores físicos:</b> en Accesos creas dispositivos (lector, torniquete, terminal de rostro, checador de huella) con dirección Entrada/Salida. Al crearlos se genera una <b>clave</b> que se copia una sola vez para el agente local.</p>
+
+    <h2 id="s7"><span class="num">7.</span>Clases con cupo</h2>
+    <p>Las clases son <b>servicios de la Agenda</b> con <b>Cupo</b> (ej. Spinning, cupo 15). Créalas en <span class="path">Agenda → Servicios</span> activando “Cupo”; luego aparecen en la pestaña <b>Clases</b>. Para inscribir: <b>“+ Inscribir a clase”</b> → elige Clase, Fecha, Hora y Miembro. Cada sesión muestra inscritos/cupo; por inscrito hay <b>“Asistió”</b> (si el plan es por visitas, descuenta una).</p>
+
+    <h2 id="s8"><span class="num">8.</span>Portal de miembros</h2>
+    <p>El miembro entra en <span class="path">/gym</span>, escribe el <b>“Código del gimnasio”</b> y luego su <b>número de miembro + teléfono</b>. Pestañas: <b>Membresía</b> (ver/renovar; si el gimnasio tiene Stripe, paga en línea; si no, paga en recepción), <b>Reservar</b> (clases y servicios), <b>Accesos</b> (historial) y <b>Mi QR</b>. El portal se puede instalar como app (PWA).</p>
+
+    <h2 id="s9"><span class="num">9.</span>Roles y solución de problemas</h2>
+    <table>
+      <tr><th>Rol</th><th>Qué puede</th></tr>
+      <tr><td><b>Recepción / empleado</b></td><td>Miembros, Planes, Check-in, Clases y venta/renovación.</td></tr>
+      <tr><td><b>Encargado</b></td><td>Lo anterior más la pestaña Accesos (dispositivos, kiosko facial).</td></tr>
+      <tr><td><b>Dueño / Admin</b></td><td>Todo, incluida la activación del add-on.</td></tr>
+    </table>
+    <table>
+      <tr><th>Situación</th><th>Qué hacer</th></tr>
+      <tr><td>“No hay caja abierta en este equipo”.</td><td>Abre caja antes de vender/renovar.</td></tr>
+      <tr><td>“Aún no tienes clases”.</td><td>Créalas en Agenda → Servicios con Cupo.</td></tr>
+      <tr><td>El miembro no puede entrar al portal.</td><td>Verifica que el teléfono coincida con el registrado y que no esté dado de baja.</td></tr>
+      <tr><td>Renovación en línea no disponible.</td><td>Solo funciona con Stripe conectado; si no, paga en recepción.</td></tr>
+      <tr><td>Kiosko facial no abre la cámara.</td><td>Acepta el aviso biométrico y da permiso de cámara en el navegador.</td></tr>
+    </table>
+  </main>
+  <footer>
+    <div><b>ALGORA TECH S.A.S. de C.V.</b> · Manual — Gimnasio<br>Soporte: WhatsApp 294 111 4401 · ventas.cliente@algora.com.mx</div>
+    <div>algora.com.mx · Hecho en México</div>
+  </footer>
+</div>
+</body>
+</html>

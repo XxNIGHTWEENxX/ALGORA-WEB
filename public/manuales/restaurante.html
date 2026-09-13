@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALGORA · Manual — Restaurante</title>
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <div class="brand">A L G O R A</div>
+    <div class="k">Manual de usuario</div>
+    <h1>Módulo <span class="gold">Restaurante</span></h1>
+    <p>Mesas y salón, comandas, cocina y barra en pantalla, cobro (incluido dividido), reservas con QR y kioscos.</p>
+    <div class="meta">Serie de manuales ALGORA · Módulo Restaurante · Para dueño, encargado, meseros, cocina y barra</div>
+    <a class="back" href="index.html">← Ver todos los manuales</a>
+  </div>
+  <main>
+    <div class="toc">
+      <h4>Contenido</h4>
+      <ol>
+        <li><a href="#s1">Activar el módulo</a></li>
+        <li><a href="#s2">Pantallas y para quién son</a></li>
+        <li><a href="#s3">Preparar el salón, insumos y recetas</a></li>
+        <li><a href="#s4">Abrir mesa y tomar la comanda</a></li>
+        <li><a href="#s5">Cocina y barra (KDS)</a></li>
+        <li><a href="#s6">Cobrar (incluido cobro dividido)</a></li>
+        <li><a href="#s7">Mover, unir y separar mesas</a></li>
+        <li><a href="#s8">Reservas de mesa con QR</a></li>
+        <li><a href="#s9">Kioscos</a></li>
+        <li><a href="#s10">Roles</a></li>
+        <li><a href="#s11">Solución de problemas</a></li>
+      </ol>
+    </div>
+
+    <h2 id="s1"><span class="num">1.</span>Activar el módulo</h2>
+    <p>Es un add-on (por defecto <b>$399/mes, 7 días gratis</b>). Solo el <b>dueño</b> lo activa: al entrar a una pantalla de restaurante sin el add-on aparece <b>“Módulo Restaurante”</b> con <b>“Activar · 7 días gratis”</b>. Una vez activo, aparece la sección <b>“Restaurante”</b> en el menú.</p>
+
+    <h2 id="s2"><span class="num">2.</span>Pantallas y para quién son</h2>
+    <table>
+      <tr><th>Pantalla</th><th>Para qué sirve</th></tr>
+      <tr><td><b>Mesas</b></td><td>Plano del salón por zonas. Toca una mesa para abrir/retomar su cuenta. Muestra Libres / Ocupadas / En cuentas y el banner “Listos para entregar”.</td></tr>
+      <tr><td><b>Para entregar</b></td><td>Vista del mesero: comandas ya listas de cualquier estación, para marcarlas entregadas.</td></tr>
+      <tr><td><b>Cocina</b> / <b>Barra</b></td><td>Pantalla de preparación (KDS) con columnas Nuevas / En preparación / Listas.</td></tr>
+      <tr><td><b>Insumos</b></td><td>Materia prima (kg, g, l, ml, piezas): stock, mínimo, costo y área.</td></tr>
+      <tr><td><b>Recetas</b></td><td>Relaciona cada producto con sus insumos para descontarlos solos.</td></tr>
+    </table>
+
+    <h2 id="s3"><span class="num">3.</span>Preparar el salón, insumos y recetas</h2>
+    <div class="steps">
+      <div class="s"><h4>Arma el salón</h4><p>En <b>Mesas → “Editar salón”</b>: <b>“+ Mesa”</b>, <b>“+ Zona”</b>, elige forma (Redonda / Cuadrada / Rectang. / Barra) y <b>Lugares</b> (asientos); arrastra y redimensiona. Pulsa <b>“Listo”</b>.</p></div>
+      <div class="s"><h4>Carga insumos</h4><p>En <b>Insumos</b> da de alta materia prima con unidad, stock, mínimo, costo y área (cocina/barra).</p></div>
+      <div class="s"><h4>Define recetas</h4><p>En <b>Recetas</b> vincula cada producto con sus insumos y cantidades. Así el consumo se descuenta solo y cada platillo se rutea a Cocina o Barra según su área.</p></div>
+    </div>
+
+    <h2 id="s4"><span class="num">4.</span>Abrir mesa y tomar la comanda</h2>
+    <div class="steps">
+      <div class="s"><h4>Abre la mesa</h4><p>En <b>Mesas</b> toca una mesa <b>libre</b> para abrir la <b>Cuenta de mesa</b> (si ya tenía cuenta, la retoma).</p></div>
+      <div class="s"><h4>Agrega platillos</h4><p>Búscalos o filtra por categoría y tócalos. Ajusta cantidad con <b>−/+</b> y agrega notas por platillo (Sin cebolla, Término medio, Para llevar, etc.).</p></div>
+      <div class="s"><h4>Manda a preparación</h4><p>Pulsa <b>“Mandar N a preparación”</b>. Los platillos pasan a “Enviado/servido” con su número de comanda y llegan a Cocina o Barra.</p></div>
+    </div>
+    <div class="box tip"><div class="t">Precuenta</div><p>El botón <b>“Cuenta”</b> imprime la precuenta (marcada “NO ES COMPROBANTE DE PAGO”) para llevarla a la mesa sin cobrar.</p></div>
+
+    <h2 id="s5"><span class="num">5.</span>Cocina y barra (KDS)</h2>
+    <p>En <b>Cocina</b> o <b>Barra</b>, cada comanda empieza con <b>“Empezar”</b> (pasa a preparación) y luego <b>“Lista para entregar”</b>. Suena una alerta al entrar una comanda nueva; el tiempo se pone ámbar a los 8 min y rojo a los 15. El <b>mesero</b> la ve en el banner “Listos para entregar” de Mesas o en <b>Para entregar</b> y pulsa <b>“Entregado”</b>.</p>
+
+    <h2 id="s6"><span class="num">6.</span>Cobrar (incluido cobro dividido)</h2>
+    <div class="box warn"><div class="t">Requiere caja abierta</div><p>Si no hay caja abierta en el equipo, no se puede cobrar (“No hay caja abierta en este equipo”).</p></div>
+    <div class="steps">
+      <div class="s"><h4>Pulsa “Cobrar $…”</h4><p>Opcional antes: <b>“+ Asignar cliente (monedero de lealtad)”</b>.</p></div>
+      <div class="s"><h4>Elige el modo</h4><p><b>Todo</b> (total + propina), <b>Partes iguales</b> (elige número de personas; al pagar la última se cierra la cuenta) o <b>Por productos</b> (selecciona qué unidades cobrar ahora; el resto queda pendiente).</p></div>
+      <div class="s"><h4>Método de pago</h4><p>Efectivo (calcula el cambio y <b>“Cobrar y abrir cajón”</b>), Tarjeta, QR o Transferencia.</p></div>
+    </div>
+    <div class="box tip"><div class="t">Cobro dividido en curso</div><p>Si cierras el cobro a medias, el progreso se guarda y solo podrás cobrar lo pendiente (no se recobra lo ya pagado).</p></div>
+
+    <h2 id="s7"><span class="num">7.</span>Mover, unir y separar mesas</h2>
+    <p>En una mesa ocupada, el menú de tres puntos ofrece <b>“Mover a otra mesa”</b>, <b>“Unir con otra mesa”</b>, <b>“Separar esta mesa del grupo”</b> y <b>“Liberar mesa/grupo (cancelar cuenta)”</b>. Cancelar o liberar una cuenta <b>requiere autorización de encargado/dueño</b>. Las mesas unidas se ven en azul con la etiqueta “Unida”.</p>
+
+    <h2 id="s8"><span class="num">8.</span>Reservas de mesa con QR</h2>
+    <div class="steps">
+      <div class="s"><h4>Actívalas</h4><p>En <b>Configuración</b>, toggle <b>“Reservas de mesa en línea”</b> (requiere add-on y mesas creadas). Define horario, <b>“Última reserva”</b>, duración, <b>“Máx. personas”</b> y si <b>“Pedir anticipo para reservar”</b>.</p></div>
+      <div class="s"><h4>El cliente reserva</h4><p>Desde la tienda en línea, botón <b>“Reservar mesa”</b>. El sistema asigna una mesa libre sin riesgo de doble reserva.</p></div>
+      <div class="s"><h4>Aviso y agenda</h4><p>Llega una notificación de “Reservación” y la reserva entra a la Agenda. Al cliente se le manda correo de confirmación.</p></div>
+    </div>
+    <div class="box tip"><div class="t">QR y aviso a los meseros</div><p>Si el negocio tiene guardia/recepción, la reserva incluye un <b>pase con QR</b>. Al escanearlo en Control de acceso se marca la llegada y se avisa a los meseros que llegó la mesa para N personas.</p></div>
+
+    <h2 id="s9"><span class="num">9.</span>Kioscos</h2>
+    <p>Abre <span class="path">/kiosko</span> en una tableta o pantalla, inicia sesión una vez y elige el modo: <b>Cocina</b>, <b>Barra</b>, <b>Órdenes listas</b> (pantalla de cara al cliente “Pedidos listos”) o <b>Salón</b> (tablero de mesas para el encargado). Activa pantalla completa; mantienen la pantalla encendida.</p>
+
+    <h2 id="s10"><span class="num">10.</span>Roles</h2>
+    <table>
+      <tr><th>Rol</th><th>Qué ve / puede</th></tr>
+      <tr><td><b>Mesero</b></td><td>Mesas y Para entregar. Abre cuentas, toma comandas y cobra. No ve Cocina/Barra. Cancelar/liberar cuenta requiere autorización.</td></tr>
+      <tr><td><b>Cocina</b></td><td>Solo Cocina y Recetas (sin costos). Empieza y marca listas las comandas de su estación.</td></tr>
+      <tr><td><b>Barra</b></td><td>Solo Barra y Recetas (sin costos).</td></tr>
+      <tr><td><b>Encargado</b></td><td>Todo lo del mesero más Cocina, Barra, Insumos, Recetas (con costos), Editor del salón y autorizar cancelaciones.</td></tr>
+      <tr><td><b>Dueño / Admin</b></td><td>Todo, incluida la activación del add-on y la configuración de reservas.</td></tr>
+    </table>
+
+    <h2 id="s11"><span class="num">11.</span>Solución de problemas</h2>
+    <table>
+      <tr><th>Situación</th><th>Qué hacer</th></tr>
+      <tr><td>“No hay caja abierta en este equipo”.</td><td>Abre una caja antes de cobrar.</td></tr>
+      <tr><td>No imprime la precuenta/ticket.</td><td>Permite las ventanas emergentes en el navegador.</td></tr>
+      <tr><td>El mesero no ve Cocina/Barra.</td><td>Es intencional: el mesero usa “Para entregar”.</td></tr>
+      <tr><td>No aparece la sección Restaurante.</td><td>El add-on no está activo (o el plan es Lite). El dueño lo activa.</td></tr>
+      <tr><td>Las reservas no están disponibles.</td><td>Requieren add-on activo, el toggle encendido y al menos una mesa creada.</td></tr>
+      <tr><td>Cancelar/liberar cuenta pide autorización.</td><td>Necesita encargado o dueño; el mesero solo no puede.</td></tr>
+    </table>
+  </main>
+  <footer>
+    <div><b>ALGORA TECH S.A.S. de C.V.</b> · Manual — Restaurante<br>Soporte: WhatsApp 294 111 4401 · ventas.cliente@algora.com.mx</div>
+    <div>algora.com.mx · Hecho en México</div>
+  </footer>
+</div>
+</body>
+</html>
