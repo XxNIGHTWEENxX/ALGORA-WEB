@@ -66,7 +66,41 @@
   .qa b{display:block;margin-bottom:6px;font-weight:600}
   .qa span{color:var(--muted);font-size:14px}
   footer{padding:44px 0;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
-  @media(max-width:860px){.plans{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}
+  /* ---- Galeria de demos por giro ---- */
+  .demos{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+  .demo{background:linear-gradient(180deg,var(--bg2),#0a0908);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}
+  .demo:hover{transform:translateY(-5px);border-color:rgba(216,166,87,.5);box-shadow:0 28px 64px rgba(0,0,0,.45)}
+  .demo .frame{background:#0a0e10}
+  .demo .bar{display:flex;align-items:center;gap:7px;padding:10px 13px;background:#0f1113;border-bottom:1px solid rgba(255,255,255,.06)}
+  .demo .bar i{width:10px;height:10px;border-radius:50%;display:block}
+  .demo .bar .u{flex:1;margin-left:8px;font-size:11px;color:#7c8a86;background:#0a0e10;border:1px solid rgba(255,255,255,.08);border-radius:7px;padding:4px 11px;font-family:var(--sans);white-space:nowrap;overflow:hidden}
+  .shot{height:344px;overflow:hidden;position:relative;background:#fff;color:#161616;font-family:var(--sans);line-height:1.5}
+  .mini{height:100%;display:flex;flex-direction:column}
+  .mtop{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#fff;border-bottom:1px solid #f2f2f2}
+  .mlogo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:12.5px;color:#1a1a1a}
+  .mlogo i{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;color:#fff;font-weight:900;font-size:12px;font-style:normal}
+  .mlnk{display:flex;gap:13px;color:#888;font-size:10.5px;font-weight:600}
+  .mban{position:relative;flex:1;min-height:150px;display:flex;align-items:flex-end;padding:18px;background-size:cover;background-position:center;color:#fff}
+  .mban .ov{position:absolute;inset:0}
+  .mban .c{position:relative;z-index:1}
+  .mban h5{font-family:var(--serif);font-weight:600;font-size:27px;line-height:1.02;margin-bottom:6px}
+  .mban p{font-size:11.5px;opacity:.94;max-width:250px;margin-bottom:12px;font-weight:400}
+  .pill{display:inline-block;font-weight:700;font-size:11px;padding:8px 15px;border-radius:999px;color:#fff}
+  .pill.gh{background:transparent;border:1px solid rgba(255,255,255,.75);margin-left:6px}
+  .mrow{display:flex;gap:9px;padding:13px 16px;background:#fafafa}
+  .mit{flex:1;background:#fff;border:1px solid #eee;border-radius:12px;overflow:hidden}
+  .mit .th{height:46px;background-size:cover;background-position:center}
+  .mit .bd{padding:8px 9px}
+  .mit .nm{font-weight:700;font-size:10.5px;color:#222;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mit .ds{font-size:9.5px;color:#8a8a8a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mit .pr{font-weight:800;font-size:11px;margin-top:3px}
+  .dmeta{padding:18px 20px 20px}
+  .dtag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+  .dmeta h3{font-family:var(--serif);font-size:22px;font-weight:600;margin:11px 0 5px}
+  .dmeta p{color:var(--muted);font-size:13.5px}
+  .dchips{display:flex;flex-wrap:wrap;gap:6px;margin-top:13px}
+  .dchip{font-size:11px;color:var(--ink);background:rgba(216,166,87,.08);border:1px solid var(--line);padding:4px 11px;border-radius:999px}
+  @media(max-width:860px){.plans{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.demos{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -82,6 +116,178 @@
     <p>La hacemos nosotros, a tu medida. Tu catálogo, tus pedidos y tus citas viven en el mismo POS. Un solo pago por construirla; el mantenimiento va en tu suscripción.</p>
   </div>
 </header>
+
+<section style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker">Ejemplos por giro</span><h2 class="serif">Así se puede ver la tuya</h2><p>Muestras de diseño. Tu página se personaliza con tu marca, tus fotos y tus servicios.</p></div>
+    <div class="demos">
+
+      <!-- RESTAURANTE -->
+      <div class="demo">
+        <div class="frame">
+          <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">trattoriabella.mx</span></div>
+          <div class="shot">
+            <div class="mini">
+              <div class="mtop"><div class="mlogo"><i style="background:#c0442e">T</i> Trattoria Bella</div><div class="mlnk"><span>Menú</span><span>Reservar</span><span>Contacto</span></div></div>
+              <div class="mban" style="background-color:#5c241a;background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=640&q=60')">
+                <div class="ov" style="background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.1))"></div>
+                <div class="c"><h5>Cocina italiana de autor</h5><p>Reserva tu mesa y ordena en línea. Pasta fresca hecha en casa.</p><span class="pill" style="background:#c0442e">Reservar mesa</span><span class="pill gh">Ver menú</span></div>
+              </div>
+              <div class="mrow">
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#e8c9a0,#d8a657)"></div><div class="bd"><div class="nm">Pasta Alfredo</div><div class="ds">Crema y parmesano</div><div class="pr" style="color:#c0442e">$185</div></div></div>
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#e0a58f,#c0442e)"></div><div class="bd"><div class="nm">Pizza Margarita</div><div class="ds">Albahaca fresca</div><div class="pr" style="color:#c0442e">$210</div></div></div>
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#d8c08a,#a9863f)"></div><div class="bd"><div class="nm">Tiramisú</div><div class="ds">De la casa</div><div class="pr" style="color:#c0442e">$95</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dmeta">
+          <span class="dtag" style="background:rgba(192,68,46,.15);color:#e08a72">Restaurante</span>
+          <h3 class="serif">Menú digital, reservas y pedidos</h3>
+          <p>Carta con fotos, reservación de mesa, pedidos para recoger o a domicilio y pago en línea.</p>
+          <div class="dchips"><span class="dchip">Menú con fotos</span><span class="dchip">Reservar mesa</span><span class="dchip">A domicilio</span><span class="dchip">Pago en línea</span></div>
+        </div>
+      </div>
+
+      <!-- BARBERIA -->
+      <div class="demo">
+        <div class="frame">
+          <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">lanavaja.mx</span></div>
+          <div class="shot">
+            <div class="mini">
+              <div class="mtop" style="background:#141414;border-bottom-color:#242424"><div class="mlogo" style="color:#fff"><i style="background:#c9a24b;color:#1a1a1a">N</i> La Navaja</div><div class="mlnk" style="color:#b8b8b8"><span>Servicios</span><span>Agenda</span><span>Estilos</span></div></div>
+              <div class="mban" style="background-color:#20201c;background-image:url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=640&q=60')">
+                <div class="ov" style="background:linear-gradient(to top,rgba(0,0,0,.68),rgba(0,0,0,.1))"></div>
+                <div class="c"><h5>Estilo que impone</h5><p>Agenda tu corte o barba en segundos. Barberos expertos, sin filas.</p><span class="pill" style="background:#c9a24b;color:#1a1a1a">Agendar cita</span></div>
+              </div>
+              <div class="mrow" style="background:#f6f5f2">
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#4a4034,#20201c)"></div><div class="bd"><div class="nm">Corte clásico</div><div class="ds">45 min</div><div class="pr" style="color:#96742f">$150</div></div></div>
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#6a5a44,#3a3128)"></div><div class="bd"><div class="nm">Barba premium</div><div class="ds">30 min</div><div class="pr" style="color:#96742f">$120</div></div></div>
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#c9a24b,#8a6d2e)"></div><div class="bd"><div class="nm">Corte + barba</div><div class="ds">70 min</div><div class="pr" style="color:#96742f">$240</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dmeta">
+          <span class="dtag" style="background:rgba(201,162,75,.16);color:#d5b566">Barbería</span>
+          <h3 class="serif">Agenda de citas y catálogo de estilos</h3>
+          <p>Reserva por barbero y horario, lista de servicios con precios y galería de cortes.</p>
+          <div class="dchips"><span class="dchip">Agenda por barbero</span><span class="dchip">Recordatorios</span><span class="dchip">Galería</span><span class="dchip">Anticipo en línea</span></div>
+        </div>
+      </div>
+
+      <!-- CLINICA -->
+      <div class="demo">
+        <div class="frame">
+          <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">clinicasalud.mx</span></div>
+          <div class="shot">
+            <div class="mini">
+              <div class="mtop"><div class="mlogo" style="color:#0e5c73"><i style="background:#0e7c93">+</i> Clínica Salud</div><div class="mlnk"><span>Especialidades</span><span>Médicos</span><span>Citas</span></div></div>
+              <div class="mban" style="background-color:#0e5c73;background-image:url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=640&q=60')">
+                <div class="ov" style="background:linear-gradient(to top,rgba(2,40,52,.72),rgba(2,40,52,.12))"></div>
+                <div class="c"><h5>Tu salud, en buenas manos</h5><p>Agenda tu consulta en línea con el especialista que necesitas.</p><span class="pill" style="background:#0e7c93">Agendar consulta</span></div>
+              </div>
+              <div class="mrow">
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#cfeaf0,#8fd0dc)"></div><div class="bd"><div class="nm">Medicina general</div><div class="ds">El mismo día</div></div></div>
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#d6ede0,#9ed4bb)"></div><div class="bd"><div class="nm">Nutrición</div><div class="ds">Plan personal</div></div></div>
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#cfe3ef,#93bdd6)"></div><div class="bd"><div class="nm">Laboratorio</div><div class="ds">Resultados en línea</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dmeta">
+          <span class="dtag" style="background:rgba(14,124,147,.16);color:#4bb6c8">Clínica</span>
+          <h3 class="serif">Citas médicas y especialidades</h3>
+          <p>Agenda por especialista, directorio de médicos, expediente conectado y recordatorios.</p>
+          <div class="dchips"><span class="dchip">Agenda por médico</span><span class="dchip">Especialidades</span><span class="dchip">Recordatorios</span><span class="dchip">Aviso de privacidad</span></div>
+        </div>
+      </div>
+
+      <!-- SUPERMERCADO -->
+      <div class="demo">
+        <div class="frame">
+          <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">superlaplaza.mx</span></div>
+          <div class="shot">
+            <div class="mini">
+              <div class="mtop"><div class="mlogo" style="color:#1f7a3d"><i style="background:#2e9e4f">S</i> Super La Plaza</div><div class="mlnk"><span>Ofertas</span><span>Categorías</span><span>Carrito</span></div></div>
+              <div class="mban" style="background-color:#1f5e33;background-image:url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=640&q=60')">
+                <div class="ov" style="background:linear-gradient(to top,rgba(0,30,10,.7),rgba(0,30,10,.08))"></div>
+                <div class="c"><h5>Tu despensa, a domicilio</h5><p>Compra en línea y recibe en tu casa. Ofertas nuevas cada semana.</p><span class="pill" style="background:#2e9e4f">Comprar ahora</span></div>
+              </div>
+              <div class="mrow">
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#f6d38a,#e7a83f)"></div><div class="bd"><div class="nm">Frutas y verduras</div><div class="ds">Del día</div><div class="pr" style="color:#2e9e4f">-20%</div></div></div>
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#e7c3a0,#c58f5f)"></div><div class="bd"><div class="nm">Abarrotes</div><div class="ds">Marcas líderes</div><div class="pr" style="color:#2e9e4f">2x1</div></div></div>
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#cfe6f0,#8fc0d6)"></div><div class="bd"><div class="nm">Lácteos</div><div class="ds">Frescos</div><div class="pr" style="color:#2e9e4f">-15%</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dmeta">
+          <span class="dtag" style="background:rgba(46,158,79,.16);color:#5fc27e">Supermercado</span>
+          <h3 class="serif">Tienda en línea con entrega</h3>
+          <p>Catálogo por categorías, carrito, pago en línea, entrega o recoger e inventario en vivo.</p>
+          <div class="dchips"><span class="dchip">Catálogo completo</span><span class="dchip">Carrito y pago</span><span class="dchip">A domicilio</span><span class="dchip">Inventario en vivo</span></div>
+        </div>
+      </div>
+
+      <!-- SPA -->
+      <div class="demo">
+        <div class="frame">
+          <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">serenityspa.mx</span></div>
+          <div class="shot">
+            <div class="mini">
+              <div class="mtop" style="background:#fbf9f5"><div class="mlogo" style="color:#6b7f5e"><i style="background:#8aa17a">S</i> Serenity Spa</div><div class="mlnk"><span>Tratamientos</span><span>Paquetes</span><span>Reservar</span></div></div>
+              <div class="mban" style="background-color:#5c6b50;background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=640&q=60')">
+                <div class="ov" style="background:linear-gradient(to top,rgba(30,40,25,.62),rgba(30,40,25,.08))"></div>
+                <div class="c"><h5>Relájate, te lo mereces</h5><p>Reserva tu masaje o facial. Un espacio para tu bienestar.</p><span class="pill" style="background:#8aa17a">Reservar cita</span></div>
+              </div>
+              <div class="mrow" style="background:#fbf9f5">
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#d8e2cc,#a9bd97)"></div><div class="bd"><div class="nm">Masaje relajante</div><div class="ds">60 min</div><div class="pr" style="color:#6b7f5e">$650</div></div></div>
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#e6ddcf,#c9b79a)"></div><div class="bd"><div class="nm">Facial hidratante</div><div class="ds">50 min</div><div class="pr" style="color:#6b7f5e">$550</div></div></div>
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#cfd9c2,#9aab85)"></div><div class="bd"><div class="nm">Paquete pareja</div><div class="ds">2 personas</div><div class="pr" style="color:#6b7f5e">$1,400</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dmeta">
+          <span class="dtag" style="background:rgba(138,161,122,.18);color:#a7bd92">Spa</span>
+          <h3 class="serif">Reservas de tratamientos y paquetes</h3>
+          <p>Reserva por servicio y terapeuta, paquetes y promociones, anticipo en línea y recordatorios.</p>
+          <div class="dchips"><span class="dchip">Reserva por terapeuta</span><span class="dchip">Paquetes</span><span class="dchip">Anticipo en línea</span><span class="dchip">Tarjetas de regalo</span></div>
+        </div>
+      </div>
+
+      <!-- DENTISTA -->
+      <div class="demo">
+        <div class="frame">
+          <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="u">sonrisadental.mx</span></div>
+          <div class="shot">
+            <div class="mini">
+              <div class="mtop"><div class="mlogo" style="color:#1667c2"><i style="background:#2b7de0">D</i> Sonrisa Dental</div><div class="mlnk"><span>Servicios</span><span>Doctores</span><span>Cita</span></div></div>
+              <div class="mban" style="background-color:#12508f;background-image:url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=640&q=60')">
+                <div class="ov" style="background:linear-gradient(to top,rgba(4,30,60,.7),rgba(4,30,60,.1))"></div>
+                <div class="c"><h5>Sonríe con confianza</h5><p>Agenda tu limpieza o valoración. Tecnología y trato cálido.</p><span class="pill" style="background:#2b7de0">Agendar cita</span></div>
+              </div>
+              <div class="mrow">
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#d5e6f7,#93bdea)"></div><div class="bd"><div class="nm">Limpieza dental</div><div class="ds">40 min</div><div class="pr" style="color:#1667c2">$450</div></div></div>
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#cfe0f2,#8fb6e0)"></div><div class="bd"><div class="nm">Blanqueamiento</div><div class="ds">Una sesión</div><div class="pr" style="color:#1667c2">$1,800</div></div></div>
+                <div class="mit"><div class="th" style="background:linear-gradient(135deg,#dbe9f6,#a7c8ea)"></div><div class="bd"><div class="nm">Ortodoncia</div><div class="ds">Valoración gratis</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dmeta">
+          <span class="dtag" style="background:rgba(43,125,224,.16);color:#6aa8ef">Dentista</span>
+          <h3 class="serif">Citas dentales y servicios</h3>
+          <p>Agenda por doctor, lista de tratamientos con precios, valoración en línea y recordatorios.</p>
+          <div class="dchips"><span class="dchip">Agenda por doctor</span><span class="dchip">Servicios y precios</span><span class="dchip">Valoración</span><span class="dchip">Recordatorios</span></div>
+        </div>
+      </div>
+
+    </div>
+    <p class="note">Estas son muestras de diseño. Los precios mostrados son de ejemplo; tu página se arma con tu marca, tus fotos y tus servicios reales.</p>
+  </div>
+</section>
 
 <section>
   <div class="wrap">
