@@ -268,6 +268,33 @@ footer .fb{font-family:var(--serif);font-style:italic;color:var(--gold);font-siz
   </div>
 </section>
 
+<!-- TOUR / CAPTURAS REALES -->
+<style>
+  .shots{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+  .shots figure{margin:0;background:var(--bg2,#0d0c0b);border:1px solid var(--line,rgba(216,166,87,.18));border-radius:14px;overflow:hidden;transition:.2s}
+  .shots figure:hover{transform:translateY(-4px);border-color:rgba(216,166,87,.5);box-shadow:0 18px 44px rgba(0,0,0,.5)}
+  .shots img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left;background:#0a0908;border-bottom:1px solid var(--line,rgba(216,166,87,.18))}
+  .shots figcaption{padding:12px 15px;font-size:13.5px}
+  .shots figcaption span{display:block;color:var(--muted,#8f887b);font-size:12.5px;margin-top:2px}
+  @media(max-width:860px){.shots{grid-template-columns:1fr}}
+</style>
+<section class="act">
+  <div class="wrap">
+    <div class="actno reveal"><b>·</b> En escena</div>
+    <h2 class="reveal d1" style="margin-top:14px">El elenco,<br>en <span class="gold">pantalla.</span></h2>
+    <p class="lead reveal d2" style="margin-top:22px">Capturas reales del sistema en operación. Esto es lo que ves todos los días.</p>
+    <div class="shots reveal d2">
+      <figure><img loading="lazy" src="/capturas/pos-venta.webp" alt="Pantalla de venta"><figcaption>Venta rápida<span>Cobra en segundos, con fotos</span></figcaption></figure>
+      <figure><img loading="lazy" src="/capturas/pos-dashboard.webp" alt="Panel de control"><figcaption>Panel de control<span>Metas y ventas en tiempo real</span></figcaption></figure>
+      <figure><img loading="lazy" src="/capturas/resto-mesas.webp" alt="Mesas de restaurante"><figcaption>Restaurante<span>Mesas, cocina y barra</span></figcaption></figure>
+      <figure><img loading="lazy" src="/capturas/agenda-calendario.webp" alt="Agenda de citas"><figcaption>Agenda y citas<span>Reservas y recordatorios</span></figcaption></figure>
+      <figure><img loading="lazy" src="/capturas/wa-marketing.webp" alt="Marketing por WhatsApp"><figcaption>Marketing con IA<span>Campañas por WhatsApp</span></figcaption></figure>
+      <figure><img loading="lazy" src="/capturas/pos-finanzas.webp" alt="Finanzas"><figcaption>Finanzas claras<span>Resultados e impuestos</span></figcaption></figure>
+    </div>
+    <div class="reveal d3" style="text-align:center;margin-top:34px"><a class="btn" href="/galeria.html">Ver toda la galería →</a></div>
+  </div>
+</section>
+
 <!-- PROOF -->
 <section class="act film" style="background:var(--bg2);padding-top:96px">
   <div class="wrap">

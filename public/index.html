@@ -95,7 +95,21 @@
   footer .links{display:flex;gap:28px;flex-wrap:wrap}
   footer .links a:hover{color:var(--gold)}
   .ph{color:#b78e3f}
-  @media(max-width:860px){.navlinks{display:none}.prods{grid-template-columns:1fr}.servs{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr}}
+  /* Showcase captura real */
+  .showcase{margin-top:56px;position:relative}
+  .frame{max-width:1000px;margin:0 auto;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--bg2);box-shadow:0 34px 90px rgba(0,0,0,.62)}
+  .frame .bar{display:flex;gap:7px;align-items:center;padding:11px 14px;background:#0a0908;border-bottom:1px solid var(--line)}
+  .frame .bar i{width:11px;height:11px;border-radius:50%;background:#2a2723;display:block}
+  .frame img{width:100%;display:block}
+  /* Tour del producto */
+  .tourgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .tcard{background:var(--bg2);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.2s;display:block;color:inherit}
+  .tcard:hover{transform:translateY(-4px);border-color:rgba(216,166,87,.5);box-shadow:0 20px 50px rgba(0,0,0,.5)}
+  .tcard img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left;border-bottom:1px solid var(--line);background:#0a0908}
+  .tcard .b{padding:15px 18px}
+  .tcard h4{font-size:16px;font-weight:600;margin-bottom:3px}
+  .tcard p{color:var(--muted);font-size:13.5px}
+  @media(max-width:860px){.navlinks{display:none}.prods{grid-template-columns:1fr}.servs{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr}.tourgrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -103,6 +117,7 @@
   <a class="brand" href="/"><img src="/ALGORA_Logo_blanco.png" alt="ALGORA"></a>
   <div class="navlinks">
     <a href="#productos">Productos</a>
+    <a href="#tour">Galería</a>
     <a href="#servicios">Servicios</a>
     <a href="#nosotros">Nosotros</a>
     <a href="#contacto">Contacto</a>
@@ -123,6 +138,12 @@
       <span><b>Software propio</b> probado en producción</span>
       <span><b>Desarrollo</b> web y móvil a la medida</span>
       <span><b>Soporte</b> humano · Hecho en México</span>
+    </div>
+    <div class="showcase">
+      <div class="frame">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <img src="/capturas/pos-dashboard.webp" alt="ALGORA POS — panel de control con ventas, metas y métodos de pago en tiempo real" width="1600" height="1000">
+      </div>
     </div>
   </div>
 </header>
@@ -166,6 +187,22 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- TOUR / GALERIA DEL PRODUCTO -->
+<section id="tour">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker">Míralo por dentro</span><h2 class="serif">ALGORA POS en operación</h2><p>Capturas reales del sistema. Punto de venta, restaurante, hotel, agenda, finanzas y WhatsApp — todo en una sola plataforma.</p></div>
+    <div class="tourgrid">
+      <a class="tcard" href="/galeria.html#pos"><img src="/capturas/pos-venta.webp" alt="Pantalla de venta de ALGORA POS con productos y carrito" loading="lazy"><div class="b"><h4>Venta rápida</h4><p>Cobra en segundos, con o sin internet, con fotos de tus productos.</p></div></a>
+      <a class="tcard" href="/galeria.html#pos"><img src="/capturas/pos-dashboard.webp" alt="Panel de control con métricas del negocio" loading="lazy"><div class="b"><h4>Todo bajo control</h4><p>Ventas, metas y métodos de pago en tiempo real.</p></div></a>
+      <a class="tcard" href="/galeria.html#restaurante"><img src="/capturas/resto-mesas.webp" alt="Mapa de mesas del módulo de restaurante" loading="lazy"><div class="b"><h4>Restaurante</h4><p>Mesas, comandas a cocina y barra, y pedidos por QR.</p></div></a>
+      <a class="tcard" href="/galeria.html#agenda"><img src="/capturas/agenda-calendario.webp" alt="Calendario de citas" loading="lazy"><div class="b"><h4>Agenda y citas</h4><p>Reservas, recordatorios y confirmación por WhatsApp.</p></div></a>
+      <a class="tcard" href="/galeria.html#whatsapp"><img src="/capturas/wa-marketing.webp" alt="Campañas de marketing por WhatsApp" loading="lazy"><div class="b"><h4>Marketing con IA</h4><p>Campañas por WhatsApp y un agente que atiende a tus clientes.</p></div></a>
+      <a class="tcard" href="/galeria.html#finanzas"><img src="/capturas/pos-finanzas.webp" alt="Módulo de finanzas: punto de equilibrio y crecimiento" loading="lazy"><div class="b"><h4>Finanzas claras</h4><p>Punto de equilibrio, estado de resultados e IVA calculado.</p></div></a>
+    </div>
+    <div style="text-align:center;margin-top:36px"><a class="btn" href="/galeria.html">Ver toda la galería →</a></div>
   </div>
 </section>
 

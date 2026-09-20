@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Galería — ALGORA POS por dentro</title>
+<meta name="description" content="Capturas reales de ALGORA POS: punto de venta, restaurante, hotel, agenda, finanzas, WhatsApp y tienda en línea. Mira el sistema en operación.">
+<meta name="theme-color" content="#060606">
+<meta property="og:title" content="ALGORA POS por dentro — Galería">
+<meta property="og:description" content="Capturas reales del sistema en operación: venta, restaurante, hotel, agenda, finanzas y WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.algora.com.mx/galeria.html">
+<meta property="og:image" content="https://www.algora.com.mx/capturas/pos-dashboard.webp">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@0,500;0,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#060606;--bg2:#0d0c0b;--ink:#ECE8DF;--muted:#8f887b;--line:rgba(216,166,87,.18);--gold:#D8A657;--gold-soft:#e9c98f;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',system-ui,sans-serif}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 26px}
+  .serif{font-family:var(--serif)}
+  .gold{color:var(--gold)}
+  .kicker{font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  nav{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:16px 26px;background:rgba(6,6,6,.72);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  nav .brand{display:flex;align-items:center;gap:9px;font-weight:600;letter-spacing:.22em;font-size:15px}
+  nav .brand img{height:26px;width:auto;display:block}
+  .navlinks{display:flex;gap:26px;align-items:center}
+  .navlinks a{font-size:14px;color:var(--muted);font-weight:500}
+  .navlinks a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-weight:500;font-size:14px;padding:11px 22px;border-radius:999px;border:1px solid var(--gold);color:#060606;background:var(--gold);transition:.25s;cursor:pointer}
+  .btn:hover{background:var(--gold-soft);transform:translateY(-2px)}
+  .btn.sm{padding:9px 18px;font-size:13px}
+  header.top{padding:70px 0 30px;text-align:center;position:relative}
+  header.top::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 0%,rgba(216,166,87,.12),transparent 62%);pointer-events:none}
+  header.top .wrap{position:relative}
+  header.top h1{font-family:var(--serif);font-size:clamp(38px,6vw,64px);font-weight:600;line-height:1.02;margin:14px 0 14px}
+  header.top p{max-width:620px;margin:0 auto;color:var(--muted);font-size:18px}
+  /* Filtros */
+  .filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:34px 0 10px}
+  .chip{font-size:13px;font-weight:500;color:var(--muted);border:1px solid var(--line);background:var(--bg2);border-radius:999px;padding:9px 18px;cursor:pointer;transition:.18s}
+  .chip:hover{border-color:rgba(216,166,87,.5);color:var(--ink)}
+  .chip.on{background:linear-gradient(135deg,var(--gold-soft),var(--gold));color:#1a1206;border-color:transparent;font-weight:600}
+  section.cat{padding:44px 0 6px}
+  .cat h2{font-family:var(--serif);font-size:30px;font-weight:600;margin-bottom:4px}
+  .cat .lead{color:var(--muted);font-size:14.5px;margin-bottom:22px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  figure{margin:0;background:var(--bg2);border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:zoom-in;transition:.2s}
+  figure:hover{transform:translateY(-4px);border-color:rgba(216,166,87,.5);box-shadow:0 18px 44px rgba(0,0,0,.5)}
+  figure img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top left;background:#0a0908;border-bottom:1px solid var(--line)}
+  figcaption{padding:12px 15px;font-size:13.5px;color:var(--ink)}
+  figcaption span{display:block;color:var(--muted);font-size:12.5px;margin-top:2px}
+  /* Lightbox */
+  .lb{position:fixed;inset:0;background:rgba(4,4,4,.92);display:none;align-items:center;justify-content:center;z-index:60;padding:26px;cursor:zoom-out;backdrop-filter:blur(4px)}
+  .lb.on{display:flex}
+  .lb figure{cursor:default;max-width:1200px;background:var(--bg2);border:1px solid var(--line)}
+  .lb img{aspect-ratio:auto;max-height:82vh;object-fit:contain}
+  .lb .x{position:absolute;top:20px;right:26px;font-size:34px;color:var(--muted);cursor:pointer;line-height:1}
+  .lb .x:hover{color:var(--gold)}
+  .cta-band{text-align:center;padding:64px 0}
+  .cta-band h2{font-family:var(--serif);font-size:clamp(30px,5vw,46px);font-weight:600;margin-bottom:16px}
+  .cta-band .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  footer{padding:40px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);text-align:center}
+  footer a:hover{color:var(--gold)}
+  @media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:600px){.navlinks{display:none}.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="brand" href="/"><img src="/ALGORA_Logo_blanco.png" alt="ALGORA"></a>
+  <div class="navlinks">
+    <a href="/#productos">Productos</a>
+    <a href="/galeria.html">Galería</a>
+    <a href="/pos.html">ALGORA POS</a>
+    <a href="/manuales/">Manuales</a>
+  </div>
+  <a class="btn sm" href="https://wa.me/522941114401" target="_blank">Hablemos</a>
+</nav>
+
+<header class="top">
+  <div class="wrap">
+    <span class="kicker">Galería del producto</span>
+    <h1 class="serif">ALGORA POS <span class="gold">por dentro</span></h1>
+    <p>Capturas reales del sistema en operación. Un solo lugar para vender, agendar, cobrar, facturar y crecer.</p>
+    <div class="filters" id="filters"></div>
+  </div>
+</header>
+
+<div class="wrap" id="gallery"></div>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2 class="serif">¿Listo para verlo en tu negocio?</h2>
+    <div class="row">
+      <a class="btn" href="https://wa.me/522941114401?text=Hola%2C%20quiero%20una%20demo%20de%20ALGORA%20POS" target="_blank">Pedir una demo</a>
+      <a class="btn sm" href="/pos.html" style="background:transparent;color:var(--ink)">Conocer ALGORA POS</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><a href="/">ALGORA TECH</a> · Hecho en México · <a href="/manuales/">Manuales</a> · <a href="/pos.html">ALGORA POS</a></p>
+    <p style="margin-top:8px">© <span id="y"></span> ALGORA TECH S.A.S. de C.V.</p>
+  </div>
+</footer>
+
+<div class="lb" id="lb"><span class="x">&times;</span><figure><img id="lbimg" src="" alt=""></figure></div>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const CATS=[
+ {id:'pos',name:'Punto de venta',lead:'El corazón de tu negocio: vender, cobrar y controlar todo desde un solo lugar.',items:[
+   ['pos-inicio','Inicio','Resumen del día: ventas, pedidos y estado de caja'],
+   ['pos-venta','Venta','Cobro rápido con fotos de productos y carrito'],
+   ['pos-caja','Caja y corte','Corte de caja e historial de cortes'],
+   ['pos-catalogo','Catálogo','Productos con precios, fotos y variantes'],
+   ['pos-clientes','Clientes','Directorio de clientes y su historial'],
+   ['pos-cotizaciones','Cotizaciones','Genera y envía cotizaciones'],
+   ['pos-ventas-historial','Historial de ventas','Todas tus ventas, filtrables y con detalle'],
+   ['pos-dashboard','Panel de control','Metas, ingresos y métodos de pago en vivo'],
+   ['pos-suscripcion','Planes y módulos','Activa restaurante, hotel, gym, clínica o el agente IA'],
+ ]},
+ {id:'restaurante',name:'Restaurante',lead:'Mesas, comandas a cocina y barra, insumos, recetas y pedidos por QR.',items:[
+   ['resto-mesas','Mapa de mesas','Estado de cada mesa y su cuenta'],
+   ['resto-cocina','Cocina (KDS)','Comandas en preparación en pantalla'],
+   ['resto-barra','Barra (KDS)','Comandas de barra en tiempo real'],
+   ['resto-entregar','Para entregar','Órdenes listas para servir o enviar'],
+   ['resto-insumos','Insumos','Control de existencias por insumo'],
+   ['resto-recetas','Recetas','Costeo y preparación por platillo'],
+   ['resto-qr','Códigos QR de mesa','Tus clientes ordenan desde su celular'],
+ ]},
+ {id:'hotel',name:'Hotel',lead:'Habitaciones, check-in y ocupación de un vistazo.',items:[
+   ['hotel-habitaciones','Habitaciones','Estado y ocupación de cada habitación'],
+   ['hotel-habitaciones-2','Ocupación','Vista general del hotel'],
+   ['hotel-habitaciones-3','Plano','Distribución por piso'],
+ ]},
+ {id:'agenda',name:'Agenda y accesos',lead:'Citas, reservaciones, control de acceso y visitas.',items:[
+   ['agenda-calendario','Agenda','Calendario de citas y reservaciones'],
+   ['acceso-control','Control de acceso','El guardia escanea el QR y registra la llegada'],
+   ['acceso-visita','Anunciar visita','Recepción avisa una visita al instante'],
+ ]},
+ {id:'tienda',name:'Tienda en línea',lead:'Tu propia tienda y app, conectada al punto de venta.',items:[
+   ['pos-pedidos','Pedidos online','Recibe y despacha pedidos de tu tienda'],
+   ['pos-tienda-config','Configura tu tienda','Link, banner y pagos en línea'],
+   ['pos-tienda-cupones','Cupones y app','Descuentos y tu negocio como app instalable'],
+   ['pos-tienda-colores','Personalización','Colores y marca de tu tienda'],
+   ['tienda-publica','Tienda del cliente','Así ve tu tienda el cliente final'],
+   ['tienda-menu','Menú en línea','Catálogo con carrito y datos del negocio'],
+ ]},
+ {id:'finanzas',name:'Finanzas y equipo',lead:'Números claros para decidir: resultados, impuestos, nómina y equipo.',items:[
+   ['pos-finanzas','Finanzas','Punto de equilibrio y crecimiento de ingresos'],
+   ['pos-estado-resultados','Estado de resultados','Utilidad del periodo, al instante'],
+   ['pos-impuestos','Impuestos (IVA)','IVA del mes calculado automáticamente'],
+   ['pos-nomina','Nómina','Cálculo y control de nómina'],
+   ['pos-equipo','Equipo','Empleados, roles y permisos'],
+   ['pos-reportes','Reportes','Top productos y ventas por empleado/sucursal'],
+   ['pos-compras','Compras','Registro de compras a proveedores'],
+   ['pos-proveedores','Proveedores','Directorio de proveedores'],
+   ['pos-traspasos','Traspasos','Movimientos de inventario entre sucursales'],
+ ]},
+ {id:'whatsapp',name:'WhatsApp e IA',lead:'Marketing por WhatsApp y un agente con IA que atiende a tus clientes.',items:[
+   ['wa-marketing','Marketing','Campañas por WhatsApp en pocos pasos'],
+   ['wa-conversaciones','Conversaciones','Bandeja del agente y tu equipo'],
+ ]},
+];
+const gallery=document.getElementById('gallery');
+const filters=document.getElementById('filters');
+function chip(id,label,on){const b=document.createElement('button');b.className='chip'+(on?' on':'');b.textContent=label;b.dataset.t=id;b.onclick=()=>{document.querySelectorAll('.chip').forEach(c=>c.classList.remove('on'));b.classList.add('on');document.querySelectorAll('section.cat').forEach(s=>{s.style.display=(id==='all'||s.id===id)?'':'none';});if(id!=='all')location.hash=id;};return b;}
+filters.appendChild(chip('all','Todo',true));
+CATS.forEach(c=>filters.appendChild(chip(c.id,c.name,false)));
+CATS.forEach(c=>{
+  const s=document.createElement('section');s.className='cat';s.id=c.id;
+  s.innerHTML='<h2 class="serif">'+c.name+'</h2><p class="lead">'+c.lead+'</p>';
+  const g=document.createElement('div');g.className='grid';
+  c.items.forEach(([f,t,d])=>{
+    const fig=document.createElement('figure');
+    fig.innerHTML='<img loading="lazy" src="/capturas/'+f+'.webp" alt="ALGORA POS — '+t+'"><figcaption>'+t+'<span>'+d+'</span></figcaption>';
+    fig.querySelector('img').addEventListener('click',()=>openLb('/capturas/'+f+'.webp',t));
+    g.appendChild(fig);
+  });
+  s.appendChild(g);gallery.appendChild(s);
+});
+const lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg');
+function openLb(src,alt){lbimg.src=src;lbimg.alt=alt;lb.classList.add('on');}
+lb.addEventListener('click',()=>lb.classList.remove('on'));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on');});
+// abrir categoría si viene en el hash
+if(location.hash){const t=location.hash.slice(1);const b=[...document.querySelectorAll('.chip')].find(c=>c.dataset.t===t);if(b)b.click();}
+</script>
+</body>
+</html>
