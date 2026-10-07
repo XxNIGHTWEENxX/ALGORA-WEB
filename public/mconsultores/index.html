@@ -1591,11 +1591,15 @@
         <div class="login-form">
           <h3>Panel de Administración</h3>
           <div class="form-group">
+            <label>Correo</label>
+            <input type="email" id="adminEmail" placeholder="correo@empresa.com" autocomplete="username">
+          </div>
+          <div class="form-group">
             <label>Contraseña</label>
-            <input type="password" id="adminPassword" placeholder="Ingrese la contraseña" onkeydown="if(event.key==='Enter')attemptLogin()">
+            <input type="password" id="adminPassword" placeholder="Ingrese la contraseña" autocomplete="current-password" onkeydown="if(event.key==='Enter')attemptLogin()">
           </div>
           <button class="btn-submit" onclick="attemptLogin()">Ingresar</button>
-          <p id="adminError">Contraseña incorrecta</p>
+          <p id="adminError">Correo o contraseña incorrectos</p>
         </div>
       </div>
 
@@ -1663,7 +1667,10 @@
     ];
 
     // ========== ADMIN CONFIG ==========
-    const ADMIN_PASS = 'mconsultores2025';
+    // El acceso de administrador usa Supabase Auth (correo + contraseña) y la base solo
+    // permite escribir a usuarios autenticados que esten en la lista public.admins.
+    function esc(v) { return String(v == null ? '' : v).replace(/[&<>"'`]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;','`':'&#96;'}[c])); }
+    function safeUrl(u) { return /^https:\/\//i.test(String(u || '')) || /^img\//.test(String(u || '')) ? esc(u) : ''; }
     let dbProjects = [];
     let currentFilter = 'all';
 
@@ -1720,14 +1727,14 @@
       const filtered = filter === 'all' ? projects : projects.filter(p => p.category === filter);
 
       grid.innerHTML = filtered.map(p => `
-        <div class="project-card fade-up visible" data-category="${p.category}">
+        <div class="project-card fade-up visible" data-category="${esc(p.category)}">
           <div class="project-img">
-            ${p.image_url ? `<img src="${p.image_url}" alt="${p.title}" loading="lazy">` : `<div class="placeholder-icon"><svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>`}
-            <span class="project-category">${p.category.charAt(0).toUpperCase() + p.category.slice(1)}</span>
+            ${safeUrl(p.image_url) ? `<img src="${safeUrl(p.image_url)}" alt="${esc(p.title)}" loading="lazy">` : `<div class="placeholder-icon"><svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>`}
+            <span class="project-category">${esc(String(p.category || '').charAt(0).toUpperCase() + String(p.category || '').slice(1))}</span>
           </div>
           <div class="project-body">
-            <h3>${p.title}</h3>
-            <p>${p.description}</p>
+            <h3>${esc(p.title)}</h3>
+            <p>${esc(p.description)}</p>
           </div>
         </div>
       `).join('');
@@ -1751,15 +1758,18 @@
       document.getElementById('adminOverlay').classList.remove('active');
       document.body.style.overflow = '';
     }
-    function attemptLogin() {
+    async function attemptLogin() {
+      const email = document.getElementById('adminEmail').value.trim();
       const pw = document.getElementById('adminPassword').value;
-      if (pw === ADMIN_PASS) {
-        document.getElementById('adminLogin').style.display = 'none';
-        document.getElementById('adminDashboard').style.display = 'block';
-        renderAdminList();
-      } else {
-        document.getElementById('adminError').style.display = 'block';
-      }
+      const err = document.getElementById('adminError');
+      err.style.display = 'none';
+      if (!email || !pw) { err.style.display = 'block'; return; }
+      const { error } = await sb.auth.signInWithPassword({ email, password: pw });
+      document.getElementById('adminPassword').value = '';
+      if (error) { err.style.display = 'block'; return; }
+      document.getElementById('adminLogin').style.display = 'none';
+      document.getElementById('adminDashboard').style.display = 'block';
+      renderAdminList();
     }
     function renderAdminList() {
       const list = document.getElementById('adminProjectsList');
@@ -1769,12 +1779,12 @@
       }
       list.innerHTML = dbProjects.map(p => `
         <div class="admin-project-item">
-          ${p.image_url ? `<img src="${p.image_url}" alt="">` : `<div class="thumb-placeholder">IMG</div>`}
+          ${safeUrl(p.image_url) ? `<img src="${safeUrl(p.image_url)}" alt="">` : `<div class="thumb-placeholder">IMG</div>`}
           <div class="info">
-            <h5>${p.title}</h5>
-            <span>${p.category}</span>
+            <h5>${esc(p.title)}</h5>
+            <span>${esc(p.category)}</span>
           </div>
-          <button class="delete-btn" onclick="handleDelete('${p.id}', '${p.image_url || ''}')">&times;</button>
+          <button class="delete-btn" data-id="${esc(p.id)}" data-img="${esc(p.image_url || '')}" onclick="handleDelete(this.dataset.id, this.dataset.img)">&times;</button>
         </div>
       `).join('');
     }
