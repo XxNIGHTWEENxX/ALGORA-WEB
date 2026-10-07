@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ALGORA TECH — Soluciones tecnológicas</title>
-<meta name="description" content="ALGORA TECH: empresa de soluciones tecnológicas. Software propio como ALGORA POS y Nofollow, más desarrollo de apps web y móviles, sistemas empresariales, consultoría y mantenimiento.">
+<meta name="description" content="ALGORA TECH: ALGORA POS, páginas web a la medida conectadas a tu punto de venta y desarrollo de software a la medida para tu empresa. Hecho en México.">
 <meta name="theme-color" content="#060606">
 <meta property="og:title" content="ALGORA TECH — Soluciones tecnológicas">
-<meta property="og:description" content="Software propio y desarrollo a la medida: apps web y móviles, sistemas empresariales, consultoría y mantenimiento.">
+<meta property="og:description" content="ALGORA POS, páginas a la medida y desarrollo de software a la medida. Un mismo equipo.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.algora.com.mx/">
 <meta property="og:image" content="https://www.algora.com.mx/og-image.png">
@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Organization","name":"ALGORA TECH","legalName":"ALGORA TECH S.A.S. de C.V.","url":"https://www.algora.com.mx/","logo":"https://www.algora.com.mx/icon-512.png","description":"Empresa de soluciones tecnológicas: software propio y desarrollo a la medida.","address":{"@type":"PostalAddress","streetAddress":"Calle 12 Sur 11509, Int. 53, Col. Los Héroes Puebla","addressLocality":"Puebla","addressRegion":"Puebla","postalCode":"72590","addressCountry":"MX"}}
+{"@context":"https://schema.org","@type":"Organization","name":"ALGORA TECH","legalName":"ALGORA TECH S.A.S. de C.V.","url":"https://www.algora.com.mx/","logo":"https://www.algora.com.mx/icon-512.png","description":"Empresa de soluciones tecnológicas: ALGORA POS, páginas web a la medida y desarrollo de software a la medida.","address":{"@type":"PostalAddress","streetAddress":"Calle 12 Sur 11509, Int. 53, Col. Los Héroes Puebla","addressLocality":"Puebla","addressRegion":"Puebla","postalCode":"72590","addressCountry":"MX"}}
 </script>
 <style>
   :root{--bg:#060606;--bg2:#0d0c0b;--ink:#ECE8DF;--muted:#8f887b;--line:rgba(216,166,87,.18);--gold:#D8A657;--gold-soft:#e9c98f;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',system-ui,sans-serif}
@@ -56,10 +56,11 @@
   .sec-head h2{font-family:var(--serif);font-size:clamp(32px,5vw,52px);font-weight:600;margin-top:8px}
   .sec-head p{color:var(--muted);margin-top:12px;max-width:640px;margin-left:auto;margin-right:auto}
   /* Productos */
-  .prods{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .prods{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .prod .num{font-family:var(--serif);font-size:15px;color:var(--gold);letter-spacing:.2em}
   .prod{background:linear-gradient(180deg,var(--bg2),#0a0908);border:1px solid var(--line);border-radius:22px;padding:34px;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
   .prod .badge{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
-  .prod h3{font-family:var(--serif);font-size:34px;font-weight:600}
+  .prod h3{font-family:var(--serif);font-size:32px;font-weight:600;line-height:1.1}
   .prod p{color:var(--muted);font-size:15px;flex:1}
   .prod .tags{display:flex;gap:8px;flex-wrap:wrap}
   .prod .tag{font-size:12px;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:4px 11px}
@@ -109,16 +110,15 @@
   .tcard .b{padding:15px 18px}
   .tcard h4{font-size:16px;font-weight:600;margin-bottom:3px}
   .tcard p{color:var(--muted);font-size:13.5px}
-  @media(max-width:860px){.navlinks{display:none}.prods{grid-template-columns:1fr}.servs{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr}.tourgrid{grid-template-columns:1fr}}
+  @media(max-width:860px){.navlinks{display:none}.prods{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr}.tourgrid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <nav>
   <a class="brand" href="/"><img src="/ALGORA_Logo_blanco.png" alt="ALGORA"></a>
   <div class="navlinks">
-    <a href="#productos">Productos</a>
+    <a href="#soluciones">Soluciones</a>
     <a href="#tour">Galería</a>
-    <a href="#servicios">Servicios</a>
     <a href="#nosotros">Nosotros</a>
     <a href="#contacto">Contacto</a>
   </div>
@@ -129,55 +129,50 @@
   <div class="wrap">
     <span class="kicker">Soluciones tecnológicas</span>
     <h1 class="serif">La tecnología que <span class="gold">mueve</span> tu negocio.</h1>
-    <p>Creamos software propio y a la medida: sistemas, apps web y móviles, y las herramientas que tu empresa necesita para crecer. De la idea al mantenimiento, contigo.</p>
+    <p>Tres soluciones, un mismo equipo: ALGORA POS para operar tu negocio, páginas web a la medida conectadas a tu punto de venta y software desarrollado a la medida de tu empresa.</p>
     <div class="cta">
-      <a class="btn" href="#productos">Ver productos</a>
+      <a class="btn" href="#soluciones">Ver soluciones</a>
       <a class="btn ghost" href="#contacto">Cotizar un proyecto</a>
     </div>
     <div class="strip">
-      <span><b>Software propio</b> probado en producción</span>
-      <span><b>Desarrollo</b> web y móvil a la medida</span>
-      <span><b>Soporte</b> humano · Hecho en México</span>
+      <span><b>ALGORA POS</b> · todo tu negocio en un sistema</span>
+      <span><b>Páginas a la medida</b> conectadas al POS</span>
+      <span><b>Software a la medida</b> · Hecho en México</span>
     </div>
   </div>
 </header>
 
-<!-- PRODUCTOS -->
-<section id="productos">
+<!-- SOLUCIONES -->
+<section id="soluciones">
   <div class="wrap">
-    <div class="sec-head"><span class="kicker">Nuestros productos</span><h2 class="serif">Software que ya opera</h2><p>Plataformas desarrolladas por ALGORA TECH, listas para usarse hoy.</p></div>
+    <div class="sec-head"><span class="kicker">Lo que hacemos</span><h2 class="serif">Nuestras soluciones</h2><p>Nos enfocamos en tres cosas y las hacemos bien. Todas desarrolladas y soportadas por ALGORA TECH.</p></div>
     <div class="prods">
 
       <div class="prod">
+        <span class="num">01</span>
         <span class="badge">Punto de venta inteligente</span>
         <h3 class="serif">ALGORA POS</h3>
         <p>El sistema todo-en-uno que dirige tu negocio: ventas, inventario, caja, tienda en línea, agenda, restaurante, gimnasio, hotel, clínica, control de accesos, marketing con Meta, facturación CFDI y una IA que atiende tu WhatsApp. Con o sin internet.</p>
-        <div class="tags"><span class="tag">POS</span><span class="tag">Tienda online</span><span class="tag">Agenda</span><span class="tag">Clínica</span><span class="tag">Agente WhatsApp IA</span><span class="tag">Marketing</span><span class="tag">CFDI 4.0</span></div>
+        <div class="tags"><span class="tag">POS</span><span class="tag">Inventario</span><span class="tag">Agenda</span><span class="tag">Agente WhatsApp IA</span><span class="tag">CFDI 4.0</span></div>
         <a class="go" href="/pos.html">Conocer ALGORA POS →</a>
       </div>
 
       <div class="prod">
-        <span class="badge">Finanzas personales con IA</span>
-        <h3 class="serif">Florinia</h3>
-        <p>App mexicana de finanzas personales con <b style="color:var(--ink);font-weight:600">Oriana</b>, una asesora con IA que ve tus números reales: registra ingresos y gastos, controla deudas, presupuestos y metas, y te dice qué hacer con tu dinero. En pesos y con reglas del SAT.</p>
-        <div class="tags"><span class="tag">Finanzas</span><span class="tag">IA</span><span class="tag">App / PWA</span></div>
-        <a class="go" href="https://florinia.com.mx" target="_blank">Conocer Florinia →</a>
+        <span class="num">02</span>
+        <span class="badge">Tu negocio en internet</span>
+        <h3 class="serif">Páginas a la medida</h3>
+        <p>Tu sitio web con tu marca, conectado en vivo a ALGORA POS: productos, precios, fotos, pedidos y citas con anticipo se actualizan solos desde tu punto de venta. Un solo pago; el mantenimiento va en tu suscripción.</p>
+        <div class="tags"><span class="tag">Diseño a tu marca</span><span class="tag">Conectada en vivo</span><span class="tag">Ventas y citas en línea</span></div>
+        <a class="go" href="/sitios.html">Ver planes y ejemplos →</a>
       </div>
 
       <div class="prod">
-        <span class="badge">Instagram · Privacidad</span>
-        <h3 class="serif">NoFollow</h3>
-        <p>Descubre a quién sigues en Instagram que no te sigue de vuelta —sin contraseñas y 100% privado: tu información se analiza en tu propio navegador y nunca toca tu cuenta, sin riesgo de baneo.</p>
-        <div class="tags"><span class="tag">Instagram</span><span class="tag">Privacidad</span><span class="tag">SaaS</span></div>
-        <a class="go" href="https://nofollow.com.mx" target="_blank">Conocer NoFollow →</a>
-      </div>
-
-      <div class="prod">
-        <span class="badge">Servicio estrella</span>
-        <h3 class="serif">Sitios a la medida</h3>
-        <p>Tu página web a la medida, conectada a tu punto de venta. Un solo pago; el mantenimiento va en tu suscripción.</p>
-        <div class="tags"><span class="tag">Web</span><span class="tag">Conectado al POS</span></div>
-        <a class="go" href="/sitios.html">Ver planes →</a>
+        <span class="num">03</span>
+        <span class="badge">Hecho para tu operación</span>
+        <h3 class="serif">Software a la medida</h3>
+        <p>Construimos el sistema que tu empresa necesita: plataformas web, automatizaciones e integraciones con lo que ya usas, desde inventarios hasta el cobro y la facturación. Partimos de la base probada de ALGORA para entregarte más rápido.</p>
+        <div class="tags"><span class="tag">Sistemas web</span><span class="tag">Automatizaciones</span><span class="tag">Integraciones</span><span class="tag">Apps</span></div>
+        <a class="go" href="#contacto">Cotizar mi proyecto →</a>
       </div>
 
     </div>
@@ -200,32 +195,10 @@
   </div>
 </section>
 
-<!-- SERVICIOS -->
-<section id="servicios" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="sec-head"><span class="kicker">Lo que hacemos</span><h2 class="serif">Servicios</h2><p>Desde la estrategia hasta el código y el soporte. Todo bajo un mismo equipo.</p></div>
-    <div class="servs">
-
-      <div class="serv"><div class="ic"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg></div><h4>Consultoría tecnológica</h4><p>Diagnóstico y estrategia: qué construir, con qué stack y cómo escalar sin desperdiciar.</p></div>
-
-      <div class="serv"><div class="ic"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg></div><h4>Desarrollo web</h4><p>Sitios y aplicaciones web rápidas, seguras y a la medida de tu operación.</p></div>
-
-      <div class="serv"><div class="ic"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path stroke-linecap="round" d="M11 18.5h2"/></svg></div><h4>Apps móviles</h4><p>Aplicaciones para Android e iOS, conectadas a tus sistemas y a tus clientes.</p></div>
-
-      <div class="serv"><div class="ic"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h12M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h8.25c.621 0 1.125.504 1.125 1.125V21"/></svg></div><h4>Sistemas empresariales</h4><p>ERPs, paneles y automatizaciones a la medida para ordenar y hacer crecer tu empresa.</p></div>
-
-      <div class="serv"><div class="ic"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"/></svg></div><h4>Sitios conectados al POS</h4><p>Páginas a la medida enlazadas a ALGORA POS: catálogo, pedidos y citas en un solo lugar. <a href="/sitios.html" style="color:var(--gold)">Ver planes →</a></p></div>
-
-      <div class="serv"><div class="ic"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085"/></svg></div><h4>Mantenimiento y soporte</h4><p>Cuidamos tus sitios y sistemas: actualizaciones, seguridad, hosting y respaldo continuo.</p></div>
-
-    </div>
-  </div>
-</section>
-
 <!-- PROCESO -->
 <section>
   <div class="wrap">
-    <div class="sec-head"><span class="kicker">Cómo trabajamos</span><h2 class="serif">De la idea a producción</h2></div>
+    <div class="sec-head"><span class="kicker">Cómo trabajamos</span><h2 class="serif">De la idea a producción</h2><p>Así llevamos cada página y cada sistema a la medida.</p></div>
     <div class="steps">
       <div class="step"><div class="n serif">1</div><h4>Diagnóstico</h4><p>Entendemos tu operación y objetivos. Sin humo: qué sí necesitas y qué no.</p></div>
       <div class="step"><div class="n serif">2</div><h4>Propuesta</h4><p>Alcance, tiempos y costo claros antes de escribir una línea de código.</p></div>
@@ -240,7 +213,7 @@
   <div class="wrap">
     <div class="sec-head"><span class="kicker">Nosotros</span><h2 class="serif">Por qué ALGORA TECH</h2><p>Somos una empresa mexicana de tecnología. No solo desarrollamos: operamos nuestro propio software con clientes reales.</p></div>
     <div class="why">
-      <div><h4>Producto propio</h4><p>ALGORA POS, Florinia y NoFollow los hicimos nosotros y están en producción. Sabemos construir cosas que aguantan el uso real.</p></div>
+      <div><h4>Producto propio</h4><p>ALGORA POS lo hicimos nosotros y opera todos los días con negocios reales. Sabemos construir software que aguanta el uso real.</p></div>
       <div><h4>A la medida, sin sobrecostos</h4><p>Reutilizamos lo que ya tenemos para entregarte más rápido y más barato, sin sacrificar calidad.</p></div>
       <div><h4>Soporte humano</h4><p>Personas reales que conocen tu proyecto y responden. Acompañamiento después del lanzamiento.</p></div>
     </div>
@@ -252,7 +225,7 @@
   <div class="wrap">
     <span class="kicker">Contacto</span>
     <h2 class="serif">Cuéntanos tu proyecto.</h2>
-    <p>Consultoría, un producto a la medida o conectar tu negocio: escríbenos y te respondemos con una propuesta clara.</p>
+    <p>ALGORA POS, una página a la medida o un sistema hecho para tu empresa: escríbenos y te respondemos con una propuesta clara.</p>
     <div class="cta">
       <a class="btn" href="https://wa.me/522941114401" target="_blank">WhatsApp ventas 294 111 4401</a>
       <a class="btn ghost" href="https://wa.me/525659186986?text=Hola%2C%20necesito%20soporte%20t%C3%A9cnico%20de%20ALGORA" target="_blank">Soporte técnico 565 918 6986</a>
@@ -275,10 +248,9 @@
     </div>
     <div>
       <div class="links">
-        <a href="#productos">Productos</a>
-        <a href="#servicios">Servicios</a>
-        <a href="/sitios.html">Sitios a la medida</a>
         <a href="/pos.html">ALGORA POS</a>
+        <a href="/sitios.html">Páginas a la medida</a>
+        <a href="#contacto">Software a la medida</a>
         <a href="/manuales/">Manuales de usuario</a>
       </div>
       <p style="margin-top:22px">© <span id="y"></span> ALGORA TECH · Hecho en México</p>
