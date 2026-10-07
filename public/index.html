@@ -380,8 +380,9 @@ document.getElementById('y').textContent=new Date().getFullYear();
 
 /* Revelados */
 var rvs=document.querySelectorAll('.rv');
-if(!FX||!('IntersectionObserver' in window)){rvs.forEach(function(e){e.classList.add('in')})}
-else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});rvs.forEach(function(e){io.observe(e)})}
+var pend=[].slice.call(rvs);
+function chk(){if(!pend.length)return;var vh=innerHeight;pend=pend.filter(function(e){var r=e.getBoundingClientRect();if(r.top<vh*.9&&r.bottom>0){e.classList.add('in');return false}return true})}
+if(!FX){rvs.forEach(function(e){e.classList.add('in')})}else{var rq=false;addEventListener('scroll',function(){if(!rq){rq=true;requestAnimationFrame(function(){rq=false;chk()})}},{passive:true});addEventListener('resize',chk);setTimeout(chk,60)}
 
 /* Nav */
 var nav=document.querySelector('nav');

@@ -4,7 +4,7 @@ cd /d "%~dp0"
 del /f /q .git\index.lock 2>nul
 echo Subiendo algora-web (sitio estatico, Vercel despliega solo)...
 git add -A
-git commit -m "Web: home con experiencia Hilo de oro (A animada, escenas POS/pagina/software por scroll) y solo 3 soluciones; sin Florinia ni NoFollow"
+git commit -m "Web: experiencia Hilo de oro en home y pos.html (POS dibujado, caos a control, reloj del dia, iconos animados); solo 3 soluciones"
 git pull --rebase origin main
 git push origin main
 echo.
