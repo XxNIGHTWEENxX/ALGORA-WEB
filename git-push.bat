@@ -4,7 +4,7 @@ cd /d "%~dp0"
 del /f /q .git\index.lock 2>nul
 echo Subiendo algora-web (sitio estatico, Vercel despliega solo)...
 git add -A
-git commit -m "Seguridad: headers (HSTS, CSP, anti-iframe), aviso de cookies, enlaces legales, security.txt y admin de M Consultores con login real"
+git commit -m "Seguridad (HSTS, CSP, cookies, legales, security.txt, M Consultores) + galeria: nueva seccion Clinica con 8 capturas"
 git pull --rebase origin main
 git push origin main
 echo.
