@@ -4,7 +4,7 @@ cd /d "%~dp0"
 del /f /q .git\index.lock 2>nul
 echo Subiendo algora-web (sitio estatico, Vercel despliega solo)...
 git add -A
-git commit -m "Hero y cierre de POS: el hilo dibuja la A del logo de ALGORA (cunas + punto)"
+git commit -m "Logo de ALGORA en las animaciones del hilo: seccion Todo conectado y cierre de galeria, sitios y software"
 git pull --rebase origin main
 git push origin main
 echo.
