@@ -198,7 +198,8 @@ h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,6vw,64px);line-
 .stack .tot{background:rgba(216,166,87,.08);padding:22px 26px;display:flex;justify-content:space-between;align-items:baseline}
 .stack .tot .l{font-family:var(--serif);font-size:22px}
 .stack .tot .p{font-family:var(--serif);font-size:34px;color:var(--gold);font-weight:600}
-.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}
+@media(max-width:1100px){.tiers{grid-template-columns:repeat(2,1fr)}}
 .tier{border:1px solid var(--line);border-radius:16px;padding:26px 22px;background:#0a0908;text-align:center;position:relative;transition:transform .2s ease-out,border-color .3s;height:100%}
 .tier:hover{border-color:rgba(216,166,87,.45)}
 @property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
@@ -370,6 +371,7 @@ footer .fb{font-family:var(--serif);font-style:italic;color:var(--gold);font-siz
     </div></div>
     <div class="tiers">
       <div class="rv"><div class="tier tilt"><div class="nm">Empieza</div><div class="pr">$399<small>/mes</small></div><div class="ds">POS Lite: lo esencial para arrancar a cobrar hoy.</div></div></div>
+      <div class="rv" style="--d:.05s"><div class="tier tilt"><div class="nm">Restaurante Lite</div><div class="pr">$799<small>/mes</small></div><div class="ds">POS Lite + mesas: cuentas, comensales, dividir y cobrar. Para fondas y cafeterías.</div></div></div>
       <div class="rv" style="--d:.1s"><div class="tier hot tilt"><div class="tag">Más elegido</div><div class="nm">Todo</div><div class="pr">$1,199<small>/mes</small></div><div class="ds">POS + Tienda + Agenda + Aura. El negocio completo.</div></div></div>
       <div class="rv" style="--d:.2s"><div class="tier tilt"><div class="nm">Suite por giro</div><div class="pr">$1,649<small>/mes</small></div><div class="ds">Todo + tu módulo especializado: Restaurante, Gimnasio, Hotel o Clínica.</div></div></div>
     </div>

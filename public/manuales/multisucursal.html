@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALGORA · Manual — Multisucursal</title>
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <img class="brand-logo" src="/ALGORA_Logo_blanco.png" alt="ALGORA">
+    <div class="k">Manual de usuario</div>
+    <h1>Módulo <span class="gold">Multisucursal</span></h1>
+    <p>Varias sucursales en un solo negocio: inventario por sucursal, traspasos, cajas y empleados por sucursal y reportes que comparan cada una.</p>
+    <div class="meta">Serie de manuales ALGORA · Multisucursal · Para dueño y administrador</div>
+    <a class="back" href="index.html">← Ver todos los manuales</a>
+  </div>
+  <main>
+    <div class="toc">
+      <h4>Contenido</h4>
+      <ol>
+        <li><a href="#s1">Qué es Multisucursal</a></li>
+        <li><a href="#s2">Cuánto cuesta</a></li>
+        <li><a href="#s3">Qué incluye</a></li>
+        <li><a href="#s4">Activar y crear una sucursal</a></li>
+        <li><a href="#s5">Cargar el inventario de la nueva sucursal</a></li>
+        <li><a href="#s6">Asignar empleados a sucursales</a></li>
+        <li><a href="#s7">Cambiar de sucursal y operar</a></li>
+        <li><a href="#s8">Traspasos entre sucursales</a></li>
+        <li><a href="#s9">Reportes por sucursal</a></li>
+        <li><a href="#s10">Editar, desactivar y facturación</a></li>
+        <li><a href="#s11">Roles y solución de problemas</a></li>
+      </ol>
+    </div>
+
+    <h2 id="s1"><span class="num">1.</span>Qué es Multisucursal</h2>
+    <p>Multisucursal te permite manejar <b>varios locales dentro de la misma cuenta de ALGORA</b>. Todas tus sucursales comparten el mismo catálogo, precios y clientes, pero cada una lleva <b>su propio inventario, sus cajas, sus empleados y sus ventas</b>. Desde la cuenta del dueño ves cada sucursal por separado o todas juntas.</p>
+    <div class="box tip"><div class="t">Ideal para</div><p>Tiendas, minisúpers, restaurantes, farmacias y cualquier negocio con más de un punto de venta que quiere saber cuánto vende y cuánto tiene cada local, sin llevar varias cuentas.</p></div>
+
+    <h2 id="s2"><span class="num">2.</span>Cuánto cuesta</h2>
+    <p>Tu plan de ALGORA POS <b>ya incluye 1 sucursal</b> (la <b>Principal</b>). Cada sucursal adicional se contrata aparte, con un cargo mensual que baja conforme creces:</p>
+    <table>
+      <tr><th>Sucursal</th><th>Precio mensual</th></tr>
+      <tr><td><b>Sucursal 1 (Principal)</b></td><td>Incluida en tu plan</td></tr>
+      <tr><td><b>Sucursales 2 y 3</b></td><td><b>$449 MXN</b> al mes cada una</td></tr>
+      <tr><td><b>Sucursales 4 y 5</b></td><td><b>$349 MXN</b> al mes cada una</td></tr>
+    </table>
+    <table>
+      <tr><th>Si tienes…</th><th>Pagas por sucursales extra</th></tr>
+      <tr><td>2 sucursales</td><td>$449 al mes</td></tr>
+      <tr><td>3 sucursales</td><td>$898 al mes ($449 + $449)</td></tr>
+      <tr><td>4 sucursales</td><td>$1,247 al mes ($449 + $449 + $349)</td></tr>
+      <tr><td>5 sucursales</td><td>$1,596 al mes ($449 + $449 + $349 + $349)</td></tr>
+    </table>
+    <ul>
+      <li>Es un <b>cargo mensual en pesos</b>, aparte de tu plan, que se cobra a la misma tarjeta.</li>
+      <li>Si contratas una sucursal a mitad de mes, solo pagas la <b>parte proporcional</b> de lo que queda del periodo.</li>
+      <li>Puedes tener <b>hasta 5 sucursales activas</b>. Si necesitas más, escríbenos.</li>
+    </ul>
+    <div class="box req"><div class="t">Requisito</div><p>Multisucursal está disponible para <b>ALGORA POS Completo</b> y los paquetes que lo incluyen. El plan <b>POS Lite</b> trabaja con una sola sucursal; para abrir más, primero cambia a POS Completo en <span class="path">Mi suscripción</span>.</p></div>
+
+    <h2 id="s3"><span class="num">3.</span>Qué incluye</h2>
+    <table>
+      <tr><th>Función</th><th>Qué hace</th></tr>
+      <tr><td><b>Selector de sucursal</b></td><td>En el menú lateral eliges una sucursal o <b>“Todas las sucursales”</b>. Aparece cuando tienes 2 o más sucursales activas.</td></tr>
+      <tr><td><b>Inventario por sucursal</b></td><td>Cada sucursal tiene su existencia. Las ventas, compras, devoluciones y cancelaciones mueven el stock de la sucursal donde ocurrieron.</td></tr>
+      <tr><td><b>Traspasos</b></td><td>Mueve mercancía de una sucursal a otra y guarda el historial.</td></tr>
+      <tr><td><b>Cajas por sucursal</b></td><td>Cada caja y cada corte quedan ligados a la sucursal donde se abrieron.</td></tr>
+      <tr><td><b>Empleados por sucursal</b></td><td>Asignas a cada empleado una o varias sucursales; solo opera y ve el historial de esas.</td></tr>
+      <tr><td><b>Reportes por sucursal</b></td><td>Filtra por sucursal y compara <b>“Ventas por sucursal”</b>: ingresos, gastos y utilidad de cada una.</td></tr>
+      <tr><td><b>Historial de ventas por sucursal</b></td><td>Consulta las ventas de una sucursal o de todas.</td></tr>
+    </table>
+    <h3>Qué se comparte entre sucursales</h3>
+    <p>El <b>catálogo de productos</b>, los <b>precios</b>, las <b>categorías</b>, los <b>clientes y sus créditos</b> y la <b>tienda en línea</b> son los mismos para todo el negocio. Cambias un precio una vez y se aplica en todas las sucursales.</p>
+    <div class="box warn"><div class="t">Bueno saber</div><p>Los pedidos de la <b>tienda en línea</b> descuentan inventario de la sucursal <b>Principal</b>. La sección <b>Finanzas</b> muestra el negocio completo (no se separa por sucursal). Los precios distintos por sucursal y el encabezado de ticket por sucursal todavía no están disponibles.</p></div>
+
+    <h2 id="s4"><span class="num">4.</span>Activar y crear una sucursal</h2>
+    <p>No hay un botón aparte para “activar”: Multisucursal se contrata <b>al crear tu segunda sucursal</b>. Solo el <b>dueño o administrador</b> puede hacerlo.</p>
+    <div class="steps">
+      <div class="s"><h4>Entra a Config → Sucursales</h4><p>En el menú lateral, sección Administración, abre <span class="path">Config</span> y baja a <b>“Sucursales”</b>. Verás tu sucursal <b>Principal</b> y el contador de sucursales (por ejemplo <b>1/5</b>).</p></div>
+      <div class="s"><h4>Llena “Agregar sucursal”</h4><p><b>Nombre de la sucursal</b> (obligatorio), <b>Dirección</b> y <b>Teléfono</b> (opcionales). Pulsa <b>“Crear sucursal”</b>.</p></div>
+      <div class="s"><h4>Confirma el cargo</h4><p>Aparece el aviso <b>“Sucursal adicional”</b> con el precio mensual. Pulsa <b>“Contratar y pagar”</b>. Si cancelas, la sucursal no se crea y no se cobra nada.</p></div>
+      <div class="s"><h4>Paga (solo la primera vez)</h4><p>La primera sucursal adicional abre la página de pago segura de Stripe. Ingresa tu tarjeta y confirma.</p></div>
+      <div class="s"><h4>Vuelve y crea la sucursal</h4><p>Al terminar el pago regresas a ALGORA. En <span class="path">Config → Sucursales</span> escribe otra vez el nombre de la sucursal y pulsa <b>“Crear sucursal”</b>: ya no te pedirá pago y aparecerá <b>“Sucursal creada”</b>.</p></div>
+    </div>
+    <div class="box tip"><div class="t">De la tercera sucursal en adelante es más rápido</div><p>Como ya tienes la suscripción de sucursales, al pulsar <b>“Contratar y pagar”</b> se cobra la parte proporcional a tu tarjeta y la sucursal se crea sola (verás <b>“Lugar contratado. Creando sucursal…”</b>). No vuelves a pasar por la página de pago.</p></div>
+
+    <h2 id="s5"><span class="num">5.</span>Cargar el inventario de la nueva sucursal</h2>
+    <p>Al pasar de 1 a 2 sucursales, el inventario empieza a llevarse <b>por sucursal</b>. La sucursal nueva <b>arranca en cero</b>: antes de vender, dale existencia de una de estas dos formas.</p>
+    <h3>Opción A · Traspaso desde otra sucursal</h3>
+    <p>Si la mercancía sale de tu Principal, usa <span class="path">Traspasos</span> (ver sección 8). Se descuenta de una y se suma a la otra.</p>
+    <h3>Opción B · Capturar el stock directo</h3>
+    <p>Elige la sucursal nueva en el selector del menú, entra a <span class="path">Catálogo</span> y edita cada producto: el campo dice <b>“Stock en {sucursal}”</b> y abajo ves el <b>total</b> de todas las sucursales. También puedes registrar una <b>Compra</b> estando en esa sucursal.</p>
+    <div class="box warn"><div class="t">Revisa también tu Principal</div><p>Si un producto aparece en <b>0</b> en la Principal justo después de crear la segunda sucursal, captura su existencia en el Catálogo con la Principal seleccionada. Con eso queda corregido.</p></div>
+
+    <h2 id="s6"><span class="num">6.</span>Asignar empleados a sucursales</h2>
+    <div class="steps">
+      <div class="s"><h4>Abre Equipo</h4><p>En el menú lateral, <span class="path">Equipo</span>. Crea un empleado o edita uno existente.</p></div>
+      <div class="s"><h4>Marca sus sucursales</h4><p>En <b>“Sucursales asignadas”</b> marca una o varias (o <b>“Seleccionar todas”</b>). Es obligatorio asignar al menos una.</p></div>
+      <div class="s"><h4>Guarda</h4><p>El empleado solo podrá operar y ver el historial de ventas de las sucursales asignadas.</p></div>
+    </div>
+    <p>Si un empleado tiene varias sucursales, al entrar con su PIN el sistema le pregunta <b>“Selecciona tu sucursal”</b>.</p>
+    <figure class="shot"><img loading="lazy" src="/capturas/pos-equipo.webp" alt="Pantalla Equipo en ALGORA"><figcaption><b>Equipo.</b> Cada empleado tiene sus sucursales asignadas.</figcaption></figure>
+
+    <h2 id="s7"><span class="num">7.</span>Cambiar de sucursal y operar</h2>
+    <ul>
+      <li><b>Dueño y administrador:</b> usan el selector del menú lateral para cambiar entre sucursales o ver <b>“Todas las sucursales”</b>. La Principal se marca con <b>(Principal)</b>.</li>
+      <li><b>Empleados:</b> ven el nombre de su sucursal y trabajan solo en ella.</li>
+      <li><b>Punto de venta:</b> las existencias que ves al vender son las de la sucursal activa, y la venta descuenta de esa sucursal.</li>
+      <li><b>Caja:</b> abre la caja estando en la sucursal correcta; el corte queda registrado a esa sucursal.</li>
+      <li><b>Sin internet:</b> el punto de venta sigue cobrando en cada sucursal y sincroniza al volver la conexión. La edición de stock por sucursal en el Catálogo necesita conexión.</li>
+    </ul>
+    <div class="box tip"><div class="t">Una computadora por sucursal</div><p>El equipo recuerda la última sucursal elegida. Antes de cobrar, confirma en el menú lateral que estás en la sucursal correcta.</p></div>
+
+    <h2 id="s8"><span class="num">8.</span>Traspasos entre sucursales</h2>
+    <p>El menú <span class="path">Traspasos</span> aparece cuando tienes 2 o más sucursales activas.</p>
+    <div class="steps">
+      <div class="s"><h4>Elige Origen y Destino</h4><p>La sucursal que entrega y la que recibe.</p></div>
+      <div class="s"><h4>Agrega productos y cantidades</h4><p>Junto a cada producto ves <b>“Disponible en origen”</b>. Si la cantidad excede lo disponible, el sistema te avisa.</p></div>
+      <div class="s"><h4>Confirma</h4><p>Pulsa <b>“Traspasar de {origen} a {destino}”</b>. El movimiento es inmediato y queda en el historial.</p></div>
+    </div>
+    <div class="box warn"><div class="t">No traspases más de lo que hay</div><p>Respeta el aviso de cantidad excedida: traspasar más de lo disponible deja la existencia descuadrada.</p></div>
+    <figure class="shot"><img loading="lazy" src="/capturas/pos-traspasos.webp" alt="Pantalla Traspasos en ALGORA"><figcaption><b>Traspasos.</b> Mercancía de una sucursal a otra, con historial.</figcaption></figure>
+
+    <h2 id="s9"><span class="num">9.</span>Reportes por sucursal</h2>
+    <p>En <span class="path">Reportes</span> usa el filtro de sucursal para ver una sola o <b>“Todas las sucursales”</b>. La sección <b>“Ventas por sucursal”</b> compara ingresos, gastos y utilidad de cada local lado a lado.</p>
+    <figure class="shot"><img loading="lazy" src="/capturas/pos-reportes-sucursal.webp" alt="Reporte de ventas por sucursal"><figcaption><b>Ventas por sucursal.</b> Compara el desempeño de cada local en una sola vista.</figcaption></figure>
+    <p>En <span class="path">Historial de ventas</span> también puedes filtrar por sucursal.</p>
+
+    <h2 id="s10"><span class="num">10.</span>Editar, desactivar y facturación</h2>
+    <ul>
+      <li><b>Editar:</b> en <span class="path">Config → Sucursales</span>, icono de lápiz → cambia nombre, dirección o teléfono → <b>“Guardar”</b>.</li>
+      <li><b>Desactivar:</b> icono de desactivar → confirma. Los empleados asignados ya no podrán operar en esa sucursal. Se marca como <b>“Inactiva”</b> y puedes reactivarla después. La Principal no se puede desactivar.</li>
+      <li><b>Dejar de pagar una sucursal:</b> desactivarla <b>no</b> reduce el cobro. Para liberar el lugar y bajar tu mensualidad, escríbenos por WhatsApp y lo ajustamos.</li>
+      <li><b>Si un pago no pasa:</b> tus sucursales y su información se conservan, pero no podrás abrir sucursales nuevas hasta regularizar el pago.</li>
+    </ul>
+
+    <h2 id="s11"><span class="num">11.</span>Roles y solución de problemas</h2>
+    <table>
+      <tr><th>Rol</th><th>Qué puede</th></tr>
+      <tr><td><b>Dueño / Admin</b></td><td>Contratar y crear sucursales, editarlas o desactivarlas, asignar empleados, cambiar de sucursal, traspasos y reportes de todas.</td></tr>
+      <tr><td><b>Encargado</b></td><td>Traspasos y ajuste de stock por sucursal. No entra a Config.</td></tr>
+      <tr><td><b>Empleado</b></td><td>Vende y opera solo en sus sucursales asignadas.</td></tr>
+    </table>
+    <table>
+      <tr><th>Aviso</th><th>Qué significa</th></tr>
+      <tr><td>“Sucursal adicional… ¿Deseas contratarla?”</td><td>Ya usas todas las sucursales de tu plan; confirmar contrata una más.</td></tr>
+      <tr><td>“Las sucursales adicionales requieren POS Completo (no Lite)”.</td><td>Tu plan es Lite. Cambia a POS Completo en Mi suscripción.</td></tr>
+      <tr><td>“Máximo 5 sucursales permitidas”.</td><td>Llegaste al límite. Escríbenos si necesitas más.</td></tr>
+      <tr><td>“Debes asignar al menos una sucursal”.</td><td>Al guardar un empleado, marca al menos una sucursal.</td></tr>
+      <tr><td>Los productos salen en 0 en la sucursal nueva.</td><td>Es normal: dale existencia con un traspaso o capturando el stock (sección 5).</td></tr>
+      <tr><td>No veo el selector de sucursal ni Traspasos.</td><td>Aparecen con 2 o más sucursales activas y solo para dueño/admin (el selector).</td></tr>
+      <tr><td>Pagué pero la sucursal no aparece.</td><td>Vuelve a <span class="path">Config → Sucursales</span>, escribe el nombre y pulsa “Crear sucursal”.</td></tr>
+    </table>
+    <div class="faq">
+      <div class="q">¿Cada sucursal necesita su propio plan?</div>
+      <div class="a">No. Es una sola cuenta y un solo plan; solo pagas el cargo por sucursal adicional.</div>
+      <div class="q">¿Puedo tener precios distintos en cada sucursal?</div>
+      <div class="a">Por ahora los precios son los mismos en todas las sucursales.</div>
+      <div class="q">¿Los clientes y sus créditos se ven en todas?</div>
+      <div class="a">Sí. Clientes, créditos y catálogo son compartidos.</div>
+    </div>
+  </main>
+  <footer>
+    <div><b>ALGORA TECH S.A.S. de C.V.</b> · Manual — Multisucursal<br>Soporte: WhatsApp 294 111 4401 · ventas.cliente@algora.com.mx</div>
+    <div>algora.com.mx · Hecho en México</div>
+  <div style="margin-top:6px;font-size:12px"><a href="https://www.algorapos.com.mx/privacidad" target="_blank" rel="noopener">Aviso de privacidad</a> · <a href="https://www.algorapos.com.mx/terminos" target="_blank" rel="noopener">Términos</a> · <a href="https://www.algorapos.com.mx/cookies" target="_blank" rel="noopener">Cookies</a></div>
+</footer>
+</div>
+<script src="/consent.js" defer></script>
+</body>
+</html>
