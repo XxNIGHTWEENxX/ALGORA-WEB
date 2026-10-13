@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>ALGORA TECH — Soluciones tecnológicas</title>
-<meta name="description" content="ALGORA TECH: ALGORA POS, páginas web a la medida conectadas a tu punto de venta y desarrollo de software a la medida para tu empresa. Hecho en México.">
+<title>ALGORA POS — Punto de venta para tu negocio · Prueba gratis 14 días</title>
+<meta name="description" content="ALGORA POS: punto de venta para tiendas, restaurantes, clínicas, gimnasios y hoteles. Cobra con o sin internet, inventario automático, factura CFDI 4.0 e IA. Prueba gratis 14 días, sin tarjeta. Hecho en México.">
 <meta name="theme-color" content="#060606">
 <meta property="og:title" content="ALGORA TECH — Soluciones tecnológicas">
 <meta property="og:description" content="ALGORA POS, páginas a la medida y desarrollo de software a la medida. Un mismo equipo.">
@@ -183,6 +183,39 @@
     .panel .pn{font-size:44px}.panel h3{font-size:30px}.fx .panel .lead{display:none}.panel li{font-size:14px}.panel ul{gap:6px;margin-bottom:14px}
     .strip{gap:14px;flex-direction:column}
   }
+
+  /* ===== Enfoque ALGORA POS ===== */
+  .giros{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .gcard{background:linear-gradient(180deg,var(--bg2),#0a0908);border:1px solid var(--line);border-radius:16px;padding:24px;height:100%;display:flex;flex-direction:column;transition:transform .2s ease-out,border-color .2s}
+  .gcard:hover{border-color:rgba(216,166,87,.5)}
+  .gcard .gi{width:46px;height:46px;border-radius:12px;background:rgba(216,166,87,.12);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+  .gcard .gi svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .gcard h4{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:6px}
+  .gcard p{color:var(--muted);font-size:14px;flex:1}
+  .gcard .gl{display:flex;gap:16px;margin-top:16px;font-size:13px;font-weight:600}
+  .gcard .gl a{color:var(--gold)} .gcard .gl a.mut{color:var(--muted);font-weight:500}
+  .plans{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .plan{border:1px solid var(--line);border-radius:16px;padding:22px 18px;background:var(--bg2);display:flex;flex-direction:column;position:relative}
+  .plan.hl{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold) inset,0 20px 50px rgba(216,166,87,.12)}
+  .plan .tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#060606;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;white-space:nowrap}
+  .plan h4{font-size:15px;font-weight:600}
+  .plan .pr{font-family:var(--serif);font-size:40px;color:var(--gold);line-height:1.1;margin:8px 0 2px}
+  .plan .pr small{font-family:var(--sans);font-size:13px;color:var(--muted)}
+  .plan p{color:var(--muted);font-size:13px;flex:1}
+  .plan .btn{margin-top:14px;padding:10px 14px;font-size:13px}
+  .plans-note{text-align:center;color:var(--muted);font-size:13px;margin-top:18px}
+  .sticky-cta{position:fixed;left:50%;bottom:18px;transform:translate(-50%,140%);z-index:60;display:flex;gap:10px;align-items:center;background:rgba(13,12,11,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(216,166,87,.35);border-radius:999px;padding:8px 8px 8px 20px;box-shadow:0 16px 40px rgba(0,0,0,.5);transition:transform .45s var(--ease);font-size:13px;white-space:nowrap}
+  .sticky-cta.show{transform:translate(-50%,0)}
+  .sticky-cta span{color:var(--ink)} .sticky-cta span b{color:var(--gold)}
+  .sticky-cta .btn{padding:10px 18px;font-size:13px}
+  .nav-cta{display:flex;gap:10px;align-items:center}
+  .nav-cta .lnk{font-size:13px;color:var(--muted)} .nav-cta .lnk:hover{color:var(--ink)}
+  .navlinks a.pos{color:var(--gold);font-weight:600}
+  .hero .trust{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-top:18px;color:var(--muted);font-size:13px}
+  .hero .trust span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:8px;vertical-align:middle}
+  @media(max-width:1100px){.plans{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:860px){.giros{grid-template-columns:1fr}.plans{grid-template-columns:1fr 1fr}.sticky-cta span{display:none}.sticky-cta{padding:8px}.nav-cta .lnk{display:none}}
+  @media(max-width:520px){.plans{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -190,42 +223,56 @@
 <nav>
   <a class="brand" href="/"><img src="/ALGORA_Logo_blanco.png" alt="ALGORA"></a>
   <div class="navlinks">
-    <a href="#soluciones">Soluciones</a>
+    <a class="pos" href="/pos.html">ALGORA POS</a>
+    <a href="#giros">Para tu giro</a>
+    <a href="#precios">Precios</a>
     <a href="#tour">Galería</a>
-    <a href="#proceso">Proceso</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#soluciones">Más soluciones</a>
   </div>
-  <a class="btn sm" href="#contacto">Hablemos</a>
+  <div class="nav-cta"><a class="lnk" href="https://algorapos.com.mx">Iniciar sesión</a><a class="btn sm" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=nav">Prueba gratis</a></div>
 </nav>
 
 <header class="hero">
   <canvas id="heroCanvas" aria-hidden="true"></canvas>
   <div class="wrap">
-    <span class="kicker hf" style="transition-delay:.1s">Soluciones tecnológicas</span>
-    <h1 class="serif"><span class="hw"><span style="transition-delay:.15s">La</span></span> <span class="hw"><span style="transition-delay:.25s">tecnología</span></span> <span class="hw"><span style="transition-delay:.35s">que</span></span><br><span class="hw"><span class="gold" style="transition-delay:.5s">mueve</span></span> <span class="hw"><span style="transition-delay:.6s">tu</span></span> <span class="hw"><span style="transition-delay:.7s">negocio.</span></span></h1>
-    <p class="hf" style="transition-delay:.9s">Tres soluciones, un mismo equipo: ALGORA POS para operar tu negocio, páginas web a la medida conectadas a tu punto de venta y software desarrollado a la medida de tu empresa.</p>
+    <span class="kicker hf" style="transition-delay:.1s">ALGORA POS · Punto de venta inteligente</span>
+    <h1 class="serif"><span class="hw"><span style="transition-delay:.15s">Tu</span></span> <span class="hw"><span style="transition-delay:.25s">negocio,</span></span> <span class="hw"><span style="transition-delay:.35s">en</span></span><br><span class="hw"><span class="gold" style="transition-delay:.5s">piloto</span></span> <span class="hw"><span class="gold" style="transition-delay:.6s">automático.</span></span></h1>
+    <p class="hf" style="transition-delay:.9s">ALGORA POS es el punto de venta hecho en México para tiendas, restaurantes, clínicas, gimnasios y hoteles. Cobra con o sin internet, controla tu inventario, factura CFDI 4.0 y deja que Aura, tu asistente con IA, te diga cómo va tu negocio.</p>
     <div class="cta hf" style="transition-delay:1.05s">
-      <a class="btn" href="#soluciones">Ver cómo funciona</a>
-      <a class="btn ghost" href="#contacto">Cotizar un proyecto</a>
+      <a class="btn" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=hero">Prueba gratis 14 días</a>
+      <a class="btn ghost" href="/pos.html">Ver cómo funciona</a>
     </div>
     <div class="strip hf" style="transition-delay:1.2s">
-      <span><b>ALGORA POS</b> · todo tu negocio en un sistema</span>
-      <span><b>Páginas a la medida</b> conectadas al POS</span>
-      <span><b>Software a la medida</b> · Hecho en México</span>
+      <span><b>Sin tarjeta</b> para empezar</span>
+      <span><b>Configuramos</b> tu catálogo contigo</span>
+      <span><b>Desde $399</b> al mes · cancela cuando quieras</span>
     </div>
   </div>
-  <a class="cue hf" style="transition-delay:1.6s" href="#soluciones" aria-label="Bajar a soluciones">Desliza<i></i></a>
+  <a class="cue hf" style="transition-delay:1.6s" href="#giros" aria-label="Bajar a giros">Desliza<i></i></a>
 </header>
 
-<div class="marquee" aria-hidden="true"><div class="mq">
-  <span>ALGORA POS</span><em></em><span class="o">Páginas a la medida</span><em></em><span>Software a la medida</span><em></em><span class="o">Hecho en México</span><em></em>
-  <span>ALGORA POS</span><em></em><span class="o">Páginas a la medida</span><em></em><span>Software a la medida</span><em></em><span class="o">Hecho en México</span><em></em>
-</div></div>
+<div class="marquee" aria-hidden="true"><div class="mq"><span>ALGORA POS</span><em></em><span class="o">Restaurantes</span><em></em><span>Tiendas</span><em></em><span class="o">Clínicas</span><em></em><span>Gimnasios</span><em></em><span class="o">Hoteles</span><em></em><span>Hecho en México</span><em></em><span>ALGORA POS</span><em></em><span class="o">Restaurantes</span><em></em><span>Tiendas</span><em></em><span class="o">Clínicas</span><em></em><span>Gimnasios</span><em></em><span class="o">Hoteles</span><em></em><span>Hecho en México</span><em></em></div></div>
+
+
+<!-- GIROS: ALGORA POS para cada tipo de negocio -->
+<section id="giros">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="kicker">ALGORA POS para tu negocio</span><h2 class="serif">Hecho para tu giro</h2><p>Un solo sistema que se adapta a lo que vendes. Activas solo lo que necesitas y sumas lo demás cuando creces.</p></div>
+    <div class="giros">
+      <div class="rv" style="--d:0.00s"><div class="gcard tilt"><div class="gi"><svg viewBox="0 0 24 24"><path d="M5 2v7a2 2 0 004 0V2M7 9v13"/><path d="M17 2c-1.5 0-2.5 2-2.5 5S16 12 17 12v10"/></svg></div><h4>Restaurantes y cafeterías</h4><p>Mesas, comandas directo a cocina y barra, pedidos por QR desde la mesa y cuenta dividida por comensal.</p><div class="gl"><a href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=giro_restaurante&amp;giro=restaurante">Probar gratis →</a><a class="mut" href="/pos.html">Ver detalles</a></div></div></div>
+      <div class="rv" style="--d:0.08s"><div class="gcard tilt"><div class="gi"><svg viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg></div><h4>Tiendas y minisúpers</h4><p>Cobro rápido con código de barras, inventario que se descuenta solo, proveedores y corte de caja al peso.</p><div class="gl"><a href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=giro_tienda&amp;giro=tienda">Probar gratis →</a><a class="mut" href="/pos.html">Ver detalles</a></div></div></div>
+      <div class="rv" style="--d:0.16s"><div class="gcard tilt"><div class="gi"><svg viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/><rect x="3" y="3" width="18" height="18" rx="4"/></svg></div><h4>Clínicas y consultorios</h4><p>Agenda con recordatorios por WhatsApp, expediente clínico, recetas y cobro de la consulta.</p><div class="gl"><a href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=giro_clinica&amp;giro=clinica">Probar gratis →</a><a class="mut" href="/pos.html">Ver detalles</a></div></div></div>
+      <div class="rv" style="--d:0.00s"><div class="gcard tilt"><div class="gi"><svg viewBox="0 0 24 24"><path d="M4 8v8M7 5v14M17 5v14M20 8v8M7 12h10"/></svg></div><h4>Gimnasios y estudios</h4><p>Membresías con cobro recurrente, acceso con QR, clases con cupo y portal para tus socios.</p><div class="gl"><a href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=giro_gimnasio&amp;giro=gimnasio">Probar gratis →</a><a class="mut" href="/pos.html">Ver detalles</a></div></div></div>
+      <div class="rv" style="--d:0.08s"><div class="gcard tilt"><div class="gi"><svg viewBox="0 0 24 24"><path d="M3 20V8h18v12"/><path d="M3 14h18M7 11h3"/><path d="M3 20h18"/></svg></div><h4>Hoteles y hospedaje</h4><p>Mapa de habitaciones, check-in y check-out, consumos a la cuenta y reservas en línea con anticipo.</p><div class="gl"><a href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=giro_hotel&amp;giro=hotel">Probar gratis →</a><a class="mut" href="/pos.html">Ver detalles</a></div></div></div>
+      <div class="rv" style="--d:0.16s"><div class="gcard tilt"><div class="gi"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg></div><h4>Servicios con cita</h4><p>Barberías, spas y estéticas: agenda en línea, anticipos, recordatorios y venta de productos.</p><div class="gl"><a href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=giro_servicios&amp;giro=servicios">Probar gratis →</a><a class="mut" href="/pos.html">Ver detalles</a></div></div></div>
+    </div>
+    <div class="rv" style="text-align:center;margin-top:36px"><a class="btn" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=giros">Crear mi cuenta gratis</a></div>
+  </div>
+</section>
 
 <!-- SOLUCIONES: historia con el hilo de oro -->
 <section id="soluciones" class="story">
-  <div class="wrap"><div class="sec-head rv"><span class="kicker">Lo que hacemos</span><h2 class="serif">Un solo hilo,<br>tres soluciones</h2><p>Todo lo que construimos está conectado. Desliza y mira, paso a paso, cómo trabaja cada solución en tu negocio.</p></div></div>
+  <div class="wrap"><div class="sec-head rv"><span class="kicker">Todo empieza en ALGORA POS</span><h2 class="serif">Tu punto de venta,<br>y todo lo que se conecta a él</h2><p>ALGORA POS es el corazón de tu negocio. Cuando lo necesites, le sumamos tu página web o un sistema a la medida, conectados al mismo hilo.</p></div></div>
   <div class="story-track">
     <div class="story-sticky wrap">
       <div class="story-stage">
@@ -245,11 +292,11 @@
             <li>Agenda, restaurante, clínica, gimnasio y hotel</li>
             <li>Agente de WhatsApp con IA que atiende a tus clientes</li>
           </ul>
-          <a class="go" href="/pos.html">Conocer ALGORA POS →</a>
+          <a class="go" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=soluciones">Probar ALGORA POS gratis →</a>
         </article>
         <article class="panel">
           <span class="pn">02</span>
-          <span class="badge">Tu negocio en internet</span>
+          <span class="badge">Complemento de tu POS</span>
           <h3>Páginas a la medida</h3>
           <p class="lead">Tu sitio con tu marca, conectado en vivo a tu punto de venta: lo que cambias en el POS se ve en tu web.</p>
           <ul>
@@ -263,7 +310,7 @@
         </article>
         <article class="panel">
           <span class="pn">03</span>
-          <span class="badge">Hecho para tu operación</span>
+          <span class="badge">Cuando necesitas algo propio</span>
           <h3>Software a la medida</h3>
           <p class="lead">El sistema exacto que tu empresa necesita, construido sobre la base probada de ALGORA para entregarte más rápido.</p>
           <ul>
@@ -285,7 +332,7 @@
             <li>Lo que te piden en línea llega a tu caja</li>
             <li>Todo termina en tus reportes y tu facturación</li>
           </ul>
-          <a class="go" href="#contacto">Hablemos de tu proyecto →</a>
+          <a class="go" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=conectado">Empieza con ALGORA POS →</a>
         </article>
       </div>
     </div>
@@ -304,32 +351,49 @@
       <div class="rv" style="--d:.08s"><a class="tcard tilt" href="/galeria.html#whatsapp"><img src="/capturas/wa-marketing.webp" alt="Campañas de marketing por WhatsApp" loading="lazy"><div class="b"><h4>Marketing con IA</h4><p>Campañas por WhatsApp y un agente que atiende a tus clientes.</p></div></a></div>
       <div class="rv" style="--d:.16s"><a class="tcard tilt" href="/galeria.html#finanzas"><img src="/capturas/pos-finanzas.webp" alt="Módulo de finanzas: punto de equilibrio y crecimiento" loading="lazy"><div class="b"><h4>Finanzas claras</h4><p>Punto de equilibrio, estado de resultados e IVA calculado.</p></div></a></div>
     </div>
-    <div class="rv" style="text-align:center;margin-top:36px"><a class="btn" href="/galeria.html">Ver toda la galería →</a></div>
+    <div class="rv cta" style="margin-top:36px"><a class="btn" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=galeria">Pruébalo gratis 14 días</a><a class="btn ghost" href="/galeria.html">Ver toda la galería →</a></div>
+  </div>
+</section>
+
+
+<!-- PRECIOS -->
+<section id="precios">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="kicker">Precios claros</span><h2 class="serif">Un plan para cada negocio</h2><p>Todos empiezan con 14 días gratis, sin tarjeta. Al terminar eliges tu plan, mes a mes, sin plazos forzosos.</p></div>
+    <div class="plans">
+      <div class="rv" style="--d:0.00s"><div class="plan"><h4>POS Lite</h4><div class="pr">$399<small> /mes</small></div><p>Lo esencial para empezar a cobrar: venta, inventario, caja, clientes y facturación.</p><a class="btn ghost" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=precio_lite&amp;plan=lite">Empezar gratis</a></div></div>
+      <div class="rv" style="--d:0.06s"><div class="plan"><h4>Restaurante Lite</h4><div class="pr">$799<small> /mes</small></div><p>Lite más mesas: abre cuentas, registra comensales, divide y cobra.</p><a class="btn ghost" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=precio_res_lite&amp;plan=res_lite">Empezar gratis</a></div></div>
+      <div class="rv" style="--d:0.12s"><div class="plan hl"><span class="tag">Más elegido</span><h4>POS</h4><div class="pr">$699<small> /mes</small></div><p>Completo: reportes, finanzas, equipo, lealtad, marketing por WhatsApp y Aura con IA.</p><a class="btn" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=precio_pos&amp;plan=pos">Empezar gratis</a></div></div>
+      <div class="rv" style="--d:0.18s"><div class="plan"><h4>ALGORA Todo</h4><div class="pr">$1,199<small> /mes</small></div><p>POS + tienda en línea + agenda con anticipos + Aura. El negocio completo.</p><a class="btn ghost" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=precio_todo&amp;plan=todo">Empezar gratis</a></div></div>
+      <div class="rv" style="--d:0.24s"><div class="plan"><h4>Suite por giro</h4><div class="pr">$1,649<small> /mes</small></div><p>Todo + tu módulo: restaurante, gimnasio, hotel o clínica.</p><a class="btn ghost" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=precio_suite&amp;plan=suite">Empezar gratis</a></div></div>
+    </div>
+    <p class="plans-note rv">Precios en MXN, sin IVA. En POS, Todo y Suite, el pago anual trae 2 meses de regalo. <a class="gold" href="/pos.html">Ver todo lo que incluye cada plan →</a></p>
   </div>
 </section>
 
 <!-- PROCESO -->
 <section id="proceso" class="tinted">
   <div class="wrap">
-    <div class="sec-head rv"><span class="kicker">Cómo trabajamos</span><h2 class="serif">De la idea a producción</h2><p>Así llevamos cada página y cada sistema a la medida.</p></div>
+    <div class="sec-head rv"><span class="kicker">Empieza hoy</span><h2 class="serif">Vendiendo en 4 pasos</h2><p>No necesitas saber de tecnología. Te acompañamos desde el primer día.</p></div>
     <div class="sline rv"><i></i></div>
     <div class="steps">
-      <div class="rv" style="--d:0s"><div class="step"><div class="n serif">1</div><h4>Diagnóstico</h4><p>Entendemos tu operación y objetivos. Sin humo: qué sí necesitas y qué no.</p></div></div>
-      <div class="rv" style="--d:.12s"><div class="step"><div class="n serif">2</div><h4>Propuesta</h4><p>Alcance, tiempos y costo claros antes de escribir una línea de código.</p></div></div>
-      <div class="rv" style="--d:.24s"><div class="step"><div class="n serif">3</div><h4>Desarrollo</h4><p>Construimos por etapas, con entregas que puedes ver y probar.</p></div></div>
-      <div class="rv" style="--d:.36s"><div class="step"><div class="n serif">4</div><h4>Entrega y soporte</h4><p>Lanzamos, capacitamos y damos mantenimiento continuo.</p></div></div>
+      <div class="rv" style="--d:0.00s"><div class="step"><div class="n serif">1</div><h4>Crea tu cuenta</h4><p>Registra tu negocio en 2 minutos. Sin tarjeta y con 14 días gratis.</p></div></div>
+      <div class="rv" style="--d:0.12s"><div class="step"><div class="n serif">2</div><h4>Carga tu catálogo</h4><p>Sube tus productos o tu menú. Si quieres, lo cargamos contigo o lo importamos de Excel.</p></div></div>
+      <div class="rv" style="--d:0.24s"><div class="step"><div class="n serif">3</div><h4>Vende y factura</h4><p>Cobra desde la computadora, tablet o celular, aunque se caiga el internet.</p></div></div>
+      <div class="rv" style="--d:0.36s"><div class="step"><div class="n serif">4</div><h4>Crece</h4><p>Suma tienda en línea, agenda, WhatsApp con IA o tu página a la medida cuando lo necesites.</p></div></div>
     </div>
+    <div class="rv" style="text-align:center;margin-top:36px"><a class="btn" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=pasos">Crear mi cuenta gratis</a></div>
   </div>
 </section>
 
 <!-- NOSOTROS / POR QUE -->
 <section id="nosotros">
   <div class="wrap">
-    <div class="sec-head rv"><span class="kicker">Nosotros</span><h2 class="serif">Por qué ALGORA TECH</h2><p>Somos una empresa mexicana de tecnología. No solo desarrollamos: operamos nuestro propio software con clientes reales.</p></div>
+    <div class="sec-head rv"><span class="kicker">Sin riesgo</span><h2 class="serif">Por qué elegir ALGORA POS</h2><p>Somos una empresa mexicana de tecnología. ALGORA POS lo hicimos nosotros y lo usan negocios reales todos los días.</p></div>
     <div class="why">
-      <div class="rv" style="--d:0s"><div class="wc tilt"><h4>Producto propio</h4><p>ALGORA POS lo hicimos nosotros y opera todos los días con negocios reales. Sabemos construir software que aguanta el uso real.</p></div></div>
-      <div class="rv" style="--d:.12s"><div class="wc tilt"><h4>A la medida, sin sobrecostos</h4><p>Reutilizamos lo que ya tenemos para entregarte más rápido y más barato, sin sacrificar calidad.</p></div></div>
-      <div class="rv" style="--d:.24s"><div class="wc tilt"><h4>Soporte humano</h4><p>Personas reales que conocen tu proyecto y responden. Acompañamiento después del lanzamiento.</p></div></div>
+      <div class="rv" style="--d:0s"><div class="wc tilt"><h4>Sin ataduras</h4><p>Mes a mes. Si no es para ti, cancelas cuando quieras. Sin permanencia forzada ni letras chiquitas.</p></div></div>
+      <div class="rv" style="--d:.12s"><div class="wc tilt"><h4>Tus datos son tuyos</h4><p>Exporta tu información cuando quieras. Nunca la usamos para retenerte.</p></div></div>
+      <div class="rv" style="--d:.24s"><div class="wc tilt"><h4>Soporte humano</h4><p>Personas reales que conocen el sistema y te responden por WhatsApp. Te ayudamos a configurarlo.</p></div></div>
     </div>
   </div>
 </section>
@@ -338,10 +402,11 @@
 <section id="contacto" class="contact">
   <div class="wrap">
     <span class="kicker rv">Contacto</span>
-    <h2 class="serif rv" style="--d:.1s">Cuéntanos tu proyecto.</h2>
-    <p class="rv" style="--d:.2s">ALGORA POS, una página a la medida o un sistema hecho para tu empresa: escríbenos y te respondemos con una propuesta clara.</p>
+    <h2 class="serif rv" style="--d:.1s">Empieza hoy con ALGORA POS.</h2>
+    <p class="rv" style="--d:.2s">Crea tu cuenta y pruébalo 14 días gratis, o escríbenos y te ayudamos a configurarlo. ¿Necesitas una página o un sistema a la medida? También lo hacemos.</p>
     <div class="cta rv" style="--d:.3s">
-      <a class="btn" href="https://wa.me/522941114401" target="_blank">WhatsApp ventas 294 111 4401</a>
+      <a class="btn" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=contacto">Crear mi cuenta gratis</a>
+      <a class="btn ghost" href="https://wa.me/522941114401?text=Hola%2C%20quiero%20probar%20ALGORA%20POS" target="_blank">WhatsApp ventas 294 111 4401</a>
       <a class="btn ghost" href="https://wa.me/525659186986?text=Hola%2C%20necesito%20soporte%20t%C3%A9cnico%20de%20ALGORA" target="_blank">Soporte técnico 565 918 6986</a>
       <a class="btn ghost" href="tel:+527821657112">Llamar 782 165 7112</a>
       <a class="btn ghost" href="mailto:ventas.cliente@algora.com.mx">ventas.cliente@algora.com.mx</a>
@@ -471,6 +536,8 @@ if(FX&&window.matchMedia&&matchMedia('(pointer:fine)').matches){
 }
 })();
 </script>
+<div class="sticky-cta" id="stickyCta"><span><b>ALGORA POS</b> · 14 días gratis, sin tarjeta</span><a class="btn" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=barra">Prueba gratis</a></div>
+<script>(function(){var b=document.getElementById('stickyCta'),c=document.getElementById('contacto');function u(){var y=window.scrollY,h=window.innerHeight,ct=c?c.getBoundingClientRect().top:1e9;b.classList.toggle('show',y>h*.7&&ct>h*.6)}addEventListener('scroll',u,{passive:true});u()})();</script>
 <script src="/consent.js" defer></script>
 </body>
 </html>
