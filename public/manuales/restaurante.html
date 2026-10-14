@@ -12,7 +12,7 @@
     <img class="brand-logo" src="/ALGORA_Logo_blanco.png" alt="ALGORA">
     <div class="k">Manual de usuario</div>
     <h1>Módulo <span class="gold">Restaurante</span></h1>
-    <p>Mesas y salón, comandas, cocina y barra en pantalla, cobro (incluido dividido), reservas con QR y kioscos.</p>
+    <p>Mesas y salón, comandas, cocina y barra en pantalla, cobro (incluido dividido), menú QR con pedido y pago desde la mesa, llamar al mesero, combos, avisos por WhatsApp, reseñas, reportes y asesor semanal.</p>
     <div class="meta">Serie de manuales ALGORA · Módulo Restaurante · Para dueño, encargado, meseros, cocina y barra</div>
     <a class="back" href="index.html">← Ver todos los manuales</a>
   </div>
@@ -27,6 +27,12 @@
         <li><a href="#s5">Cocina y barra (KDS)</a></li>
         <li><a href="#s6">Cobrar (incluido cobro dividido)</a></li>
         <li><a href="#s7">Mover, unir y separar mesas</a></li>
+        <li><a href="#s12">Menú QR en la mesa</a></li>
+        <li><a href="#s13">Llamar al mesero, Mi cuenta y pago desde la mesa</a></li>
+        <li><a href="#s14">Combos, etiquetas, sugerencias, horarios y agotado</a></li>
+        <li><a href="#s15">Pedidos en línea y avisos por WhatsApp</a></li>
+        <li><a href="#s16">Reseñas y ticket digital</a></li>
+        <li><a href="#s17">Reportes, clientes y asesor semanal</a></li>
         <li><a href="#s8">Reservas de mesa con QR</a></li>
         <li><a href="#s9">Kioscos</a></li>
         <li><a href="#s10">Roles</a></li>
@@ -52,6 +58,8 @@
       <tr><td><b>Cocina</b> / <b>Barra</b></td><td>Pantalla de preparación (KDS) con columnas Nuevas / En preparación / Listas.</td></tr>
       <tr><td><b>Insumos</b></td><td>Materia prima (kg, g, l, ml, piezas): stock, mínimo, costo y área.</td></tr>
       <tr><td><b>Recetas</b></td><td>Relaciona cada producto con sus insumos para descontarlos solos.</td></tr>
+      <tr><td><b>Códigos QR</b></td><td>Imprime el QR de cada mesa y define horarios del menú por categoría.</td></tr>
+      <tr><td><b>Reseñas</b> (en Operatividad)</td><td>Opiniones de tus clientes, las que fueron a Google y las negativas por atender.</td></tr>
     </table>
 
     <h2 id="s3"><span class="num">3.</span>Preparar el salón, insumos y recetas</h2>
@@ -74,7 +82,12 @@
     <figure class="shot"><img loading="lazy" src="/capturas/resto-mesas.webp" alt="Mapa de mesas del restaurante"><figcaption><b>Mesas.</b> Estado de cada mesa (libre, ocupada, por cobrar) y su cuenta. Toca una para abrirla o tomar la comanda.</figcaption></figure>
 
     <h2 id="s5"><span class="num">5.</span>Cocina y barra (KDS)</h2>
-    <p>En <b>Cocina</b> o <b>Barra</b>, cada comanda empieza con <b>“Empezar”</b> (pasa a preparación) y luego <b>“Lista para entregar”</b>. Suena una alerta al entrar una comanda nueva; el tiempo se pone ámbar a los 8 min y rojo a los 15. El <b>mesero</b> la ve en el banner “Listos para entregar” de Mesas o en <b>Para entregar</b> y pulsa <b>“Entregado”</b>.</p>
+    <p>En <b>Cocina</b> o <b>Barra</b>, cada comanda empieza con <b>“Empezar”</b> (pasa a preparación) y luego <b>“Lista para entregar”</b>. Suena una alerta al entrar una comanda nueva. El color usa el <b>tiempo de preparación</b> de cada platillo: se pone <b>ámbar</b> cuando ya pasó su tiempo y <b>rojo</b> cuando lleva 1.5 veces ese tiempo (si no capturaste el tiempo, se usan 8 y 15 minutos). El <b>mesero</b> la ve en el banner “Listos para entregar” de Mesas o en <b>Para entregar</b> y pulsa <b>“Entregado”</b>.</p>
+    <ul>
+      <li><b>Agotado en un toque:</b> cada platillo de una comanda tiene el botón <b>“Agotado”</b>. Al confirmarlo (“Marcar agotado”) deja de poderse pedir hoy por el menú QR y la tienda en línea. Al día siguiente vuelve solo.</li>
+      <li><b>Pedidos en línea:</b> los pedidos pagados de la tienda en línea llegan solos, cada platillo a su estación (Cocina o Barra) según su receta. La tarjeta dice <b>ENVÍO</b> o <b>RECOGER</b>, con número de pedido y cliente.</li>
+      <li><b>Combos:</b> se ven desglosados; cada platillo del combo va a su estación.</li>
+    </ul>
 
     <figure class="shot"><img loading="lazy" src="/capturas/resto-cocina.webp" alt="Pantalla de cocina (KDS)"><figcaption><b>Cocina (KDS).</b> Las comandas llegan solas y se marcan conforme se preparan. La barra tiene su propia pantalla.</figcaption></figure>
 
@@ -90,7 +103,96 @@
     <h2 id="s7"><span class="num">7.</span>Mover, unir y separar mesas</h2>
     <p>En una mesa ocupada, el menú de tres puntos ofrece <b>“Mover a otra mesa”</b>, <b>“Unir con otra mesa”</b>, <b>“Separar esta mesa del grupo”</b> y <b>“Liberar mesa/grupo (cancelar cuenta)”</b>. Cancelar o liberar una cuenta <b>requiere autorización de encargado/dueño</b>. Las mesas unidas se ven en azul con la etiqueta “Unida”.</p>
 
-    <h2 id="s8"><span class="num">8.</span>Reservas de mesa con QR</h2>
+    <h2 id="s12"><span class="num">8.</span>Menú QR en la mesa</h2>
+    <p>El cliente escanea el QR de su mesa, ve tu menú con fotos y manda el pedido directo a cocina. Disponible en <b>POS + Restaurante</b> y <b>Suite Restaurante</b> (no en Restaurante Lite).</p>
+    <div class="steps">
+      <div class="s"><h4>Actívalo</h4><p>En <span class="path">Tienda Online → Configuración de tienda</span> prende <b>“Pedido por QR en la mesa”</b>. Si quieres revisar cada pedido antes de cocina, prende <b>“El mesero confirma antes de ir a cocina”</b>.</p></div>
+      <div class="s"><h4>Elige cómo se cobra</h4><p><b>Cobro:</b> “Se carga a la cuenta de la mesa (paga con el mesero)”, “Paga en línea al ordenar (requiere Stripe)” o “El cliente elige”.</p></div>
+      <div class="s"><h4>Imprime los códigos</h4><p>En <span class="path">Restaurante → Códigos QR</span> toca <b>“Imprimir todos”</b> y pon cada uno en su mesa.</p></div>
+    </div>
+    <h3>Lo que ve el cliente</h3>
+    <ul>
+      <li>Tu menú por categorías, con fotos, etiquetas (Nuevo, Picante, Vegetariano, Sin gluten, Recomendación del chef, Más pedido) y filtro por etiqueta.</li>
+      <li>Notas por platillo para cocina (“sin cebolla, término medio...”).</li>
+      <li><b>“¿Lo acompañas con...?”</b>: al agregar un platillo le sugerimos una bebida o postre con un toque.</li>
+      <li><b>“Listo en ~X min”</b>: tiempo estimado con el tiempo de preparación de los platillos y la carga de cocina en ese momento.</li>
+      <li><b>“Código de descuento”</b>: acepta los mismos cupones de tu tienda en línea.</li>
+      <li><b>“Tu WhatsApp para avisarte (opcional)”</b>: le avisamos cuando su pedido va a la mesa, y queda registrado en tus Clientes.</li>
+      <li><b>Seguimiento en vivo:</b> al enviar ve su pedido pasar por <b>Recibido → Preparando → Listo</b> (“Va en camino a tu mesa”). La pantalla se actualiza sola y tiene “Seguir pidiendo”.</li>
+    </ul>
+
+    <h2 id="s13"><span class="num">9.</span>Llamar al mesero, Mi cuenta y pago desde la mesa</h2>
+    <p>Desde el mismo QR el cliente tiene dos botones:</p>
+    <ul>
+      <li><b>“Llamar al mesero”</b>: a todo el salón le llega el aviso “Mesa 4 llama al mesero”, con sonido. El cliente ve “Tu mesero ya viene”.</li>
+      <li><b>“Mi cuenta”</b>: ve todo lo que lleva la mesa (incluido lo que capturó el mesero), lo ya pagado y lo que falta. Puede tocar <b>“Prefiero pagar con el mesero”</b> (avisa que la mesa pide la cuenta) o pagar con tarjeta.</li>
+    </ul>
+    <h3>Pago con tarjeta desde la mesa</h3>
+    <p>Prende <b>“El cliente puede pagar su cuenta desde el QR”</b> en <span class="path">Tienda Online → Configuración de tienda</span> (requiere tus pagos en línea con Stripe activos en esa pantalla). El cliente paga <b>Todo</b> o <b>Solo mi parte</b>, puede dividir entre 2 a 6 personas o escribir un monto, y agregar propina (10%, 15% o 20%). Te llega el aviso “Mesa 4 pagó $X en línea” y el pago se descuenta de la cuenta de la mesa.</p>
+    <h3>Aviso en el plano de Mesas</h3>
+    <p>Cuando una mesa llama al mesero o pide la cuenta, cualquier mesero lo ve en <b>Mesas</b>:</p>
+    <ul>
+      <li>La mesa se pinta con un <b>borde rojo que parpadea</b> y la etiqueta <b>Mesero</b> o <b>Cuenta</b>.</li>
+      <li>Arriba aparece <b>“Mesas que requieren atención”</b> con la mesa, el nombre del cliente y hace cuántos minutos llamó.</li>
+      <li>Quien va a atenderla toca <b>“Atender”</b> (o la etiqueta roja de la mesa) y el aviso se apaga en todas las pantallas.</li>
+      <li>Durante 10 minutos se ve quién la atendió (“Mesa 4: atendida por Ana hace 2 min”), así nadie va dos veces.</li>
+    </ul>
+
+    <h2 id="s14"><span class="num">10.</span>Combos, etiquetas, sugerencias, horarios y agotado</h2>
+    <p>Todo se configura en el editor de productos (<span class="path">Catálogo → Productos</span>, crear o editar).</p>
+    <h3>Combos</h3>
+    <div class="steps">
+      <div class="s"><h4>Crea el producto del combo</h4><p>Por ejemplo “Combo Pareja”, con su precio.</p></div>
+      <div class="s"><h4>Márcalo como combo</h4><p>En <b>“Opciones (aderezos, extras)”</b> marca <b>“Es un combo”</b>.</p></div>
+      <div class="s"><h4>Agrega las elecciones</h4><p>Un grupo por cada elección (ej. “Plato fuerte”, elige 1; “Bebidas”, elige 2) y en cada opción escoge el platillo en <b>“Platillo del combo...”</b>.</p></div>
+    </div>
+    <p>El cliente ve <b>“Ahorras $X”</b>. En cocina y barra el combo sale desglosado y cada platillo descuenta los insumos de su receta.</p>
+    <h3>Menú del restaurante (en el mismo editor)</h3>
+    <table>
+      <tr><th>Campo</th><th>Para qué sirve</th></tr>
+      <tr><td><b>Agotado hoy</b></td><td>Lo quita del QR y la tienda por el resto del día.</td></tr>
+      <tr><td><b>Etiquetas</b></td><td>Nuevo, Picante, Vegetariano, Sin gluten, Recomendación del chef. “Más pedido” se pone sola con las ventas de los últimos 30 días.</td></tr>
+      <tr><td><b>Tiempo de preparación</b></td><td>Minutos del platillo: se usa para “Listo en ~X min” y para los colores de la pantalla de cocina.</td></tr>
+      <tr><td><b>Sugerir con (hasta 3)</b></td><td>Qué ofrecer al agregar este platillo. En “Automático” sugiere tus bebidas y postres más vendidos.</td></tr>
+      <tr><td><b>Solo se vende en un horario</b></td><td>Para desayunos, comida corrida, etc. Fuera de horario se oculta o se ve “Disponible desde las 7:00”.</td></tr>
+    </table>
+    <h3>Horarios por categoría</h3>
+    <p>En <span class="path">Restaurante → Códigos QR</span>, tarjeta <b>“Horarios del menú por categoría”</b>: elige horas y días para una categoría completa (ej. Desayunos de 7:00 a 12:00). Sin días marcados aplica todos los días. Marca “Ocultar fuera de horario” si no quieres que se vea.</p>
+
+    <h2 id="s15"><span class="num">11.</span>Pedidos en línea y avisos por WhatsApp</h2>
+    <ul>
+      <li>El seguimiento del pedido en línea incluye el paso <b>Preparando</b> (“La cocina está preparando tu pedido”) además de Confirmado, En camino o Listo para recoger, y Entregado.</li>
+      <li>El cliente puede poner una nota por platillo y ve el tiempo estimado.</li>
+      <li>Con tu WhatsApp conectado, el teléfono es <b>obligatorio</b> también para pedidos para recoger, para poder avisarle.</li>
+    </ul>
+    <table>
+      <tr><th>Mensaje al cliente</th><th>Cuándo sale</th></tr>
+      <tr><td><b>Pedido confirmado</b></td><td>Al aceptar o pagarse un pedido en línea, y al confirmarse un pedido del QR.</td></tr>
+      <tr><td><b>Pedido listo</b></td><td>Cuando el pedido en línea está listo para recoger.</td></tr>
+      <tr><td><b>Va en camino a tu mesa</b></td><td>Cuando cocina termina un pedido del QR.</td></tr>
+      <tr><td><b>Encuesta de la visita</b></td><td>Después de la visita, si activaste el envío automático en Reseñas.</td></tr>
+    </table>
+    <div class="box tip"><div class="t">Salen de tu número</div><p>Los mensajes a tus clientes salen siempre de <b>tu propio WhatsApp</b>, nunca del número de ALGORA. Conéctalo en <span class="path">Marketing → Conectar WhatsApp</span>; puedes seguir usándolo en tu celular (ver el <a href="whatsapp.html">manual de WhatsApp</a>). Sin WhatsApp conectado no se mandan y el cliente usa el enlace en pantalla.</p></div>
+
+    <h2 id="s16"><span class="num">12.</span>Reseñas y ticket digital</h2>
+    <p>Después de cada visita el cliente califica en 10 segundos: si le fue bien lo invitamos a tu ficha de <b>Google Maps</b>; si le fue mal te avisamos a ti primero. Se activa en <span class="path">Operatividad → Reseñas → Configuración</span> pegando tu enlace de Google. Los pasos completos están en el <a href="resenas.html">manual de Reseñas</a>.</p>
+    <p><b>Ticket digital:</b> con las reseñas activas, el ticket impreso trae el QR <b>“Califícanos en 10 segundos”</b>. Al escanearlo, el cliente ve su ticket en el celular (logo, productos, total; si la cuenta se dividió, lo que pagó esa persona), lo descarga en PDF y califica. También se manda con el botón <b>“WhatsApp”</b> al terminar la venta.</p>
+
+    <h2 id="s17"><span class="num">13.</span>Reportes, clientes y asesor semanal</h2>
+    <h3>Reportes del restaurante</h3>
+    <p>En <span class="path">Historial → Reportes</span>, tarjeta <b>“Restaurante”</b> (7, 30 o 90 días):</p>
+    <ul>
+      <li><b>Food cost:</b> cuánto te cuesta en insumos lo que vendes (verde hasta 32%, ámbar hasta 38%, rojo arriba). Necesita tus recetas.</li>
+      <li><b>Horas pico:</b> mapa de calor por día y hora, por ingreso o por tickets.</li>
+      <li><b>Ventas por canal:</b> mostrador, mesa, menú QR, en línea para recoger, a domicilio y apps de delivery.</li>
+      <li><b>Platillos con peor margen</b> según su receta, para ajustar precio o porción.</li>
+    </ul>
+    <h3>Clientes</h3>
+    <p>En <span class="path">Catálogos → Clientes</span> cada cliente muestra sus visitas, gasto, última visita y calificación. Filtros <b>Frecuentes</b> (3 o más visitas en 45 días) y <b>Por recuperar</b> (venían y llevan más de 45 días sin volver: mándales una promoción desde Marketing).</p>
+    <h3>Tu asesor esta semana</h3>
+    <p>Cada <b>lunes a las 8:00</b> ALGORA analiza tu semana y te da <b>3 consejos</b> en la tarjeta <b>“Tu asesor esta semana”</b> del Inicio: ventas contra la semana anterior, tickets, food cost y opiniones por atender. Cada consejo tiene un botón para actuar (“Crear campaña”, “Crear cupón”, “Revisar recetas”, “Ver personal”). También llega por correo y, con tu WhatsApp conectado, un aviso corto. <b>“Generar ahora”</b> lo hace al momento (usa 1 de tus consultas mensuales de Aura). Requiere POS Completo.</p>
+
+    <h2 id="s8"><span class="num">14.</span>Reservas de mesa con QR</h2>
     <div class="steps">
       <div class="s"><h4>Actívalas</h4><p>En <b>Configuración</b>, toggle <b>“Reservas de mesa en línea”</b> (requiere add-on y mesas creadas). Define horario, <b>“Última reserva”</b>, duración, <b>“Máx. personas”</b> y si <b>“Pedir anticipo para reservar”</b>.</p></div>
       <div class="s"><h4>El cliente reserva</h4><p>Desde la tienda en línea, botón <b>“Reservar mesa”</b>. El sistema asigna una mesa libre sin riesgo de doble reserva.</p></div>
@@ -100,20 +202,20 @@
 
     <figure class="shot"><img loading="lazy" src="/capturas/resto-qr.webp" alt="Códigos QR de mesa para imprimir"><figcaption><b>Códigos QR de mesa.</b> Imprime un QR por mesa; el cliente escanea, ve el menú y ordena desde su celular.</figcaption></figure>
 
-    <h2 id="s9"><span class="num">9.</span>Kioscos</h2>
+    <h2 id="s9"><span class="num">15.</span>Kioscos</h2>
     <p>Abre <span class="path">/kiosko</span> en una tableta o pantalla, inicia sesión una vez y elige el modo: <b>Cocina</b>, <b>Barra</b>, <b>Órdenes listas</b> (pantalla de cara al cliente “Pedidos listos”) o <b>Salón</b> (tablero de mesas para el encargado). Activa pantalla completa; mantienen la pantalla encendida.</p>
 
-    <h2 id="s10"><span class="num">10.</span>Roles</h2>
+    <h2 id="s10"><span class="num">16.</span>Roles</h2>
     <table>
       <tr><th>Rol</th><th>Qué ve / puede</th></tr>
-      <tr><td><b>Mesero</b></td><td>Mesas y Para entregar. Abre cuentas, toma comandas y cobra. No ve Cocina/Barra. Cancelar/liberar cuenta requiere autorización.</td></tr>
-      <tr><td><b>Cocina</b></td><td>Solo Cocina y Recetas (sin costos). Empieza y marca listas las comandas de su estación.</td></tr>
+      <tr><td><b>Mesero</b></td><td>Mesas y Para entregar. Abre cuentas, toma comandas, cobra y atiende los llamados de las mesas (“Atender”). No ve Cocina/Barra. Cancelar/liberar cuenta requiere autorización.</td></tr>
+      <tr><td><b>Cocina</b></td><td>Solo Cocina y Recetas (sin costos). Empieza y marca listas las comandas de su estación, y marca platillos como agotados.</td></tr>
       <tr><td><b>Barra</b></td><td>Solo Barra y Recetas (sin costos).</td></tr>
       <tr><td><b>Encargado</b></td><td>Todo lo del mesero más Cocina, Barra, Insumos, Recetas (con costos), Editor del salón y autorizar cancelaciones.</td></tr>
-      <tr><td><b>Dueño / Admin</b></td><td>Todo, incluida la activación del add-on y la configuración de reservas.</td></tr>
+      <tr><td><b>Dueño / Admin</b></td><td>Todo, incluida la activación del add-on y la configuración de reservas, del menú QR y de reseñas.</td></tr>
     </table>
 
-    <h2 id="s11"><span class="num">11.</span>Solución de problemas</h2>
+    <h2 id="s11"><span class="num">17.</span>Solución de problemas</h2>
     <table>
       <tr><th>Situación</th><th>Qué hacer</th></tr>
       <tr><td>“No hay caja abierta en este equipo”.</td><td>Abre una caja antes de cobrar.</td></tr>
@@ -122,6 +224,11 @@
       <tr><td>No aparece la sección Restaurante.</td><td>El add-on no está activo (o el plan es Lite). El dueño lo activa.</td></tr>
       <tr><td>Las reservas no están disponibles.</td><td>Requieren add-on activo, el toggle encendido y al menos una mesa creada.</td></tr>
       <tr><td>Cancelar/liberar cuenta pide autorización.</td><td>Necesita encargado o dueño; el mesero solo no puede.</td></tr>
+      <tr><td>El QR dice que el pedido por QR no está activo.</td><td>Prende “Pedido por QR en la mesa” en Tienda Online → Configuración de tienda. En Restaurante Lite el menú QR no está incluido.</td></tr>
+      <tr><td>No sale el pago con tarjeta en “Mi cuenta”.</td><td>Prende “El cliente puede pagar su cuenta desde el QR” y activa tus pagos en línea con Stripe.</td></tr>
+      <tr><td>Una mesa sigue en rojo.</td><td>Alguien debe tocar “Atender”. Los llamados de más de 3 horas se ocultan solos.</td></tr>
+      <tr><td>No llegan los WhatsApp de “pedido listo”.</td><td>Conecta tu WhatsApp en Marketing y revisa que el cliente haya dejado su teléfono.</td></tr>
+      <tr><td>El food cost dice “Captura recetas para medirlo”.</td><td>Captura las recetas de tus platillos en Recetas.</td></tr>
     </table>
   </main>
   <footer>
