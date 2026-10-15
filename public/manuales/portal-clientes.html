@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALGORA · Manual — Portales de clientes y códigos QR</title>
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <img class="brand-logo" src="/ALGORA_Logo_blanco.png" alt="ALGORA">
+    <div class="k">Manual de usuario</div>
+    <h1>Portales de clientes <span class="gold">y códigos QR</span></h1>
+    <p>Qué puede hacer tu cliente desde su celular (pedidos, citas, membresía, expediente, tarjeta de monedero) y todos los códigos QR que genera ALGORA.</p>
+    <div class="meta">Serie de manuales ALGORA · Portales y QR · Para dueño y encargado</div>
+    <a class="back" href="index.html">← Ver todos los manuales</a>
+  </div>
+  <main>
+    <div class="toc">
+      <h4>Contenido</h4>
+      <ol>
+        <li><a href="#p1">Los portales en un vistazo</a></li>
+        <li><a href="#p2">ALGORA Miembros: la cuenta de tu cliente</a></li>
+        <li><a href="#p3">Portal del gimnasio</a></li>
+        <li><a href="#p4">Portal del paciente (clínica)</a></li>
+        <li><a href="#p5">Otros enlaces que recibe tu cliente</a></li>
+        <li><a href="#p6">Todos los códigos QR de ALGORA</a></li>
+        <li><a href="#p7">Solución de problemas</a></li>
+      </ol>
+    </div>
+
+    <h2 id="p1"><span class="num">1.</span>Los portales en un vistazo</h2>
+    <table>
+      <tr><th>Portal</th><th>Para quién</th><th>Cómo entra</th><th>Qué hace</th></tr>
+      <tr><td><b>ALGORA Miembros</b> (Mi cuenta)</td><td>Cualquier cliente de cualquier negocio ALGORA</td><td>Su teléfono + código por WhatsApp</td><td>Ve sus pedidos, citas y reservaciones, y sus documentos</td></tr>
+      <tr><td><b>Portal del gimnasio</b></td><td>Socios del gimnasio</td><td>Código del negocio + número de miembro + teléfono</td><td>Membresía, reservar clases, progreso, comunidad y su QR de entrada</td></tr>
+      <tr><td><b>Portal del paciente</b></td><td>Pacientes de la clínica</td><td>Código del negocio + número de expediente + teléfono</td><td>Agendar y cambiar citas, su tratamiento, progreso y recetas</td></tr>
+    </table>
+    <div class="box tip"><div class="t">El código del negocio</div><p>Es el mismo que usan tus empleados para entrar. Lo ves en <span class="path">Config → Datos del negocio → Código de negocio</span> (botón “Copiar”). Compártelo con tus socios o pacientes.</p></div>
+
+    <h2 id="p2"><span class="num">2.</span>ALGORA Miembros: la cuenta de tu cliente</h2>
+    <p>Tu cliente entra desde <b>“Mi cuenta”</b> en tu tienda en línea, sin contraseñas:</p>
+    <div class="steps">
+      <div class="s"><h4>Su teléfono</h4><p>Escribe su WhatsApp y toca <b>“Enviar código por WhatsApp”</b>.</p></div>
+      <div class="s"><h4>El código</h4><p>Le llega un código por WhatsApp y lo escribe. La primera vez da su nombre y, opcional, su correo.</p></div>
+      <div class="s"><h4>Su cuenta</h4><p>Ve <b>Mis pedidos</b> (de todos los negocios ALGORA donde compró con ese teléfono), <b>Próximas citas y reservaciones</b> e <b>Historial</b>, y <b>Mis documentos</b> (recetas de su clínica).</p></div>
+    </div>
+    <p>En sus citas puede tocar <b>“Confirmar asistencia”</b>. Si en <span class="path">Tienda Online → Configuración de tienda</span> activaste <b>“Cancelar/reprogramar en línea”</b>, también puede <b>“Reprogramar”</b> y <b>“Cancelar”</b>; si no, verá “Para cambios, contacta al negocio”. Cuando un cliente agenda, cambia o cancela, te llega un aviso.</p>
+    <p>El saldo del monedero no se ve aquí: el cliente lo ve en su <b>tarjeta digital</b> (Apple o Google Wallet) y en su ticket. Ver el <a href="monedero.html">manual de Monedero</a>.</p>
+
+    <h2 id="p3"><span class="num">3.</span>Portal del gimnasio</h2>
+    <p>El socio abre <span class="path">algorapos.com.mx/gym</span>, escribe el <b>código del negocio</b> y luego su <b>número de miembro</b> y <b>teléfono</b>. Ahí puede:</p>
+    <ul>
+      <li><b>Membresía:</b> ver su plan y vencimiento, y <b>“Renovar / contratar”</b> (paga en línea si el gimnasio tiene Stripe, o en recepción).</li>
+      <li><b>Reservar:</b> clases grupales y servicios personalizados.</li>
+      <li><b>Progreso:</b> racha actual, mejor racha, asistencia del mes y logros.</li>
+      <li><b>Comunidad:</b> anuncios del gimnasio y ranking del mes.</li>
+      <li><b>Accesos</b> (su historial de entradas) y <b>Mi QR</b> para entrar.</li>
+      <li>Puede instalarlo como app en su celular (“Agregar a inicio”).</li>
+    </ul>
+    <p>Más detalle en el <a href="gimnasio.html">manual de Gimnasio</a>.</p>
+
+    <h2 id="p4"><span class="num">4.</span>Portal del paciente (clínica)</h2>
+    <p>El paciente abre <span class="path">algorapos.com.mx/gym</span>, escribe el <b>código del negocio</b> (lo lleva al portal de la clínica) y entra con su <b>número de expediente</b> y <b>teléfono</b>. Puede:</p>
+    <ul>
+      <li><b>Agendar nueva cita</b> (con anticipo en línea si la clínica tiene Stripe).</li>
+      <li>Ver <b>Mis próximas citas</b> y, si está permitido, reprogramarlas o cancelarlas.</li>
+      <li>Ver <b>Mi tratamiento</b>, <b>Mi progreso</b> (mediciones) y <b>Mis recetas</b>, además de los documentos que la clínica le compartió.</li>
+    </ul>
+    <p>Más detalle en el <a href="clinica.html">manual de Clínica</a>.</p>
+
+    <h2 id="p5"><span class="num">5.</span>Otros enlaces que recibe tu cliente</h2>
+    <table>
+      <tr><th>Enlace</th><th>Cuándo lo recibe</th></tr>
+      <tr><td><b>Ticket digital</b></td><td>Con el botón WhatsApp al terminar la venta, o escaneando el QR del ticket. Lo descarga en PDF y puede calificar su visita.</td></tr>
+      <tr><td><b>Seguimiento de pedido</b></td><td>Al pedir en tu tienda en línea o en el menú QR.</td></tr>
+      <tr><td><b>Pase de acceso</b></td><td>Al agendar una cita, reserva o visita, si tienes Control de acceso.</td></tr>
+      <tr><td><b>Paquete de sesiones</b></td><td>Por WhatsApp, para agendar su siguiente sesión pagada (“no se cobra nada”).</td></tr>
+      <tr><td><b>Encuesta / opinión</b></td><td>Después de su visita (ver <a href="resenas.html">manual de Reseñas</a>).</td></tr>
+      <tr><td><b>Receta</b></td><td>Cuando el médico la envía por WhatsApp.</td></tr>
+      <tr><td><b>Tarjeta de monedero</b></td><td>Para agregarla a Apple Wallet o Google Wallet.</td></tr>
+      <tr><td><b>Mi cuenta de la mesa</b></td><td>Desde el QR del restaurante, para ver y pagar su cuenta.</td></tr>
+    </table>
+
+    <h2 id="p6"><span class="num">6.</span>Todos los códigos QR de ALGORA</h2>
+    <table>
+      <tr><th>Código</th><th>Dónde se genera</th><th>Qué hace</th></tr>
+      <tr><td><b>QR de mesa</b></td><td><span class="path">Restaurante → Códigos QR → “Imprimir todos”</span></td><td>El cliente ve el menú, pide, llama al mesero y paga su cuenta.</td></tr>
+      <tr><td><b>“Califícanos en 10 segundos”</b></td><td>Sale solo en el ticket impreso con las reseñas activas.</td><td>Abre el ticket digital y la encuesta.</td></tr>
+      <tr><td><b>Pase de acceso</b></td><td>Agenda: ícono “Enviar QR de acceso por correo” (también sale por WhatsApp y al reservar en línea).</td><td>El guardia lo escanea en <b>Control de acceso → “Escanear código QR”</b> y registra la llegada.</td></tr>
+      <tr><td><b>Credencial de socio</b></td><td>Gimnasio → Miembros → botón QR (“Descargar credencial QR”). También en “Mi QR” del portal.</td><td>Check-in en recepción o en el kiosko.</td></tr>
+      <tr><td><b>Pase del día de clase</b></td><td>Se envía al reservar una clase con cupo desde la agenda pública.</td><td>Entra solo el día de la clase.</td></tr>
+      <tr><td><b>QR de la tarjeta digital</b></td><td>Dentro de la tarjeta de Apple o Google Wallet.</td><td>Se escanea en caja para asignar al cliente y usar su monedero.</td></tr>
+      <tr><td><b>Tu tienda en línea</b></td><td>Copia tu enlace en Tienda Online y genera el QR con cualquier generador.</td><td>Lleva a tu tienda para pedir o agendar.</td></tr>
+    </table>
+    <p>La tarjeta física del monedero usa <b>código de barras</b> (no QR); se escanea igual en caja.</p>
+
+    <h2 id="p7"><span class="num">7.</span>Solución de problemas</h2>
+    <table>
+      <tr><th>Situación</th><th>Qué hacer</th></tr>
+      <tr><td>Al cliente no le llega el código por WhatsApp.</td><td>Revisa que escriba el teléfono a 10 dígitos y toque “Reenviar código”.</td></tr>
+      <tr><td>El cliente no puede cancelar ni reprogramar.</td><td>Activa “Cancelar/reprogramar en línea” en Tienda Online → Configuración de tienda.</td></tr>
+      <tr><td>El socio o paciente no puede entrar.</td><td>Revisa el código del negocio, su número de miembro o de expediente y el teléfono registrado.</td></tr>
+      <tr><td>No veo sus pedidos en Mi cuenta.</td><td>Solo aparecen los que hizo con ese mismo teléfono.</td></tr>
+    </table>
+  </main>
+  <footer>
+    <div><b>ALGORA TECH S.A.S. de C.V.</b> · Manual — Portales de clientes y códigos QR<br>Soporte: WhatsApp 294 111 4401 · ventas.cliente@algora.com.mx</div>
+    <div>algora.com.mx · Hecho en México</div>
+  <div style="margin-top:6px;font-size:12px"><a href="https://www.algorapos.com.mx/privacidad" target="_blank" rel="noopener">Aviso de privacidad</a> · <a href="https://www.algorapos.com.mx/terminos" target="_blank" rel="noopener">Términos</a> · <a href="https://www.algorapos.com.mx/cookies" target="_blank" rel="noopener">Cookies</a></div>
+</footer>
+</div>
+<script src="/consent.js" defer></script>
+</body>
+</html>

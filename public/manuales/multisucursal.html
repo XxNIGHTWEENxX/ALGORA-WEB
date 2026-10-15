@@ -55,7 +55,7 @@
     </table>
     <ul>
       <li>Es un <b>cargo mensual en pesos</b>, aparte de tu plan, que se cobra a la misma tarjeta.</li>
-      <li>Si contratas una sucursal a mitad de mes, solo pagas la <b>parte proporcional</b> de lo que queda del periodo.</li>
+      <li>La <b>primera sucursal extra</b> abre una suscripción mensual nueva (se cobra completa). De la <b>tercera en adelante</b>, si la contratas a mitad de mes, solo pagas la <b>parte proporcional</b> de lo que queda del periodo.</li>
       <li>Puedes tener <b>hasta 5 sucursales activas</b>. Si necesitas más, escríbenos.</li>
     </ul>
     <div class="box req"><div class="t">Requisito</div><p>Multisucursal está disponible para <b>ALGORA POS Completo</b> y los paquetes que lo incluyen. El plan <b>POS Lite</b> trabaja con una sola sucursal; para abrir más, primero cambia a POS Completo en <span class="path">Mi suscripción</span>.</p></div>
@@ -68,7 +68,7 @@
       <tr><td><b>Traspasos</b></td><td>Mueve mercancía de una sucursal a otra y guarda el historial.</td></tr>
       <tr><td><b>Cajas por sucursal</b></td><td>Cada caja y cada corte quedan ligados a la sucursal donde se abrieron.</td></tr>
       <tr><td><b>Empleados por sucursal</b></td><td>Asignas a cada empleado una o varias sucursales; solo opera y ve el historial de esas.</td></tr>
-      <tr><td><b>Reportes por sucursal</b></td><td>Filtra por sucursal y compara <b>“Ventas por sucursal”</b>: ingresos, gastos y utilidad de cada una.</td></tr>
+      <tr><td><b>Reportes por sucursal</b></td><td>Filtra por sucursal y compara <b>“Ventas por sucursal”</b>: número de ventas, gastos y neto de cada una.</td></tr>
       <tr><td><b>Historial de ventas por sucursal</b></td><td>Consulta las ventas de una sucursal o de todas.</td></tr>
     </table>
     <h3>Qué se comparte entre sucursales</h3>
@@ -91,7 +91,7 @@
     <h3>Opción A · Traspaso desde otra sucursal</h3>
     <p>Si la mercancía sale de tu Principal, usa <span class="path">Traspasos</span> (ver sección 8). Se descuenta de una y se suma a la otra.</p>
     <h3>Opción B · Capturar el stock directo</h3>
-    <p>Elige la sucursal nueva en el selector del menú, entra a <span class="path">Catálogo</span> y edita cada producto: el campo dice <b>“Stock en {sucursal}”</b> y abajo ves el <b>total</b> de todas las sucursales. También puedes registrar una <b>Compra</b> estando en esa sucursal.</p>
+    <p>Elige la sucursal nueva en el selector del menú, entra a <span class="path">Catálogo</span> y edita cada producto: el campo dice <b>“Stock en {sucursal}”</b>, y en la lista de productos ves “Stock (sucursal): N · total N”. También puedes registrar una <b>Compra</b> estando en esa sucursal.</p>
     <div class="box warn"><div class="t">Revisa también tu Principal</div><p>Si un producto aparece en <b>0</b> en la Principal justo después de crear la segunda sucursal, captura su existencia en el Catálogo con la Principal seleccionada. Con eso queda corregido.</p></div>
 
     <h2 id="s6"><span class="num">6.</span>Asignar empleados a sucursales</h2>
@@ -124,7 +124,7 @@
     <figure class="shot"><img loading="lazy" src="/capturas/pos-traspasos.webp" alt="Pantalla Traspasos en ALGORA"><figcaption><b>Traspasos.</b> Mercancía de una sucursal a otra, con historial.</figcaption></figure>
 
     <h2 id="s9"><span class="num">9.</span>Reportes por sucursal</h2>
-    <p>En <span class="path">Reportes</span> usa el filtro de sucursal para ver una sola o <b>“Todas las sucursales”</b>. La sección <b>“Ventas por sucursal”</b> compara ingresos, gastos y utilidad de cada local lado a lado.</p>
+    <p>En <span class="path">Reportes</span> usa el filtro de sucursal para ver una sola o <b>“Todas las sucursales”</b>. La sección <b>“Ventas por sucursal”</b> compara las ventas, gastos y el <b>neto</b> de cada local lado a lado (las ventas sin sucursal salen como “Sin sucursal”). El filtro lo ven el dueño y el administrador; el encargado y los empleados ven solo su sucursal.</p>
     <figure class="shot"><img loading="lazy" src="/capturas/pos-reportes-sucursal.webp" alt="Reporte de ventas por sucursal"><figcaption><b>Ventas por sucursal.</b> Compara el desempeño de cada local en una sola vista.</figcaption></figure>
     <p>En <span class="path">Historial de ventas</span> también puedes filtrar por sucursal.</p>
 
@@ -132,6 +132,7 @@
     <ul>
       <li><b>Editar:</b> en <span class="path">Config → Sucursales</span>, icono de lápiz → cambia nombre, dirección o teléfono → <b>“Guardar”</b>.</li>
       <li><b>Desactivar:</b> icono de desactivar → confirma. Los empleados asignados ya no podrán operar en esa sucursal. Se marca como <b>“Inactiva”</b> y puedes reactivarla después. La Principal no se puede desactivar.</li>
+      <li><b>Cambiar una sucursal por otra:</b> al desactivar una se libera su lugar, así que puedes abrir otra sin pagar de más. Reactivar una sucursal inactiva tampoco cobra extra si tienes lugar.</li>
       <li><b>Dejar de pagar una sucursal:</b> desactivarla <b>no</b> reduce el cobro. Para liberar el lugar y bajar tu mensualidad, escríbenos por WhatsApp y lo ajustamos.</li>
       <li><b>Si un pago no pasa:</b> tus sucursales y su información se conservan, pero no podrás abrir sucursales nuevas hasta regularizar el pago.</li>
     </ul>

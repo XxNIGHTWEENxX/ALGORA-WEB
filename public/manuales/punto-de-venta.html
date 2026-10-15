@@ -12,7 +12,7 @@
     <img class="brand-logo" src="/ALGORA_Logo_blanco.png" alt="ALGORA">
     <div class="k">Manual de usuario</div>
     <h1>Punto de venta <span class="gold">y ventas</span></h1>
-    <p>Cobrar, controlar inventario, manejar la caja, registrar clientes y facturar (CFDI 4.0), con o sin internet.</p>
+    <p>Cobrar, monedero, controlar inventario, manejar la caja, clientes y crédito, cancelaciones, devoluciones y facturación CFDI 4.0, con o sin internet.</p>
     <div class="meta">Serie de manuales ALGORA · Módulo Punto de venta · Para dueño y empleados</div>
     <a class="back" href="index.html">← Ver todos los manuales</a>
   </div>
@@ -20,120 +20,197 @@
     <div class="toc">
       <h4>Contenido</h4>
       <ol>
-        <li><a href="#s1">Antes de empezar (roles y acceso)</a></li>
+        <li><a href="#s1">Antes de empezar (menú, roles y acceso)</a></li>
         <li><a href="#s2">Hacer una venta y cobrar</a></li>
-        <li><a href="#s3">Descuentos</a></li>
+        <li><a href="#s3">Descuentos, monedero y venta a crédito</a></li>
         <li><a href="#s4">Catálogo de productos</a></li>
         <li><a href="#s5">Inventario / existencias</a></li>
         <li><a href="#s6">Caja: abrir, gastos y corte</a></li>
-        <li><a href="#s7">Clientes, crédito y monedero</a></li>
+        <li><a href="#s7">Clientes, crédito y abonos</a></li>
+        <li><a href="#s12">Ticket, ticket digital y encuesta</a></li>
+        <li><a href="#s13">Cancelar una venta</a></li>
+        <li><a href="#s14">Devoluciones y notas de crédito</a></li>
         <li><a href="#s8">Facturación CFDI 4.0</a></li>
         <li><a href="#s9">Con y sin internet</a></li>
-        <li><a href="#s10">Ajustes clave</a></li>
+        <li><a href="#s10">Configuración clave</a></li>
+        <li><a href="#s15">Qué incluye cada plan</a></li>
         <li><a href="#s11">Solución de problemas</a></li>
       </ol>
     </div>
 
-    <h2 id="s1"><span class="num">1.</span>Antes de empezar (roles y acceso)</h2>
+    <h2 id="s1"><span class="num">1.</span>Antes de empezar (menú, roles y acceso)</h2>
+    <p>El menú de la izquierda se organiza en grupos. Las pantallas de este manual están en:</p>
+    <table>
+      <tr><th>Grupo</th><th>Pantallas</th></tr>
+      <tr><td><b>Operatividad</b></td><td>Venta, Caja, Reseñas</td></tr>
+      <tr><td><b>Catálogos</b></td><td>Productos, Clientes</td></tr>
+      <tr><td><b>Historial</b></td><td>Ventas, Devoluciones, Facturas, Reportes</td></tr>
+      <tr><td><b>Administración</b></td><td>Config (Configuración)</td></tr>
+    </table>
     <p>Cada persona entra con su rol y solo ve lo que le corresponde:</p>
     <table>
       <tr><th>Rol</th><th>Qué puede hacer</th></tr>
-      <tr><td><b>Dueño</b></td><td>Todo: vender, catálogo, precios, costos, inventario, caja, reportes, finanzas, ajustes y facturación. Es el único que abre y asigna cajas y da de alta empleados/sucursales.</td></tr>
-      <tr><td><b>Encargado</b></td><td>Casi todo, excepto Finanzas/Nómina, Ajustes y gestión de personal. Ve todas las ventas.</td></tr>
-      <tr><td><b>Cajero / Empleado</b></td><td>Vender, usar su caja asignada, clientes, facturar y ajustar stock. No ve costos ni reportes y no aplica descuentos libres sin autorización.</td></tr>
+      <tr><td><b>Dueño</b></td><td>Todo: vender, catálogo, precios, costos, inventario, caja, reportes, finanzas, configuración y facturación. Es el único que abre y asigna cajas, ajusta el monedero y da de alta empleados y sucursales.</td></tr>
+      <tr><td><b>Encargado</b></td><td>Casi todo, excepto Finanzas, Nómina, Config y Equipo. Ve todas las ventas y puede usar cualquier caja abierta (no abrir una nueva). Autoriza cancelaciones.</td></tr>
+      <tr><td><b>Cajero / Empleado</b></td><td>Vender en su caja asignada, asignar o registrar clientes al cobrar (monedero) y facturar desde el ticket recién hecho. No entra a Productos ni a Clientes, no ve costos ni reportes, y en Historial → Ventas solo ve sus ventas.</td></tr>
     </table>
-    <p><b>Cómo entra cada quien:</b> el dueño con correo y contraseña (o huella de Windows si la activó); el empleado con <b>código del negocio + PIN de 4 dígitos</b>, huella USB o Windows Hello.</p>
+    <p><b>Cómo entra cada quien:</b> el dueño con correo y contraseña (o huella de Windows si la activó); el empleado en <b>“Acceso Empleado”</b> con el <b>código del negocio + PIN de 4 dígitos</b>, <b>“Entrar con huella”</b> (lector USB) o <b>“Entrar con huella (Windows Hello)”</b>.</p>
     <div class="box tip">
-      <div class="t">Autorización del encargado</div>
-      <p>Para acciones sensibles (por ejemplo, un descuento libre) el sistema pide autorización. El dueño/administrador procede directo; el encargado confirma con huella USB, biometría del equipo o su PIN. Verás el aviso <b>“Autorización requerida”</b>.</p>
+      <div class="t">Autorización requerida</div>
+      <p><b>Cancelar una venta</b> y <b>facturar desde Historial → Ventas</b> piden autorización a los empleados. El dueño y el administrador pasan directo; el encargado confirma con el lector de huella USB, la biometría del equipo o su PIN, y toca <b>“Autorizar”</b>.</p>
     </div>
 
     <figure class="shot"><img loading="lazy" src="/capturas/pos-inicio.webp" alt="Pantalla de inicio de ALGORA POS"><figcaption><b>Inicio.</b> Al entrar ves el resumen del negocio: ventas del día, pedidos y estado de la caja.</figcaption></figure>
 
     <h2 id="s2"><span class="num">2.</span>Hacer una venta y cobrar</h2>
     <div class="steps">
-      <div class="s"><h4>Agrega productos al carrito</h4><p>En <span class="path">Punto de venta</span> toca los productos, escanéalos con lector USB o usa <b>“Escanear con cámara”</b>. Búscalos en <b>“Buscar producto, SKU o código de barras…”</b>. Si es producto a granel, se pide la <b>Cantidad</b>.</p></div>
+      <div class="s"><h4>Agrega productos al carrito</h4><p>En <span class="path">Operatividad → Venta</span> toca los productos, escanéalos con lector USB o con el botón de cámara (“Escanear con cámara”). Búscalos en <b>“Buscar producto, SKU o código de barras...”</b>.</p></div>
+      <div class="s"><h4>Productos con opciones o a granel</h4><p>Si el producto tiene <b>opciones</b> (aderezos, extras), se abre una ventana para elegirlas (“Elige N”, “Hasta N”, “obligatorio”) y se agrega con <b>“Agregar · $X”</b>. Si es <b>a granel</b>, escribe la cantidad (por ejemplo kg) y ves el total al momento.</p></div>
       <div class="s"><h4>Revisa el carrito</h4><p>Ajusta cantidades con <b>+ / −</b> o usa <b>“Vaciar”</b>. Verás Subtotal, Descuento y Total.</p></div>
-      <div class="s"><h4>Pulsa “Cobrar”</h4><p>Si el botón está deshabilitado, es porque la caja está cerrada (“Abre la caja registradora para poder cobrar”).</p></div>
-      <div class="s"><h4>Elige la forma de pago</h4><p>En el modal <b>“Cobrar”</b>: <b>Efectivo</b> (teclea el monto o usa <b>“Exacto”</b>; muestra el <b>Cambio</b>), <b>Tarjeta</b> (si tienes terminal Mercado Pago Point, <b>“Enviar cobro a la terminal”</b>) o <b>QR</b>.</p></div>
-      <div class="s"><h4>Confirma</h4><p>Pulsa <b>“Confirmar”</b>. Se guarda la venta, baja el stock y aparece el ticket, desde donde puedes facturar.</p></div>
+      <div class="s"><h4>Pulsa “Cobrar $…”</h4><p>Si dice <b>“Caja cerrada”</b>, primero abre o asigna una caja (“Abre la caja registradora para poder cobrar”).</p></div>
+      <div class="s"><h4>Elige la forma de pago</h4><p><b>Efectivo:</b> teclea lo recibido o usa los botones <b>“Exacto”</b>, $20, $50, $100, $200, $500, $1000; ves el cambio. <b>Tarjeta:</b> cobra en tu terminal; con <b>Mercado Pago Point</b> usa <b>“Enviar cobro a la terminal”</b> y la venta se confirma sola al aprobarse el pago. <b>QR:</b> muestra tu QR de cobro al cliente.</p></div>
+      <div class="s"><h4>Confirma</h4><p>El botón dice <b>“Confirmar · Cambio $X”</b> (efectivo) o <b>“Confirmar pago”</b>. Se guarda la venta, baja el stock y aparece <b>“Venta completada”</b> con los botones <b>WhatsApp</b>, <b>Imprimir</b>, <b>Facturar</b> y <b>Nueva venta</b>.</p></div>
     </div>
-    <div class="box tip"><div class="t">Ticket digital y encuesta</div><p>Al terminar la venta, el botón <b>“WhatsApp”</b> le manda al cliente su ticket. Con las reseñas activas, el ticket impreso trae el QR <b>“Califícanos en 10 segundos”</b>: el cliente ve su ticket en el celular, lo descarga en PDF y califica su compra. Si le fue bien lo invitamos a tu ficha de Google Maps. Ver el <a href="resenas.html">manual de Reseñas</a>.</p></div>
 
-    <figure class="shot"><img loading="lazy" src="/capturas/pos-venta.webp" alt="Pantalla de venta con productos y carrito"><figcaption><b>Punto de venta.</b> Toca los productos (con foto), revisa el carrito a la derecha y pulsa “Cobrar”.</figcaption></figure>
+    <figure class="shot"><img loading="lazy" src="/capturas/pos-venta.webp" alt="Pantalla de venta con productos y carrito"><figcaption><b>Venta.</b> Toca los productos (con foto), revisa el carrito a la derecha y pulsa “Cobrar”.</figcaption></figure>
 
-    <h2 id="s3"><span class="num">3.</span>Descuentos</h2>
-    <p>En el carrito, botón <b>“Agregar descuento”</b>: elige <b>%</b> o <b>$</b>, escribe el valor y <b>“Aplicar”</b>. Aparece como “Descuento (…)” y puedes quitarlo. Los empleados no pueden aplicar descuentos libres sin autorización del encargado. Los cupones son de la tienda en línea, no del POS.</p>
+    <h2 id="s3"><span class="num">3.</span>Descuentos, monedero y venta a crédito</h2>
+    <h3>Descuento</h3>
+    <p>En el carrito (computadora), botón <b>“Agregar descuento”</b>: elige <b>%</b> o <b>$</b>, escribe el valor y <b>“Aplicar”</b>. Aparece como “Descuento (10%)” y lo quitas con la ×. Los cupones son de la tienda en línea y del menú QR.</p>
+    <h3>Monedero del cliente</h3>
+    <div class="steps">
+      <div class="s"><h4>Asigna al cliente</h4><p>En el cobro, <b>“Asignar cliente (monedero)”</b>: búscalo por nombre o teléfono, toca <b>“Escanear tarjeta”</b> o regístralo al momento con <b>“+ Nuevo (teléfono)”</b> → nombre y 10 dígitos → <b>“Crear y asignar”</b>.</p></div>
+      <div class="s"><h4>Usa su saldo (opcional)</h4><p>Activa <b>“Usar monedero”</b>, escribe el monto o toca <b>“Máx $X”</b> (lo menor entre su saldo y el tope que configuraste). El total se muestra como “$total − $X monedero”.</p></div>
+      <div class="s"><h4>Cobra normal</h4><p>Al confirmar, el cliente acumula el porcentaje de su compra. El ticket muestra el bloque <b>MONEDERO</b>: Usado / Acumulado / Saldo. Si tiene su tarjeta en Google o Apple Wallet, el saldo se actualiza solo.</p></div>
+    </div>
+    <p>Todo sobre el monedero (configuración, tarjeta física y tarjeta digital) está en el <a href="monedero.html">manual de Monedero y tarjetas digitales</a>.</p>
+    <h3>Venta a crédito</h3>
+    <p>En el cobro, <b>“Vender a crédito”</b>: elige un cliente con crédito disponible (“Disp: $X”) y toca <b>“Confirmar venta a crédito”</b>. Vence en los “Días de crédito” del cliente (30 si no tiene). Los clientes sin crédito aparecen como “Sin crédito — Asigna límite en Clientes”.</p>
 
     <h2 id="s4"><span class="num">4.</span>Catálogo de productos</h2>
+    <p>En <span class="path">Catálogos → Productos</span> tienes <b>“Importar”</b> (Excel o CSV), <b>“Etiquetas”</b> (imprimir códigos), <b>“Escanear”</b> y <b>“+ Nuevo producto”</b>.</p>
     <div class="steps">
-      <div class="s"><h4>Nuevo producto</h4><p>En <span class="path">Catálogo</span> → <b>“+ Nuevo producto”</b> (o <b>“Escanear”</b> un código para prellenar nombre y foto).</p></div>
-      <div class="s"><h4>Llena los datos</h4><p><b>Nombre</b> y <b>Precio</b> son obligatorios. Opcional: Costo, SKU, Código de barras (<b>“Generar EAN-13”</b>), Clave SAT (se sugiere), <b>IVA</b> (Gravado 16% / Tasa 0% / Exento), <b>IEPS (%)</b>, Categoría y foto (con <b>“Quitar fondo”</b>).</p></div>
-      <div class="s"><h4>Inventario y unidad</h4><p>Activa <b>“Controlar inventario”</b> y define <b>Stock actual</b>. Elige la <b>Unidad de venta</b> (Pieza, Kilogramo, Litro…); las que no son pieza activan la venta a granel.</p></div>
-      <div class="s"><h4>Guarda</h4><p>Pulsa <b>“Guardar”</b>. Con <b>“Importar”</b> puedes subir tu catálogo desde Excel/CSV, y con <b>“Etiquetas”</b> imprimir códigos.</p></div>
+      <div class="s"><h4>Nuevo producto</h4><p><b>“+ Nuevo producto”</b> (o <b>“Escanear”</b> un código para prellenar nombre y foto).</p></div>
+      <div class="s"><h4>Llena los datos</h4><p><b>Nombre</b> y <b>Precio</b> son obligatorios. Opcional: Costo, SKU, Código de barras (<b>“Generar EAN-13”</b>), <b>“Descripción (opcional)”</b> (se ve en la tienda en línea), <b>Clave SAT</b> (con <b>“Buscar clave”</b>), <b>IVA</b> (Gravado (16%) / Tasa 0% / Exento), <b>IEPS (%)</b>, Categoría y foto (Galería o cámara; casilla <b>“Quitar fondo y dejarlo blanco”</b>).</p></div>
+      <div class="s"><h4>Inventario y unidad</h4><p>Activa <b>“Controlar inventario”</b> y define el <b>Stock actual</b>. En <b>Unidad de venta</b>, kg, gramo, litro, mililitro, onza y metro activan la venta <b>a granel</b>; pieza, caja, paquete, par y rollo se venden por unidad.</p></div>
+      <div class="s"><h4>Opciones (aderezos, extras)</h4><p>Opcional: <b>“+ Agregar grupo”</b> (ej. “Aderezos”) con <b>Min</b>, <b>Max</b>, <b>Gratis</b> y <b>Obligatorio</b>; agrega opciones con <b>“+ Agregar opción”</b> y su precio extra. Con el módulo Restaurante también puedes marcarlo como combo.</p></div>
+      <div class="s"><h4>Guarda</h4><p>Pulsa <b>“Guardar”</b>. En cada fila tienes imprimir etiqueta, <b>historial de stock</b>, editar y eliminar (desactiva el producto, no borra sus ventas).</p></div>
     </div>
+    <p><b>Departamentos:</b> el botón <b>“Departamentos”</b> agrupa tus categorías (ej. Alimentos, Bebidas): crea el departamento y asigna cada categoría. Sirve para filtrar el catálogo y ordenar la tienda en línea.</p>
 
     <figure class="shot"><img loading="lazy" src="/capturas/pos-catalogo.webp" alt="Catálogo de productos"><figcaption><b>Catálogo.</b> Tus productos con precio, foto y existencias. Desde aquí creas, editas e importas.</figcaption></figure>
 
     <h2 id="s5"><span class="num">5.</span>Inventario / existencias</h2>
-    <p>En <span class="path">Catálogo</span>, toca un producto que controle inventario para abrir <b>Existencias</b>. Elige el modo:</p>
+    <p>En <span class="path">Catálogos → Productos</span>, toca un producto que controle inventario para abrir <b>Existencias</b>. Elige el modo:</p>
     <ul>
-      <li><b>Entrada</b>: recarga de mercancía (con costo opcional; calcula costo promedio ponderado).</li>
-      <li><b>Salida</b>: merma o consumo.</li>
-      <li><b>Ajuste</b>: conteo físico (deja el stock en el número real).</li>
+      <li><b>Entrada</b>: recarga de mercancía, con <b>“Costo unitario de esta entrada (opcional)”</b> (recalcula el costo promedio). Botón <b>“Registrar entrada”</b>.</li>
+      <li><b>Salida</b>: merma o consumo. Botón <b>“Registrar salida”</b>.</li>
+      <li><b>Ajuste</b>: conteo físico; escribe la <b>“Existencia real (contada)”</b> y toca <b>“Ajustar existencia”</b>.</li>
     </ul>
-    <p>Escribe la cantidad y una nota opcional, y confirma. El botón <b>“Historial”</b> muestra todos los movimientos.</p>
+    <p>Ves el <b>“Stock nuevo”</b> antes de confirmar; el stock nunca queda negativo. <b>“Historial”</b> muestra todos los movimientos. Con varias sucursales, el stock es el de la sucursal activa.</p>
 
     <h2 id="s6"><span class="num">6.</span>Caja: abrir, gastos y corte</h2>
     <div class="steps">
-      <div class="s"><h4>Abrir caja</h4><p>En <span class="path">Caja</span> → <b>“Abrir caja”</b>: nombre, encargado (opcional) y <b>“Fondo de caja inicial”</b>. Con varias cajas, cada equipo elige <b>“Usar esta caja”</b>. Solo el dueño abre; al empleado se le asigna una.</p></div>
-      <div class="s"><h4>Registrar un gasto</h4><p>En <b>“Gastos del negocio” → “Agregar gasto”</b>: Descripción y Monto. Se resta del efectivo esperado en el corte.</p></div>
-      <div class="s"><h4>Cerrar caja (corte)</h4><p><b>“Cerrar caja (corte)”</b> muestra: fondo + ventas en efectivo − gastos = <b>“Efectivo esperado”</b>. Escribe el <b>“Conteo real en caja”</b>, revisa la <b>Diferencia</b> y <b>“Confirmar cierre”</b>. Consulta cortes pasados en <b>“Historial de cortes”</b>.</p></div>
+      <div class="s"><h4>Abrir caja</h4><p>En <span class="path">Operatividad → Caja</span> → <b>“Abrir caja”</b>: <b>“Nombre de la caja”</b>, <b>“Encargado de la caja (opcional)”</b> (o “Sin asignar”) y <b>“Fondo de caja inicial”</b>. Solo el dueño o el administrador abren cajas.</p></div>
+      <div class="s"><h4>Varias cajas</h4><p>El dueño puede abrir <b>“+ Otra caja”</b> (libre para otro equipo o para usarla aquí), <b>“Cambiar de caja”</b> y reasignar el encargado. Las etiquetas <b>ESTE EQUIPO</b> y <b>ASIGNADA A TI</b> indican cuál usas.</p></div>
+      <div class="s"><h4>Registrar un gasto</h4><p>En <b>“Gastos del negocio” → “Agregar gasto”</b>: Descripción y Monto. Se resta del efectivo esperado. Las devoluciones en efectivo se registran solas como gasto.</p></div>
+      <div class="s"><h4>Cerrar caja (corte)</h4><p><b>“Cerrar caja (corte)”</b>: fondo + ventas en efectivo − gastos = <b>“Efectivo esperado”</b>. Escribe el <b>“Conteo real en caja (efectivo)”</b>, revisa la <b>Diferencia</b> y <b>“Confirmar cierre”</b>. Los cortes pasados están en <b>“Historial de cortes”</b> con su detalle.</p></div>
     </div>
+    <p>Con cajón de dinero configurado tienes el botón <b>“Abrir cajón”</b> para abrirlo sin venta.</p>
 
     <figure class="shot"><img loading="lazy" src="/capturas/pos-caja.webp" alt="Caja y corte"><figcaption><b>Caja.</b> Fondo, ventas y gastos con el efectivo esperado; abajo, el historial de cortes.</figcaption></figure>
 
-    <h2 id="s7"><span class="num">7.</span>Clientes, crédito y monedero</h2>
-    <p>En <span class="path">Clientes</span> → <b>“+ Nuevo”</b> registras nombre, RFC, teléfono, email, régimen, uso CFDI, <b>Límite de crédito</b> y <b>Días de crédito</b>. Cada ficha muestra <b>Límite / Adeudo / Disponible</b>, el <b>Monedero</b> (lealtad) y <b>“Registrar abono”</b>.</p>
-    <p>Cada cliente muestra sus <b>visitas</b>, <b>gasto</b>, <b>última visita</b> y su <b>calificación</b> en las encuestas. Usa los filtros <b>Frecuentes</b> (3 o más visitas en los últimos 45 días) y <b>Por recuperar</b> (venían seguido y llevan más de 45 días sin volver: mándales una promoción desde Marketing), y ordena por mayor gasto, más visitas o visita reciente.</p>
-    <p>Durante el cobro puedes <b>“Asignar cliente (monedero)”</b> (buscar, escanear tarjeta o registrar por teléfono) y, si tiene saldo, activar <b>“Usar monedero”</b>. Para vender a crédito, usa <b>“Vender a crédito”</b> en el cobro.</p>
+    <h2 id="s7"><span class="num">7.</span>Clientes, crédito y abonos</h2>
+    <p>En <span class="path">Catálogos → Clientes</span> → <b>“+ Nuevo”</b> registras nombre o razón social, RFC, teléfono, email, régimen fiscal, uso CFDI, C.P. fiscal, <b>Límite de crédito</b> y <b>Días de crédito</b>.</p>
+    <ul>
+      <li>Cada cliente muestra sus <b>visitas</b>, <b>gasto</b>, <b>última visita</b> y su <b>calificación</b> en las encuestas, con la etiqueta <b>Frecuente</b> o <b>Por recuperar</b>.</li>
+      <li>Filtros <b>Frecuentes</b> (3 o más visitas en los últimos 45 días) y <b>Por recuperar</b> (2 o más visitas y más de 45 días sin volver: mándales una promoción desde Marketing). Ordena por nombre, mayor gasto, más visitas o visita reciente.</li>
+      <li>La ficha muestra <b>Límite / Adeudo / Disponible</b>, el <b>Monedero</b> y su tarjeta.</li>
+      <li><b>Abonos:</b> si el cliente debe, en <b>“Registrar abono”</b> escribe el <b>Monto</b>, elige Efectivo, Tarjeta o Transferencia y toca <b>“Abonar”</b>. Si la venta se facturó como PPD, el complemento de pago se emite solo.</li>
+    </ul>
 
     <figure class="shot"><img loading="lazy" src="/capturas/pos-clientes.webp" alt="Directorio de clientes"><figcaption><b>Clientes.</b> Directorio con datos fiscales, crédito y monedero de lealtad.</figcaption></figure>
 
-    <h2 id="s8"><span class="num">8.</span>Facturación CFDI 4.0</h2>
+    <h2 id="s12"><span class="num">8.</span>Ticket, ticket digital y encuesta</h2>
+    <ul>
+      <li><b>“Imprimir”</b>: ticket de 58 mm con tu logo y pie de ticket (por defecto “¡Gracias por su compra!”).</li>
+      <li><b>“WhatsApp”</b>: genera el PDF del ticket y lo comparte; el texto incluye el enlace a su <b>ticket digital</b>.</li>
+      <li>Con las reseñas activas, el ticket impreso trae el QR <b>“Califícanos en 10 segundos”</b>: el cliente ve su ticket en el celular, lo descarga en PDF y califica su compra. Si le fue bien lo invitamos a tu ficha de Google Maps. Ver el <a href="resenas.html">manual de Reseñas</a>.</li>
+      <li>Para reimprimir, toca la venta en <span class="path">Historial → Ventas</span>.</li>
+    </ul>
+
+    <h2 id="s13"><span class="num">9.</span>Cancelar una venta</h2>
     <div class="steps">
-      <div class="s"><h4>Abre “Facturar venta”</h4><p>Desde el ticket de la venta.</p></div>
-      <div class="s"><h4>Captura los datos fiscales</h4><p>Busca al cliente o crea uno nuevo: <b>RFC</b>, <b>Razón social</b>, <b>Régimen fiscal</b>, <b>Uso CFDI</b>, <b>Email</b> y <b>C.P. fiscal</b> (5 dígitos; obligatorio para timbrar).</p></div>
-      <div class="s"><h4>Timbra</h4><p><b>“Timbrar factura CFDI”</b> (o <b>“Timbrar factura PPD”</b> en ventas a crédito). Luego puedes <b>Descargar PDF</b>, <b>Descargar XML</b> o <b>Enviar por correo</b>.</p></div>
+      <div class="s"><h4>Busca la venta</h4><p>En <span class="path">Historial → Ventas</span> (filtra por fechas, sucursal u origen: POS, Online, Citas).</p></div>
+      <div class="s"><h4>Cancélala</h4><p>Toca el ícono <b>“Cancelar venta”</b>. Los empleados necesitan autorización. Escribe el <b>“Motivo (opcional)”</b> y confirma <b>“Cancelar venta”</b>.</p></div>
+    </div>
+    <p>La venta deja de contar en caja, reportes y finanzas; el stock regresa; en ventas a crédito se revierte el adeudo; y el <b>monedero</b> se corrige solo (se quita lo que ganó y se le regresa lo que usó), incluida su tarjeta digital. Con <b>“Reactivar venta”</b> la recuperas. El dueño puede <b>“Eliminar definitivamente”</b> ventas canceladas. Filtros: Activas / Canceladas / Todas.</p>
+
+    <h2 id="s14"><span class="num">10.</span>Devoluciones y notas de crédito</h2>
+    <p>Para devolver <b>parte o toda</b> una venta (en plan completo):</p>
+    <div class="steps">
+      <div class="s"><h4>Abre la devolución</h4><p>En <span class="path">Historial → Ventas</span>, ícono <b>“Devolver / Nota de crédito”</b> de la venta.</p></div>
+      <div class="s"><h4>Elige qué devolver</h4><p>En <b>“Selecciona qué devolver”</b> usa − / + o <b>“Todo”</b> en cada producto. Marca <b>“Marcar como merma (no regresa al inventario)”</b> si el producto no se puede revender, y escribe el <b>“Motivo (opcional)”</b>.</p></div>
+      <div class="s"><h4>Confirma</h4><p>Revisa el <b>“Total a devolver”</b> y el método de <b>Reembolso</b> (se elige solo según cómo pagó: efectivo como gasto de caja, tarjeta en tu terminal, QR o transferencia, o saldo del cliente si fue a crédito) y toca <b>“Confirmar devolución”</b>.</p></div>
+    </div>
+    <ul>
+      <li>Puedes hacer varias devoluciones de la misma venta hasta completar lo vendido. El folio es NC-venta-número.</li>
+      <li>Si hubo descuento en la venta, se devuelve lo que el cliente realmente pagó.</li>
+      <li><b>Monedero:</b> se le quita lo que ganó por esos productos y se le regresa lo que pagó con monedero, en proporción a lo devuelto. Su tarjeta digital se actualiza sola.</li>
+      <li>En <span class="path">Historial → Devoluciones</span> ves las <b>“Notas de crédito”</b> (con el total devuelto) y las <b>“Solicitudes”</b> de devolución o cancelación de la tienda en línea (“Rechazar”, “Revisar y aprobar”, “Aprobar cancelación”).</li>
+      <li>El dueño puede abrir una nota y <b>“Eliminar nota”</b>: deshace el stock, el reembolso en caja, el saldo del cliente y el ajuste del monedero.</li>
+    </ul>
+
+    <h2 id="s8"><span class="num">11.</span>Facturación CFDI 4.0</h2>
+    <div class="steps">
+      <div class="s"><h4>Abre “Facturar venta”</h4><p>Desde el botón <b>“Facturar”</b> del ticket, o en <span class="path">Historial → Ventas</span> con el ícono <b>“Facturar (CFDI)”</b> (los empleados necesitan autorización).</p></div>
+      <div class="s"><h4>Captura los datos fiscales</h4><p><b>“Buscar cliente por RFC o nombre...”</b> o <b>“Nuevo cliente”</b>: <b>RFC</b>, <b>Razón social</b>, <b>Régimen fiscal</b>, <b>Uso CFDI</b>, <b>Email</b> y <b>C.P. fiscal</b> (5 dígitos; obligatorio para timbrar). Revisa el <b>“Resumen de factura”</b>.</p></div>
+      <div class="s"><h4>Timbra</h4><p><b>“Timbrar factura CFDI”</b> (o <b>“Timbrar factura PPD”</b> en ventas a crédito). Luego <b>Descargar PDF</b>, <b>Descargar XML</b> o <b>“Enviar por correo a …”</b>. Arriba ves los timbres que te quedan.</p></div>
     </div>
     <div class="box warn">
       <div class="t">Requisitos para timbrar</div>
-      <p>Necesitas la <b>Facturación CFDI configurada</b> (Configuración) y timbres disponibles. Sin eso, ALGORA genera un <b>comprobante interno</b> (sin validez fiscal). En pruebas aparece “MODO PRUEBA - SIN VALIDEZ FISCAL”.</p>
+      <p>Necesitas la <b>Facturación CFDI 4.0</b> configurada en <span class="path">Config</span> y timbres disponibles. Sin eso, ALGORA genera un <b>comprobante interno</b> (“Generar comprobante”, sin validez fiscal). En pruebas aparece “MODO PRUEBA - SIN VALIDEZ FISCAL”. Si el timbrado falla, puedes <b>“Generar solo comprobante interno (sin timbrar)”</b>.</p>
     </div>
 
-    <h2 id="s9"><span class="num">9.</span>Con y sin internet</h2>
-    <p>Todo se guarda <b>primero en el dispositivo</b>: puedes vender sin internet. Verás la banda <b>“Sin conexión — los datos se guardan localmente y se sincronizarán al reconectar”</b> y un contador de <b>ventas pendientes</b>. Al volver la conexión, se sincroniza solo (no repitas la venta: ya está guardada).</p>
-    <p>Sí necesitan internet: enviar cobro a la terminal, timbrar CFDI, el monedero (saldo del servidor), registrar gastos y consultar la clave SAT.</p>
+    <h2 id="s9"><span class="num">12.</span>Con y sin internet</h2>
+    <p>Las ventas se guardan <b>primero en el dispositivo</b>: puedes vender sin internet. Verás la banda <b>“Sin conexión — Los datos se guardan localmente y se sincronizarán al reconectar”</b> y el contador de <b>ventas pendientes de sincronizar</b>. Al volver la conexión se sincroniza solo (no repitas la venta: ya está guardada).</p>
+    <p>Sí necesitan internet: enviar cobro a la terminal, timbrar CFDI, el monedero (saldo, tarjetas y registro de clientes por teléfono), registrar gastos y abonos, devoluciones, cancelar ventas, autorizar con PIN y buscar la clave SAT.</p>
 
-    <h2 id="s10"><span class="num">10.</span>Ajustes clave</h2>
+    <h2 id="s10"><span class="num">13.</span>Configuración clave</h2>
+    <p>En <span class="path">Administración → Config</span>:</p>
     <ul>
-      <li><b>Ticket impreso:</b> logo del ticket (58 mm) y pie de ticket.</li>
-      <li><b>Cajón de efectivo</b> (por equipo): <b>“Conectar cajón”</b>, <b>“Probar apertura”</b>; opción de abrir automáticamente al cobrar en efectivo. Con impresoras de driver de Windows se usa el <b>Agente de cajón ALGORA</b>.</li>
-      <li><b>IVA / IEPS por producto:</b> se define en cada producto. En el POS el precio ya incluye impuestos; el IVA/IEPS solo se usa al timbrar CFDI.</li>
+      <li><b>Datos del negocio:</b> nombre, RFC, dirección, teléfono, <b>Código de negocio</b> (el que usan tus empleados para entrar; botón “Copiar”) y <b>“Bloqueo de caja por inactividad (minutos)”</b> (0 = nunca; aplica por equipo).</li>
+      <li><b>Ticket impreso:</b> logo (58 mm) y pie de ticket.</li>
+      <li><b>Monedero / Lealtad:</b> porcentaje de acumulación, tope de canje y canje mínimo (ver <a href="monedero.html">manual de Monedero</a>).</li>
+      <li><b>Cajón de efectivo</b> (por equipo): <b>“Conectar cajón”</b>, <b>“Probar apertura”</b>, <b>“Buscar agente”</b> y abrir automáticamente al cobrar en efectivo. Con impresoras de driver de Windows se usa el <b>Agente de cajón ALGORA</b>.</li>
       <li><b>Terminales de cobro:</b> Mercado Pago Point.</li>
-      <li><b>Reseñas:</b> Config → Reseñas (o Operatividad → Reseñas → Configuración): activa la encuesta y pega tu enlace de Google. Ver el <a href="resenas.html">manual de Reseñas</a>.</li>
-      <li><b>Multi-sucursal:</b> Configuración → Sucursales (hasta 5). Con 2+ sucursales activas, el stock pasa a ser por sucursal. Precio, activación y uso en el <a href="multisucursal.html">manual de Multisucursal</a>.</li>
+      <li><b>Facturación CFDI 4.0</b>, <b>Reseñas</b> (ver <a href="resenas.html">manual de Reseñas</a>) y <b>Sucursales</b> (ver <a href="multisucursal.html">manual de Multisucursal</a>).</li>
+      <li>Solo el dueño: <b>Biometría / huella</b> para autorizaciones y el <b>Lector de huella USB</b>.</li>
+      <li><b>Tamaño de letra</b>, <b>Guías rápidas</b> (“Reiniciar guías rápidas”) y <b>Privacidad y datos</b> (“Exportar mis datos”, “Eliminar mi cuenta”).</li>
+      <li><b>IVA / IEPS por producto:</b> en el POS el precio ya incluye impuestos; el IVA/IEPS solo se usa al timbrar CFDI.</li>
     </ul>
 
-    <h2 id="s11"><span class="num">11.</span>Solución de problemas</h2>
+    <h2 id="s15"><span class="num">14.</span>Qué incluye cada plan</h2>
+    <table>
+      <tr><th>Función</th><th>POS Lite</th><th>POS Completo</th></tr>
+      <tr><td>Venta, caja, catálogo, inventario, clientes, historial de ventas, cotizaciones, facturación CFDI, configuración</td><td>Sí</td><td>Sí</td></tr>
+      <tr><td>Monedero, devoluciones, reportes, finanzas, nómina, equipo, marketing y asistente Aura</td><td>No</td><td>Sí</td></tr>
+    </table>
+    <p>Lo que no incluye tu plan no aparece en el menú. Para subir de plan entra a <b>Mi suscripción</b>.</p>
+
+    <h2 id="s11"><span class="num">15.</span>Solución de problemas</h2>
     <table>
       <tr><th>Situación</th><th>Qué hacer</th></tr>
-      <tr><td>El botón “Cobrar” está bloqueado.</td><td>No hay caja abierta o asignada. El dueño abre la caja; al empleado hay que asignarle una.</td></tr>
-      <tr><td>“Agotado” o “Solo hay N unidades”.</td><td>El producto controla inventario y no hay stock suficiente. Registra una entrada.</td></tr>
-      <tr><td>La caja parece cerrarse sola.</td><td>Es el bloqueo por inactividad: el empleado reingresa su PIN. Se ajusta en “Bloqueo de caja por inactividad (minutos)”.</td></tr>
+      <tr><td>El botón dice “Caja cerrada”.</td><td>No hay caja abierta o asignada en este equipo. El dueño la abre o asigna; el empleado verá “No tienes una caja asignada” hasta entonces.</td></tr>
+      <tr><td>“Esta caja está asignada a …”.</td><td>Cada empleado usa su caja. El dueño puede reasignarla en Caja.</td></tr>
+      <tr><td>“Sin stock disponible” o “Solo hay N …”.</td><td>El producto controla inventario y no hay suficiente. Registra una entrada.</td></tr>
+      <tr><td>“Producto no encontrado: …” al escanear.</td><td>El código no está dado de alta. Créalo en Productos o revisa el código de barras.</td></tr>
+      <tr><td>“Elige las opciones obligatorias”.</td><td>El producto tiene un grupo de opciones obligatorio: elige una antes de agregarlo.</td></tr>
+      <tr><td>La caja parece cerrarse sola.</td><td>Es el bloqueo por inactividad: el empleado reingresa su PIN. Se ajusta en Config → Datos del negocio.</td></tr>
       <tr><td>No timbra la factura.</td><td>Falta el C.P. fiscal (5 dígitos) o no hay timbres. Revisa la configuración de CFDI.</td></tr>
       <tr><td>El cajón no abre.</td><td>Suele ser impresora con driver de Windows: instala el Agente de cajón y, en Chrome, da permiso de “red local” al pulsar “Buscar agente”.</td></tr>
-      <tr><td>Stock distinto al esperado en multi-sucursal.</td><td>El campo de stock es el de la sucursal activa, no el total global.</td></tr>
+      <tr><td>El historial solo muestra las ventas de este equipo.</td><td>No hay conexión con la nube. Revisa el internet; al volver se muestran todas.</td></tr>
+      <tr><td>Stock distinto al esperado en multi-sucursal.</td><td>El stock que ves es el de la sucursal activa, no el total.</td></tr>
     </table>
   </main>
   <footer>

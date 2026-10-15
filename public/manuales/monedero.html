@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALGORA · Manual — Monedero y tarjetas digitales</title>
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <img class="brand-logo" src="/ALGORA_Logo_blanco.png" alt="ALGORA">
+    <div class="k">Manual de usuario</div>
+    <h1>Monedero y <span class="gold">tarjetas digitales</span></h1>
+    <p>Premia a tus clientes con saldo en cada compra. Tarjeta física con código de barras y tarjeta digital en Apple Wallet y Google Wallet que se actualiza sola.</p>
+    <div class="meta">Serie de manuales ALGORA · Monedero / Lealtad · Para dueño y cajeros</div>
+    <a class="back" href="index.html">← Ver todos los manuales</a>
+  </div>
+  <main>
+    <div class="toc">
+      <h4>Contenido</h4>
+      <ol>
+        <li><a href="#m1">Qué es y cómo funciona</a></li>
+        <li><a href="#m2">Activar y configurar el monedero</a></li>
+        <li><a href="#m3">Dar de alta a un cliente en el monedero</a></li>
+        <li><a href="#m4">Acumular y usar saldo al cobrar</a></li>
+        <li><a href="#m5">Tarjeta física (código de barras)</a></li>
+        <li><a href="#m6">Tarjeta digital en Apple Wallet y Google Wallet</a></li>
+        <li><a href="#m7">Ajustes manuales, cancelaciones y devoluciones</a></li>
+        <li><a href="#m8">Solución de problemas</a></li>
+      </ol>
+    </div>
+
+    <h2 id="m1"><span class="num">1.</span>Qué es y cómo funciona</h2>
+    <p>El monedero le regresa al cliente un porcentaje de cada compra como <b>saldo</b>, que puede usar como descuento en sus siguientes visitas. Es la forma más simple de que regresen.</p>
+    <div class="steps">
+      <div class="s"><h4>Compra</h4><p>El cliente compra y acumula, por ejemplo, el 5% de lo que pagó.</p></div>
+      <div class="s"><h4>Regresa</h4><p>En su siguiente compra usa su saldo como descuento (hasta el tope que tú definas).</p></div>
+      <div class="s"><h4>Lo trae siempre</h4><p>Con su tarjeta física o en la cartera de su celular (Apple Wallet o Google Wallet), donde ve su saldo actualizado.</p></div>
+    </div>
+    <div class="box req"><div class="t">Disponible en</div><p>ALGORA POS (plan completo) y planes superiores. En POS Lite aparece “El monedero está disponible en ALGORA POS (plan completo)”.</p></div>
+
+    <h2 id="m2"><span class="num">2.</span>Activar y configurar el monedero</h2>
+    <p>Solo el <b>dueño</b>, en <span class="path">Administración → Config → Monedero / Lealtad</span>. Cada campo se guarda solo al salir de él (“Monedero actualizado”).</p>
+    <table>
+      <tr><th>Campo</th><th>Qué significa</th><th>Sugerido</th></tr>
+      <tr><td><b>Activar monedero</b></td><td>Enciende la acumulación de saldo.</td><td>Encendido</td></tr>
+      <tr><td><b>Acumulación (% de cada compra)</b></td><td>Cuánto gana el cliente de lo que paga. Ej.: 5% = $5 por cada $100.</td><td>3% a 5%</td></tr>
+      <tr><td><b>Tope de canje (% máximo de la venta)</b></td><td>Qué parte de una venta se puede pagar con monedero.</td><td>50%</td></tr>
+      <tr><td><b>Canje mínimo</b></td><td>Saldo mínimo para poder usarlo.</td><td>$20</td></tr>
+    </table>
+    <div class="box tip"><div class="t">Cómo se calcula</div><p>El cliente acumula sobre lo que <b>realmente pagó</b>: si usó $30 de monedero en una compra de $200, acumula sobre $170.</p></div>
+
+    <h2 id="m3"><span class="num">3.</span>Dar de alta a un cliente en el monedero</h2>
+    <p>Dos formas, las dos rápidas:</p>
+    <ul>
+      <li><b>Al cobrar</b> (cualquier cajero): <b>“Asignar cliente (monedero)”</b> → <b>“+ Nuevo (teléfono)”</b> → nombre y teléfono a 10 dígitos → <b>“Crear y asignar”</b>.</li>
+      <li><b>En Clientes</b> (dueño o encargado): <span class="path">Catálogos → Clientes → “+ Nuevo”</span>.</li>
+    </ul>
+    <p>El teléfono es la llave del cliente: con él se le encuentra y se le manda su tarjeta digital por WhatsApp.</p>
+
+    <h2 id="m4"><span class="num">4.</span>Acumular y usar saldo al cobrar</h2>
+    <div class="steps">
+      <div class="s"><h4>Asigna al cliente</h4><p>En el cobro, <b>“Asignar cliente (monedero)”</b>: búscalo por nombre o teléfono, o toca <b>“Escanear tarjeta”</b> y pasa su tarjeta física o la de su celular.</p></div>
+      <div class="s"><h4>Usar saldo (opcional)</h4><p>Activa <b>“Usar monedero”</b> y escribe el monto, o toca <b>“Máx $X”</b>. El total queda como “$total − $X monedero”.</p></div>
+      <div class="s"><h4>Cobra</h4><p>Al confirmar, el cliente acumula su porcentaje. El ticket muestra el bloque <b>MONEDERO</b>: Usado, Acumulado y Saldo.</p></div>
+    </div>
+    <p>Mensajes que puedes ver: “Sin saldo de monedero todavía”, “Saldo mínimo para canjear: $X” y “Esta compra acumula N%”. El monedero no aplica en ventas a crédito. Con <b>“Quitar”</b> desasignas al cliente.</p>
+    <p>También acumulan las citas que cobras en la Agenda (“Cobrar y completar”, con <b>“Usar saldo”</b> para pagar con monedero).</p>
+
+    <h2 id="m5"><span class="num">5.</span>Tarjeta física (código de barras)</h2>
+    <p>En <span class="path">Catálogos → Clientes</span>, abre al cliente. En el recuadro <b>Monedero</b> está su <b>Tarjeta</b>:</p>
+    <ul>
+      <li><b>“Crear e imprimir”</b>: crea el código del cliente e imprime una tarjeta tamaño credencial (85.6 × 54 mm) con su código de barras. Si ya tiene, el botón dice <b>“Imprimir”</b>.</li>
+      <li><b>“Asignar tarjeta”</b> o <b>“Cambiar tarjeta”</b>: si mandaste hacer tarjetas preimpresas, escanea una para dársela al cliente. Si esa tarjeta ya era de otra persona, te pregunta si quieres <b>“Reasignar”</b>.</li>
+    </ul>
+
+    <h2 id="m6"><span class="num">6.</span>Tarjeta digital en Apple Wallet y Google Wallet</h2>
+    <p>El cliente guarda su tarjeta en la cartera de su celular, con el logo, su saldo disponible, su nombre y un QR para escanear en caja.</p>
+    <div class="steps">
+      <div class="s"><h4>Abre al cliente</h4><p>En <span class="path">Catálogos → Clientes</span>.</p></div>
+      <div class="s"><h4>Elige su celular</h4><p><b>“Tarjeta digital (Apple Wallet)”</b> para iPhone o <b>“Tarjeta digital (Google Wallet)”</b> para Android. Si aún no tiene código de tarjeta, se crea solo.</p></div>
+      <div class="s"><h4>Envíasela</h4><p>Si el cliente tiene teléfono se abre WhatsApp con el enlace listo; si no, el enlace se copia para que lo mandes como quieras.</p></div>
+      <div class="s"><h4>El cliente la agrega</h4><p>Abre el enlace en su celular y toca <b>“Agregar a Apple Wallet”</b> o <b>“Guardar en Google Wallet”</b>.</p></div>
+    </div>
+    <div class="box tip"><div class="t">El saldo se actualiza solo</div><p>Cada vez que el cliente compra, usa saldo, le ajustas el monedero, o se cancela o devuelve una venta, su tarjeta digital se actualiza sola en segundos (Apple) o minutos (Google). No hay que mandarle otra.</p></div>
+    <ul>
+      <li>El enlace vence en 30 días; si lo necesitas otra vez, genera uno nuevo con el mismo botón.</li>
+      <li>En caja se escanea igual que la tarjeta física.</li>
+      <li>Con el servicio <b>Monedero personalizado</b>, la tarjeta lleva tus colores, tu logo y tus condiciones. Pídelo a ALGORA.</li>
+    </ul>
+
+    <h2 id="m7"><span class="num">7.</span>Ajustes manuales, cancelaciones y devoluciones</h2>
+    <ul>
+      <li><b>Ajuste manual</b> (solo dueño): en la ficha del cliente, escribe el monto en <b>Monto</b> y toca <b>+</b> (“Agregar saldo”) o <b>−</b> (“Restar saldo”). Úsalo para promociones o correcciones.</li>
+      <li><b>Movimientos:</b> la ficha muestra Acumulado, Canjeado y Ajuste con su fecha; los movimientos cancelados aparecen tachados.</li>
+      <li><b>Cancelar una venta:</b> se le quita al cliente lo que ganó en esa venta y se le regresa lo que pagó con monedero. Si reactivas la venta, se vuelve a aplicar.</li>
+      <li><b>Devolución parcial:</b> se ajusta en proporción a lo devuelto. Ej.: devolver la mitad de la compra le quita la mitad de lo ganado y le regresa la mitad de lo que usó.</li>
+      <li>El saldo nunca queda en negativo: si el cliente ya gastó lo que ganó, se queda en $0.</li>
+    </ul>
+
+    <h2 id="m8"><span class="num">8.</span>Solución de problemas</h2>
+    <table>
+      <tr><th>Situación</th><th>Qué hacer</th></tr>
+      <tr><td>“Esa tarjeta no está registrada”.</td><td>La tarjeta no está asignada a nadie. Asígnala en Clientes con “Asignar tarjeta”.</td></tr>
+      <tr><td>El cliente no acumula.</td><td>Revisa que “Activar monedero” esté encendido y que tenga porcentaje de acumulación. En ventas a crédito no aplica.</td></tr>
+      <tr><td>No me deja usar el saldo.</td><td>No alcanza el “Canje mínimo”, o el monto pasa el “Tope de canje”.</td></tr>
+      <tr><td>Google Wallet dice que el pase es solo de prueba.</td><td>La tarjeta de Google está en activación. Avisa a soporte de ALGORA.</td></tr>
+      <tr><td>La tarjeta de Apple no cambia el saldo.</td><td>Revisa que el iPhone tenga internet. Si se agregó hace mucho, bórrala y agrégala de nuevo con un enlace nuevo.</td></tr>
+      <tr><td>El monedero no aparece en el menú de Config.</td><td>Solo lo ve el dueño, y requiere plan completo.</td></tr>
+    </table>
+  </main>
+  <footer>
+    <div><b>ALGORA TECH S.A.S. de C.V.</b> · Manual — Monedero y tarjetas digitales<br>Soporte: WhatsApp 294 111 4401 · ventas.cliente@algora.com.mx</div>
+    <div>algora.com.mx · Hecho en México</div>
+  <div style="margin-top:6px;font-size:12px"><a href="https://www.algorapos.com.mx/privacidad" target="_blank" rel="noopener">Aviso de privacidad</a> · <a href="https://www.algorapos.com.mx/terminos" target="_blank" rel="noopener">Términos</a> · <a href="https://www.algorapos.com.mx/cookies" target="_blank" rel="noopener">Cookies</a></div>
+</footer>
+</div>
+<script src="/consent.js" defer></script>
+</body>
+</html>

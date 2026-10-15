@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALGORA · Manual — Tienda en línea</title>
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <img class="brand-logo" src="/ALGORA_Logo_blanco.png" alt="ALGORA">
+    <div class="k">Manual de usuario</div>
+    <h1>Tienda <span class="gold">en línea</span></h1>
+    <p>Tu página web con catálogo, carrito, pago con tarjeta o efectivo, envíos, cupones, pedidos programados y seguimiento del pedido. Conectada en vivo a tu inventario.</p>
+    <div class="meta">Serie de manuales ALGORA · Tienda en línea (ALGORA Web) · Para dueño y encargado</div>
+    <a class="back" href="index.html">← Ver todos los manuales</a>
+  </div>
+  <main>
+    <div class="toc">
+      <h4>Contenido</h4>
+      <ol>
+        <li><a href="#t1">Activar tu tienda</a></li>
+        <li><a href="#t2">Tu enlace, widget y dominio propio</a></li>
+        <li><a href="#t3">Cobrar en línea con Stripe</a></li>
+        <li><a href="#t4">Configurar entregas, envíos y pagos</a></li>
+        <li><a href="#t5">Diseño: logo, banner, colores y horario</a></li>
+        <li><a href="#t6">Qué productos se ven</a></li>
+        <li><a href="#t7">Cupones de descuento</a></li>
+        <li><a href="#t8">Recibir y atender pedidos</a></li>
+        <li><a href="#t9">Lo que ve tu cliente</a></li>
+        <li><a href="#t10">Cancelaciones y devoluciones de pedidos</a></li>
+        <li><a href="#t11">Reservas desde la tienda y sitio a la medida</a></li>
+        <li><a href="#t12">Solución de problemas</a></li>
+      </ol>
+    </div>
+
+    <h2 id="t1"><span class="num">1.</span>Activar tu tienda</h2>
+    <p>Entra a <span class="path">Operatividad → Tienda Online</span> (dueño o con permiso de configuración). Arriba está la <b>Licencia ALGORA Web</b>:</p>
+    <ul>
+      <li><b>“Probar 14 días gratis”</b> para empezar, o <b>“Suscribirse”</b>. Si ya tienes un plan que incluye Web (como el paquete POS + Web + Agenda), ya está activa.</li>
+      <li>Incluye: página web profesional, catálogo en línea, carrito y pagos en línea, panel de pedidos y avisos, dominio personalizado y personalización de colores, logo y banners.</li>
+      <li>Las secciones de abajo aparecen cuando la licencia está activa o en prueba.</li>
+    </ul>
+
+    <h2 id="t2"><span class="num">2.</span>Tu enlace, widget y dominio propio</h2>
+    <ul>
+      <li><b>Link de tienda:</b> tu dirección es <span class="path">algorapos.com.mx/store/tu-negocio</span>. Usa <b>“Copiar”</b> para compartirla y <b>“Abrir”</b> para verla.</li>
+      <li><b>Widget para tu página web:</b> si ya tienes página, copia el código que aparece y pégalo en ella para mostrar tu tienda.</li>
+      <li><b>Código QR de tu tienda:</b> copia tu enlace y crea un QR con cualquier generador para ponerlo en tu local, volantes o empaques.</li>
+    </ul>
+    <h3>Dominio propio (tunegocio.com)</h3>
+    <div class="steps">
+      <div class="s"><h4>Elige cómo</h4><p>En <b>“Dominio personalizado”</b>: <b>“Comprar dominio”</b> (búscalo, revisa si está disponible y cómpralo) o <b>“Conectar existente”</b> (escribe el que ya tienes, ej. tienda.tunegocio.com, y toca <b>“Conectar”</b>).</p></div>
+      <div class="s"><h4>Configura el DNS</h4><p>Si conectas uno existente, copia los registros de <b>“Configuración DNS”</b> (Tipo, Nombre, Valor) en el panel donde compraste tu dominio.</p></div>
+      <div class="s"><h4>Verifica</h4><p>Toca <b>“Verificar DNS”</b>. Cuando diga “Tu dominio está activo”, tu tienda abre en tu dominio. El DNS puede tardar unas horas.</p></div>
+    </div>
+
+    <h2 id="t3"><span class="num">3.</span>Cobrar en línea con Stripe</h2>
+    <p>En <b>“Pagos en línea (Stripe)”</b> toca <b>“Conectar Stripe”</b> y completa tus datos y cuenta bancaria. Si queda en “Verificación pendiente”, toca <b>“Completar verificación”</b>. Al quedar en <b>“Pagos activos”</b> ya puedes cobrar con tarjeta; con <b>“Dashboard Stripe”</b> ves tus depósitos.</p>
+    <p>Comisión: 0.5% ALGORA + la comisión de Stripe (aprox. 3.6%). El dinero llega directo a tu cuenta.</p>
+    <p>Stripe también se usa para anticipos de citas, reservas de mesa y de hotel, y el pago de la cuenta desde el menú QR.</p>
+
+    <h2 id="t4"><span class="num">4.</span>Configurar entregas, envíos y pagos</h2>
+    <p>En <b>“Configuración de tienda”</b>:</p>
+    <table>
+      <tr><th>Opción</th><th>Para qué sirve</th></tr>
+      <tr><td><b>Tipo de negocio</b></td><td><b>Productos</b> (carrito y pago) o <b>Servicios</b> (tu tienda muestra tus servicios para agendar cita).</td></tr>
+      <tr><td><b>Métodos de entrega</b></td><td><b>Recolección en tienda</b> y/o <b>Envío a domicilio</b> (al menos uno).</td></tr>
+      <tr><td><b>Costos de envío</b></td><td><b>Tarifa fija</b>, <b>Gratis desde…</b> (envío gratis arriba de un monto) o <b>Por zonas</b> (“Agregar zona”, su tarifa y los estados que cubre, más una tarifa para los demás).</td></tr>
+      <tr><td><b>Aceptar pedidos antes de cobrar</b></td><td>El cargo a la tarjeta queda apartado hasta que tú aceptas. Si no aceptas en el tiempo que pongas, se cancela y se libera el pago.</td></tr>
+      <tr><td><b>Aceptar pago en efectivo</b></td><td>El cliente paga al recibir o al recoger. El pedido llega para que lo aceptes primero.</td></tr>
+      <tr><td><b>Pedidos programados</b></td><td>El cliente elige día y hora: define Abre, Cierra, Anticipación, Bloque (cada cuántos minutos) y Días adelante.</td></tr>
+      <tr><td><b>Cancelar/reprogramar en línea</b></td><td>Permite a tus clientes cambiar o cancelar sus citas desde su cuenta (ALGORA Miembros) o respondiendo por WhatsApp.</td></tr>
+      <tr><td><b>Aparecer en el directorio ALGORA</b></td><td>Tu negocio aparece en el directorio de ALGORA por giro y ciudad.</td></tr>
+    </table>
+    <p>Con el módulo Restaurante también están <b>Pedido por QR en la mesa</b> y <b>Reservas de mesa en línea</b> (ver <a href="restaurante.html">manual de Restaurante</a>). Toca <b>“Guardar configuración”</b>.</p>
+
+    <h2 id="t5"><span class="num">5.</span>Diseño: logo, banner, colores y horario</h2>
+    <p>En <b>“Diseño y personalización”</b>:</p>
+    <ul>
+      <li><b>Banner</b> (1200×400), <b>Logo</b>, <b>Publicidad / promoción</b> (1200×300) y tu slogan.</li>
+      <li><b>Colores:</b> color principal, secundario y de acento, tipografía y <b>Modo oscuro en tienda</b>, con vista previa.</li>
+      <li><b>Contenido:</b> “Sobre nosotros”. <b>Redes:</b> Facebook, Instagram, TikTok, WhatsApp y sitio web.</li>
+      <li><b>Horario:</b> por día o “Cerrado”. En <b>“Cuando el negocio está cerrado”</b> elige <b>“Aceptar con aviso”</b> (se atiende al siguiente día hábil) o <b>“No aceptar pedidos”</b> (ideal para restaurantes).</li>
+    </ul>
+    <p>Toca <b>“Guardar diseño”</b>.</p>
+
+    <h2 id="t6"><span class="num">6.</span>Qué productos se ven</h2>
+    <p>Se muestran <b>todos tus productos activos</b> del catálogo, con su foto, precio y existencias en vivo. La <b>Descripción</b> del producto se ve en su ficha, y los <b>Departamentos</b> y categorías organizan la tienda. Para ocultar un producto, desactívalo en el catálogo. Los productos agotados no se pueden comprar.</p>
+
+    <h2 id="t7"><span class="num">7.</span>Cupones de descuento</h2>
+    <p>En <b>“Cupones de descuento”</b> → <b>“Nuevo cupón”</b>:</p>
+    <ul>
+      <li><b>Código</b> (ej. BIENVENIDA), tipo <b>Porcentaje (%)</b> o <b>Monto fijo ($)</b> y su valor.</li>
+      <li>Opcionales: <b>Compra mínima</b>, <b>Límite de usos</b> y fecha en que <b>Vence</b>.</li>
+      <li>Toca <b>“Crear cupón”</b>. Puedes activarlo o desactivarlo, editarlo o borrarlo.</li>
+    </ul>
+    <p>Los cupones se usan en la tienda en línea y en el menú QR del restaurante (no en la caja). Avisos al cliente: “Cupón no válido”, “Este cupón ya venció”, “Este cupón alcanzó su límite de usos” o “Compra mínima de $X”.</p>
+
+    <h2 id="t8"><span class="num">8.</span>Recibir y atender pedidos</h2>
+    <p>Los pedidos llegan a <span class="path">Operatividad → Pedidos</span> (“Pedidos Online”) con sonido y notificación. Filtros: Todos, Por aceptar, Pagados, En camino, Entregados, Cancelados y Recurrentes.</p>
+    <div class="steps">
+      <div class="s"><h4>Acepta</h4><p><b>“Aceptar y cobrar”</b> (tarjeta apartada) o <b>“Aceptar pedido”</b> (efectivo). O <b>“Rechazar”</b>.</p></div>
+      <div class="s"><h4>Prepara</h4><p>Con Restaurante, <b>“Enviar a cocina”</b>. Asigna un <b>Repartidor</b> si es a domicilio.</p></div>
+      <div class="s"><h4>Avanza el pedido</h4><p><b>“Marcar en camino”</b> → <b>“Entregado”</b>, o <b>“Listo para recoger”</b> → <b>“Cliente recogió”</b>. En efectivo verás “Cobrar $X en EFECTIVO al entregar”.</p></div>
+    </div>
+    <ul>
+      <li><b>“WhatsApp al cliente”</b> y <b>“Copiar link de seguimiento”</b> en cada pedido.</li>
+      <li><b>“Cancelar pedido y reembolsar”</b> (tarjeta) o <b>“Cancelar pedido”</b> (efectivo).</li>
+      <li><b>Pedidos recurrentes:</b> para clientes que piden siempre lo mismo; el sistema genera el pedido solo (diario, semanal o mensual).</li>
+      <li>Con tu WhatsApp conectado, al cliente le llegan avisos de “pedido confirmado” y “pedido listo”.</li>
+    </ul>
+
+    <h2 id="t9"><span class="num">9.</span>Lo que ve tu cliente</h2>
+    <ul>
+      <li>Tu catálogo por departamentos, carrito, método de entrega, día y hora (si programas pedidos), pago con <b>Tarjeta</b> o <b>Efectivo</b>, código de descuento y su WhatsApp para avisarle.</li>
+      <li>Una página de <b>“Seguimiento de pedido”</b> que se actualiza: Confirmado → Preparando → En camino / Listo para recoger → Entregado.</li>
+      <li><b>“Mi cuenta”</b>: su cuenta de ALGORA Miembros con sus pedidos y citas (ver <a href="portal-clientes.html">manual de Portales y códigos QR</a>).</li>
+      <li>“Recibe ofertas y novedades”: los interesados quedan como clientes potenciales para tus campañas.</li>
+    </ul>
+
+    <h2 id="t10"><span class="num">10.</span>Cancelaciones y devoluciones de pedidos</h2>
+    <p>Desde su página de seguimiento, el cliente puede tocar <b>“¿Necesitas cancelar tu pedido?”</b> o <b>“¿Algo salió mal con tu pedido?”</b> y <b>“Enviar solicitud”</b>. Las solicitudes llegan a <span class="path">Historial → Devoluciones</span>, pestaña <b>“Solicitudes”</b>, donde puedes <b>“Rechazar”</b>, <b>“Revisar y aprobar”</b> o <b>“Aprobar cancelación”</b> (reembolsa por Stripe).</p>
+
+    <h2 id="t11"><span class="num">11.</span>Reservas desde la tienda y sitio a la medida</h2>
+    <ul>
+      <li><b>Citas:</b> con tipo de negocio “Servicios” o con Agenda, tus clientes agendan desde la tienda (ver <a href="agenda-citas.html">manual de Agenda</a>).</li>
+      <li><b>Reservar mesa</b> (Restaurante) y <b>Reservar habitación</b> (Hotel) aparecen como botones en tu tienda cuando los activas.</li>
+      <li><b>Sitio a la medida:</b> si ALGORA te diseña un sitio propio, se activa en <span class="path">Config → Conexión de sitio web (API)</span> y reemplaza tu tienda estándar en tu enlace y en tu dominio.</li>
+    </ul>
+
+    <h2 id="t12"><span class="num">12.</span>Solución de problemas</h2>
+    <table>
+      <tr><th>Situación</th><th>Qué hacer</th></tr>
+      <tr><td>No veo las opciones de la tienda.</td><td>Activa la licencia ALGORA Web (prueba de 14 días) en Tienda Online.</td></tr>
+      <tr><td>No aparece el pago con tarjeta.</td><td>Conecta Stripe y termina la verificación hasta que diga “Pagos activos”.</td></tr>
+      <tr><td>Mi dominio no abre.</td><td>Revisa los registros DNS y toca “Verificar DNS”; el cambio puede tardar horas.</td></tr>
+      <tr><td>Un producto no aparece.</td><td>Debe estar activo en el catálogo.</td></tr>
+      <tr><td>El cliente no puede pagar fuera de horario.</td><td>Elegiste “No aceptar pedidos” cuando está cerrado; cámbialo a “Aceptar con aviso” si quieres recibirlos.</td></tr>
+      <tr><td>Se canceló un pedido solo.</td><td>Con “Aceptar pedidos antes de cobrar”, si no lo aceptas a tiempo se cancela y se libera el pago.</td></tr>
+    </table>
+  </main>
+  <footer>
+    <div><b>ALGORA TECH S.A.S. de C.V.</b> · Manual — Tienda en línea<br>Soporte: WhatsApp 294 111 4401 · ventas.cliente@algora.com.mx</div>
+    <div>algora.com.mx · Hecho en México</div>
+  <div style="margin-top:6px;font-size:12px"><a href="https://www.algorapos.com.mx/privacidad" target="_blank" rel="noopener">Aviso de privacidad</a> · <a href="https://www.algorapos.com.mx/terminos" target="_blank" rel="noopener">Términos</a> · <a href="https://www.algorapos.com.mx/cookies" target="_blank" rel="noopener">Cookies</a></div>
+</footer>
+</div>
+<script src="/consent.js" defer></script>
+</body>
+</html>

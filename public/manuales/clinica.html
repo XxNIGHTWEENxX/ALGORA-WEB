@@ -25,22 +25,23 @@
         <li><a href="#s3">Crear o buscar un paciente</a></li>
         <li><a href="#s4">Antecedentes (perfil clínico)</a></li>
         <li><a href="#s5">Nota de evolución SOAP y firma</a></li>
-        <li><a href="#s6">Imprimir receta / documento</a></li>
+        <li><a href="#s6">Imprimir notas, recetas y tratamientos</a></li>
         <li><a href="#s7">Fichas y plantillas</a></li>
         <li><a href="#s8">Mediciones y métricas</a></li>
         <li><a href="#s9">Control de acceso con QR</a></li>
+        <li><a href="#s12">Portal del paciente y paquetes</a></li>
         <li><a href="#s10">Migrar pacientes desde otro sistema</a></li>
         <li><a href="#s11">Roles y solución de problemas</a></li>
       </ol>
     </div>
 
     <h2 id="s1"><span class="num">1.</span>Activar el módulo y requisitos</h2>
-    <p>Solo el <b>dueño/administrador</b> lo activa desde <span class="path">Suscripción</span>, en la tarjeta <b>“ALGORA CLÍNICA · Salud”</b> con <b>“Activar · 7 días gratis”</b> (por defecto $599/mes). Hay planes empaquetados: <b>“ALGORA POS + Clínica”</b> y <b>“ALGORA Suite Clínica”</b>. Una vez activo aparece la sección <b>“Clínica”</b> con <b>Expedientes</b>, <b>Mi desempeño</b> (médico) y <b>Métricas</b> (dueño/encargado).</p>
+    <p>Solo el <b>dueño/administrador</b> lo activa desde <span class="path">Suscripción</span>, en la tarjeta <b>“ALGORA CLÍNICA · Salud”</b> con <b>“Activar · 7 días gratis”</b> (por defecto $599/mes). Hay planes empaquetados: <b>“ALGORA POS + Clínica”</b> y <b>“ALGORA Suite Clínica”</b>. Una vez activo aparece la sección <b>“Clínica”</b> con <b>Expedientes</b>, <b>Mi desempeño</b> (solo el rol Médico) y <b>Métricas</b> (dueño/encargado). <b>Control de acceso</b> y <b>Anunciar visita</b> están en la sección <b>“Acceso”</b>. Si alguien que no es el dueño entra a Expedientes sin el módulo activo, verá que debe pedirle al dueño que lo active.</p>
     <div class="box req"><div class="t">Requisitos NOM-004</div><p>El rol <b>Médico</b> exige <b>cédula profesional</b> (se captura en Equipo y sale impresa en las notas). Cada nota debe llevar motivo, exploración, diagnóstico, plan y firma; las notas no se pueden borrar.</p></div>
 
     <h2 id="s2"><span class="num">2.</span>Pantallas principales</h2>
     <ul>
-      <li><b>Expedientes</b>: buscador “Buscar paciente por nombre o teléfono”, <b>“+ Nuevo paciente”</b> y, al elegir uno, su expediente (Perfil clínico, Mediciones, Fichas, Nueva nota SOAP, Historial y Adjuntos).</li>
+      <li><b>Expedientes</b>: buscador “Buscar por nombre, teléfono o No. de expediente”, <b>“+ Nuevo paciente”</b> y, al elegir uno, su expediente en este orden: Perfil clínico, Mediciones y mejoría, <b>Recetas médicas</b>, <b>Tratamientos</b>, Fichas clínicas, Nueva nota de evolución (SOAP), Historial de evolución y Adjuntos.</li>
       <li><b>Mi desempeño</b> (médico): sus propios números (citas, completadas, pacientes, retención, NPS…).</li>
       <li><b>Métricas</b> (dueño/encargado): “Métricas por médico”, paquetes y satisfacción, con <b>“Exportar CSV”</b>.</li>
       <li><b>Control de acceso</b> (recepción/guardia): citas del día y escáner de QR.</li>
@@ -50,27 +51,43 @@
     <div class="steps">
       <div class="s"><h4>Busca</h4><p>En <b>Expedientes</b> escribe nombre o teléfono. Los pacientes son los clientes del negocio.</p></div>
       <div class="s"><h4>Nuevo paciente</h4><p><b>“+ Nuevo paciente”</b> → Nombre completo, Teléfono, Correo (opcional) → <b>“Registrar y abrir expediente”</b>.</p></div>
+      <div class="s"><h4>Consentimiento firmado</h4><p>Se abre el <b>“Consentimiento del paciente”</b>: el paciente firma en la pantalla (<b>“Limpiar firma”</b> si se equivoca) y toca <b>“Acepto y firmo”</b>. Después se crea su expediente con su número.</p></div>
     </div>
 
     <h2 id="s4"><span class="num">4.</span>Antecedentes (perfil clínico)</h2>
-    <p>En la sección <b>“Perfil clínico”</b> captura tipo de sangre, aseguradora, alergias, padecimientos crónicos, medicamentos, antecedentes heredofamiliares y personales, y contacto de emergencia. Pulsa <b>“Guardar”</b>.</p>
+    <p>En la sección <b>“Perfil clínico”</b> captura los datos de identificación (No. de expediente, que se asigna solo; fecha de nacimiento con edad calculada; sexo; CURP; estado civil; ocupación; domicilio; teléfono de emergencia) y los antecedentes: tipo de sangre, aseguradora, alergias, padecimientos crónicos, medicamentos, antecedentes heredofamiliares y personales. Pulsa <b>“Guardar”</b>.</p>
 
     <h2 id="s5"><span class="num">5.</span>Nota de evolución SOAP y firma</h2>
     <div class="steps">
       <div class="s"><h4>Abre “Nueva nota de evolución (SOAP)”</h4><p>Puedes consultar la <b>“Guía NOM-004-SSA3-2012”</b>.</p></div>
-      <div class="s"><h4>Llena la nota</h4><p><b>Subjetivo</b> (lo que refiere), <b>Objetivo</b> (exploración), <b>Análisis/diagnóstico</b>, <b>Plan/tratamiento</b> y <b>Diagnóstico</b> (resumen).</p></div>
+      <div class="s"><h4>Llena la nota</h4><p><b>Signos vitales y somatometría</b> (T/A, FC, FR, temperatura, SpO₂, peso, talla, glucosa; el IMC se calcula solo), <b>Subjetivo</b> (lo que refiere), <b>Objetivo</b> (exploración), <b>Análisis/diagnóstico</b>, <b>Plan/tratamiento</b>, <b>Pronóstico</b> y <b>Diagnóstico</b> (resumen).</p></div>
       <div class="s"><h4>Agrega la nota</h4><p><b>“Agregar nota”</b>. Si falta diagnóstico o plan, avisa “Nota incompleta según NOM-004” con opciones <b>“Guardar así”</b> / <b>“Completar”</b>.</p></div>
     </div>
     <div class="box tip"><div class="t">Firma automática</div><p>La nota queda con fecha, hora, nombre del médico y su cédula. Es de solo agregar: no se edita ni se borra; una corrección se hace con una nota nueva.</p></div>
 
-    <h2 id="s6"><span class="num">6.</span>Imprimir receta / documento</h2>
+    <h2 id="s6"><span class="num">6.</span>Imprimir notas, recetas y tratamientos</h2>
+    <h3>Imprimir una nota</h3>
     <p>En <b>“Historial de evolución”</b>, cada nota tiene <b>“Imprimir”</b>: genera un documento conforme a NOM-004 (datos del establecimiento, identificación del paciente, fecha/hora, contenido SOAP, línea de firma con cédula y pie de conservación por 5 años). Permite las ventanas emergentes para imprimir.</p>
+    <h3>Recetas médicas</h3>
+    <div class="steps">
+      <div class="s"><h4>Nueva receta</h4><p>En el expediente, <b>“Recetas médicas” → “+ Nueva receta”</b>.</p></div>
+      <div class="s"><h4>Medicamentos</h4><p>Por cada uno: Medicamento (se autocompleta), Presentación, Dosis, Vía, Frecuencia, Duración, Cantidad e instrucciones. <b>“+ Agregar otro medicamento”</b> para más. Opcional: diagnóstico e indicaciones generales.</p></div>
+      <div class="s"><h4>Guarda e imprime</h4><p><b>“Guardar e imprimir receta”</b>: sale con folio, firma y cédula del médico. Con <b>“Enviar”</b> se manda al paciente por WhatsApp (o se copia el enlace). La receta también aparece en su portal.</p></div>
+    </div>
+    <h3>Tratamientos</h3>
+    <p><b>“+ Nuevo tratamiento”</b>: nombre, tipo, diagnóstico, objetivo, sesiones del plan, inicio y costo opcional → <b>“Crear tratamiento”</b>. En cada visita, <b>“Agregar sesión”</b> con fecha, procedimiento, evolución, próxima cita y <b>fotos de antes y después</b>. Estados: Activo, Pausado, Concluido y Abandonado. El cobro se hace por sesión en el Punto de venta, o con un paquete desde la Agenda. Si un tratamiento activo pasa 14 días sin sesión, te llega el aviso “Tratamiento sin actividad” y al paciente un recordatorio para retomarlo.</p>
+    <h3>Adjuntos</h3>
+    <p>En <b>“Adjuntos”</b> → <b>“Agregar imagen”</b> (estudios, fotos). Con <b>“Compartir”</b> el paciente lo ve en su portal (“Compartido”).</p>
 
     <h2 id="s7"><span class="num">7.</span>Fichas y plantillas</h2>
-    <p>En <b>“Fichas clínicas”</b>, el dueño/encargado abre <b>“Plantillas”</b> para instalar prediseñadas o <b>“Crear ficha personalizada”</b> (nombre, especialidad y campos de varios tipos: texto, número, opción única, casillas, sí/no, fecha, escala 0–10). Para llenar una ficha, pulsa su botón, complétala y <b>“Guardar ficha”</b>. Las fichas llenas también se imprimen.</p>
+    <p>En <b>“Fichas clínicas”</b>, el dueño/encargado abre <b>“Plantillas de ficha clínica”</b> para instalar <b>“Plantillas prediseñadas”</b> o <b>“Crear ficha personalizada”</b> (nombre, especialidad y campos con <b>“+ Agregar campo”</b>: texto, texto largo, número, opción única, casillas, sí/no, fecha, escala 0–10) y <b>“Guardar plantilla”</b>. Para llenar una ficha, pulsa su botón, complétala y <b>“Guardar ficha”</b>. Las fichas llenas también se imprimen.</p>
 
     <h2 id="s8"><span class="num">8.</span>Mediciones y métricas</h2>
-    <p>En el expediente, <b>“Mediciones y mejoría”</b>: el dueño/encargado crea <b>Indicadores</b> (nombre, unidad, si “más alto = mejor” o “más bajo = mejor”); cualquiera captura el <b>“Valor de hoy”</b> y pulsa <b>“Registrar”</b>. Se muestra la gráfica y la etiqueta Mejoría / Retroceso / Sin cambio. El médico ve <b>“Mi desempeño”</b> y el dueño/encargado <b>“Métricas”</b>.</p>
+    <p>En el expediente, <b>“Mediciones y mejoría”</b>: el dueño/encargado crea <b>Indicadores</b> (nombre, unidad, si “más alto = mejor” o “más bajo = mejor”); cualquiera captura el <b>“Valor de hoy”</b> y pulsa <b>“Registrar”</b>. Se muestra la gráfica y la etiqueta Mejoría / Retroceso / Sin cambio.</p>
+    <ul>
+      <li><b>Métricas</b> (dueño/encargado; 30 días, 90 días o 12 meses): <b>por médico</b> (citas, completadas, canceladas, pacientes, recurrentes, retención, ingresos y ticket promedio), <b>paquetes</b> en riesgo y <b>satisfacción</b> (NPS, trato, servicio y comentarios), con <b>“Exportar CSV”</b>.</li>
+      <li><b>Mi desempeño</b> (médico): sus citas, pacientes, retención, ingresos atribuidos y su NPS.</li>
+    </ul>
     <h3>Encuesta de satisfacción y reseñas en Google Maps</h3>
     <p>Después de cada consulta el paciente responde una encuesta corta: <b>¿qué tan probable es que nos recomiende?</b> (0 a 10), <b>trato</b> y <b>servicio</b> con estrellas, y un comentario. Si le fue bien, le invitamos con un botón grande a dejar su reseña en <b>Google Maps</b>; si le fue mal, elige qué mejorar (atención del médico, tiempo de espera, recepción, instalaciones, precio), puede pedir que lo contacten y al dueño le llega una alerta. La encuesta le recuerda no escribir información médica personal.</p>
     <div class="steps">
@@ -83,12 +100,17 @@
     <h2 id="s9"><span class="num">9.</span>Control de acceso con QR</h2>
     <div class="box warn"><div class="t">Solo con recepción o guardia</div><p>El QR de la cita solo se genera si hay al menos un empleado activo con rol <b>Guardia</b> o <b>Recepción</b>. Se envía al paciente por correo y/o WhatsApp.</p></div>
     <div class="steps">
-      <div class="s"><h4>El paciente muestra su QR</h4><p>Recibió el enlace del pase por correo; en él aparece el código QR con los datos de su cita.</p></div>
+      <div class="s"><h4>El paciente muestra su QR</h4><p>Recibió el enlace del pase por correo y WhatsApp; en él aparece el código QR con los datos de su cita.</p></div>
       <div class="s"><h4>Recepción escanea</h4><p>En <b>Control de acceso</b> → <b>“Escanear código QR”</b>. Resultado: “Acceso válido. Llegada registrada.” (o avisos de ya registrado / cancelada / no es de hoy).</p></div>
       <div class="s"><h4>Se avisa al médico</h4><p>El médico asignado recibe la notificación <b>“Paciente en recepción”</b>. También se puede marcar con <b>“Confirmar llegada”</b> sin escanear.</p></div>
     </div>
 
-    <h2 id="s10"><span class="num">10.</span>Migrar pacientes desde otro sistema (Klinik)</h2>
+    <h2 id="s12"><span class="num">10.</span>Portal del paciente y paquetes</h2>
+    <p>Tus pacientes entran a <span class="path">algorapos.com.mx/gym</span> con el <b>código del negocio</b> y luego su <b>número de expediente</b> y <b>teléfono</b>. Ahí pueden <b>agendar una nueva cita</b> (con anticipo en línea si tienes Stripe), ver <b>Mis próximas citas</b>, <b>Mi tratamiento</b>, <b>Mi progreso</b> y <b>Mis recetas</b>, y los documentos que les compartiste. Si activas <b>“Cancelar/reprogramar en línea”</b> (Tienda Online → Configuración de tienda) también pueden cambiar o cancelar sus citas. Ver el <a href="portal-clientes.html">manual de Portales</a>.</p>
+    <p><b>Paquetes:</b> vende paquetes de sesiones desde la pestaña Paquetes de la Agenda y dales seguimiento a los pacientes “Por agendar” (ver <a href="agenda-citas.html">manual de Agenda</a>).</p>
+    <p><b>Aura</b> (plan completo) puede, con tu confirmación, agregar notas SOAP, llenar fichas y actualizar el perfil clínico, firmadas con el nombre y cédula del médico.</p>
+
+    <h2 id="s10"><span class="num">11.</span>Migrar pacientes desde otro sistema (Klinik)</h2>
     <p>En el panel de administración (ALGORA ADMIN), bloque <b>“Importar de Klinik (clínica)”</b>:</p>
     <div class="steps">
       <div class="s"><h4>Elige el negocio destino</h4><p>La Clínica debe estar activa en ese negocio.</p></div>
@@ -97,11 +119,11 @@
       <div class="s"><h4>Revisa el reporte</h4><p>Cada tipo queda como <b>lote reversible</b> con su botón <b>“Revertir”</b>.</p></div>
     </div>
 
-    <h2 id="s11"><span class="num">11.</span>Roles y solución de problemas</h2>
+    <h2 id="s11"><span class="num">12.</span>Roles y solución de problemas</h2>
     <table>
       <tr><th>Rol</th><th>Qué ve / puede</th></tr>
-      <tr><td><b>Médico</b></td><td>Su agenda, Expedientes (pacientes, notas, fichas, mediciones, imprimir) y Mi desempeño. Requiere cédula.</td></tr>
-      <tr><td><b>Recepción</b></td><td>Control de acceso (citas del día + escáner). Su presencia activa el QR.</td></tr>
+      <tr><td><b>Médico</b></td><td>Expedientes (pacientes, notas, recetas, tratamientos, fichas, mediciones), Agenda (actúa solo en sus citas), Cotizaciones, Clientes, Tareas, Anunciar visita y Mi desempeño. Requiere cédula.</td></tr>
+      <tr><td><b>Recepción</b></td><td>Agenda (todas las citas), Cotizaciones, Clientes, Control de acceso, Tareas y Anunciar visita. No ve expedientes. Su presencia activa el QR.</td></tr>
       <tr><td><b>Guardia</b></td><td>Solo Control de acceso.</td></tr>
       <tr><td><b>Encargado</b></td><td>Plantillas, indicadores y Métricas.</td></tr>
       <tr><td><b>Dueño / Admin</b></td><td>Todo, incluida la activación del add-on y la migración desde Klinik.</td></tr>

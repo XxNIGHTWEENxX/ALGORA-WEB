@@ -34,7 +34,7 @@
     </div>
 
     <h2 id="s1"><span class="num">1.</span>Activar el módulo</h2>
-    <p>Add-on (por defecto <b>$549/mes, 7 días gratis</b>). Solo el <b>dueño/administrador</b> lo activa (paywall <b>“Módulo Hotel”</b> o Mi suscripción). La sección <b>“Hotel”</b> con la entrada <b>“Habitaciones”</b> está siempre visible; si no está activo, al entrar se muestra la activación.</p>
+    <p>Add-on (por defecto <b>$549/mes, 7 días gratis</b>). Solo el <b>dueño/administrador</b> lo activa (paywall <b>“Módulo Hotel”</b> o Mi suscripción). Una vez activo (o en prueba) aparece la sección <b>“Hotel”</b> con <b>“Habitaciones”</b> en el menú.</p>
 
     <h2 id="s2"><span class="num">2.</span>Pantallas principales</h2>
     <ul>
@@ -47,43 +47,43 @@
     <h2 id="s3"><span class="num">3.</span>Tipos de habitación y tarifas</h2>
     <div class="steps">
       <div class="s"><h4>Habitaciones → “Tipos”</h4><p><b>“+ Nuevo tipo”</b>: Nombre (ej. Doble Estándar), Capacidad y una o más <b>Tarifas</b> (Nombre, Horas —0 = por noche— y Precio).</p></div>
-      <div class="s"><h4>Extras</h4><p>Opcional: Tarifa por persona extra, notas y foto (se muestra en el booking).</p></div>
-      <div class="s"><h4>Guarda</h4><p><b>“Guardar tipo”</b>. Al editar un tipo puedes aplicar las tarifas a las habitaciones existentes de ese tipo.</p></div>
+      <div class="s"><h4>Tarifas rápidas y extras</h4><p>Con <b>“+ Agregar tarifa”</b> y los atajos “1 hora”, “3 horas” y “1 noche”. Opcional: tarifa por persona extra, notas y foto (<b>“Subir foto”</b>, se muestra en el booking).</p></div>
+      <div class="s"><h4>Guarda</h4><p><b>“Guardar tipo”</b>. Al editar un tipo, las tarifas se aplican a las habitaciones de ese tipo (“Tarifas aplicadas a N habitaciones”).</p></div>
     </div>
 
     <h2 id="s4"><span class="num">4.</span>Generar y dar de alta habitaciones</h2>
     <p><b>Generar en lote:</b> en Tipos, botón <b>“Generar”</b> → Piso, Zona, Prefijo, Número inicial y cuántas. <b>“Generar habitaciones”</b> las crea con la tarifa ya puesta.</p>
-    <p><b>Alta manual:</b> <b>“+ Nueva habitación”</b> → Número/nombre (obligatorio), Piso, Zona, Tipo, Capacidad, Tarifas (Hora / 3 horas / Noche), persona extra, Estado y notas → <b>“Crear habitación”</b>.</p>
+    <p><b>Alta manual:</b> <b>“+ Nueva habitación”</b> → Número/nombre (obligatorio), Piso, Zona, <b>Tipo</b> (precarga tarifas y capacidad) o “Sin tipo (tarifas manuales)”, Capacidad, Tarifas (llena las que uses), persona extra, Estado y notas → <b>“Crear habitación”</b>.</p>
 
     <figure class="shot"><img loading="lazy" src="/capturas/hotel-habitaciones.webp" alt="Mapa de habitaciones del hotel"><figcaption><b>Habitaciones.</b> Estado y ocupación de cada habitación de un vistazo; toca una para check-in, cargar consumos o check-out.</figcaption></figure>
 
     <h2 id="s5"><span class="num">5.</span>Mapa de ocupación</h2>
-    <p>El mapa se agrupa por piso (pestañas). Cada tarjeta tiene color según estado, muestra la tarifa o “Cuenta: $…”, el tiempo de ocupación y avisos “Por salir” / “Salida vencida”. Con <b>“Editar plano”</b> reacomodas las habitaciones arrastrándolas y pulsas <b>“Listo”</b>.</p>
+    <p>El mapa se agrupa por piso (pestañas). Cada tarjeta tiene color según estado, muestra la tarifa o “Cuenta: $…”, el tiempo de ocupación y avisos “Por salir” / “Salida vencida”. Con <b>“Editar plano”</b> arrastras para mover, usas la esquina para cambiar el tamaño, agregas pisos (<b>“+ Piso”</b>), habitaciones y zonas, y pulsas <b>“Listo”</b>. Para cambiar el estado de una habitación (Libre, Ocupada, Limpieza, Mantenimiento), tócala y elige en <b>“Estado”</b>. Una ocupada muestra <b>“Ver cuenta · $X”</b>.</p>
 
     <h2 id="s6"><span class="num">6.</span>Check-in: abrir cuenta y cargar consumos</h2>
-    <div class="box tip"><div class="t">El check-in es abrir la cuenta</div><p>No hay un botón separado de “Check-in”: se hace al abrir la cuenta y poner la habitación en <b>Ocupada</b>.</p></div>
+    <div class="box tip"><div class="t">El check-in es abrir la cuenta</div><p>No hay un botón separado de “Check-in”: al abrir la cuenta, la habitación pasa sola a <b>Ocupada</b> y arranca el cronómetro.</p></div>
     <div class="steps">
-      <div class="s"><h4>Abre la cuenta</h4><p>Toca la habitación → <b>“Abrir cuenta”</b>. Escribe huésped (opcional) y número de huéspedes.</p></div>
-      <div class="s"><h4>Carga consumos</h4><p>Con las pestañas <b>Habitación</b> (Hora / 3 horas / Noche), <b>Persona</b> (extra), <b>Producto</b> (del catálogo) y <b>Otro</b> (concepto libre). Al cargar noches se calcula la <b>Salida</b>.</p></div>
-      <div class="s"><h4>Marca Ocupada</h4><p>Cambia el estado de la habitación a <b>Ocupada</b> (arranca el cronómetro).</p></div>
+      <div class="s"><h4>Abre la cuenta</h4><p>Toca la habitación → <b>“Abrir cuenta”</b>. Escribe el huésped, su <b>WhatsApp</b> (para mandarle la encuesta de su estancia al salir) y el número de huéspedes.</p></div>
+      <div class="s"><h4>Carga consumos</h4><p>Con las pestañas <b>Habitación</b> (tarifas), <b>Persona</b> (personas extra y tarifa por cada una), <b>Producto</b> (del catálogo) y <b>Otro</b> (concepto y monto, ej. Lavandería). Cada cargo se puede <b>“Quitar”</b>.</p></div>
+      <div class="s"><h4>Revisa la salida</h4><p>Al cargar noches se calcula la <b>Salida</b> (abajo en la cuenta, junto al Check-in). Puedes cambiarla a mano. Te llegan avisos de <b>“Salida próxima”</b> y <b>“Check-out vencido”</b>, y el mapa marca “Por salir” y “Salida vencida”.</p></div>
     </div>
 
     <h2 id="s7"><span class="num">7.</span>Cobrar</h2>
-    <p>En la cuenta, <b>“Cobrar $…”</b> → método (Efectivo, Tarjeta o QR/Transfer) → <b>“Confirmar cobro”</b>. Genera una venta en el POS. <b>Cobrar no libera la habitación</b>: sigue ocupada hasta el check-out. Admite cobrar por partes.</p>
+    <p>En la cuenta, <b>“Cobrar $…”</b> → método (Efectivo, Tarjeta o QR/Transfer) → <b>“Confirmar cobro”</b>. Genera una venta en el POS. <b>Cobrar no libera la habitación</b>: sigue ocupada hasta el check-out. Siempre se cobra el saldo pendiente completo; si después se cargan más consumos, se vuelve a cobrar solo lo nuevo (“pagado $X”, “Por cobrar: $Y”).</p>
 
     <h2 id="s8"><span class="num">8.</span>Check-out</h2>
-    <p>En la cuenta, botón <b>“Check-out”</b>. Si queda saldo, pide confirmar. Al confirmar, la habitación pasa a <b>Limpieza</b> y la cuenta se cierra. También existe <b>“Cancelar”</b> la cuenta (descarta cargos y libera la habitación).</p>
-    <div class="box tip"><div class="t">Encuesta de la estancia</div><p>Con las reseñas activas y tu WhatsApp conectado, al hacer el check-out el huésped recibe <b>una</b> encuesta de su estancia (por defecto 2 horas después): si le fue bien lo invitamos a tu ficha de <b>Google Maps</b>; si no, te llega una alerta como “Habitación 204: 2 estrellas”. Captura el teléfono del huésped en la cuenta para que le llegue. Configúrala en <span class="path">Operatividad → Reseñas</span> (ver <a href="resenas.html">manual de Reseñas</a>).</p></div>
+    <p>En la cuenta, botón <b>“Check-out”</b>. Si queda saldo, pide confirmar. Al confirmar, la habitación pasa a <b>Limpieza</b>, la cuenta se cierra y al equipo le llega el aviso <b>“Limpieza: Hab N”</b>. Cuando esté lista, tócala y cambia su Estado a <b>Libre</b>. También existe <b>“Cancelar”</b> la cuenta (descarta todos los cargos y libera la habitación).</p>
+    <div class="box tip"><div class="t">Encuesta de la estancia</div><p>Con las reseñas activas y tu WhatsApp conectado, al hacer el check-out el huésped recibe <b>una</b> encuesta de su estancia (por defecto 2 horas después): si le fue bien lo invitamos a tu ficha de <b>Google Maps</b>; si no, te llega una alerta como “Habitación 204: 2 estrellas”. Para que le llegue, captura su WhatsApp al abrir la cuenta (o llegará solo si reservó en línea con su teléfono). No se manda si cancelas la cuenta. Configúrala en <span class="path">Operatividad → Reseñas</span> (ver <a href="resenas.html">manual de Reseñas</a>).</p></div>
 
     <h2 id="s9"><span class="num">9.</span>Reservas en línea con anticipo</h2>
-    <p>Se configuran en el botón <b>“Check-out”</b> (modal <b>“Check-out y reservas online”</b>): activa <b>“Reservas online (booking)”</b>, define hora de entrada, mínimo de noches y, si quieres, <b>“Pedir anticipo”</b> (monto fijo o % del total).</p>
+    <p>Se configuran en el botón <b>“Check-out”</b> (modal <b>“Check-out y reservas online”</b>): define la <b>“Hora de salida (estancias por noche)”</b> y <b>“Avisar cuántos minutos antes de la salida”</b>; activa <b>“Reservas online (booking)”</b>, la hora de entrada, el mínimo de noches y, si quieres, <b>“Pedir anticipo”</b> (monto fijo o porcentaje del total).</p>
     <div class="box warn"><div class="t">El anticipo requiere Stripe</div><p>El cobro del anticipo requiere Stripe conectado (Tienda en línea). Sin Stripe, la reserva llega sin cobro.</p></div>
-    <p>En la página pública <b>“Reserva tu habitación”</b>, el cliente elige fechas, tipo, tarifa, huéspedes y extras, ve el total y el <b>“Anticipo a pagar ahora”</b>. Con anticipo paga por Stripe; sin anticipo, <b>“Reservar”</b> y llega una notificación al negocio.</p>
+    <p>En tu tienda en línea aparece <b>“Reservar habitación”</b>. El cliente elige fechas (o fecha y hora de llegada en tarifas por horas), tipo, tarifa, extras y sus datos (nombre, teléfono, correo, peticiones especiales), ve el total y el anticipo. Con anticipo paga por Stripe (<b>“Pagar anticipo $X”</b>; si no paga en 30 minutos la reserva se libera); sin anticipo toca <b>“Reservar”</b>. Te llega una notificación y la reserva queda en la Agenda. Cuando llegue el huésped, abre su cuenta con “Abrir cuenta”.</p>
 
     <h2 id="s10"><span class="num">10.</span>Roles y solución de problemas</h2>
     <table>
       <tr><th>Rol</th><th>Qué puede</th></tr>
-      <tr><td><b>Recepción / empleado</b></td><td>Ver el mapa, abrir cuenta, cargar consumos, cobrar y hacer check-in/out.</td></tr>
+      <tr><td><b>Empleado / cajero</b></td><td>Ver el mapa, abrir cuenta, cargar consumos, cobrar y hacer check-in/out. (El rol Recepción es para Agenda y Control de acceso; para tu recepción del hotel usa el rol Empleado.)</td></tr>
       <tr><td><b>Encargado</b></td><td>Además crear/editar habitaciones, Tipos, editar plano y ajustes de booking.</td></tr>
       <tr><td><b>Dueño / Admin</b></td><td>Todo, incluida la activación del add-on.</td></tr>
     </table>
