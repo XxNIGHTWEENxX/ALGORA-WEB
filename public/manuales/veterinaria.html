@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALGORA · Manual — Veterinaria</title>
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <img class="brand-logo" src="/ALGORA_Logo_blanco.png" alt="ALGORA">
+    <div class="k">Manual de usuario</div>
+    <h1>Módulo <span class="gold">Veterinaria</span></h1>
+    <p>Expediente por mascota, consultas SOAP, vacunas y desparasitaciones con recordatorios por WhatsApp, cartilla en PDF, recetas veterinarias, estética y pensión, y portal del tutor.</p>
+    <div class="meta">Serie de manuales ALGORA · Módulo Veterinaria · Para dueño, médico veterinario y recepción</div>
+    <a class="back" href="index.html">← Ver todos los manuales</a>
+  </div>
+  <main>
+    <div class="toc">
+      <h4>Contenido</h4>
+      <ol>
+        <li><a href="#s1">Activar el módulo</a></li>
+        <li><a href="#s2">Pantallas principales</a></li>
+        <li><a href="#s3">Registrar una mascota y su tutor</a></li>
+        <li><a href="#s4">Consulta (nota SOAP y signos vitales)</a></li>
+        <li><a href="#s5">Vacunas y desparasitaciones</a></li>
+        <li><a href="#s6">Cartilla de vacunación (PDF)</a></li>
+        <li><a href="#s7">Recetas, tratamientos, indicadores y fichas</a></li>
+        <li><a href="#s8">Estética y pensión</a></li>
+        <li><a href="#s9">Recordatorios por WhatsApp</a></li>
+        <li><a href="#s10">Portal del tutor</a></li>
+        <li><a href="#s11">Roles y solución de problemas</a></li>
+      </ol>
+    </div>
+
+    <h2 id="s1"><span class="num">1.</span>Activar el módulo</h2>
+    <p>Solo el <b>dueño/administrador</b> lo activa desde <span class="path">Suscripción</span>, en la tarjeta <b>“ALGORA VETERINARIA”</b> con <b>“Activar · 7 días gratis”</b> ($599/mes). También existen los planes <b>“ALGORA POS + Veterinaria”</b> y <b>“ALGORA Suite Veterinaria”</b> (POS + Tienda Online + Agenda + Veterinaria). Al activarse aparece en el menú la sección <b>“Veterinaria”</b> con <b>Expedientes</b> y <b>Estética y pensión</b>.</p>
+    <div class="box req"><div class="t">Antes de empezar</div><p>Para los recordatorios y avisos automáticos conecta el WhatsApp del negocio (ver manual de WhatsApp). Sin WhatsApp conectado todo funciona igual y el sistema te ofrece mandar el mensaje manualmente.</p></div>
+
+    <h2 id="s2"><span class="num">2.</span>Pantallas principales</h2>
+    <ul>
+      <li><b>Expedientes</b>: buscador por nombre de la mascota, tutor, teléfono o número de expediente (<b>MAS-000123</b>), botón <b>“+ Nueva mascota”</b> y el expediente con pestañas: <b>Consulta</b>, <b>Vacunas</b>, <b>Desparasitación</b>, <b>Recetas y tratamientos</b>, <b>Indicadores y fichas</b>, <b>Perfil</b> y <b>Archivos</b>.</li>
+      <li><b>Estética y pensión</b>: tablero del día con las columnas En espera, En proceso, Lista para recoger y Entregadas hoy.</li>
+    </ul>
+
+    <h2 id="s3"><span class="num">3.</span>Registrar una mascota y su tutor</h2>
+    <div class="steps">
+      <div class="s"><h4>Nueva mascota</h4><p>En <b>Expedientes</b> toca <b>“+ Nueva mascota”</b>. Escribe nombre y <b>teléfono del tutor</b> (es su llave para el portal y los recordatorios) y los datos de la mascota: nombre, especie, sexo, raza, fecha de nacimiento y peso.</p></div>
+      <div class="s"><h4>Expediente</h4><p>Toca <b>“Registrar y abrir expediente”</b>. La mascota recibe su número <b>MAS-</b> y el tutor queda como cliente del negocio. Si el teléfono ya existía, se usa el mismo tutor.</p></div>
+      <div class="s"><h4>Más mascotas del mismo tutor</h4><p>Con un expediente abierto usa <b>“+ Otra mascota de este tutor”</b>. Arriba del expediente verás a todas sus mascotas para cambiar entre ellas.</p></div>
+    </div>
+    <p>En la pestaña <b>Perfil</b> completas color o señas, esterilizado, microchip, alergias, padecimientos crónicos, alimentación y notas, y corriges los datos del tutor. Toca la foto para subir una imagen de la mascota. Si la mascota fallece, marca la casilla para que deje de recibir recordatorios.</p>
+
+    <h2 id="s4"><span class="num">4.</span>Consulta (nota SOAP y signos vitales)</h2>
+    <p>En la pestaña <b>Consulta</b> captura los signos vitales (<b>peso, temperatura, FC, FR, TLLC, mucosas, condición corporal e hidratación</b>) y la nota: <b>Subjetivo</b> (lo que refiere el tutor), <b>Objetivo</b> (exploración y hallazgos), <b>Análisis</b>, <b>Plan</b>, diagnóstico y pronóstico. Toca <b>“Agregar consulta”</b>.</p>
+    <div class="box"><div class="t">Importante</div><p>Las consultas quedan firmadas con fecha, hora y el nombre de quien las captura y <b>no se pueden borrar</b>; una corrección se hace con una consulta nueva. El peso capturado actualiza el peso de la mascota. Cada consulta del historial tiene <b>“Imprimir”</b>.</p></div>
+
+    <h2 id="s5"><span class="num">5.</span>Vacunas y desparasitaciones</h2>
+    <div class="steps">
+      <div class="s"><h4>Vacunas</h4><p>Elige la vacuna del catálogo de la especie (o escríbela), laboratorio y lote. La <b>próxima dosis</b> se calcula sola según la vacuna y la puedes cambiar.</p></div>
+      <div class="s"><h4>Desparasitación</h4><p>Elige el producto (interna, externa o ambas), dosis y peso. La próxima aplicación también se calcula sola.</p></div>
+      <div class="s"><h4>Pendientes</h4><p>Arriba del expediente aparecen las aplicaciones <b>Vencidas</b> (rojo) y <b>Próximas</b> (14 días o menos).</p></div>
+    </div>
+
+    <h2 id="s6"><span class="num">6.</span>Cartilla de vacunación (PDF)</h2>
+    <p>Botón <b>“Cartilla (imprimir / PDF)”</b> en el expediente: genera la cartilla con los datos del negocio, la mascota y su tutor, y las tablas de vacunas y desparasitaciones. En el cuadro de impresión elige <b>“Guardar como PDF”</b> para enviarla. El tutor también la descarga desde su portal.</p>
+
+    <h2 id="s7"><span class="num">7.</span>Recetas, tratamientos, indicadores y fichas</h2>
+    <ul>
+      <li><b>Recetas veterinarias</b>: muestra el peso de la mascota para calcular la dosis por kg. Al guardar se imprime y con <b>“Enviar”</b> se la mandas al tutor por WhatsApp.</li>
+      <li><b>Tratamientos</b>: planes con sesiones y seguimiento (por ejemplo rehabilitación o curaciones).</li>
+      <li><b>Indicadores</b>: gráficas de evolución (peso, glucosa, etc.) que defines como en Clínica.</li>
+      <li><b>Fichas</b>: formatos a la medida (por ejemplo pre-quirúrgico o consentimiento de cirugía).</li>
+      <li><b>Archivos</b>: radiografías, análisis o fotos. Los que marques como <b>“Compartir”</b> los ve el tutor en su portal.</li>
+    </ul>
+
+    <h2 id="s8"><span class="num">8.</span>Estética y pensión</h2>
+    <div class="steps">
+      <div class="s"><h4>Ingreso</h4><p>En <b>Estética y pensión</b> toca <b>“+ Ingreso”</b>, busca la mascota, elige Estética o Pensión, servicio, precio, salida estimada e indicaciones del tutor.</p></div>
+      <div class="s"><h4>Avance</h4><p>Mueve la tarjeta con <b>“Iniciar”</b> y <b>“Lista para recoger”</b>. Al marcarla lista avisamos al tutor por WhatsApp automáticamente.</p></div>
+      <div class="s"><h4>Entrega</h4><p>Cuando el tutor recoge, toca <b>“Entregar”</b>. El cobro se hace en el punto de venta como cualquier servicio.</p></div>
+    </div>
+
+    <h2 id="s9"><span class="num">9.</span>Recordatorios por WhatsApp</h2>
+    <p>Cada mañana ALGORA revisa las próximas dosis y manda al tutor un recordatorio <b>3 días antes</b> y <b>el mismo día</b>. Si después aplicas la siguiente dosis, la anterior deja de recordar. Si el negocio no tiene WhatsApp o el tutor no tiene teléfono, el día de la dosis llega una notificación interna para que recepción le llame.</p>
+
+    <h2 id="s10"><span class="num">10.</span>Portal del tutor</h2>
+    <p>El tutor entra en <b>algorapos.com.mx/veterinaria/&lt;tu-negocio&gt;</b> o en <b>/gym</b> con el código de tu negocio, usando su <b>teléfono</b> y el <b>número de expediente</b> de cualquiera de sus mascotas. Ve a todas sus mascotas: cartilla descargable, peso, consultas (diagnóstico e indicaciones), recetas, tratamientos, archivos compartidos y si está en estética o pensión. También agenda citas en línea. Desde el expediente, <b>“Enviar acceso al portal”</b> le manda el enlace por WhatsApp.</p>
+
+    <h2 id="s11"><span class="num">11.</span>Roles y solución de problemas</h2>
+    <table>
+      <tr><th>Rol</th><th>Qué ve</th></tr>
+      <tr><td>Dueño / encargado</td><td>Todo el módulo y Suscripción.</td></tr>
+      <tr><td>Médico</td><td>Agenda, Expedientes, Estética y pensión, clientes y tareas.</td></tr>
+      <tr><td>Recepción</td><td>Agenda, Estética y pensión, clientes y tareas.</td></tr>
+    </table>
+    <table>
+      <tr><th>Aviso</th><th>Qué significa</th></tr>
+      <tr><td>“El modulo Veterinaria no esta activo”.</td><td>El dueño debe activarlo desde Suscripción.</td></tr>
+      <tr><td>“Agrega el teléfono del tutor”.</td><td>El teléfono es obligatorio: es la llave del portal y de los recordatorios.</td></tr>
+      <tr><td>El tutor no puede entrar al portal.</td><td>Revisa que el teléfono del Perfil coincida y que use el número MAS- de una de sus mascotas.</td></tr>
+      <tr><td>“Sin aviso automático” en Lista para recoger.</td><td>No hay WhatsApp conectado; usa el botón “WhatsApp” de la tarjeta.</td></tr>
+    </table>
+  </main>
+  <footer>
+    <div><b>ALGORA TECH S.A.S. de C.V.</b> · Manual — Veterinaria<br>Soporte: WhatsApp 294 111 4401 · ventas.cliente@algora.com.mx</div>
+    <div>algora.com.mx · Hecho en México</div>
+  <div style="margin-top:6px;font-size:12px"><a href="https://www.algorapos.com.mx/privacidad" target="_blank" rel="noopener">Aviso de privacidad</a> · <a href="https://www.algorapos.com.mx/terminos" target="_blank" rel="noopener">Términos</a> · <a href="https://www.algorapos.com.mx/cookies" target="_blank" rel="noopener">Cookies</a></div>
+</footer>
+</div>
+<script src="/consent.js" defer></script>
+</body>
+</html>
