@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALGORA · Manual — Eventos y boletos</title>
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <img class="brand-logo" src="/ALGORA_Logo_blanco.png" alt="ALGORA">
+    <div class="k">Manual de usuario</div>
+    <h1>Eventos y <span class="gold">boletos</span></h1>
+    <p>Crea eventos, vende boletos en tu página y en taquilla, controla el acceso con QR, el aforo, el consumo incluido, las mesas VIP, la lista de invitados y a tus promotores.</p>
+    <div class="meta">Serie de manuales ALGORA · Incluido en ALGORA POS + Restaurante · Para dueño, encargado, taquilla y puerta</div>
+    <a class="back" href="index.html">← Ver todos los manuales</a>
+  </div>
+  <main>
+    <div class="toc">
+      <h4>Contenido</h4>
+      <ol>
+        <li><a href="#s1">Requisitos</a></li>
+        <li><a href="#s2">Crear un evento</a></li>
+        <li><a href="#s3">Tipos de boleto, preventa y mesas VIP</a></li>
+        <li><a href="#s4">Publicar y vender en línea</a></li>
+        <li><a href="#s5">Lo que recibe el comprador</a></li>
+        <li><a href="#s6">Taquilla</a></li>
+        <li><a href="#s7">Acceso en la puerta</a></li>
+        <li><a href="#s8">Consumo incluido</a></li>
+        <li><a href="#s9">Invitados, cortesías, códigos y promotores</a></li>
+        <li><a href="#s10">Ventas, reembolsos y cancelación</a></li>
+        <li><a href="#s11">Preguntas frecuentes</a></li>
+      </ol>
+    </div>
+
+    <h2 id="s1"><span class="num">1.</span>Requisitos</h2>
+    <ul>
+      <li>Plan <b>ALGORA POS + Restaurante</b> (completo) o <b>Suite Restaurante</b>. Restaurante Lite no incluye eventos.</li>
+      <li>Para vender en línea: tener conectados los pagos de la tienda (<span class="path">Tienda en línea → Pagos</span>). Sin eso puedes vender en taquilla y dar cortesías.</li>
+      <li>Para mandar boletos y recordatorios por WhatsApp: el WhatsApp del negocio conectado. Siempre se envían también por correo.</li>
+    </ul>
+    <p>En el menú, dentro de <b>Restaurante</b>, aparecen <b>Eventos</b> y <b>Acceso a eventos</b>.</p>
+
+    <h2 id="s2"><span class="num">2.</span>Crear un evento</h2>
+    <div class="steps">
+      <div class="s"><h4>Nuevo evento</h4><p>En <b>Eventos</b> toca <b>“+ Nuevo evento”</b>: nombre, artista o invitado, póster vertical (4:5), lugar dentro del negocio, inicio y apertura de puertas.</p></div>
+      <div class="s"><h4>Aforo y reglas</h4><p>Aforo total en personas (protege de sobreventa aunque tengas varios tipos de boleto), edad mínima, fechas de apertura y cierre de venta, términos y política de reembolso.</p></div>
+      <div class="s"><h4>Boletos</h4><p>Al guardar se crea un boleto General; ajústalo en la pestaña <b>Boletos</b>.</p></div>
+    </div>
+
+    <h2 id="s3"><span class="num">3.</span>Tipos de boleto, preventa y mesas VIP</h2>
+    <ul>
+      <li><b>General / VIP</b>: precio, cupo, máximo por compra y descripción.</li>
+      <li><b>Mesa / reservado</b>: indica cuántas personas entran con un boleto (ej. 6) y el consumo mínimo. Un solo QR deja pasar al grupo.</li>
+      <li><b>Consumo incluido</b>: saldo en pesos que trae cada boleto para gastarlo en barra.</li>
+      <li><b>Preventa por lotes</b>: crea “Preventa” con su cupo y fecha de cierre y “General” que se vende después. Si marcas un tipo como <b>oculto</b>, solo se ve con un código de preventa.</li>
+      <li><b>Solo cortesías</b>: tipo que no se vende, solo se regala desde el POS.</li>
+    </ul>
+
+    <h2 id="s4"><span class="num">4.</span>Publicar y vender en línea</h2>
+    <p>Toca <b>“Publicar y vender”</b>. El evento aparece en tu página (<b>/store/tu-negocio/eventos</b>, o <b>tudominio.com/eventos</b> si tienes dominio propio) y en tu tienda sale una tarjeta de <b>Eventos</b>. Usa <b>“Copiar enlace de venta”</b> para compartirlo en redes: al pegarlo se ve el póster.</p>
+    <div class="box"><div class="t">Cargo por servicio</div><p>En línea el comprador paga un cargo por servicio de <b>5% por boleto (mínimo $10)</b>, desglosado antes de pagar. Tú recibes el precio completo del boleto; Stripe descuenta su comisión de procesamiento. En taquilla y cortesías no hay cargo.</p></div>
+    <p>Mientras el cliente paga, sus boletos quedan apartados unos minutos; si no paga, se liberan solos. Nunca se vende más del cupo.</p>
+
+    <h2 id="s5"><span class="num">5.</span>Lo que recibe el comprador</h2>
+    <p>Una página con <b>un QR por boleto</b>, que también le llega por correo y WhatsApp, con botón para <b>Apple Wallet</b> o <b>Google Wallet</b>. Si el boleto trae consumo, ve su saldo ahí. El día del evento recibe un recordatorio con la hora de puertas.</p>
+
+    <h2 id="s6"><span class="num">6.</span>Taquilla</h2>
+    <div class="steps">
+      <div class="s"><h4>Elige boletos</h4><p>En el evento, pestaña <b>Taquilla</b>: cantidades por tipo, nombre y WhatsApp (opcionales).</p></div>
+      <div class="s"><h4>Cobra</h4><p>Efectivo, tarjeta o transferencia. Es una venta normal: entra al <b>corte de caja</b>. Necesita una caja abierta en el equipo.</p></div>
+      <div class="s"><h4>Entrega</h4><p><b>“Imprimir boletos”</b> (un QR por boleto en la impresora de tickets) o <b>“Enviar por WhatsApp”</b>.</p></div>
+    </div>
+
+    <h2 id="s7"><span class="num">7.</span>Acceso en la puerta</h2>
+    <p>Abre <b>Acceso a eventos</b> en el celular o tableta de la puerta (lo pueden usar el guardia, la recepción o tu personal), elige el evento y toca <b>“Abrir escáner”</b>. El escáner se queda abierto: escanea un boleto tras otro.</p>
+    <table>
+      <tr><th>Pantalla</th><th>Qué significa</th></tr>
+      <tr><td><b>Verde</b> “Acceso permitido · Entran N”</td><td>Pasa el número de personas indicado.</td></tr>
+      <tr><td><b>Ámbar</b> “Este QR ya se usó”</td><td>Muestra a qué hora entró y quién lo escaneó. No dejes pasar: es una captura o un boleto compartido.</td></tr>
+      <tr><td><b>Rojo</b></td><td>Boleto cancelado o reembolsado, de otro evento, o QR falso.</td></tr>
+    </table>
+    <p>Arriba ves cuántos entraron, cuántos se esperan y los lugares libres. Con <b>“Buscar a mano”</b> encuentras por nombre, teléfono o folio (también la lista de invitados) y das acceso con un botón.</p>
+
+    <h2 id="s8"><span class="num">8.</span>Consumo incluido</h2>
+    <p>Al cobrar en el punto de venta toca <b>“+ Pagar con consumo de boleto de evento”</b> y escanea el QR del boleto. El saldo disponible se descuenta del total y lo demás se cobra normal. El saldo del boleto baja en ese momento (necesita internet).</p>
+
+    <h2 id="s9"><span class="num">9.</span>Invitados, cortesías, códigos y promotores</h2>
+    <ul>
+      <li><b>Lista de invitados</b>: nombres con acompañantes; entran por nombre en la puerta.</li>
+      <li><b>Cortesías con QR</b>: boletos sin costo que ocupan cupo; se mandan por WhatsApp.</li>
+      <li><b>Códigos</b>: porcentaje o monto por boleto, usos máximos, fecha límite, y opción de abrir boletos ocultos (preventa privada). Compártelos con el enlace <b>?code=CODIGO</b>.</li>
+      <li><b>Promotores (RP)</b>: cada uno tiene un código y su enlace (<b>?rp=CODIGO</b>). En la pestaña ves boletos vendidos, ingreso y comisión de cada promotor; con <b>“Enviar enlace”</b> se lo mandas por WhatsApp.</li>
+    </ul>
+
+    <h2 id="s10"><span class="num">10.</span>Ventas, reembolsos y cancelación</h2>
+    <ul>
+      <li><b>Ventas</b>: busca compras, <b>reenvía</b> boletos, <b>reembolsa</b> (en línea regresa a la tarjeta, incluido el cargo por servicio; en taquilla devuelves en caja) y <b>exporta CSV</b> de asistentes.</li>
+      <li><b>Resumen</b>: personas vendidas contra aforo, entradas y porcentaje de asistencia, ingreso por boletos, consumo incluido canjeado y venta por tipo.</li>
+      <li><b>Cancelar evento</b>: reembolsa automáticamente todas las compras en línea y avisa a los compradores por WhatsApp.</li>
+    </ul>
+
+    <h2 id="s11"><span class="num">11.</span>Preguntas frecuentes</h2>
+    <table>
+      <tr><th>Pregunta</th><th>Respuesta</th></tr>
+      <tr><td>¿Y si dos personas llegan con el mismo QR?</td><td>Solo entra la primera; a la segunda le sale “ya se usó” con la hora.</td></tr>
+      <tr><td>¿Puedo cambiar el cupo después de vender?</td><td>Sí, pero no por debajo de lo ya vendido.</td></tr>
+      <tr><td>Un cliente no recibió sus boletos.</td><td>En Ventas búscalo y toca “Reenviar”, o comparte su enlace de boletos.</td></tr>
+      <tr><td>“Este negocio aún no recibe pagos en línea”.</td><td>Conecta los pagos en Tienda en línea o vende en taquilla.</td></tr>
+    </table>
+  </main>
+  <footer>
+    <div><b>ALGORA TECH S.A.S. de C.V.</b> · Manual — Eventos y boletos<br>Soporte: WhatsApp 294 111 4401 · ventas.cliente@algora.com.mx</div>
+    <div>algora.com.mx · Hecho en México</div>
+  <div style="margin-top:6px;font-size:12px"><a href="https://www.algorapos.com.mx/privacidad" target="_blank" rel="noopener">Aviso de privacidad</a> · <a href="https://www.algorapos.com.mx/terminos" target="_blank" rel="noopener">Términos</a> · <a href="https://www.algorapos.com.mx/cookies" target="_blank" rel="noopener">Cookies</a></div>
+</footer>
+</div>
+<script src="/consent.js" defer></script>
+</body>
+</html>
