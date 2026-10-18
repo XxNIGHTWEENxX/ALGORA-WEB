@@ -241,6 +241,10 @@
   .otros{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:26px}
   .otros a{border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13px;color:var(--muted)}
   .otros a:hover{color:var(--gold);border-color:rgba(216,166,87,.5)}
+  .ph3{display:grid;grid-template-columns:repeat(3,minmax(0,230px));gap:26px;justify-content:center;margin-top:50px}
+  .ph3 .cap{text-align:center;color:var(--muted);font-size:13px;margin-top:12px;line-height:1.45}
+  .ph3 .cap b{color:var(--ink);font-weight:600;display:block}
+  @media(max-width:620px){.ph3{gap:10px}.ph3 .phone{border-width:5px;border-radius:18px}.ph3 .cap{font-size:11px}}
   @media(max-width:860px){.vid{grid-template-columns:1fr;gap:34px}.phone{max-width:300px;margin:0 auto}.phone.land{max-width:none}.plans.few{grid-template-columns:1fr}}
 </style>
 </head>
@@ -300,6 +304,24 @@
   <div class="wrap">
     <div class="sec-head rv"><span class="kicker">Míralo por dentro</span><h2 class="serif">Pantallas reales del sistema</h2><p>Esto es lo que vas a ver todos los días.</p></div>
     <div class="tourgrid"><div class="rv" style="--d:0.00s"><a class="tcard tilt" href="/galeria.html"><img src="/capturas/acceso-control.webp" alt="Control de acceso en ALGORA POS" loading="lazy"><div class="b"><h4>Control de acceso</h4><p>Quién entró y si está al corriente.</p></div></a></div><div class="rv" style="--d:0.08s"><a class="tcard tilt" href="/galeria.html"><img src="/capturas/pos-clientes.webp" alt="Socios en ALGORA POS" loading="lazy"><div class="b"><h4>Socios</h4><p>Historial, membresía y pagos de cada socio.</p></div></a></div><div class="rv" style="--d:0.16s"><a class="tcard tilt" href="/galeria.html"><img src="/capturas/pos-dashboard.webp" alt="Panel del negocio en ALGORA POS" loading="lazy"><div class="b"><h4>Panel del negocio</h4><p>Ingresos y socios activos.</p></div></a></div></div>
+  </div>
+</section>
+
+<section id="portal">
+  <div class="wrap">
+    <div class="vid">
+      <div class="rv"><div class="phone"><img src="/capturas/gym-portal-progreso.webp" alt="Racha, asistencia y logros del socio en su portal" loading="lazy"></div></div>
+      <div>
+        <div class="sec-head rv" style="text-align:left;margin-bottom:26px"><span class="kicker">La app de tus socios</span><h2 class="serif">Que vuelvan por su racha</h2><p>Cada socio tiene su portal en el celular, con el logo de tu negocio. Lo instala como una app, sin tiendas de aplicaciones.</p></div>
+        <ul class="bl"><li class="rv" style="--d:0.00s"><i></i><div><b>Racha y asistencia</b> <span>ve cuántos días seguidos lleva y su calendario de visitas.</span></div></li><li class="rv" style="--d:0.07s"><i></i><div><b>Logros</b> <span>primera visita, racha de 7 días, 50 visitas, madrugador y más.</span></div></li><li class="rv" style="--d:0.14s"><i></i><div><b>Reserva su clase</b> <span>con los lugares que quedan en cada horario.</span></div></li><li class="rv" style="--d:0.21s"><i></i><div><b>Renueva en línea</b> <span>su membresía o su paquete de visitas.</span></div></li><li class="rv" style="--d:0.28s"><i></i><div><b>Su QR de acceso</b> <span>siempre a la mano para entrar.</span></div></li><li class="rv" style="--d:0.35s"><i></i><div><b>Comunidad</b> <span>tus avisos, retos y clases especiales en su portal.</span></div></li></ul>
+        <div class="cta rv"><a class="btn reg" href="https://algorapos.com.mx/?registro=1&amp;giro=gimnasio&amp;utm_source=algora_web&amp;utm_medium=landing_gimnasio_portal&amp;utm_campaign=reel_gimnasio">Probar 14 días gratis</a></div>
+      </div>
+    </div>
+    <div class="ph3">
+      <div class="rv" style="--d:0.00s"><div class="phone"><img src="/capturas/gym-portal-reservar.webp" alt="Reservar clase con lugares disponibles" loading="lazy"></div><p class="cap"><b>Reserva su clase</b>Horarios y lugares disponibles</p></div>
+      <div class="rv" style="--d:0.08s"><div class="phone"><img src="/capturas/gym-portal-membresia.webp" alt="Membresía y paquetes del socio" loading="lazy"></div><p class="cap"><b>Membresía y paquetes</b>Vigencia y renovación en línea</p></div>
+      <div class="rv" style="--d:0.16s"><div class="phone"><img src="/capturas/gym-portal-qr.webp" alt="Código QR de acceso del socio" loading="lazy"></div><p class="cap"><b>Su QR de acceso</b>Lo muestra en recepción</p></div>
+    </div>
   </div>
 </section>
 
