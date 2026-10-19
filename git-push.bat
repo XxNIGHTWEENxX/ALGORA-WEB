@@ -4,7 +4,7 @@ cd /d "%~dp0"
 del /f /q .git\index.lock 2>nul
 echo Subiendo algora-web (sitio estatico, Vercel despliega solo)...
 git add -A
-git commit -m "Sitio: video y capturas de clinica con Clinica Algora (sin nombre de clinica real)"
+git commit -m "Sitio: video y capturas de clinica con Clinica Algora, tarifa de sucursales 499/399 hasta 5"
 git pull --rebase origin main
 git push origin main
 echo.
