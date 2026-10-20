@@ -4,7 +4,7 @@ cd /d "%~dp0"
 del /f /q .git\index.lock 2>nul
 echo Subiendo algora-web (sitio estatico, Vercel despliega solo)...
 git add -A
-git commit -m "Manuales: sin apps de delivery (Uber Eats, DiDi, Rappi) hasta su lanzamiento"
+git commit -m "Sitio: pagina Tarjeta de sellos (/monedero), avisos de Nuevo en inicio, POS y giros"
 git pull --rebase origin main
 git push origin main
 echo.
