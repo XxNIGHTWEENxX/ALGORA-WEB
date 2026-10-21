@@ -4,7 +4,7 @@ cd /d "%~dp0"
 del /f /q .git\index.lock 2>nul
 echo Subiendo algora-web (sitio estatico, Vercel despliega solo)...
 git add -A
-git commit -m "Sitio: pagina Tarjeta de sellos (/monedero), avisos de Nuevo y manual con la vista previa de la tarjeta"
+git commit -m "Sitio: Monedero personalizado en /monedero con logo, colores, foto e icono, y manual"
 git pull --rebase origin main
 git push origin main
 echo.
