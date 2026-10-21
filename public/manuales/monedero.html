@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ALGORA · Manual — Monedero y tarjetas digitales</title>
+<meta name="description" content="Manual de ALGORA POS: Monedero y tarjetas digitales. Guía paso a paso para configurar y usar el módulo en tu negocio.">
 <link rel="stylesheet" href="manual.css">
 </head>
 <body>
@@ -28,6 +29,7 @@
         <li><a href="#m6">Tarjeta física (código de barras)</a></li>
         <li><a href="#m7">Tarjeta digital en Apple Wallet y Google Wallet</a></li>
         <li><a href="#m8">Aviso al pasar cerca del negocio</a></li>
+        <li><a href="#m11">Promociones, eventos y avisos en la tarjeta</a></li>
         <li><a href="#m9">Ajustes manuales, cancelaciones y devoluciones</a></li>
         <li><a href="#m10">Solución de problemas</a></li>
       </ol>
@@ -132,7 +134,23 @@
     <div class="box warn"><div class="t">Cómo se ve en cada celular</div><p><b>iPhone</b>: el aviso aparece en la pantalla bloqueada a unos 100 metros del negocio, con el texto de su tarjeta. Es un aviso en pantalla, sin sonido, y puede tardar uno o dos minutos en salir. <b>Android</b>: Google Wallet decide si muestra el aviso y con qué texto; no siempre aparece.</p></div>
     <div class="box tip"><div class="t">Te extrañamos</div><p>Si un cliente con tarjeta digital lleva 3 semanas sin venir, su tarjeta cambia el aviso a “Te extrañamos en tu negocio. Te faltan N sellos para tu premio” y en Android le llega una notificación. Se le avisa una sola vez por ausencia; si regresa y se vuelve a ausentar, se le avisa de nuevo.</p></div>
 
-    <h2 id="m9"><span class="num">9.</span>Ajustes manuales, cancelaciones y devoluciones</h2>
+    <h2 id="m11"><span class="num">9.</span>Promociones, eventos y avisos en la tarjeta</h2>
+    <p>Desde <b>Marketing</b> le mandas un mensaje a la tarjeta digital de tus clientes. Les llega como aviso en su celular y queda guardado en su tarjeta, en <b>Novedades</b>. No tiene costo por mensaje.</p>
+    <table>
+      <tr><th>Tipo</th><th>Para qué</th></tr>
+      <tr><td><b>Promoción</b></td><td>Descuentos y ofertas. Solo llega a quien aceptó recibir promociones. Puede llevar un <b>cupón personal de un solo uso</b>.</td></tr>
+      <tr><td><b>Evento</b></td><td>Catas, música, lanzamientos. Tus clientes pueden apartar su lugar y guardar el pase.</td></tr>
+      <tr><td><b>Aviso</b></td><td>Horarios, cierres o cambios; no es publicidad y no lleva cupón.</td></tr>
+    </table>
+    <ul>
+      <li><b>A quién:</b> todos con tarjeta, los que no vienen hace tiempo, clientes nuevos, a 1 sello del premio, con premio sin canjear, cumpleañeros del mes, los que más compran o por sucursal.</li>
+      <li><b>Cupón en caja:</b> al escanear la tarjeta del cliente se aplica su cupón vigente.</li>
+      <li><b>Sin saturar:</b> en <span class="path">Administración → Config → Monedero / Lealtad</span>, sección <b>Comunidad</b>, eliges el máximo de promociones por cliente a la semana (de 1 a 5).</li>
+      <li><b>Baja:</b> cada cliente puede dejar de recibir promociones desde su tarjeta con un toque; sus sellos y su saldo siguen funcionando.</li>
+    </ul>
+    <div class="box warn"><div class="t">Límites de cada celular</div><p><b>iPhone</b>: el aviso sale si el cliente no apagó las actualizaciones de esa tarjeta. <b>Android</b>: Google permite hasta 3 avisos al día por tarjeta, contando los de sellos.</p></div>
+
+    <h2 id="m9"><span class="num">10.</span>Ajustes manuales, cancelaciones y devoluciones</h2>
     <ul>
       <li><b>Ajuste de saldo</b> (solo dueño): en la ficha del cliente, escribe el monto en <b>Monto</b> y toca <b>+</b> (“Agregar saldo”) o <b>−</b> (“Restar saldo”). Úsalo para promociones o correcciones.</li>
       <li><b>Ajuste de sellos</b> (solo dueño): en el recuadro de sellos toca <b>+</b> (“Agregar sello”) o <b>−</b> (“Quitar sello”). Si al sumar completa la tarjeta, el premio queda listo.</li>
@@ -142,7 +160,7 @@
       <li>El saldo y los sellos nunca quedan en negativo.</li>
     </ul>
 
-    <h2 id="m10"><span class="num">10.</span>Solución de problemas</h2>
+    <h2 id="m10"><span class="num">11.</span>Solución de problemas</h2>
     <table>
       <tr><th>Situación</th><th>Qué hacer</th></tr>
       <tr><td>“Esa tarjeta no está registrada”.</td><td>La tarjeta no está asignada a nadie. Asígnala en Clientes con “Asignar tarjeta”.</td></tr>
