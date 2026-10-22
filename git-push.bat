@@ -4,7 +4,7 @@ cd /d "%~dp0"
 del /f /q .git\index.lock 2>nul
 echo Subiendo algora-web (sitio estatico, Vercel despliega solo)...
 git add -A
-git commit -m "Sitio: Monedero personalizado a 99 al mes con 14 dias gratis, incluido en ALGORA Todo y Suites"
+git commit -m "Sitio: precios con IVA incluido en todas las paginas y manuales"
 git pull --rebase origin main
 git push origin main
 echo.

@@ -39,7 +39,7 @@ El plan **POS + Restaurante** ya existe en la app y en los materiales de venta (
 ```
 
 4. Revisa que `.plans.few` con `--n:3` quede centrado en escritorio y en una sola columna abajo de 860 px. Ya existe esa regla; solo confírmala.
-5. En `plans-note` agrega el pago anual: "Precios en MXN, sin IVA. Pago anual: POS + Restaurante $10,490 y Suite $16,490." Deja el enlace "Ver todos los planes".
+5. En `plans-note` agrega el pago anual: "Precios en MXN, IVA incluido. Pago anual: POS + Restaurante $10,490 y Suite $16,490." Deja el enlace "Ver todos los planes".
 
 ### 2. `public/index.html`, sección `#precios`
 
