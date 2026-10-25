@@ -34,7 +34,7 @@
       ]
     },
     {
-      "source": "/((?!mconsultores).*)",
+      "source": "/((?!mconsultores|tutoriales).*)",
       "headers": [
         {
           "key": "X-Frame-Options",
@@ -43,6 +43,19 @@
         {
           "key": "Content-Security-Policy",
           "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self'; media-src 'self'; frame-src 'none'; worker-src 'none'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://www.algorapos.com.mx https://algorapos.com.mx; frame-ancestors 'none'; upgrade-insecure-requests"
+        }
+      ]
+    },
+    {
+      "source": "/tutoriales(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self'; media-src 'self'; frame-src https://www.youtube-nocookie.com; worker-src 'none'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://www.algorapos.com.mx https://algorapos.com.mx; frame-ancestors 'none'; upgrade-insecure-requests"
         }
       ]
     },

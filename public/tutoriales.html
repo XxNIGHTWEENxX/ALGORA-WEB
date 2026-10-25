@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tutoriales en video — ALGORA POS</title>
+<meta name="description" content="Aprende ALGORA POS en videos cortos: punto de venta, caja y corte, restaurante, agenda, clínica y gimnasio. Pantallas reales, paso a paso.">
+<meta name="theme-color" content="#060606">
+<meta property="og:title" content="Tutoriales en video — ALGORA POS">
+<meta property="og:description" content="Videos cortos, paso a paso, con las pantallas reales del sistema.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.algora.com.mx/tutoriales">
+<meta property="og:image" content="https://www.algora.com.mx/tutoriales/t06.webp">
+<link rel="canonical" href="https://www.algora.com.mx/tutoriales">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060606;--bg2:#0d0c0b;--ink:#ECE8DF;--muted:#8f887b;--line:rgba(216,166,87,.18);--gold:#D8A657;--gold-soft:#e9c98f;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',system-ui,sans-serif;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1160px;margin:0 auto;padding:0 26px}
+.gold{color:var(--gold)}
+.kicker{font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);font-weight:500}
+nav.top{position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:16px 26px;background:rgba(6,6,6,.35);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:background .4s,border-color .4s,padding .4s}
+nav.top.scrolled{background:rgba(6,6,6,.82);border-color:var(--line);padding:12px 26px}
+nav.top .brand img{height:26px;width:auto;display:block}
+.navlinks{display:flex;gap:24px;align-items:center}
+.navlinks a{font-size:14px;color:var(--muted);font-weight:500;position:relative}
+.navlinks a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.navlinks a:hover,.navlinks a.on{color:var(--ink)}
+.navlinks a:hover::after,.navlinks a.on::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font-weight:500;font-size:14px;letter-spacing:.02em;padding:13px 26px;border-radius:999px;border:1px solid var(--gold);color:#060606;background:var(--gold);transition:.25s;cursor:pointer}
+.btn:hover{background:var(--gold-soft);border-color:var(--gold-soft);transform:translateY(-2px);box-shadow:0 10px 30px rgba(216,166,87,.25)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:rgba(216,166,87,.08)}
+.btn.sm{padding:9px 18px;font-size:13px}
+/* encabezado */
+.thero{text-align:center;padding:90px 0 40px;position:relative}
+.thero::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 80% at 50% 30%,rgba(216,166,87,.10),transparent 65%);pointer-events:none}
+.thero h1{font-family:var(--serif);font-size:clamp(42px,7vw,80px);font-weight:600;line-height:1.04;margin:14px 0 16px}
+.thero p{color:#b7af9f;max-width:640px;margin:0 auto;font-size:clamp(16px,1.9vw,19px)}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+.chips a{font-size:13px;font-weight:500;padding:8px 16px;border-radius:999px;border:1px solid var(--line);color:var(--muted);transition:.25s}
+.chips a:hover{border-color:var(--gold);color:var(--ink)}
+/* secciones */
+.mod{padding:46px 0 10px;scroll-margin-top:80px}
+.mod h2{font-family:var(--serif);font-size:clamp(30px,4.2vw,44px);font-weight:600;line-height:1.1}
+.mod .sub{color:var(--muted);margin:6px 0 24px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:18px;overflow:hidden;cursor:pointer;transition:transform .3s var(--ease),border-color .3s,box-shadow .3s;text-align:left;color:inherit;font:inherit;padding:0;scroll-margin-top:90px}
+.card:hover{transform:translateY(-4px);border-color:rgba(216,166,87,.55);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.card .th{position:relative;aspect-ratio:16/9;background:#000}
+.card .th img{width:100%;height:100%;object-fit:cover}
+.card .play{position:absolute;inset:0;display:grid;place-items:center}
+.card .play span{width:62px;height:62px;border-radius:50%;background:rgba(6,6,6,.72);border:1px solid var(--gold);display:grid;place-items:center;transition:transform .3s var(--ease),background .3s}
+.card:hover .play span{transform:scale(1.08);background:var(--gold)}
+.card .play svg{width:22px;height:22px;fill:var(--gold);margin-left:3px;transition:fill .3s}
+.card:hover .play svg{fill:#060606}
+.card .dur{position:absolute;right:10px;bottom:10px;font-size:12px;font-weight:600;background:rgba(6,6,6,.8);padding:3px 8px;border-radius:6px}
+.card .bd{padding:16px 18px 20px}
+.card .num{font-size:11px;letter-spacing:.25em;color:var(--gold);font-weight:600}
+.card h3{font-size:18px;font-weight:600;margin:4px 0 6px;line-height:1.3}
+.card p{font-size:14px;color:var(--muted);line-height:1.5}
+.card.soon{cursor:default;opacity:.6}
+.card.soon:hover{transform:none;box-shadow:none;border-color:var(--line)}
+.card.soon .play span{display:none}
+.soon-tag{position:absolute;left:10px;top:10px;font-size:11px;font-weight:600;letter-spacing:.1em;background:rgba(6,6,6,.85);color:var(--gold);padding:4px 9px;border-radius:6px}
+/* cierre */
+.final{text-align:center;padding:110px 0 120px}
+.final h2{font-family:var(--serif);font-size:clamp(34px,5.5vw,60px);font-weight:600;line-height:1.08;margin:12px 0 14px}
+.final p{color:var(--muted);max-width:560px;margin:0 auto 26px}
+.final .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+/* reproductor */
+.pl{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.82);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.pl.on{display:flex}
+.pl .box{width:min(1040px,100%);background:var(--bg2);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.pl .vid{position:relative;aspect-ratio:16/9;background:#000}
+.pl iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.pl .meta{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 18px;flex-wrap:wrap}
+.pl .meta b{font-weight:600}
+.pl .meta small{display:block;color:var(--muted);font-size:13px}
+.pl .acts{display:flex;gap:10px;flex-wrap:wrap}
+.pl .x{position:absolute;top:14px;right:16px;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:rgba(6,6,6,.7);color:var(--ink);font-size:22px;line-height:1;cursor:pointer}
+footer.foot{padding:48px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);background:var(--bg)}
+footer.foot .cols{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer.foot .legal{max-width:420px;line-height:1.7}
+footer.foot .legal b{color:var(--ink)}
+footer.foot .links{display:flex;gap:24px;flex-wrap:wrap}
+footer.foot .links a:hover{color:var(--gold)}
+@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+@media(max-width:860px){.navlinks{display:none}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.thero{padding:60px 0 24px}.pl{padding:0}.pl .box{border-radius:0}}
+</style>
+</head>
+<body>
+<nav class="top"><a class="brand" href="/"><img src="/ALGORA_Logo_blanco.png" alt="ALGORA"></a><div class="navlinks"><a href="/#soluciones">Soluciones</a><a href="/pos.html" style="color:#D8A657;font-weight:600">ALGORA POS</a><a href="/galeria.html">Galería</a><a href="/tutoriales" class="on">Tutoriales</a><a href="/manuales/">Manuales</a></div><a class="btn sm" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=nav_tutoriales">Prueba ALGORA POS gratis</a></nav>
+
+<header class="thero">
+  <div class="wrap">
+    <span class="kicker">Tutoriales en video</span>
+    <h1>Aprende ALGORA <span class="gold">en minutos</span></h1>
+    <p>Videos cortos, paso a paso, con las pantallas reales del sistema. También los encuentras dentro de ALGORA POS, en el botón de ayuda de cada pantalla.</p>
+    <div class="chips" id="chips"></div>
+  </div>
+</header>
+
+<main class="wrap" id="mods"></main>
+
+<section class="final">
+  <div class="wrap">
+    <span class="kicker">Pruébalo con tu negocio</span>
+    <h2>Lo que ves en los videos, <span class="gold">en tu negocio hoy</span></h2>
+    <p>14 días gratis. Te ayudamos a cargar tus productos y a configurar tu cuenta.</p>
+    <div class="cta">
+      <a class="btn" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=tutoriales_final">Crear mi cuenta gratis</a>
+      <a class="btn ghost" href="/manuales/">Ver los manuales</a>
+    </div>
+  </div>
+</section>
+
+<div class="pl" id="pl" role="dialog" aria-modal="true" aria-label="Tutorial en video">
+  <button class="x" id="plx" aria-label="Cerrar">&times;</button>
+  <div class="box">
+    <div class="vid" id="plv"></div>
+    <div class="meta">
+      <div><b id="plt"></b><small id="pls"></small></div>
+      <div class="acts"><a class="btn sm ghost" id="plyt" target="_blank" rel="noopener">Ver en YouTube</a><a class="btn sm" id="plman" target="_blank" rel="noopener">Manual paso a paso</a></div>
+    </div>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="wrap cols">
+    <div class="legal">
+      <p style="margin-bottom:12px"><img src="/ALGORA_Logo_blanco.png" alt="ALGORA" style="height:24px;width:auto"></p>
+      <p><b>ALGORA TECH S.A.S. de C.V.</b><br>
+      Calle 12 Sur 11509, Int. 53, Col. Los Héroes Puebla,<br>
+      C.P. 72590, Puebla, Puebla, México.<br>
+      WhatsApp ventas 294 111 4401 · Tel. 782 165 7112<br>
+      Soporte técnico 565 918 6986<br>
+      ventas.cliente@algora.com.mx</p>
+    </div>
+    <div>
+      <div class="links">
+        <a href="/pos.html">ALGORA POS</a>
+        <a href="/sitios.html">Páginas a la medida</a>
+        <a href="/software.html">Software a la medida</a>
+        <a href="/galeria.html">Galería</a>
+        <a href="/tutoriales">Tutoriales</a>
+        <a href="/manuales/">Manuales</a>
+      </div>
+      <p style="margin-top:22px">© <span id="y"></span> ALGORA TECH · Hecho en México</p>
+      <p style="margin-top:10px;font-size:12px"><a href="https://www.algorapos.com.mx/privacidad" target="_blank" rel="noopener">Aviso de privacidad</a> · <a href="https://www.algorapos.com.mx/terminos" target="_blank" rel="noopener">Términos</a> · <a href="https://www.algorapos.com.mx/cookies" target="_blank" rel="noopener">Cookies</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Catalogo de tutoriales. youtubeId vacio = se muestra como "Proximamente".
+var MODS=[
+ {id:'punto-de-venta',name:'Punto de venta',sub:'Cobra, controla tu caja y haz el corte del día.',manual:'punto-de-venta.html'},
+ {id:'restaurante',name:'Restaurante',sub:'Mesas, comandas a cocina y cobro de la cuenta.',manual:'restaurante.html'},
+ {id:'agenda-clinica',name:'Agenda y clínica',sub:'Citas, expediente del paciente y notas de evolución.',manual:'clinica.html'},
+ {id:'gimnasio',name:'Gimnasio',sub:'Control de acceso y membresías.',manual:'gimnasio.html'}
+];
+var TUT=[
+ {n:'06',m:'punto-de-venta',t:'Tu primera venta',d:'Agrega productos, cobra en efectivo y entrega el ticket.',dur:'0:53',yt:'Mp79o-27sJs',man:'punto-de-venta.html'},
+ {n:'09',m:'punto-de-venta',t:'Caja y corte del día',d:'Abre la caja, registra gastos y haz el corte con el conteo.',dur:'1:13',yt:'kMpBm_kdpVw',man:'punto-de-venta.html'},
+ {n:'29',m:'restaurante',t:'De la mesa a la cocina',d:'Orden con notas y complementos, pantalla de cocina y entrega.',dur:'1:42',yt:'rPkoH5zDxxk',man:'restaurante.html'},
+ {n:'30',m:'restaurante',t:'Divide la cuenta',d:'Partes iguales, propina y cobro de cada parte.',dur:'1:17',yt:'zFLuy6wHPj0',man:'restaurante.html'},
+ {n:'20',m:'agenda-clinica',t:'Agenda y cobra una cita',d:'Nueva cita, cobrar y completar, y tarjeta de sellos.',dur:'0:39',yt:'GEZ6LOZRnLk',man:'agenda-citas.html'},
+ {n:'37',m:'agenda-clinica',t:'Expediente del paciente',d:'Paciente nuevo, consentimiento firmado y perfil clínico.',dur:'0:42',yt:'I2n81UhEoec',man:'clinica.html'},
+ {n:'38',m:'agenda-clinica',t:'Nota de evolución',d:'Nota SOAP, signos vitales e IMC, lista para imprimir.',dur:'0:40',yt:'vkT2tq_Jyo8',man:'clinica.html'},
+ {n:'33',m:'gimnasio',t:'Acceso y renovación',d:'Check-in con número o QR, NO PASA y renovación.',dur:'0:56',yt:'ng2j1OzjUI4',man:'gimnasio.html'}
+];
+(function(){
+  var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+  var play='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
+  var chips=document.getElementById('chips'), root=document.getElementById('mods');
+  MODS.forEach(function(md){
+    var items=TUT.filter(function(t){return t.m===md.id}); if(!items.length) return;
+    chips.insertAdjacentHTML('beforeend','<a href="#'+md.id+'">'+esc(md.name)+'</a>');
+    var h='<section class="mod" id="'+md.id+'"><h2>'+esc(md.name)+'</h2><p class="sub">'+esc(md.sub)+'</p><div class="grid">';
+    items.forEach(function(t){
+      var soon=!t.yt;
+      h+='<button class="card'+(soon?' soon':'')+'" id="t-'+t.n+'" data-n="'+t.n+'"'+(soon?' disabled':'')+' aria-label="Ver tutorial: '+esc(t.t)+'">'
+       +'<div class="th"><img src="/tutoriales/t'+t.n+'.webp" alt="" loading="lazy" width="960" height="540"><div class="play"><span>'+play+'</span></div>'
+       +(soon?'<span class="soon-tag">Muy pronto</span>':'<span class="dur">'+t.dur+'</span>')+'</div>'
+       +'<div class="bd"><span class="num">TUTORIAL '+t.n+'</span><h3>'+esc(t.t)+'</h3><p>'+esc(t.d)+'</p></div></button>';
+    });
+    root.insertAdjacentHTML('beforeend',h+'</div></section>');
+  });
+  var pl=document.getElementById('pl'), plv=document.getElementById('plv');
+  function open(n){
+    var t=TUT.filter(function(x){return x.n===n})[0]; if(!t||!t.yt) return;
+    plv.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+t.yt+'?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="'+esc(t.t)+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    document.getElementById('plt').textContent='Tutorial '+t.n+' · '+t.t;
+    document.getElementById('pls').textContent=t.d;
+    document.getElementById('plyt').href='https://youtu.be/'+t.yt;
+    document.getElementById('plman').href='/manuales/'+t.man;
+    pl.classList.add('on'); document.body.style.overflow='hidden';
+    if(location.hash!=='#t-'+n) history.replaceState(null,'','#t-'+n);
+  }
+  function close(){pl.classList.remove('on');plv.innerHTML='';document.body.style.overflow='';if(/^#t-/.test(location.hash))history.replaceState(null,'',location.pathname)}
+  root.addEventListener('click',function(e){var c=e.target.closest('.card');if(c&&!c.disabled)open(c.getAttribute('data-n'))});
+  document.getElementById('plx').addEventListener('click',close);
+  pl.addEventListener('click',function(e){if(e.target===pl)close()});
+  addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  var m=location.hash.match(/^#t-(\d+)/); if(m) setTimeout(function(){open(m[1])},300);
+  var y=document.getElementById('y');if(y)y.textContent=new Date().getFullYear();
+  var nav=document.querySelector('nav.top');if(nav)addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>30)},{passive:true});
+})();
+</script>
+<script src="/consent.js" defer></script>
+</body>
+</html>
