@@ -68,9 +68,17 @@
       <div class="s"><h4>Agrega productos al carrito</h4><p>En <span class="path">Operatividad → Venta</span> toca los productos, escanéalos con lector USB o con el botón de cámara (“Escanear con cámara”). Búscalos en <b>“Buscar producto, SKU o código de barras...”</b>.</p></div>
       <div class="s"><h4>Productos con opciones o a granel</h4><p>Si el producto tiene <b>opciones</b> (aderezos, extras), se abre una ventana para elegirlas (“Elige N”, “Hasta N”, “obligatorio”) y se agrega con <b>“Agregar · $X”</b>. Si es <b>a granel</b>, escribe la cantidad (por ejemplo kg) y ves el total al momento.</p></div>
       <div class="s"><h4>Revisa el carrito</h4><p>Ajusta cantidades con <b>+ / −</b> o usa <b>“Vaciar”</b>. Verás Subtotal, Descuento y Total.</p></div>
-      <div class="s"><h4>Pulsa “Cobrar $…”</h4><p>Si dice <b>“Caja cerrada”</b>, primero abre o asigna una caja (“Abre la caja registradora para poder cobrar”).</p></div>
-      <div class="s"><h4>Elige la forma de pago</h4><p><b>Efectivo:</b> teclea lo recibido o usa los botones <b>“Exacto”</b>, $20, $50, $100, $200, $500, $1000; ves el cambio. <b>Tarjeta:</b> cobra en tu terminal; con <b>Mercado Pago Point</b> usa <b>“Enviar cobro a la terminal”</b> y la venta se confirma sola al aprobarse el pago. <b>QR:</b> muestra tu QR de cobro al cliente.</p></div>
+      <div class="s"><h4>Pulsa “Cobrar $…”</h4><p>Si la caja está cerrada, toca <b>“Abrir caja para cobrar”</b>: escribes el cambio inicial y la caja se abre ahí mismo, sin salir de la venta.</p></div>
+      <div class="s"><h4>Elige la forma de pago</h4><p><b>Efectivo:</b> teclea lo recibido o usa los botones <b>“Exacto”</b>, $20, $50, $100, $200, $500, $1000; ves el cambio. <b>Tarjeta:</b> cobra en tu terminal; con <b>Mercado Pago Point</b> usa <b>“Enviar cobro a la terminal”</b> y la venta se confirma sola al aprobarse el pago. <b>Transferencia:</b> el cliente te transfiere y tú confirmas que llegó.</p></div>
       <div class="s"><h4>Confirma</h4><p>El botón dice <b>“Confirmar · Cambio $X”</b> (efectivo) o <b>“Confirmar pago”</b>. Se guarda la venta, baja el stock y aparece <b>“Venta completada”</b> con los botones <b>WhatsApp</b>, <b>Imprimir</b>, <b>Facturar</b> y <b>Nueva venta</b>.</p></div>
+    </div>
+
+    <h3>Pago combinado (dos o tres formas de pago)</h3>
+    <p>Cuando el cliente paga una parte en efectivo y otra con tarjeta o transferencia, en la ventana de cobro toca <b>“Combinar pagos (efectivo + tarjeta o transferencia)”</b>.</p>
+    <div class="steps">
+      <div class="s"><h4>Escribe cuánto se paga con cada método</h4><p>Puedes usar hasta 3 métodos. El último renglón toma solo lo que falta para completar el total.</p></div>
+      <div class="s"><h4>Efectivo</h4><p>En el renglón de efectivo escribe lo que te dieron; el cambio se calcula solo sobre esa parte.</p></div>
+      <div class="s"><h4>Confirma</h4><p>Queda una sola venta con un solo folio. En el corte de caja cada parte suma a su método. Si facturas, la forma de pago es la del mayor importe.</p></div>
     </div>
 
     <figure class="shot"><img loading="lazy" src="/capturas/pos-venta.webp" alt="Pantalla de venta con productos y carrito"><figcaption><b>Venta.</b> Toca los productos (con foto), revisa el carrito a la derecha y pulsa “Cobrar”.</figcaption></figure>
@@ -80,7 +88,7 @@
     <p>En el carrito (computadora), botón <b>“Agregar descuento”</b>: elige <b>%</b> o <b>$</b>, escribe el valor y <b>“Aplicar”</b>. Aparece como “Descuento (10%)” y lo quitas con la ×. Los cupones son de la tienda en línea y del menú QR.</p>
     <h3>Monedero del cliente</h3>
     <div class="steps">
-      <div class="s"><h4>Asigna al cliente</h4><p>En el cobro, <b>“Asignar cliente (monedero)”</b>: búscalo por nombre o teléfono, toca <b>“Escanear tarjeta”</b> o regístralo al momento con <b>“+ Nuevo (teléfono)”</b> → nombre y 10 dígitos → <b>“Crear y asignar”</b>.</p></div>
+      <div class="s"><h4>Asigna al cliente</h4><p>En el cobro, <b>“Asignar cliente (monedero)”</b>: búscalo por nombre o teléfono, toca <b>“Escanear tarjeta de monedero”</b> (lee el QR de Apple o Google Wallet y el código de barras de la tarjeta impresa) o regístralo al momento con <b>“+ Nuevo (teléfono)”</b> → nombre y 10 dígitos → <b>“Crear y asignar”</b>.</p></div>
       <div class="s"><h4>Usa su saldo (opcional)</h4><p>Activa <b>“Usar monedero”</b>, escribe el monto o toca <b>“Máx $X”</b> (lo menor entre su saldo y el tope que configuraste). El total se muestra como “$total − $X monedero”.</p></div>
       <div class="s"><h4>Cobra normal</h4><p>Al confirmar, el cliente acumula el porcentaje de su compra. El ticket muestra el bloque <b>MONEDERO</b>: Usado / Acumulado / Saldo. Si tiene su tarjeta en Google o Apple Wallet, el saldo se actualiza solo.</p></div>
     </div>
@@ -215,7 +223,7 @@
     </table>
   </main>
   <footer>
-    <div><b>ALGORA TECH S.A.S. de C.V.</b> · Manual — Punto de venta<br>Soporte: WhatsApp 294 111 4401 · ventas.cliente@algora.com.mx</div>
+    <div><b>ALGORA TECH S.A.S. de C.V.</b> · Manual — Punto de venta<br>Soporte técnico: WhatsApp 565 918 6986 · ventas.cliente@algora.com.mx · Ventas: WhatsApp 294 111 4401</div>
     <div>algora.com.mx · Hecho en México</div>
   <div style="margin-top:6px;font-size:12px"><a href="https://www.algorapos.com.mx/privacidad" target="_blank" rel="noopener">Aviso de privacidad</a> · <a href="https://www.algorapos.com.mx/terminos" target="_blank" rel="noopener">Términos</a> · <a href="https://www.algorapos.com.mx/cookies" target="_blank" rel="noopener">Cookies</a> · <a href="https://www.instagram.com/algor.atech/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/1181549718370950" target="_blank" rel="noopener">Facebook</a></div>
 </footer>
