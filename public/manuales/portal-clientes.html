@@ -6,6 +6,15 @@
 <title>ALGORA · Manual — Portales de clientes y códigos QR</title>
 <meta name="description" content="Manual de ALGORA POS: Portales de clientes y códigos QR. Guía paso a paso para configurar y usar el módulo en tu negocio.">
 <link rel="stylesheet" href="manual.css">
+<style>
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0 8px;align-items:start}
+.shots .shot{margin:0}
+.shots .shot img{background:#06120d}
+.vidlink{display:inline-flex;align-items:center;gap:8px;margin:6px 0 4px;padding:9px 16px;border:1px solid var(--gold,#D8A657);border-radius:999px;font-weight:600;font-size:13.5px;text-decoration:none}
+.vidlink:hover{background:rgba(216,166,87,.1)}
+@media(max-width:700px){.shots{grid-template-columns:1fr 1fr}}
+@media print{.shots{grid-template-columns:repeat(3,1fr)}.vidlink{display:none}}
+</style>
 </head>
 <body>
 <div class="doc">
@@ -13,7 +22,7 @@
     <img class="brand-logo" src="/ALGORA_Logo_blanco.png" alt="ALGORA">
     <div class="k">Manual de usuario</div>
     <h1>Portales de clientes <span class="gold">y códigos QR</span></h1>
-    <p>Qué puede hacer tu cliente desde su celular (pedidos, citas, membresía, expediente, tarjeta de monedero) y todos los códigos QR que genera ALGORA.</p>
+    <p>Qué ven y qué pueden hacer tus clientes desde su celular: socios del gimnasio, pacientes, dueños de mascotas y clientes con tarjeta de sellos. Con capturas reales y un video de cada portal.</p>
     <div class="meta">Serie de manuales ALGORA · Portales y QR · Para dueño y encargado</div>
     <a class="back" href="index.html">← Ver todos los manuales</a>
   </div>
@@ -23,11 +32,13 @@
       <ol>
         <li><a href="#p1">Los portales en un vistazo</a></li>
         <li><a href="#p2">ALGORA Miembros: la cuenta de tu cliente</a></li>
-        <li><a href="#p3">Portal del gimnasio</a></li>
+        <li><a href="#p3">Portal del gimnasio (socios)</a></li>
         <li><a href="#p4">Portal del paciente (clínica)</a></li>
-        <li><a href="#p5">Otros enlaces que recibe tu cliente</a></li>
-        <li><a href="#p6">Todos los códigos QR de ALGORA</a></li>
-        <li><a href="#p7">Solución de problemas</a></li>
+        <li><a href="#p5">Portal del tutor (veterinaria)</a></li>
+        <li><a href="#p6">Tarjeta de sellos con QR</a></li>
+        <li><a href="#p7">Otros enlaces que recibe tu cliente</a></li>
+        <li><a href="#p8">Todos los códigos QR de ALGORA</a></li>
+        <li><a href="#p9">Solución de problemas</a></li>
       </ol>
     </div>
 
@@ -37,6 +48,8 @@
       <tr><td><b>ALGORA Miembros</b> (Mi cuenta)</td><td>Cualquier cliente de cualquier negocio ALGORA</td><td>Su teléfono + código por WhatsApp</td><td>Ve sus pedidos, citas y reservaciones, y sus documentos</td></tr>
       <tr><td><b>Portal del gimnasio</b></td><td>Socios del gimnasio</td><td>Código del negocio + número de miembro + teléfono</td><td>Membresía, reservar clases, progreso, comunidad y su QR de entrada</td></tr>
       <tr><td><b>Portal del paciente</b></td><td>Pacientes de la clínica</td><td>Código del negocio + número de expediente + teléfono</td><td>Agendar y cambiar citas, su tratamiento, progreso y recetas</td></tr>
+      <tr><td><b>Portal del tutor</b></td><td>Dueños de mascotas de la veterinaria</td><td>Número de expediente de cualquiera de sus mascotas + teléfono</td><td>Cartilla de vacunación, salud, consultas, recetas y citas de cada mascota</td></tr>
+      <tr><td><b>Tarjeta de sellos con QR</b></td><td>Cualquier cliente de tu negocio</td><td>Escanea tu QR de registro y confirma su WhatsApp con un código</td><td>Guarda tu tarjeta (con tu diseño) en su celular y junta sellos en cada visita</td></tr>
     </table>
     <div class="box tip"><div class="t">El código del negocio</div><p>Es el mismo que usan tus empleados para entrar. Lo ves en <span class="path">Config → Datos del negocio → Código de negocio</span> (botón “Copiar”). Compártelo con tus socios o pacientes.</p></div>
 
@@ -50,28 +63,85 @@
     <p>En sus citas puede tocar <b>“Confirmar asistencia”</b>. Si en <span class="path">Tienda Online → Configuración de tienda</span> activaste <b>“Cancelar/reprogramar en línea”</b>, también puede <b>“Reprogramar”</b> y <b>“Cancelar”</b>; si no, verá “Para cambios, contacta al negocio”. Cuando un cliente agenda, cambia o cancela, te llega un aviso.</p>
     <p>El saldo del monedero no se ve aquí: el cliente lo ve en su <b>tarjeta digital</b> (Apple o Google Wallet) y en su ticket. Ver el <a href="monedero.html">manual de Monedero</a>.</p>
 
-    <h2 id="p3"><span class="num">3.</span>Portal del gimnasio</h2>
-    <p>El socio abre <span class="path">algorapos.com.mx/gym</span>, escribe el <b>código del negocio</b> y luego su <b>número de miembro</b> y <b>teléfono</b>. Ahí puede:</p>
+    <h2 id="p3"><span class="num">3.</span>Portal del gimnasio (socios)</h2>
+    <p>Tu socio abre <span class="path">algorapos.com.mx/gym</span>, escribe el <b>código del negocio</b> y luego su <b>número de miembro</b> y <b>teléfono</b>. Sin contraseñas. Lo puede instalar como app en su celular (“Agregar a inicio”).</p>
+    <a class="vidlink" href="/tutoriales#t-40">Ver el video: Portal de tus socios</a>
     <ul>
-      <li><b>Membresía:</b> ver su plan y vencimiento, y <b>“Renovar / contratar”</b> (paga en línea si el gimnasio tiene Stripe, o en recepción).</li>
-      <li><b>Reservar:</b> clases grupales y servicios personalizados.</li>
-      <li><b>Progreso:</b> racha actual, mejor racha, asistencia del mes y logros.</li>
-      <li><b>Comunidad:</b> anuncios del gimnasio y ranking del mes.</li>
-      <li><b>Accesos</b> (su historial de entradas) y <b>Mi QR</b> para entrar.</li>
-      <li>Puede instalarlo como app en su celular (“Agregar a inicio”).</li>
+      <li><b>Membresía:</b> ve su plan y cuántos días le quedan, y puede <b>renovar o contratar</b> otro plan (paga en línea si tu gimnasio tiene pagos con tarjeta, o en recepción).</li>
+      <li><b>Reservar:</b> elige la clase (con foto y descripción), el día en la tira de fechas o en el calendario, y el horario (Mañana, Tarde y Noche, con los lugares disponibles). Confirma en <b>“Reservar mi lugar”</b> y su clase queda en <b>Mis clases</b>, donde también la puede cancelar.</li>
+      <li><b>Progreso:</b> racha actual, mejor racha, visitas del mes y en total, su mapa de asistencia y sus logros.</li>
+      <li><b>Comunidad:</b> los anuncios del gimnasio (retos, horarios especiales, avisos) y el ranking del mes.</li>
+      <li><b>Accesos:</b> su historial de entradas. <b>Mi QR:</b> el código que muestra en recepción para entrar.</li>
     </ul>
-    <p>Más detalle en el <a href="gimnasio.html">manual de Gimnasio</a>.</p>
+    <div class="shots">
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-gym-membresia.webp" alt="Portal del socio: membresía y planes para renovar"><figcaption><b>Membresía.</b> Su plan, vencimiento y planes para renovar.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-gym-reservar.webp" alt="Portal del socio: horarios de la clase por día"><figcaption><b>Reservar.</b> Día y horarios con lugares disponibles.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-gym-reservado.webp" alt="Portal del socio: lugar reservado"><figcaption><b>Listo.</b> Confirma y su lugar queda reservado.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-gym-progreso.webp" alt="Portal del socio: rachas, asistencia y logros"><figcaption><b>Progreso.</b> Rachas, asistencia y logros.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-gym-comunidad.webp" alt="Portal del socio: anuncios y ranking del mes"><figcaption><b>Comunidad.</b> Anuncios y ranking del mes.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-gym-qr.webp" alt="Portal del socio: QR de acceso"><figcaption><b>Mi QR.</b> Lo muestra en recepción para entrar.</figcaption></figure>
+    </div>
+    <p>Los anuncios los publicas tú en <span class="path">Gimnasio → Comunidad</span>. Más detalle en el <a href="gimnasio.html">manual de Gimnasio</a>.</p>
 
     <h2 id="p4"><span class="num">4.</span>Portal del paciente (clínica)</h2>
-    <p>El paciente abre <span class="path">algorapos.com.mx/gym</span>, escribe el <b>código del negocio</b> (lo lleva al portal de la clínica) y entra con su <b>número de expediente</b> y <b>teléfono</b>. Puede:</p>
+    <p>El paciente abre <span class="path">algorapos.com.mx/gym</span>, escribe el <b>código del negocio</b> (lo lleva al portal de tu clínica) y entra con su <b>número de expediente</b> y <b>teléfono</b>.</p>
+    <a class="vidlink" href="/tutoriales#t-41">Ver el video: Portal del paciente</a>
     <ul>
-      <li><b>Agendar nueva cita</b> (con anticipo en línea si la clínica tiene Stripe).</li>
-      <li>Ver <b>Mis próximas citas</b> y, si está permitido, reprogramarlas o cancelarlas.</li>
-      <li>Ver <b>Mi tratamiento</b>, <b>Mi progreso</b> (mediciones) y <b>Mis recetas</b>, además de los documentos que la clínica le compartió.</li>
+      <li><b>Inicio:</b> su próxima cita, con botones para <b>Reprogramar</b> o <b>Cancelar</b>, y el avance de su tratamiento.</li>
+      <li><b>Citas:</b> toca <b>“Agendar nueva cita”</b>, elige el servicio (con duración, precio y anticipo si aplica), el día y el horario, y confirma. Si el servicio pide anticipo y tu clínica cobra en línea, lo paga ahí mismo. En <b>Mis próximas citas</b> puede reprogramar o cancelar (si lo tienes permitido).</li>
+      <li><b>Tratamiento:</b> sus planes de tratamiento con las sesiones hechas, el porcentaje de avance y la próxima sesión.</li>
+      <li><b>Progreso:</b> sus mediciones en gráfica (por ejemplo, dolor o movilidad), con el cambio desde la primera.</li>
+      <li><b>Recetas:</b> las recetas que le compartiste, para verlas o descargarlas en PDF.</li>
+      <li><b>Ayuda:</b> un botón para escribirle a tu clínica por WhatsApp.</li>
     </ul>
-    <p>Más detalle en el <a href="clinica.html">manual de Clínica</a>.</p>
+    <div class="shots">
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-paciente-inicio.webp" alt="Portal del paciente: próxima cita y tratamiento"><figcaption><b>Inicio.</b> Su próxima cita y su tratamiento.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-paciente-servicio.webp" alt="Portal del paciente: elegir servicio"><figcaption><b>Agendar.</b> Elige el servicio.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-paciente-horarios.webp" alt="Portal del paciente: elegir día y horario"><figcaption><b>Día y hora.</b> Horarios por Mañana y Tarde.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-paciente-confirmar.webp" alt="Portal del paciente: confirmar la cita"><figcaption><b>Confirmar.</b> Resumen antes de agendar.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-paciente-citas.webp" alt="Portal del paciente: próximas citas"><figcaption><b>Mis citas.</b> Reprogramar o cancelar.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-paciente-progreso.webp" alt="Portal del paciente: progreso con gráficas"><figcaption><b>Progreso.</b> Sus mediciones en gráfica.</figcaption></figure>
+    </div>
+    <p>El permiso para reprogramar y cancelar se activa en <span class="path">Tienda Online → Configuración de tienda</span>. Más detalle en el <a href="clinica.html">manual de Clínica</a>.</p>
 
-    <h2 id="p5"><span class="num">5.</span>Otros enlaces que recibe tu cliente</h2>
+    <h2 id="p5"><span class="num">5.</span>Portal del tutor (veterinaria)</h2>
+    <p>El dueño de la mascota entra al portal de tu veterinaria con el <b>número de expediente de cualquiera de sus mascotas</b> (viene en la cartilla) y su <b>teléfono</b>. Ve a <b>todas sus mascotas</b> y cambia entre ellas tocando su foto o inicial.</p>
+    <a class="vidlink" href="/tutoriales#t-42">Ver el video: Portal del tutor</a>
+    <ul>
+      <li><b>Mascota:</b> su ficha (especie, raza, edad, peso, expediente), lo siguiente que le toca (vacuna o desparasitación) y, si está en estética o pensión, su estado en vivo, por ejemplo “Lista para recoger”.</li>
+      <li><b>Cartilla:</b> vacunas y desparasitaciones con su próxima fecha y si están al día, próximas o vencidas. La puede descargar en PDF.</li>
+      <li><b>Salud:</b> la gráfica de peso, las consultas con sus indicaciones, y las recetas y tratamientos.</li>
+      <li><b>Citas:</b> agenda para la mascota que tenga seleccionada (servicio, día, horario y confirmar), y ve sus próximas citas con <b>Reprogramar</b> y <b>Cancelar</b>.</li>
+      <li><b>Ayuda:</b> un botón para escribirle a tu veterinaria por WhatsApp.</li>
+    </ul>
+    <div class="shots">
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-tutor-mascota.webp" alt="Portal del tutor: ficha de la mascota"><figcaption><b>Mascota.</b> Su ficha y lo que le toca.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-tutor-cartilla.webp" alt="Portal del tutor: cartilla de vacunación"><figcaption><b>Cartilla.</b> Vacunas y desparasitación.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-tutor-salud.webp" alt="Portal del tutor: peso, consultas y recetas"><figcaption><b>Salud.</b> Peso, consultas y recetas.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-tutor-servicios.webp" alt="Portal del tutor: elegir servicio para la mascota"><figcaption><b>Agendar.</b> Servicios para su mascota.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-tutor-confirmar.webp" alt="Portal del tutor: confirmar la cita"><figcaption><b>Confirmar.</b> Con el nombre de la mascota.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/portal-tutor-citas.webp" alt="Portal del tutor: próximas citas"><figcaption><b>Próximas citas.</b> Reprogramar o cancelar.</figcaption></figure>
+    </div>
+    <p>Más detalle en el <a href="veterinaria.html">manual de Veterinaria</a>.</p>
+
+    <h2 id="p6"><span class="num">6.</span>Tarjeta de sellos con QR</h2>
+    <p>Pones tu <b>QR de registro</b> en el mostrador o en la mesa. Tu cliente lo escanea y en un minuto tiene su tarjeta en el celular:</p>
+    <a class="vidlink" href="/tutoriales#t-43">Ver el video: Tarjeta de sellos con QR</a>
+    <div class="steps">
+      <div class="s"><h4>Sus datos</h4><p>Escribe su nombre y su WhatsApp. Opcional: correo, cumpleaños y si quiere recibir promociones (máximo las que tú definas por semana).</p></div>
+      <div class="s"><h4>El código</h4><p>Le llega un código de 6 dígitos por WhatsApp. Lo escribe y toca <b>“Verificar y ver mi tarjeta”</b>. Así nadie más usa su tarjeta.</p></div>
+      <div class="s"><h4>Su tarjeta</h4><p>Ve su tarjeta con <b>tu logo, tus colores y tu imagen</b>, sus sellos y el premio. La guarda con un toque en <b>Apple Wallet</b>; en caja muestra el código de la tarjeta.</p></div>
+    </div>
+    <div class="shots">
+      <figure class="shot"><img loading="lazy" src="/capturas/tarjeta-registro.webp" alt="Registro de la tarjeta de sellos"><figcaption><b>Registro.</b> Nombre y WhatsApp.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/tarjeta-codigo.webp" alt="Código de verificación por WhatsApp"><figcaption><b>Código.</b> Confirma su WhatsApp.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/tarjeta-web.webp" alt="Tarjeta de sellos con el diseño del negocio"><figcaption><b>Su tarjeta.</b> Con el diseño de tu negocio.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/tarjeta-agregar-wallet.webp" alt="Agregar la tarjeta a Apple Wallet en el iPhone"><figcaption><b>iPhone.</b> “Agregar a Wallet”.</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="/capturas/tarjeta-apple-wallet.webp" alt="Tarjeta de sellos guardada en Apple Wallet"><figcaption><b>Apple Wallet.</b> Sellos y avisos siempre a la mano.</figcaption></figure>
+    </div>
+    <p>Cada visita suma un sello y la tarjeta se actualiza sola; cuando le das un sello, le llega un aviso. Con el <b>Monedero personalizado</b> la tarjeta lleva tu logo, tus colores y la imagen de tu negocio en lugar de la de ALGORA. Ver el <a href="monedero.html">manual de Monedero</a>.</p>
+
+    <h2 id="p7"><span class="num">7.</span>Otros enlaces que recibe tu cliente</h2>
     <table>
       <tr><th>Enlace</th><th>Cuándo lo recibe</th></tr>
       <tr><td><b>Ticket digital</b></td><td>Con el botón WhatsApp al terminar la venta, o escaneando el QR del ticket. Lo descarga en PDF y puede calificar su visita.</td></tr>
@@ -84,7 +154,7 @@
       <tr><td><b>Mi cuenta de la mesa</b></td><td>Desde el QR del restaurante, para ver y pagar su cuenta.</td></tr>
     </table>
 
-    <h2 id="p6"><span class="num">6.</span>Todos los códigos QR de ALGORA</h2>
+    <h2 id="p8"><span class="num">8.</span>Todos los códigos QR de ALGORA</h2>
     <table>
       <tr><th>Código</th><th>Dónde se genera</th><th>Qué hace</th></tr>
       <tr><td><b>QR de mesa</b></td><td><span class="path">Restaurante → Códigos QR → “Imprimir todos”</span></td><td>El cliente ve el menú, pide, llama al mesero y paga su cuenta.</td></tr>
@@ -97,7 +167,7 @@
     </table>
     <p>La tarjeta física del monedero usa <b>código de barras</b> (no QR); se escanea igual en caja.</p>
 
-    <h2 id="p7"><span class="num">7.</span>Solución de problemas</h2>
+    <h2 id="p9"><span class="num">9.</span>Solución de problemas</h2>
     <table>
       <tr><th>Situación</th><th>Qué hacer</th></tr>
       <tr><td>Al cliente no le llega el código por WhatsApp.</td><td>Revisa que escriba el teléfono a 10 dígitos y toque “Reenviar código”.</td></tr>

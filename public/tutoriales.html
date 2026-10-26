@@ -4,13 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Tutoriales en video — ALGORA POS</title>
-<meta name="description" content="Aprende ALGORA POS en videos cortos: punto de venta, caja y corte, restaurante, agenda, clínica y gimnasio. Pantallas reales, paso a paso.">
+<meta name="description" content="Aprende ALGORA POS en videos cortos: punto de venta, caja y corte, restaurante, agenda, clínica, gimnasio y los portales para tus clientes. Pantallas reales, paso a paso.">
 <meta name="theme-color" content="#060606">
 <meta property="og:title" content="Tutoriales en video — ALGORA POS">
 <meta property="og:description" content="Videos cortos, paso a paso, con las pantallas reales del sistema.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.algora.com.mx/tutoriales">
 <meta property="og:image" content="https://www.algora.com.mx/tutoriales/t06.webp">
+<script>(function(){var r=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;document.documentElement.classList.add(r?'rm':'fx')})();</script>
 <link rel="canonical" href="https://www.algora.com.mx/tutoriales">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -94,6 +95,37 @@ footer.foot .legal{max-width:420px;line-height:1.7}
 footer.foot .legal b{color:var(--ink)}
 footer.foot .links{display:flex;gap:24px;flex-wrap:wrap}
 footer.foot .links a:hover{color:var(--gold)}
+/* portales y videos cortos */
+.card{position:relative}
+.card .th video{width:100%;height:100%;object-fit:cover}
+.sgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.card.v .th{aspect-ratio:9/16}
+.card.v .bd{padding:12px 14px 16px}
+.card.v h3{font-size:15px}
+.card.v .play span{width:52px;height:52px}
+.tag-new{position:absolute;left:10px;top:10px;font-size:10.5px;font-weight:600;letter-spacing:.14em;background:var(--gold);color:#060606;padding:4px 9px;border-radius:6px}
+.pl .vid.v{aspect-ratio:9/16;max-height:78vh;margin:0 auto;width:auto;height:min(78vh,calc((100vw - 40px)*16/9))}
+.pl .box.v{width:auto;max-width:100%}
+.pl video{position:absolute;inset:0;width:100%;height:100%;background:#000}
+/* subrayado del titulo */
+.uline{display:block;width:min(420px,70%);height:26px;margin:-6px auto 14px}
+.uline path{fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round}
+.fx .uline path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2s var(--ease) .5s}
+.fx .rv.in .uline path{stroke-dashoffset:0}
+/* brillo que sigue al cursor */
+.tilt::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(216,166,87,.13),transparent 45%);opacity:0;transition:opacity .3s}
+.tilt:hover::after{opacity:1}
+/* revelados */
+.fx .rv{opacity:0;transform:translateY(30px);filter:blur(6px);transition:opacity 1s var(--ease),transform 1s var(--ease),filter 1s var(--ease);transition-delay:var(--d,0s)}
+.fx .rv.in{opacity:1;transform:none;filter:none}
+.sline{height:1px;background:var(--line);margin:0 0 6px;position:relative;overflow:hidden}
+.sline i{position:absolute;inset:0;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform 1.8s var(--ease)}
+.sline.in i,.rm .sline i{transform:scaleX(1)}
+/* cursor */
+.cur{position:fixed;left:0;top:0;width:28px;height:28px;margin:-14px 0 0 -14px;border:1px solid rgba(216,166,87,.7);border-radius:50%;pointer-events:none;z-index:100;transition:width .25s,height .25s,margin .25s,background .25s}
+.cur.big{width:56px;height:56px;margin:-28px 0 0 -28px;background:rgba(216,166,87,.08)}
+@media(max-width:1000px){.sgrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.sgrid{grid-template-columns:1fr 1fr;gap:12px}}
 @media(max-width:900px){.grid{grid-template-columns:1fr 1fr}}
 @media(max-width:860px){.navlinks{display:none}}
 @media(max-width:600px){.grid{grid-template-columns:1fr}.thero{padding:60px 0 24px}.pl{padding:0}.pl .box{border-radius:0}}
@@ -104,10 +136,11 @@ footer.foot .links a:hover{color:var(--gold)}
 
 <header class="thero">
   <div class="wrap">
-    <span class="kicker">Tutoriales en video</span>
-    <h1>Aprende ALGORA <span class="gold">en minutos</span></h1>
-    <p>Videos cortos, paso a paso, con las pantallas reales del sistema. También los encuentras dentro de ALGORA POS, en el botón de ayuda de cada pantalla.</p>
-    <div class="chips" id="chips"></div>
+    <span class="kicker rv">Tutoriales en video</span>
+    <div class="rv" style="--d:.12s"><h1>Aprende ALGORA <span class="gold">en minutos</span></h1>
+    <svg class="uline" viewBox="0 0 420 26" aria-hidden="true"><path pathLength="1" d="M8 16 C 100 4, 180 24, 250 12 S 370 6, 412 14"/></svg></div>
+    <p class="rv" style="--d:.25s">Videos cortos, paso a paso, con las pantallas reales del sistema. También los encuentras dentro de ALGORA POS, en el botón de ayuda de cada pantalla.</p>
+    <div class="chips rv" id="chips" style="--d:.38s"></div>
   </div>
 </header>
 
@@ -115,10 +148,10 @@ footer.foot .links a:hover{color:var(--gold)}
 
 <section class="final">
   <div class="wrap">
-    <span class="kicker">Pruébalo con tu negocio</span>
-    <h2>Lo que ves en los videos, <span class="gold">en tu negocio hoy</span></h2>
-    <p>14 días gratis. Te ayudamos a cargar tus productos y a configurar tu cuenta.</p>
-    <div class="cta">
+    <span class="kicker rv">Pruébalo con tu negocio</span>
+    <h2 class="rv" style="--d:.1s">Lo que ves en los videos, <span class="gold">en tu negocio hoy</span></h2>
+    <p class="rv" style="--d:.2s">14 días gratis. Te ayudamos a cargar tus productos y a configurar tu cuenta.</p>
+    <div class="cta rv" style="--d:.3s">
       <a class="btn" href="https://algorapos.com.mx/?registro=1&amp;utm_source=algora_web&amp;utm_medium=tutoriales_final">Crear mi cuenta gratis</a>
       <a class="btn ghost" href="/manuales/">Ver los manuales</a>
     </div>
@@ -127,7 +160,7 @@ footer.foot .links a:hover{color:var(--gold)}
 
 <div class="pl" id="pl" role="dialog" aria-modal="true" aria-label="Tutorial en video">
   <button class="x" id="plx" aria-label="Cerrar">&times;</button>
-  <div class="box">
+  <div class="box" id="plbox">
     <div class="vid" id="plv"></div>
     <div class="meta">
       <div><b id="plt"></b><small id="pls"></small></div>
@@ -163,12 +196,15 @@ footer.foot .links a:hover{color:var(--gold)}
 </footer>
 
 <script>
-// Catalogo de tutoriales. youtubeId vacio = se muestra como "Proximamente".
+// Catalogo de tutoriales. yt = id de YouTube; vid = video propio en /tutoriales/video/.
+// PENDIENTE: los que usan "vid" se publicaron aqui porque YouTube llego a su limite diario de cargas.
+// Cuando se suban a YouTube, cambiar vid:'...' por yt:'ID' (y quitar el archivo de /tutoriales/video/).
 var MODS=[
  {id:'punto-de-venta',name:'Punto de venta',sub:'Cobra, controla tu caja y haz el corte del día.',manual:'punto-de-venta.html'},
  {id:'restaurante',name:'Restaurante',sub:'Mesas, comandas a cocina y cobro de la cuenta.',manual:'restaurante.html'},
  {id:'agenda-clinica',name:'Agenda y clínica',sub:'Citas, expediente del paciente y notas de evolución.',manual:'clinica.html'},
- {id:'gimnasio',name:'Gimnasio',sub:'Control de acceso y membresías.',manual:'gimnasio.html'}
+ {id:'gimnasio',name:'Gimnasio',sub:'Control de acceso y membresías.',manual:'gimnasio.html'},
+ {id:'portales',name:'Portales para tus clientes',sub:'Lo que tus socios, pacientes y clientes ven en su celular: reservan, agendan, consultan y guardan su tarjeta.',manual:'portal-clientes.html',isNew:true}
 ];
 var TUT=[
  {n:'06',m:'punto-de-venta',t:'Tu primera venta',d:'Agrega productos, cobra en efectivo y entrega el ticket.',dur:'0:53',yt:'Mp79o-27sJs',man:'punto-de-venta.html'},
@@ -178,44 +214,94 @@ var TUT=[
  {n:'20',m:'agenda-clinica',t:'Agenda y cobra una cita',d:'Nueva cita, cobrar y completar, y tarjeta de sellos.',dur:'0:39',yt:'GEZ6LOZRnLk',man:'agenda-citas.html'},
  {n:'37',m:'agenda-clinica',t:'Expediente del paciente',d:'Paciente nuevo, consentimiento firmado y perfil clínico.',dur:'0:42',yt:'I2n81UhEoec',man:'clinica.html'},
  {n:'38',m:'agenda-clinica',t:'Nota de evolución',d:'Nota SOAP, signos vitales e IMC, lista para imprimir.',dur:'0:40',yt:'vkT2tq_Jyo8',man:'clinica.html'},
- {n:'33',m:'gimnasio',t:'Acceso y renovación',d:'Check-in con número o QR, NO PASA y renovación.',dur:'0:56',yt:'ng2j1OzjUI4',man:'gimnasio.html'}
+ {n:'33',m:'gimnasio',t:'Acceso y renovación',d:'Check-in con número o QR, NO PASA y renovación.',dur:'0:56',yt:'ng2j1OzjUI4',man:'gimnasio.html'},
+ {n:'40',m:'portales',t:'Portal de tus socios',d:'Membresía, reservar clases, progreso, comunidad y su QR de acceso.',dur:'0:59',vid:'t40',man:'portal-clientes.html#p3'},
+ {n:'41',m:'portales',t:'Portal del paciente',d:'Agenda y reprograma citas, ve su tratamiento, progreso y recetas.',dur:'0:56',vid:'t41',man:'portal-clientes.html#p4'},
+ {n:'42',m:'portales',t:'Portal del tutor',d:'Cartilla de vacunación, salud y citas de cada mascota.',dur:'0:52',vid:'t42',man:'portal-clientes.html#p5'},
+ {n:'43',m:'portales',t:'Tarjeta de sellos con QR',d:'Tu cliente se registra con WhatsApp y guarda tu tarjeta en su celular.',dur:'0:48',vid:'t43',man:'portal-clientes.html#p6'}
+];
+// Videos cortos (verticales)
+var SHORTS=[
+ {n:'06',t:'Cobra en segundos',dur:'0:25',yt:'CDmvqd2i8VY',man:'punto-de-venta.html'},
+ {n:'09',t:'Tu caja, siempre cuadrada',dur:'0:21',yt:'zzEAbMP6tsA',man:'punto-de-venta.html'},
+ {n:'29',t:'Comandas sin papel',dur:'0:43',vid:'s29',man:'restaurante.html'},
+ {n:'30',t:'Divide la cuenta',dur:'0:30',vid:'s30',man:'restaurante.html'},
+ {n:'20',t:'Agenda y cobra en un solo lugar',dur:'0:19',vid:'s20',man:'agenda-citas.html'},
+ {n:'37',t:'Expediente sin papel',dur:'0:18',vid:'s37',man:'clinica.html'},
+ {n:'38',t:'Notas clínicas sin papel',dur:'0:16',vid:'s38',man:'clinica.html'},
+ {n:'33',t:'El que no paga, no pasa',dur:'0:23',vid:'s33',man:'gimnasio.html'},
+ {n:'40',t:'Tu gimnasio en su celular',dur:'0:24',vid:'s40',man:'portal-clientes.html#p3',isNew:true},
+ {n:'41',t:'Tus pacientes agendan solos',dur:'0:23',vid:'s41',man:'portal-clientes.html#p4',isNew:true},
+ {n:'42',t:'Sus mascotas en su celular',dur:'0:20',vid:'s42',man:'portal-clientes.html#p5',isNew:true},
+ {n:'43',t:'Tarjeta de sellos con QR',dur:'0:25',vid:'s43',man:'portal-clientes.html#p6',isNew:true}
 ];
 (function(){
+  var FX=document.documentElement.classList.contains('fx');
   var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
   var play='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
   var chips=document.getElementById('chips'), root=document.getElementById('mods');
   MODS.forEach(function(md){
     var items=TUT.filter(function(t){return t.m===md.id}); if(!items.length) return;
     chips.insertAdjacentHTML('beforeend','<a href="#'+md.id+'">'+esc(md.name)+'</a>');
-    var h='<section class="mod" id="'+md.id+'"><h2>'+esc(md.name)+'</h2><p class="sub">'+esc(md.sub)+'</p><div class="grid">';
-    items.forEach(function(t){
-      var soon=!t.yt;
-      h+='<button class="card'+(soon?' soon':'')+'" id="t-'+t.n+'" data-n="'+t.n+'"'+(soon?' disabled':'')+' aria-label="Ver tutorial: '+esc(t.t)+'">'
+    var h='<section class="mod" id="'+md.id+'"><h2 class="rv">'+esc(md.name)+'</h2><p class="sub rv" style="--d:.08s">'+esc(md.sub)+'</p><div class="sline rv"><i></i></div><div class="grid" style="margin-top:20px">';
+    items.forEach(function(t,i){
+      var soon=!t.yt&&!t.vid;
+      h+='<div class="rv" style="--d:'+((i%3)*0.08).toFixed(2)+'s"><button class="card tilt'+(soon?' soon':'')+'" id="t-'+t.n+'" data-k="t" data-n="'+t.n+'"'+(soon?' disabled':'')+' aria-label="Ver tutorial: '+esc(t.t)+'">'
        +'<div class="th"><img src="/tutoriales/t'+t.n+'.webp" alt="" loading="lazy" width="960" height="540"><div class="play"><span>'+play+'</span></div>'
-       +(soon?'<span class="soon-tag">Muy pronto</span>':'<span class="dur">'+t.dur+'</span>')+'</div>'
-       +'<div class="bd"><span class="num">TUTORIAL '+t.n+'</span><h3>'+esc(t.t)+'</h3><p>'+esc(t.d)+'</p></div></button>';
+       +(soon?'<span class="soon-tag">Muy pronto</span>':'<span class="dur">'+t.dur+'</span>')+(md.isNew&&!soon?'<span class="tag-new">NUEVO</span>':'')+'</div>'
+       +'<div class="bd"><span class="num">TUTORIAL '+t.n+'</span><h3>'+esc(t.t)+'</h3><p>'+esc(t.d)+'</p></div></button></div>';
     });
     root.insertAdjacentHTML('beforeend',h+'</div></section>');
   });
-  var pl=document.getElementById('pl'), plv=document.getElementById('plv');
-  function open(n){
-    var t=TUT.filter(function(x){return x.n===n})[0]; if(!t||!t.yt) return;
-    plv.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+t.yt+'?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="'+esc(t.t)+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
-    document.getElementById('plt').textContent='Tutorial '+t.n+' · '+t.t;
-    document.getElementById('pls').textContent=t.d;
-    document.getElementById('plyt').href='https://youtu.be/'+t.yt;
+  // Videos cortos
+  chips.insertAdjacentHTML('beforeend','<a href="#cortos">Videos cortos</a>');
+  var hs='<section class="mod" id="cortos"><h2 class="rv">Videos cortos</h2><p class="sub rv" style="--d:.08s">Lo esencial en menos de un minuto, en formato vertical para verlo desde el celular.</p><div class="sline rv"><i></i></div><div class="sgrid" style="margin-top:20px">';
+  SHORTS.forEach(function(t,i){
+    hs+='<div class="rv" style="--d:'+((i%5)*0.06).toFixed(2)+'s"><button class="card v tilt" id="s-'+t.n+'" data-k="s" data-n="'+t.n+'" aria-label="Ver video corto: '+esc(t.t)+'">'
+     +'<div class="th"><img src="/tutoriales/s'+t.n+'.webp" alt="" loading="lazy" width="540" height="960"><div class="play"><span>'+play+'</span></div><span class="dur">'+t.dur+'</span>'+(t.isNew?'<span class="tag-new">NUEVO</span>':'')+'</div>'
+     +'<div class="bd"><h3>'+esc(t.t)+'</h3></div></button></div>';
+  });
+  root.insertAdjacentHTML('beforeend',hs+'</div></section>');
+
+  var pl=document.getElementById('pl'), plv=document.getElementById('plv'), box=document.getElementById('plbox'), yt=document.getElementById('plyt');
+  function find(k,n){return (k==='s'?SHORTS:TUT).filter(function(x){return x.n===n})[0]}
+  function open(k,n){
+    var t=find(k,n); if(!t||(!t.yt&&!t.vid)) return;
+    var vert=k==='s'; plv.classList.toggle('v',vert); box.classList.toggle('v',vert);
+    if(t.yt){
+      plv.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+t.yt+'?autoplay=1&rel=0&modestbranding=1&playsinline=1" title="'+esc(t.t)+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+      yt.href=(vert?'https://www.youtube.com/shorts/':'https://youtu.be/')+t.yt; yt.style.display='';
+    }else{
+      plv.innerHTML='<video src="/tutoriales/video/'+t.vid+'.mp4" poster="/tutoriales/'+(vert?'s':'t')+t.n+'.webp" controls autoplay playsinline preload="none"></video>';
+      yt.style.display='none';
+    }
+    document.getElementById('plt').textContent=(vert?'Video corto':'Tutorial '+t.n)+' · '+t.t;
+    document.getElementById('pls').textContent=t.d||'';
     document.getElementById('plman').href='/manuales/'+t.man;
     pl.classList.add('on'); document.body.style.overflow='hidden';
-    if(location.hash!=='#t-'+n) history.replaceState(null,'','#t-'+n);
+    var h='#'+k+'-'+n; if(location.hash!==h) history.replaceState(null,'',h);
   }
-  function close(){pl.classList.remove('on');plv.innerHTML='';document.body.style.overflow='';if(/^#t-/.test(location.hash))history.replaceState(null,'',location.pathname)}
-  root.addEventListener('click',function(e){var c=e.target.closest('.card');if(c&&!c.disabled)open(c.getAttribute('data-n'))});
+  function close(){pl.classList.remove('on');plv.innerHTML='';document.body.style.overflow='';if(/^#[ts]-/.test(location.hash))history.replaceState(null,'',location.pathname)}
+  root.addEventListener('click',function(e){var c=e.target.closest('.card');if(c&&!c.disabled)open(c.getAttribute('data-k'),c.getAttribute('data-n'))});
   document.getElementById('plx').addEventListener('click',close);
   pl.addEventListener('click',function(e){if(e.target===pl)close()});
   addEventListener('keydown',function(e){if(e.key==='Escape')close()});
-  var m=location.hash.match(/^#t-(\d+)/); if(m) setTimeout(function(){open(m[1])},300);
+  var m=location.hash.match(/^#([ts])-(\d+)/); if(m) setTimeout(function(){open(m[1],m[2])},300);
   var y=document.getElementById('y');if(y)y.textContent=new Date().getFullYear();
   var nav=document.querySelector('nav.top');if(nav)addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>30)},{passive:true});
+
+  /* revelados (mismo patron que el resto del sitio) */
+  var pend=[];
+  function chk(){if(!pend.length)return;var vh=innerHeight;pend=pend.filter(function(e){var r=e.getBoundingClientRect();if(r.top<vh*.9&&r.bottom>0){e.classList.add('in');return false}return true})}
+  function watch(nodes){[].forEach.call(nodes,function(e){if(!FX)e.classList.add('in');else pend.push(e)});if(FX)setTimeout(chk,60)}
+  var rq=false;addEventListener('scroll',function(){if(!rq){rq=true;requestAnimationFrame(function(){rq=false;chk()})}},{passive:true});addEventListener('resize',chk);
+  watch(document.querySelectorAll('.rv'));
+  chips.addEventListener('click',function(){setTimeout(chk,700)});
+  /* cursor y 3D */
+  var fine=FX&&window.matchMedia&&matchMedia('(pointer:fine)').matches,cr=null;
+  if(fine){cr=document.createElement('div');cr.className='cur';document.body.appendChild(cr);var cx=-100,cy=-100,tx=-100,ty=-100;addEventListener('mousemove',function(e){tx=e.clientX;ty=e.clientY},{passive:true});(function lp(){cx+=(tx-cx)*.18;cy+=(ty-cy)*.18;cr.style.transform='translate('+cx+'px,'+cy+'px)';requestAnimationFrame(lp)})();
+    document.querySelectorAll('a,button').forEach(function(a){a.addEventListener('mouseenter',function(){cr.classList.add('big')});a.addEventListener('mouseleave',function(){cr.classList.remove('big')})});
+    document.querySelectorAll('.tilt').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(800px) rotateY('+(x*7)+'deg) rotateX('+(-y*7)+'deg) translateY(-4px)';c.style.setProperty('--mx',((x+.5)*100)+'%');c.style.setProperty('--my',((y+.5)*100)+'%')});c.addEventListener('mouseleave',function(){c.style.transform=''})})}
 })();
 </script>
 <script src="/consent.js" defer></script>
