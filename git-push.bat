@@ -4,7 +4,7 @@ cd /d "%~dp0"
 del /f /q .git\index.lock 2>nul
 echo Subiendo algora-web (sitio estatico, Vercel despliega solo)...
 git add -A
-git commit -m "Aviso de cookies con permiso (Aceptar / Solo necesarias), pixel de Meta con variable de entorno al desplegar, etiquetas del anuncio hasta el registro y verificacion de dominio"
+git commit -m "Pagina 404 con la marca ALGORA"
 git pull --rebase origin main
 git push origin main
 echo.
