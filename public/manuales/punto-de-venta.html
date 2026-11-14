@@ -142,11 +142,21 @@
 
     <h2 id="s12"><span class="num">8.</span>Ticket, ticket digital y encuesta</h2>
     <ul>
-      <li><b>“Imprimir”</b>: ticket de 58 mm con tu logo y pie de ticket (por defecto “¡Gracias por su compra!”).</li>
+      <li><b>“Imprimir”</b>: ticket de 58 u 80 mm con tu logo y pie de ticket (por defecto “¡Gracias por su compra!”).</li>
       <li><b>“WhatsApp”</b>: genera el PDF del ticket y lo comparte; el texto incluye el enlace a su <b>ticket digital</b>.</li>
       <li>Con las reseñas activas, el ticket impreso trae el QR <b>“Califícanos en 10 segundos”</b>: el cliente ve su ticket en el celular, lo descarga en PDF y califica su compra. Si le fue bien lo invitamos a tu ficha de Google Maps. Ver el <a href="resenas.html">manual de Reseñas</a>.</li>
       <li>Para reimprimir, toca la venta en <span class="path">Historial → Ventas</span>.</li>
     </ul>
+
+    <h3 id="impresora">Impresora térmica: tickets nítidos</h3>
+    <p>ALGORA imprime todo en negro puro, con letra de 10 px como mínimo, y pasa tu logo a blanco y negro para que la térmica no lo emborrone. En <span class="path">Administración → Config → Ticket impreso</span> elige el <b>Ancho de papel</b> de ese equipo (<b>58 mm</b> u <b>80 mm</b>; cada caja puede tener una impresora distinta) y usa <b>“Imprimir ticket de prueba”</b> para revisar el resultado.</p>
+    <p>Configuración recomendada:</p>
+    <ol>
+      <li><b>Ventana de impresión de Chrome</b> (Más opciones): Tamaño de papel igual a tu rollo (58 o 80 mm, a veces “Roll Paper 58 x 297 mm”), Márgenes en <b>Ninguno</b>, Escala en <b>Predeterminada</b> (no “Ajustar”), sin Encabezados y pies de página, y con <b>Gráficos de fondo</b> marcado.</li>
+      <li><b>Preferencias del driver</b> (Windows → Impresoras y escáneres → tu térmica → Preferencias de impresión): Densidad u Oscuridad en alto, Velocidad baja o media, papel de 58 u 80 mm y, si hay opción de tramado o halftone, elige “Texto”, “Ninguno” o “Umbral”.</li>
+      <li><b>Papel y cabezal:</b> papel térmico de buena calidad con el lado sensible hacia el cabezal. Si la impresión se ve débil, limpia el cabezal con alcohol isopropílico y un hisopo.</li>
+    </ol>
+    <p>Para que los tickets salgan directo sin la ventana de impresión, en la caja usa el acceso <b>“ALGORA Caja”</b> que crea el instalador del agente (<b>3-Acceso-Caja-Impresion-Directa.bat</b>).</p>
 
     <h2 id="s13"><span class="num">9.</span>Cancelar una venta</h2>
     <div class="steps">
@@ -189,7 +199,7 @@
     <p>En <span class="path">Administración → Config</span>:</p>
     <ul>
       <li><b>Datos del negocio:</b> nombre, RFC, dirección, teléfono, <b>Código de negocio</b> (el que usan tus empleados para entrar; botón “Copiar”) y <b>“Bloqueo de caja por inactividad (minutos)”</b> (0 = nunca; aplica por equipo).</li>
-      <li><b>Ticket impreso:</b> logo (58 mm) y pie de ticket.</li>
+      <li><b>Ticket impreso:</b> logo, pie de ticket, <b>Ancho de papel</b> (58 u 80 mm, por equipo) y <b>“Imprimir ticket de prueba”</b> (ver <a href="#impresora">Impresora térmica</a>).</li>
       <li><b>Monedero / Lealtad:</b> porcentaje de acumulación, tope de canje y canje mínimo (ver <a href="monedero.html">manual de Monedero</a>).</li>
       <li><b>Cajón de efectivo</b> (por equipo): <b>“Conectar cajón”</b>, <b>“Probar apertura”</b>, <b>“Buscar agente”</b> y abrir automáticamente al cobrar en efectivo. Con impresoras de driver de Windows se usa el <b>Agente de cajón ALGORA</b>.</li>
       <li><b>Terminales de cobro:</b> Mercado Pago Point.</li>
@@ -217,6 +227,7 @@
       <tr><td>“Elige las opciones obligatorias”.</td><td>El producto tiene un grupo de opciones obligatorio: elige una antes de agregarlo.</td></tr>
       <tr><td>La caja parece cerrarse sola.</td><td>Es el bloqueo por inactividad: el empleado reingresa su PIN. Se ajusta en Config → Datos del negocio.</td></tr>
       <tr><td>No timbra la factura.</td><td>Falta el C.P. fiscal (5 dígitos) o no hay timbres. Revisa la configuración de CFDI.</td></tr>
+      <tr><td>El ticket sale borroso o la letra chica no se lee.</td><td>Revisa que el Ancho de papel sea el de tu rollo y sigue la <a href="#impresora">configuración recomendada</a>: márgenes en Ninguno, escala Predeterminada y densidad alta en el driver.</td></tr>
       <tr><td>El cajón no abre.</td><td>Suele ser impresora con driver de Windows: instala el Agente de cajón y, en Chrome, da permiso de “red local” al pulsar “Buscar agente”.</td></tr>
       <tr><td>El historial solo muestra las ventas de este equipo.</td><td>No hay conexión con la nube. Revisa el internet; al volver se muestran todas.</td></tr>
       <tr><td>Stock distinto al esperado en multi-sucursal.</td><td>El stock que ves es el de la sucursal activa, no el total.</td></tr>
