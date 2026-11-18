@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALGORA · Manual — Terminales de cobro (Mercado Pago Point y Clip)</title>
+<meta name="description" content="Manual de ALGORA POS: Terminales de cobro (Mercado Pago Point y Clip). Guía paso a paso para configurar y usar el módulo en tu negocio.">
+<link rel="stylesheet" href="manual.css">
+</head>
+<body>
+<div class="doc">
+  <div class="cover">
+    <img class="brand-logo" src="/ALGORA_Logo_blanco.png" alt="ALGORA">
+    <div class="k">Manual de usuario</div>
+    <h1>Terminales <span class="gold">de cobro</span></h1>
+    <p>Conecta tu terminal Mercado Pago Point o Clip a ALGORA: el cobro se manda solo a la terminal, no tecleas el monto y la venta se confirma sola cuando el cliente paga. El dinero llega directo a tu cuenta.</p>
+    <div class="meta">Serie de manuales ALGORA · Terminales de cobro · Para dueño y cajeros</div>
+    <a class="back" href="index.html">← Ver todos los manuales</a>
+  </div>
+  <main>
+    <div class="toc">
+      <h4>Contenido</h4>
+      <ol>
+        <li><a href="#t1">Qué terminal elegir</a></li>
+        <li><a href="#t2">Mercado Pago Point: conectar</a></li>
+        <li><a href="#t3">Mercado Pago Point: cobrar y cancelar</a></li>
+        <li><a href="#t4">Clip: antes de empezar</a></li>
+        <li><a href="#t5">Clip: conectar</a></li>
+        <li><a href="#t6">Clip: cobrar y cancelar</a></li>
+        <li><a href="#t7">Pago combinado</a></li>
+        <li><a href="#t8">Solución de problemas</a></li>
+      </ol>
+    </div>
+
+    <h2 id="t1"><span class="num">1.</span>Qué terminal elegir</h2>
+    <p>ALGORA funciona con dos marcas. En las dos, el dinero llega directo a <b>tu</b> cuenta, no a la de ALGORA.</p>
+    <table>
+      <tr><th></th><th>Mercado Pago Point</th><th>Clip</th></tr>
+      <tr><td><b>Terminales compatibles</b></td><td>Point Smart 2 (la Point Air 2 no sirve: no tiene modo punto de venta)</td><td>Clip Ultra, Clip Total 3, Clip PinPad y Clip Stand 2, con la app Clip PinPad</td></tr>
+      <tr><td><b>Qué necesitas de tu cuenta</b></td><td>Access Token</td><td>API Key y Clave Secreta</td></tr>
+      <tr><td><b>Al cobrar</b></td><td>Eliges Crédito o Débito en ALGORA</td><td>Un solo botón: el lector detecta la tarjeta</td></tr>
+      <tr><td><b>Cancelar con el monto en la terminal</b></td><td>Sí, desde ALGORA</td><td>No: se cancela en el lector</td></tr>
+    </table>
+    <div class="box req"><div class="t">Quién lo configura</div><p>Solo el <b>dueño</b> conecta las terminales, en <span class="path">Administración → Config → Terminales de cobro</span>. Después, cualquier cajero cobra con ellas.</p></div>
+
+    <h2 id="t2"><span class="num">2.</span>Mercado Pago Point: conectar</h2>
+    <h3>Saca tu Access Token</h3>
+    <div class="steps">
+      <div class="s"><h4>Entra al portal de desarrolladores</h4><p>Abre <b>mercadopago.com.mx/developers</b> con la cuenta de tu negocio y ve a <b>“Tus integraciones”</b>.</p></div>
+      <div class="s"><h4>Crea una aplicación</h4><p>Toca <b>“Crear aplicación”</b>, ponle un nombre (por ejemplo, “ALGORA”) y elige que vas a recibir <b>pagos presenciales con Point</b>.</p></div>
+      <div class="s"><h4>Copia el Access Token</h4><p>Dentro de la aplicación abre <b>“Credenciales de producción”</b> y copia el <b>Access Token</b>. Empieza con <b>APP_USR-</b>.</p></div>
+    </div>
+    <div class="box warn"><div class="t">Cuida tu Access Token</div><p>Quien lo tenga puede cobrar a tu nombre. No lo mandes por mensaje ni correo: pégalo solo en ALGORA.</p></div>
+    <h3>Conéctalo en ALGORA</h3>
+    <div class="steps">
+      <div class="s"><h4>Pega el token</h4><p>En <span class="path">Config → Terminales de cobro → Mercado Pago Point</span> pega el Access Token y toca <b>“Conectar”</b>. Debe salir <b>“Cuenta conectada. Terminales encontradas: 1”</b>.</p></div>
+      <div class="s"><h4>Activa la terminal para el POS</h4><p>Si junto a tu terminal sale <b>“Activar para el POS”</b>, tócalo. Cuando diga <b>“LISTA PARA EL POS”</b>, ya quedó.</p></div>
+      <div class="s"><h4>Ponle nombre</h4><p>Toca el nombre de la terminal para cambiarlo, por ejemplo “Caja 1”. Así la reconoces si tienes varias.</p></div>
+    </div>
+    <div class="box tip"><div class="t">Usarla sin ALGORA</div><p>En modo punto de venta la terminal recibe los cobros desde ALGORA. Para cobrar con ella sin ALGORA, cámbiala a <b>STANDALONE</b> desde la app de Mercado Pago. Para regresarla, toca otra vez “Activar para el POS”.</p></div>
+
+    <h2 id="t3"><span class="num">3.</span>Mercado Pago Point: cobrar y cancelar</h2>
+    <div class="steps">
+      <div class="s"><h4>Cobra con tarjeta</h4><p>Arma la venta, toca <b>“Cobrar $…”</b> y elige <b>Tarjeta</b>. Si tienes varias terminales, elige en cuál.</p></div>
+      <div class="s"><h4>Crédito o Débito</h4><p>Pregunta al cliente qué tarjeta usa y toca <b>“Crédito”</b> o <b>“Débito”</b>. La terminal pasa directo a pedir la tarjeta: nadie teclea nada en ella.</p></div>
+      <div class="s"><h4>El cliente paga</h4><p>ALGORA muestra <b>“Esperando el pago en la terminal”</b>. El cliente acerca, inserta o desliza su tarjeta. Al aprobarse, la venta se cierra sola e imprime el ticket con todos los productos.</p></div>
+    </div>
+    <table>
+      <tr><th>Cuándo cancelas</th><th>Qué haces</th><th>Qué pasa</th></tr>
+      <tr><td>Antes de que el monto aparezca en la terminal</td><td>“Cancelar cobro” en ALGORA</td><td>Se cancela al instante.</td></tr>
+      <tr><td>Con el monto ya en la terminal</td><td>“Cancelar cobro” en ALGORA</td><td>ALGORA dice “Cancelando en la terminal…” y en segundos sale “Cobro cancelado en la terminal”.</td></tr>
+      <tr><td>Desde la terminal</td><td>Cancela en la Point</td><td>ALGORA lo detecta solo y te deja cobrar de nuevo.</td></tr>
+      <tr><td>El cliente ya pagó</td><td>No se puede cancelar</td><td>Haz la devolución desde la app de Mercado Pago.</td></tr>
+    </table>
+
+    <h2 id="t4"><span class="num">4.</span>Clip: antes de empezar</h2>
+    <ul>
+      <li>Una <b>cuenta Clip</b> a nombre de tu negocio, con tu identidad verificada.</li>
+      <li>Un lector compatible: <b>Clip Ultra</b>, <b>Clip Total 3</b>, <b>Clip PinPad</b> o <b>Clip Stand 2</b>, con WiFi estable.</li>
+      <li>La <b>app Clip PinPad</b> instalada en el lector, abierta y con la sesión de <b>la misma cuenta Clip</b> con la que creas tu credencial. Si es otra cuenta, ALGORA no encuentra el lector.</li>
+    </ul>
+    <div class="box req"><div class="t">Pide la app PinPad por WhatsApp</div><p>Clip la instala a distancia. Manda un WhatsApp a Clip al <a href="https://wa.me/525611887770?text=Hola%2C%20somos%20clientes%20de%20ALGORA.%20%C2%BFNos%20ayudan%20a%20instalar%20Clip%20PinPad%20en%20nuestro%20lector%3F%20N%C3%BAmero%20de%20serie%3A%20"><b>56 1188 7770</b></a> (contacto de integraciones de Clip para clientes de ALGORA) con este mensaje:<br><i>“Hola, somos clientes de ALGORA. ¿Nos ayudan a instalar Clip PinPad en nuestro lector? Número de serie: ______. Correo de nuestra cuenta Clip: ______.”</i></p></div>
+
+    <h2 id="t5"><span class="num">5.</span>Clip: conectar</h2>
+    <h3>Crea tu credencial</h3>
+    <div class="steps">
+      <div class="s"><h4>Entra al Panel de Desarrolladores</h4><p>Abre <b>dashboard.developer.clip.mx</b> con tu cuenta Clip y ve a <b>“Credenciales”</b>. Usa la columna <b>Producción</b>, no la de Pruebas.</p></div>
+      <div class="s"><h4>Crea la credencial</h4><p>Toca <b>“Crear credencial”</b>, ponle un nombre (por ejemplo, “ALGORA”) y toca <b>“Crear”</b>.</p></div>
+      <div class="s"><h4>Copia las dos llaves</h4><p>Copia la <b>API Key</b> y la <b>Clave Secreta</b>. La Clave Secreta <b>solo se muestra una vez</b>: si la pierdes, borra esa credencial y crea otra.</p></div>
+    </div>
+    <h3>Conéctala en ALGORA</h3>
+    <div class="steps">
+      <div class="s"><h4>Abre PinPad en el lector</h4><p>Con WiFi y con la sesión de tu cuenta Clip.</p></div>
+      <div class="s"><h4>Pega las llaves</h4><p>En <span class="path">Config → Terminales de cobro → Clip</span> pega la <b>API Key</b> en el primer campo y la <b>Clave Secreta</b> en el segundo. Toca <b>“Conectar”</b>.</p></div>
+      <div class="s"><h4>Revisa tu lector</h4><p>Debe salir <b>“Clip conectado. Lectores encontrados: 1”</b> y abajo tu lector con su número de serie y un punto verde. Toca el nombre para cambiarlo, por ejemplo “Caja 1”.</p></div>
+    </div>
+    <h3>Opciones del lector</h3>
+    <table>
+      <tr><th>Opción</th><th>Qué hace</th></tr>
+      <tr><td>Imprimir comprobante en la terminal</td><td>El lector imprime el comprobante de Clip al aprobarse el pago.</td></tr>
+      <tr><td>Permitir meses sin intereses</td><td>El lector ofrece meses sin intereses con tarjetas participantes. Úsala solo si ya lo tienes con Clip.</td></tr>
+      <tr><td>Pedir propina en la terminal</td><td>El lector pregunta la propina y la suma sola a la venta. Si la usas, no cobres también la propina en ALGORA.</td></tr>
+    </table>
+    <div class="box tip"><div class="t">Cobros olvidados</div><p>ALGORA deja tu lector configurado para que un cobro que nadie atiende se cancele solo después de un minuto y medio sin actividad.</p></div>
+
+    <h2 id="t6"><span class="num">6.</span>Clip: cobrar y cancelar</h2>
+    <div class="steps">
+      <div class="s"><h4>Deja PinPad abierta</h4><p>Antes de abrir tu caja, abre la app <b>Clip PinPad</b> en el lector. Si está cerrada, el cobro no llega.</p></div>
+      <div class="s"><h4>Envía el cobro</h4><p>Arma la venta, toca <b>“Cobrar $…”</b>, elige <b>Tarjeta</b> y revisa que diga <b>“Lector activo”</b>. Toca <b>“Enviar cobro a la terminal”</b>.</p></div>
+      <div class="s"><h4>El cliente paga</h4><p>El monto aparece solo en el lector. El cliente acerca, inserta o desliza su tarjeta; el lector detecta si es crédito o débito. Al aprobarse, la venta se cierra sola, en unos 25 segundos.</p></div>
+    </div>
+    <table>
+      <tr><th>Cuándo cancelas</th><th>Qué haces</th><th>Qué pasa</th></tr>
+      <tr><td>Antes de que el monto aparezca en el lector</td><td>“Cancelar cobro” en ALGORA</td><td>Se cancela al instante.</td></tr>
+      <tr><td>Con el monto ya en el lector</td><td>Cancélalo <b>en el lector</b>, en la app PinPad</td><td>ALGORA lo detecta solo. Desde ALGORA ya no se puede: así funciona Clip.</td></tr>
+      <tr><td>Nadie atiende el cobro</td><td>Nada</td><td>Al minuto el lector pregunta “continuar o cancelar” y, si nadie responde, lo cancela solo.</td></tr>
+      <tr><td>El cliente ya pagó</td><td>No se puede cancelar</td><td>Haz la devolución desde la app o el panel de Clip.</td></tr>
+    </table>
+    <div class="box tip"><div class="t">Correo de Clip</div><p>Clip manda un correo por cada cobro a la cuenta registrada. Es su aviso normal y no tiene que ver con ALGORA.</p></div>
+
+    <h2 id="t7"><span class="num">7.</span>Pago combinado</h2>
+    <p>Si el cliente paga una parte en efectivo y otra con tarjeta, en la ventana de cobro toca <b>“Combinar pagos”</b>, escribe cuánto va en cada forma y confirma. Con <b>“Cobrar la parte con tarjeta en la terminal”</b> encendido, solo esa parte se manda a la terminal y la venta se registra completa cuando se paga.</p>
+    <div class="box warn"><div class="t">No cierres la ventana de cobro</div><p>Mientras dice “Esperando el pago en la terminal”, no la cierres: si el cliente paga, la venta se tiene que registrar. Si necesitas salir, primero cancela el cobro. Enviar cobros a la terminal necesita internet.</p></div>
+
+    <h2 id="t8"><span class="num">8.</span>Solución de problemas</h2>
+    <table>
+      <tr><th>Situación</th><th>Qué hacer</th></tr>
+      <tr><td>“El Access Token no parece válido”.</td><td>Copia el de “Credenciales de producción” (empieza con APP_USR-), no el de pruebas.</td></tr>
+      <tr><td>Mercado Pago: “No se encontraron terminales”.</td><td>Vincula la Point a tu cuenta desde la app de Mercado Pago y toca “Sincronizar terminales”.</td></tr>
+      <tr><td>La Point ya no recibe cobros de ALGORA.</td><td>Alguien la cambió a STANDALONE: toca “Activar para el POS”.</td></tr>
+      <tr><td>“Esa es una credencial de pruebas (empieza con test_)”.</td><td>Crea la credencial en la columna Producción del Panel de Desarrolladores de Clip.</td></tr>
+      <tr><td>“Clip rechazó las llaves”.</td><td>La API Key y la Clave Secreta deben ser de la misma credencial, cada una en su campo. Si perdiste la secreta, crea otra credencial.</td></tr>
+      <tr><td>Clip: “Lectores encontrados: 0”.</td><td>Abre PinPad en el lector, revisa que la sesión sea de la misma cuenta Clip de tu credencial y toca “Revisar estado”.</td></tr>
+      <tr><td>“La terminal Clip no está lista”.</td><td>El lector está apagado, sin internet o con PinPad cerrada. Ábrela y vuelve a enviar el cobro.</td></tr>
+      <tr><td>“La terminal Clip ya tiene otro cobro en proceso”.</td><td>Termina o cancela en el lector el cobro que tiene en pantalla y vuelve a enviar.</td></tr>
+      <tr><td>“El pago no se aprobó en la terminal”.</td><td>La tarjeta fue rechazada: pide otra tarjeta o cobra de otra forma.</td></tr>
+      <tr><td>El lector Clip no tiene la app PinPad.</td><td>WhatsApp a Clip al <a href="https://wa.me/525611887770">56 1188 7770</a> con el número de serie; di que eres cliente de ALGORA.</td></tr>
+    </table>
+  </main>
+  <footer>
+    <div><b>ALGORA TECH S.A.S. de C.V.</b> · Manual — Terminales de cobro<br>Soporte técnico: WhatsApp 565 918 6986 · ventas.cliente@algora.com.mx · Ventas: WhatsApp 294 111 4401</div>
+    <div>algora.com.mx · Hecho en México</div>
+  <div style="margin-top:6px;font-size:12px"><a href="https://www.algorapos.com.mx/privacidad" target="_blank" rel="noopener">Aviso de privacidad</a> · <a href="https://www.algorapos.com.mx/terminos" target="_blank" rel="noopener">Términos</a> · <a href="https://www.algorapos.com.mx/cookies" target="_blank" rel="noopener">Cookies</a> · <a href="https://www.instagram.com/algor.atech/" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/1181549718370950" target="_blank" rel="noopener">Facebook</a></div>
+</footer>
+</div>
+<script src="/consent.js" defer></script>
+</body>
+</html>
