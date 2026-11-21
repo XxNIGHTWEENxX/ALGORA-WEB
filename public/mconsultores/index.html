@@ -1048,6 +1048,33 @@
       background: #dc3545;
       color: var(--white);
     }
+    .admin-project-item .edit-btn {
+      height: 32px;
+      padding: 0 12px;
+      border-radius: 16px;
+      border: none;
+      background: var(--gray-200);
+      color: var(--navy);
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .admin-project-item .edit-btn:hover { background: var(--navy); color: var(--white); }
+    .admin-project-item.editing { border-color: var(--navy); background: var(--gray-100, #f5f7fa); }
+    .admin-projects-list { max-height: 320px; overflow-y: auto; }
+    .btn-cancel-edit {
+      display: none;
+      width: 100%;
+      margin-top: 8px;
+      padding: 10px;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      background: transparent;
+      color: var(--gray-500);
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
     .img-preview {
       width: 100%;
       max-height: 200px;
@@ -1605,14 +1632,14 @@
 
       <!-- Dashboard view -->
       <div id="adminDashboard" style="display:none;">
-        <h2>Gestiónar Portafolio</h2>
-        <p>Agregue, edite o elimine proyectos de su portafolio.</p>
+        <h2>Gestionar Portafolio</h2>
+        <p>Agregue, edite o elimine proyectos de su portafolio. <a href="#" onclick="logoutAdmin(); return false;" style="color:var(--gray-400); font-size:0.85rem;">Cerrar sesión</a></p>
 
         <div class="admin-projects-list" id="adminProjectsList"></div>
 
         <hr class="admin-divider">
 
-        <h3 style="font-size:1.1rem; font-weight:700; color:var(--navy); margin-bottom:16px;">Agregar nuevo proyecto</h3>
+        <h3 id="projectFormTitle" style="font-size:1.1rem; font-weight:700; color:var(--navy); margin-bottom:16px;">Agregar nuevo proyecto</h3>
         <div class="form-group">
           <label>Título del proyecto</label>
           <input type="text" id="projectTitle" placeholder="Ej: Centro de Monitoreo C4">
@@ -1631,11 +1658,12 @@
           </select>
         </div>
         <div class="form-group">
-          <label>Imagen del proyecto</label>
-          <input type="file" id="projectImage" accept="image/*" onchange="previewImage(this)">
+          <label id="projectImageLabel">Imagen del proyecto</label>
+          <input type="file" id="projectImage" accept="image/jpeg,image/png,image/webp" onchange="previewImage(this)">
           <img class="img-preview" id="imgPreview">
         </div>
-        <button class="btn-submit" onclick="addProject()">Agregar proyecto</button>
+        <button class="btn-submit" id="addProjectBtn" onclick="saveProject()">Agregar proyecto</button>
+        <button class="btn-cancel-edit" id="cancelEditBtn" onclick="resetProjectForm()">Cancelar edición</button>
       </div>
     </div>
   </div>
@@ -1649,7 +1677,9 @@
     const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJidGJqbmpoY2xud3JhZGdkbG90Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg2OTAwOTksImV4cCI6MjA5NDI2NjA5OX0.N5udDMbhA8y5OXTih5nNE-J33F1TQBNAq65khOQydb4';
     const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-    // ========== DEFAULT PROJECTS (siempre visibles) ==========
+    // ========== PROYECTOS DE RESPALDO ==========
+    // Solo se muestran si la base de datos no responde. Los proyectos reales se
+    // administran desde el panel (tabla projects en Supabase).
     const defaultProjects = [
       { id: 'default-1', title: 'Gobierno del Estado de Puebla — Edificio Semiconductores', description: 'Voz, datos, CCTV, detección de humo y contra incendio — Edificio Yankuilotl.', category: 'infraestructura', image_url: 'img/semiconductores.jpg' },
       { id: 'default-2', title: 'Hotel Hilton Tru, San Andrés Cholula', description: 'Voz y datos, control de acceso, videovigilancia, sistema de audio y video.', category: 'infraestructura', image_url: 'img/hilton.jpg' },
@@ -1672,26 +1702,47 @@
     function esc(v) { return String(v == null ? '' : v).replace(/[&<>"'`]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;','`':'&#96;'}[c])); }
     function safeUrl(u) { return /^https:\/\//i.test(String(u || '')) || /^img\//.test(String(u || '')) ? esc(u) : ''; }
     let dbProjects = [];
+    let dbLoaded = false;   // true cuando la base respondio; si falla se muestran los proyectos de respaldo
+    let editingId = null;   // id del proyecto que se esta editando en el panel
     let currentFilter = 'all';
 
     // ========== SUPABASE DATA ==========
+    // Todos los proyectos (incluidos los 13 originales) viven en la tabla projects,
+    // asi el administrador puede editarlos o eliminarlos.
     async function fetchProjects() {
       try {
         const { data, error } = await sb.from('projects').select('*').order('created_at', { ascending: false });
         if (error) throw error;
         dbProjects = data || [];
+        dbLoaded = true;
       } catch (e) {
         console.warn('Error cargando proyectos de Supabase:', e);
         dbProjects = [];
+        dbLoaded = false;
       }
       renderPortfolio(currentFilter);
     }
 
+    function storagePath(imageUrl) {
+      const marker = '/object/public/project-images/';
+      return imageUrl && imageUrl.includes(marker) ? decodeURIComponent(imageUrl.split(marker)[1]) : null;
+    }
+    async function removeStoredImage(imageUrl) {
+      const path = storagePath(imageUrl);
+      if (path) await sb.storage.from('project-images').remove([path]);
+    }
+
+    const IMG_TYPES = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' };
+    const IMG_MAX_MB = 5;
+
     async function uploadImage(file) {
-      const ext = file.name.split('.').pop();
+      const ext = IMG_TYPES[file.type];
+      if (!ext) throw new Error('La imagen debe ser JPG, PNG o WEBP.');
+      if (file.size > IMG_MAX_MB * 1024 * 1024) throw new Error(`La imagen pesa más de ${IMG_MAX_MB} MB.`);
       const fileName = `${Date.now()}_${Math.random().toString(36).slice(2,8)}.${ext}`;
       const { data, error } = await sb.storage.from('project-images').upload(fileName, file, {
         cacheControl: '3600',
+        contentType: file.type,
         upsert: false
       });
       if (error) throw error;
@@ -1705,19 +1756,23 @@
       return data[0];
     }
 
-    async function removeProject(id, imageUrl) {
-      // Eliminar imagen del storage si existe
-      if (imageUrl) {
-        const fileName = imageUrl.split('/').pop();
-        await sb.storage.from('project-images').remove([fileName]);
-      }
-      const { error } = await sb.from('projects').delete().eq('id', id);
+    async function updateProject(id, fields) {
+      const { data, error } = await sb.from('projects').update(fields).eq('id', id).select('id');
       if (error) throw error;
+      if (!data || data.length === 0) throw new Error('Sin permiso para editar (¿la cuenta es administradora?).');
+    }
+
+    async function removeProject(id, imageUrl) {
+      const { data, error } = await sb.from('projects').delete().eq('id', id).select('id');
+      if (error) throw error;
+      if (!data || data.length === 0) throw new Error('Sin permiso para eliminar (¿la cuenta es administradora?).');
+      // Las imagenes img/... del sitio no se tocan; solo las subidas al almacenamiento
+      await removeStoredImage(imageUrl);
     }
 
     // ========== PORTFOLIO RENDERING ==========
     function getAllProjects() {
-      return [...defaultProjects, ...dbProjects];
+      return dbLoaded ? dbProjects : defaultProjects;
     }
 
     function renderPortfolio(filter = 'all') {
@@ -1750,9 +1805,26 @@
     });
 
     // ========== ADMIN FUNCTIONS ==========
-    function openAdmin() {
+    async function openAdmin() {
       document.getElementById('adminOverlay').classList.add('active');
       document.body.style.overflow = 'hidden';
+      // Si ya hay una sesion de administrador activa, entrar directo al panel
+      const { data } = await sb.auth.getSession();
+      if (data.session && await isAdmin()) showDashboard();
+    }
+    async function isAdmin() {
+      const { data, error } = await sb.rpc('is_site_admin');
+      return !error && data === true;
+    }
+    function showDashboard() {
+      document.getElementById('adminLogin').style.display = 'none';
+      document.getElementById('adminDashboard').style.display = 'block';
+      renderAdminList();
+    }
+    async function logoutAdmin() {
+      await sb.auth.signOut();
+      document.getElementById('adminDashboard').style.display = 'none';
+      document.getElementById('adminLogin').style.display = 'block';
     }
     function closeAdmin() {
       document.getElementById('adminOverlay').classList.remove('active');
@@ -1766,38 +1838,79 @@
       if (!email || !pw) { err.style.display = 'block'; return; }
       const { error } = await sb.auth.signInWithPassword({ email, password: pw });
       document.getElementById('adminPassword').value = '';
-      if (error) { err.style.display = 'block'; return; }
-      document.getElementById('adminLogin').style.display = 'none';
-      document.getElementById('adminDashboard').style.display = 'block';
-      renderAdminList();
+      if (error) { err.textContent = 'Correo o contraseña incorrectos'; err.style.display = 'block'; return; }
+      if (!(await isAdmin())) {
+        await sb.auth.signOut();
+        err.textContent = 'Esta cuenta no tiene permiso de administrador.';
+        err.style.display = 'block';
+        return;
+      }
+      showDashboard();
     }
     function renderAdminList() {
       const list = document.getElementById('adminProjectsList');
       if (dbProjects.length === 0) {
-        list.innerHTML = '<p style="color:var(--gray-400); font-size:0.85rem; text-align:center; padding:16px;">No hay proyectos agregados aún. Los proyectos predeterminados se muestran automáticamente.</p>';
+        list.innerHTML = '<p style="color:var(--gray-400); font-size:0.85rem; text-align:center; padding:16px;">No hay proyectos en el portafolio.</p>';
         return;
       }
       list.innerHTML = dbProjects.map(p => `
-        <div class="admin-project-item">
+        <div class="admin-project-item${p.id === editingId ? ' editing' : ''}">
           ${safeUrl(p.image_url) ? `<img src="${safeUrl(p.image_url)}" alt="">` : `<div class="thumb-placeholder">IMG</div>`}
           <div class="info">
             <h5>${esc(p.title)}</h5>
             <span>${esc(p.category)}</span>
           </div>
-          <button class="delete-btn" data-id="${esc(p.id)}" data-img="${esc(p.image_url || '')}" onclick="handleDelete(this.dataset.id, this.dataset.img)">&times;</button>
+          <button class="edit-btn" data-id="${esc(p.id)}" onclick="startEdit(this.dataset.id)">Editar</button>
+          <button class="delete-btn" title="Eliminar" data-id="${esc(p.id)}" data-img="${esc(p.image_url || '')}" onclick="handleDelete(this.dataset.id, this.dataset.img)">&times;</button>
         </div>
       `).join('');
     }
 
     async function handleDelete(id, imageUrl) {
-      if (!confirm('¿Eliminar este proyecto?')) return;
+      const p = dbProjects.find(x => x.id === id);
+      if (!confirm(`¿Eliminar el proyecto "${p ? p.title : ''}"? Esta acción no se puede deshacer.`)) return;
       try {
         await removeProject(id, imageUrl);
+        if (editingId === id) resetProjectForm();
         await fetchProjects();
         renderAdminList();
       } catch (e) {
         alert('Error al eliminar: ' + e.message);
       }
+    }
+
+    function startEdit(id) {
+      const p = dbProjects.find(x => x.id === id);
+      if (!p) return;
+      editingId = id;
+      document.getElementById('projectTitle').value = p.title || '';
+      document.getElementById('projectDesc').value = p.description || '';
+      document.getElementById('projectCategory').value = p.category;
+      document.getElementById('projectImage').value = '';
+      const preview = document.getElementById('imgPreview');
+      if (safeUrl(p.image_url)) { preview.src = p.image_url; preview.style.display = 'block'; }
+      else { preview.src = ''; preview.style.display = 'none'; }
+      document.getElementById('projectFormTitle').textContent = 'Editar proyecto';
+      document.getElementById('projectImageLabel').textContent = 'Cambiar imagen (opcional)';
+      document.getElementById('addProjectBtn').textContent = 'Guardar cambios';
+      document.getElementById('cancelEditBtn').style.display = 'block';
+      renderAdminList();
+      document.getElementById('projectFormTitle').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function resetProjectForm() {
+      editingId = null;
+      document.getElementById('projectTitle').value = '';
+      document.getElementById('projectDesc').value = '';
+      document.getElementById('projectCategory').value = 'infraestructura';
+      document.getElementById('projectImage').value = '';
+      document.getElementById('imgPreview').style.display = 'none';
+      document.getElementById('imgPreview').src = '';
+      document.getElementById('projectFormTitle').textContent = 'Agregar nuevo proyecto';
+      document.getElementById('projectImageLabel').textContent = 'Imagen del proyecto';
+      document.getElementById('addProjectBtn').textContent = 'Agregar proyecto';
+      document.getElementById('cancelEditBtn').style.display = 'none';
+      renderAdminList();
     }
 
     function previewImage(input) {
@@ -1812,43 +1925,48 @@
       }
     }
 
-    async function addProject() {
+    // Agrega un proyecto nuevo o guarda los cambios del que se esta editando
+    async function saveProject() {
       const title = document.getElementById('projectTitle').value.trim();
       const desc = document.getElementById('projectDesc').value.trim();
       const category = document.getElementById('projectCategory').value;
       const fileInput = document.getElementById('projectImage');
-      const submitBtn = document.querySelector('#adminDashboard .btn-submit');
+      const submitBtn = document.getElementById('addProjectBtn');
+      const editing = editingId ? dbProjects.find(x => x.id === editingId) : null;
 
       if (!title || !desc) {
         alert('Por favor complete el título y la descripción.');
         return;
       }
 
-      submitBtn.textContent = 'Subiendo...';
+      const idleText = submitBtn.textContent;
+      submitBtn.textContent = editing ? 'Guardando...' : 'Subiendo...';
       submitBtn.disabled = true;
 
+      let newImage = '';
       try {
-        let image_url = '';
         if (fileInput.files && fileInput.files[0]) {
-          image_url = await uploadImage(fileInput.files[0]);
+          newImage = await uploadImage(fileInput.files[0]);
         }
-
-        await insertProject({ title, description: desc, category, image_url });
-
-        // Reset form
-        document.getElementById('projectTitle').value = '';
-        document.getElementById('projectDesc').value = '';
-        fileInput.value = '';
-        document.getElementById('imgPreview').style.display = 'none';
-        document.getElementById('imgPreview').src = '';
-
+        if (editing) {
+          const fields = { title, description: desc, category };
+          if (newImage) fields.image_url = newImage;
+          await updateProject(editing.id, fields);
+          // Si se cambio la imagen, borrar la anterior del almacenamiento
+          if (newImage && editing.image_url !== newImage) await removeStoredImage(editing.image_url);
+        } else {
+          await insertProject({ title, description: desc, category, image_url: newImage });
+        }
+        newImage = '';
         await fetchProjects();
-        renderAdminList();
-        alert('¡Proyecto agregado exitosamente!');
+        resetProjectForm();
+        alert(editing ? 'Cambios guardados.' : '¡Proyecto agregado exitosamente!');
       } catch (e) {
-        alert('Error al agregar proyecto: ' + e.message);
+        // Si la imagen ya se subio pero fallo guardar, no dejarla huerfana
+        if (newImage) { try { await removeStoredImage(newImage); } catch (_) {} }
+        alert((editing ? 'Error al guardar cambios: ' : 'Error al agregar proyecto: ') + e.message);
+        submitBtn.textContent = idleText;
       } finally {
-        submitBtn.textContent = 'Agregar proyecto';
         submitBtn.disabled = false;
       }
     }
@@ -1989,11 +2107,7 @@
     })();
 
     // ========== INIT ==========
-    renderPortfolio();
     fetchProjects();
   </script>
-
-  <!-- ALGORA Widget — Catálogo de productos -->
-  <script src="https://algora-pos-zlvf.vercel.app/api/store/widget?id=87d4915d-2636-41b9-8e65-2a9190404920"></script>
 </body>
 </html>

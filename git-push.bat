@@ -4,7 +4,7 @@ cd /d "%~dp0"
 del /f /q .git\index.lock 2>nul
 echo Subiendo algora-web (sitio estatico, Vercel despliega solo)...
 git add -A
-git commit -m "Manual terminales de cobro: Mercado Pago Point y Clip"
+git commit -m "M Consultores: quitar widget ALGORA, restaurar logo, admin con sesion y validacion de imagenes"
 git pull --rebase origin main
 git push origin main
 echo.

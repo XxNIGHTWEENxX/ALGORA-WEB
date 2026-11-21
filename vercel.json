@@ -68,7 +68,7 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://algora-pos-zlvf.vercel.app https://www.algorapos.com.mx; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://rbtbjnjhclnwradgdlot.supabase.co wss://rbtbjnjhclnwradgdlot.supabase.co https://algora-pos-zlvf.vercel.app https://www.algorapos.com.mx; frame-src https://www.google.com https://algora-pos-zlvf.vercel.app https://www.algorapos.com.mx https://checkout.stripe.com; object-src 'none'; base-uri 'self'; form-action 'self' https:; frame-ancestors 'self'; upgrade-insecure-requests"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://rbtbjnjhclnwradgdlot.supabase.co wss://rbtbjnjhclnwradgdlot.supabase.co; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https:; frame-ancestors 'self'; upgrade-insecure-requests"
         }
       ]
     },
